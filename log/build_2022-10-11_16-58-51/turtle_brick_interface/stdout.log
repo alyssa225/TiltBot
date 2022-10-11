@@ -1,0 +1,19 @@
+[35m[1mConsolidate compiler generated dependencies of target place[0m
+[100%] Built target place
+-- Install configuration: ""
+-- Installing: /home/alyssa/ros2_ws/src/homework2-alyssa225/install/turtle_brick_interface/lib/turtle_brick_interface/place
+-- Installing: /home/alyssa/ros2_ws/src/homework2-alyssa225/install/turtle_brick_interface/share/ament_index/resource_index/package_run_dependencies/turtle_brick_interface
+-- Installing: /home/alyssa/ros2_ws/src/homework2-alyssa225/install/turtle_brick_interface/share/ament_index/resource_index/parent_prefix_path/turtle_brick_interface
+-- Installing: /home/alyssa/ros2_ws/src/homework2-alyssa225/install/turtle_brick_interface/share/turtle_brick_interface/environment/ament_prefix_path.sh
+-- Installing: /home/alyssa/ros2_ws/src/homework2-alyssa225/install/turtle_brick_interface/share/turtle_brick_interface/environment/ament_prefix_path.dsv
+-- Installing: /home/alyssa/ros2_ws/src/homework2-alyssa225/install/turtle_brick_interface/share/turtle_brick_interface/environment/path.sh
+-- Installing: /home/alyssa/ros2_ws/src/homework2-alyssa225/install/turtle_brick_interface/share/turtle_brick_interface/environment/path.dsv
+-- Installing: /home/alyssa/ros2_ws/src/homework2-alyssa225/install/turtle_brick_interface/share/turtle_brick_interface/local_setup.bash
+-- Installing: /home/alyssa/ros2_ws/src/homework2-alyssa225/install/turtle_brick_interface/share/turtle_brick_interface/local_setup.sh
+-- Installing: /home/alyssa/ros2_ws/src/homework2-alyssa225/install/turtle_brick_interface/share/turtle_brick_interface/local_setup.zsh
+-- Installing: /home/alyssa/ros2_ws/src/homework2-alyssa225/install/turtle_brick_interface/share/turtle_brick_interface/local_setup.dsv
+-- Installing: /home/alyssa/ros2_ws/src/homework2-alyssa225/install/turtle_brick_interface/share/turtle_brick_interface/package.dsv
+-- Installing: /home/alyssa/ros2_ws/src/homework2-alyssa225/install/turtle_brick_interface/share/ament_index/resource_index/packages/turtle_brick_interface
+-- Installing: /home/alyssa/ros2_ws/src/homework2-alyssa225/install/turtle_brick_interface/share/turtle_brick_interface/cmake/turtle_brick_interfaceConfig.cmake
+-- Installing: /home/alyssa/ros2_ws/src/homework2-alyssa225/install/turtle_brick_interface/share/turtle_brick_interface/cmake/turtle_brick_interfaceConfig-version.cmake
+-- Installing: /home/alyssa/ros2_ws/src/homework2-alyssa225/install/turtle_brick_interface/share/turtle_brick_interface/package.xml

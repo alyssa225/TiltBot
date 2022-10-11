@@ -1,0 +1,10 @@
+/home/alyssa/ros2_ws/src/homework2-alyssa225/build/turtle_brick_interface/CMakeFiles/uninstall.dir
+/home/alyssa/ros2_ws/src/homework2-alyssa225/build/turtle_brick_interface/CMakeFiles/turtle_brick_interface_uninstall.dir
+/home/alyssa/ros2_ws/src/homework2-alyssa225/build/turtle_brick_interface/CMakeFiles/place.dir
+/home/alyssa/ros2_ws/src/homework2-alyssa225/build/turtle_brick_interface/CMakeFiles/test.dir
+/home/alyssa/ros2_ws/src/homework2-alyssa225/build/turtle_brick_interface/CMakeFiles/edit_cache.dir
+/home/alyssa/ros2_ws/src/homework2-alyssa225/build/turtle_brick_interface/CMakeFiles/rebuild_cache.dir
+/home/alyssa/ros2_ws/src/homework2-alyssa225/build/turtle_brick_interface/CMakeFiles/list_install_components.dir
+/home/alyssa/ros2_ws/src/homework2-alyssa225/build/turtle_brick_interface/CMakeFiles/install.dir
+/home/alyssa/ros2_ws/src/homework2-alyssa225/build/turtle_brick_interface/CMakeFiles/install/local.dir
+/home/alyssa/ros2_ws/src/homework2-alyssa225/build/turtle_brick_interface/CMakeFiles/install/strip.dir

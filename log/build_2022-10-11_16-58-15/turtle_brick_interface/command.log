@@ -1,0 +1,1 @@
+Invoking command in '/home/alyssa/ros2_ws/src/homework2-alyssa225/build/turtle_brick_interface': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/alyssa/ros2_ws/src/homework2-alyssa225/turtle_brick_interface -DCMAKE_INSTALL_PREFIX=/home/alyssa/ros2_ws/src/homework2-alyssa225/install/turtle_brick_interface
