@@ -1,0 +1,15 @@
+/home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/ament_index/resource_index/package_run_dependencies/turtle_brick_interfaces
+/home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/ament_index/resource_index/parent_prefix_path/turtle_brick_interfaces
+/home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/turtle_brick_interfaces/environment/ament_prefix_path.sh
+/home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/turtle_brick_interfaces/environment/ament_prefix_path.dsv
+/home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/turtle_brick_interfaces/environment/path.sh
+/home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/turtle_brick_interfaces/environment/path.dsv
+/home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/turtle_brick_interfaces/local_setup.bash
+/home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/turtle_brick_interfaces/local_setup.sh
+/home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/turtle_brick_interfaces/local_setup.zsh
+/home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/turtle_brick_interfaces/local_setup.dsv
+/home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/turtle_brick_interfaces/package.dsv
+/home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/ament_index/resource_index/packages/turtle_brick_interfaces
+/home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/turtle_brick_interfaces/cmake/turtle_brick_interfacesConfig.cmake
+/home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/turtle_brick_interfaces/cmake/turtle_brick_interfacesConfig-version.cmake
+/home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/turtle_brick_interfaces/package.xml

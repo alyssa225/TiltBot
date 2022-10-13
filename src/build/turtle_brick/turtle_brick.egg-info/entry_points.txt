@@ -1,0 +1,3 @@
+[console_scripts]
+turtle_robot = turtle_brick.turtle_robot:main
+

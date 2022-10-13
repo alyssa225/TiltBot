@@ -1,0 +1,9 @@
+/home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces/CMakeFiles/uninstall.dir
+/home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces/CMakeFiles/turtle_brick_interfaces_uninstall.dir
+/home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces/CMakeFiles/test.dir
+/home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces/CMakeFiles/edit_cache.dir
+/home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces/CMakeFiles/rebuild_cache.dir
+/home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces/CMakeFiles/list_install_components.dir
+/home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces/CMakeFiles/install.dir
+/home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces/CMakeFiles/install/local.dir
+/home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces/CMakeFiles/install/strip.dir
