@@ -8,10 +8,13 @@ setup.py
 ../../build/turtle_brick/turtle_brick.egg-info/requires.txt
 ../../build/turtle_brick/turtle_brick.egg-info/top_level.txt
 ../../build/turtle_brick/turtle_brick.egg-info/zip-safe
+config/view.rviz
 launch/show_turtle.launch.py
 resource/turtle_brick
 test/test_copyright.py
 test/test_flake8.py
 test/test_pep257.py
 turtle_brick/__init__.py
+turtle_brick/arena.py
+turtle_brick/catcher.py
 turtle_brick/turtle_robot.py

@@ -1,0 +1,21 @@
+[0.229s] Invoking command in '/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/alyssa/homework2-alyssa225/src/install/turtle_brick:/home/alyssa/homework2-alyssa225/install/turtle_brick:/home/alyssa/ws/install/me495_tf:/opt/ros/humble /usr/bin/cmake --build /home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces -- -j8 -l8
+[0.258s] Invoked command in '/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/alyssa/homework2-alyssa225/src/install/turtle_brick:/home/alyssa/homework2-alyssa225/install/turtle_brick:/home/alyssa/ws/install/me495_tf:/opt/ros/humble /usr/bin/cmake --build /home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces -- -j8 -l8
+[0.282s] Invoking command in '/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/alyssa/homework2-alyssa225/src/install/turtle_brick:/home/alyssa/homework2-alyssa225/install/turtle_brick:/home/alyssa/ws/install/me495_tf:/opt/ros/humble /usr/bin/cmake --install /home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces
+[0.288s] -- Install configuration: ""
+[0.289s] -- Execute custom install script
+[0.289s] -- Up-to-date symlink: /home/alyssa/homework2-alyssa225/src/install/turtle_brick_interfaces/share/ament_index/resource_index/package_run_dependencies/turtle_brick_interfaces
+[0.289s] -- Up-to-date symlink: /home/alyssa/homework2-alyssa225/src/install/turtle_brick_interfaces/share/ament_index/resource_index/parent_prefix_path/turtle_brick_interfaces
+[0.290s] -- Up-to-date symlink: /home/alyssa/homework2-alyssa225/src/install/turtle_brick_interfaces/share/turtle_brick_interfaces/environment/ament_prefix_path.sh
+[0.290s] -- Up-to-date symlink: /home/alyssa/homework2-alyssa225/src/install/turtle_brick_interfaces/share/turtle_brick_interfaces/environment/ament_prefix_path.dsv
+[0.290s] -- Up-to-date symlink: /home/alyssa/homework2-alyssa225/src/install/turtle_brick_interfaces/share/turtle_brick_interfaces/environment/path.sh
+[0.290s] -- Up-to-date symlink: /home/alyssa/homework2-alyssa225/src/install/turtle_brick_interfaces/share/turtle_brick_interfaces/environment/path.dsv
+[0.291s] -- Up-to-date symlink: /home/alyssa/homework2-alyssa225/src/install/turtle_brick_interfaces/share/turtle_brick_interfaces/local_setup.bash
+[0.291s] -- Up-to-date symlink: /home/alyssa/homework2-alyssa225/src/install/turtle_brick_interfaces/share/turtle_brick_interfaces/local_setup.sh
+[0.291s] -- Up-to-date symlink: /home/alyssa/homework2-alyssa225/src/install/turtle_brick_interfaces/share/turtle_brick_interfaces/local_setup.zsh
+[0.291s] -- Up-to-date symlink: /home/alyssa/homework2-alyssa225/src/install/turtle_brick_interfaces/share/turtle_brick_interfaces/local_setup.dsv
+[0.291s] -- Symlinking: /home/alyssa/homework2-alyssa225/src/install/turtle_brick_interfaces/share/turtle_brick_interfaces/package.dsv
+[0.299s] -- Up-to-date symlink: /home/alyssa/homework2-alyssa225/src/install/turtle_brick_interfaces/share/ament_index/resource_index/packages/turtle_brick_interfaces
+[0.299s] -- Up-to-date symlink: /home/alyssa/homework2-alyssa225/src/install/turtle_brick_interfaces/share/turtle_brick_interfaces/cmake/turtle_brick_interfacesConfig.cmake
+[0.299s] -- Up-to-date symlink: /home/alyssa/homework2-alyssa225/src/install/turtle_brick_interfaces/share/turtle_brick_interfaces/cmake/turtle_brick_interfacesConfig-version.cmake
+[0.299s] -- Up-to-date symlink: /home/alyssa/homework2-alyssa225/src/install/turtle_brick_interfaces/share/turtle_brick_interfaces/package.xml
+[0.302s] Invoked command in '/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/alyssa/homework2-alyssa225/src/install/turtle_brick:/home/alyssa/homework2-alyssa225/install/turtle_brick:/home/alyssa/ws/install/me495_tf:/opt/ros/humble /usr/bin/cmake --install /home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces

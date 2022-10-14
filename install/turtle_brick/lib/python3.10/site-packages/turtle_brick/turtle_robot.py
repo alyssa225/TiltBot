@@ -17,6 +17,7 @@ from rclpy.node import Node
 from tf2_ros.static_transform_broadcaster import StaticTransformBroadcaster
 from tf2_ros import TransformBroadcaster
 from geometry_msgs.msg import TransformStamped
+#from visualization_msg.msg import Marker  
 from math import pi
 #from .quaternion import angle_axis_to_quaternion
 
@@ -30,19 +31,21 @@ class Turtle_robot(Node):
     def __init__(self):
         super().__init__('turtle_robot')
         # Static broadcasters publish on /tf_static. We will only need to publish this once
+        self.static_broadcaster = StaticTransformBroadcaster(self)
         self.broadcaster = TransformBroadcaster(self)
         world_odom_tf = TransformStamped()
         
-        world_base_tf.header.stamp = self.get_clock().now().to_msg()
+        world_odom_tf.header.stamp = self.get_clock().now().to_msg()
         world_odom_tf.header.frame_id = "world"
         world_odom_tf.child_frame_id = "odom"
+
 
         # The base frame will be raised in the z direction by 1 meter
         # and be aligned with world We are relying on the default values
         # of the transform message (which defaults to no rotation)
         world_odom_tf.transform.translation.x = 0.5
         world_odom_tf.transform.translation.y = 0.50
-        self.static_broadcaster.sendTransform(world_base_tf)
+        self.static_broadcaster.sendTransform(world_odom_tf)
 	
         # Now create the transform, noted that it must have a parent frame and a timestamp
         # The header contains the timing information and frame id
@@ -54,14 +57,15 @@ class Turtle_robot(Node):
 
     def timer_callback(self):
         
-        brick = TransformStamped()
-        brick.header.frame_id = "world"
-        brick.child_frame_id = "brick"
+        # brick = TransformStamped()
+        # brick.header.frame_id = "world"
+        # brick.child_frame_id = "brick"
         
         
         base_link = TransformStamped()
         base_link.header.frame_id = "world"
         base_link.child_frame_id = "base_link"
+        base_link.transform.translation.x = -float(self.dx)
         
     	# get a quaternion corresponding to a rotation by theta about an axis
         #degrees = 36 * self.dx
@@ -72,25 +76,24 @@ class Turtle_robot(Node):
         # don't forget to put a timestamp
         time = self.get_clock().now().to_msg()
         base_link.header.stamp = time
-        brick.header.stamp = time
+        # brick.header.stamp = time
         #world_base_tf.header.stamp = time
         #base_up.header.stamp = time
         
-        self.broadcaster.sendTransform(brick)
+        # self.broadcaster.sendTransform(brick)
         self.broadcaster.sendTransform(base_link)
         #self.broadcaster.sendTransform(world_base_tf)
         #self.broadcaster.sendTransform(base_up)
         # update the movement
         self.dx -= 1
-        
-        if self.dx>5:
-            print("above threashold")
         if self.dx == 0:
             self.dx = 10
 
 
-def in_out_entry(args=None):
+def main(args=None):
     rclpy.init(args=args)
-    node = InOut()
-    rclpy.spin(node)
-    rclpy.shutdown()
+    turtleRobot= Turtle_robot()
+    rclpy.spin(turtleRobot)
+    rclpy.shutdown 
+
+

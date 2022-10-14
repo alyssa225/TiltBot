@@ -1,3 +1,4 @@
 [console_scripts]
+arena = turtle_brick.arena:arena_entry
 turtle_robot = turtle_brick.turtle_robot:main
 
