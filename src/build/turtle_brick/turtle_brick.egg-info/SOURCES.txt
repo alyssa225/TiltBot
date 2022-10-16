@@ -8,7 +8,8 @@ setup.py
 ../build/turtle_brick/turtle_brick.egg-info/requires.txt
 ../build/turtle_brick/turtle_brick.egg-info/top_level.txt
 ../build/turtle_brick/turtle_brick.egg-info/zip-safe
-config/view.rviz
+config/turtle_urdf.rviz
+launch/run_turtle.launch.py
 launch/show_turtle.launch.py
 resource/turtle_brick
 test/test_copyright.py

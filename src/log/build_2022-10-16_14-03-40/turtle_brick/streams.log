@@ -1,0 +1,37 @@
+[0.976s] Invoking command in '/home/alyssa/homework2-alyssa225/src/build/turtle_brick': PYTHONPATH=/home/alyssa/homework2-alyssa225/src/install/turtle_brick/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/alyssa/homework2-alyssa225/src/install/turtle_brick --uninstall --editable --build-directory /home/alyssa/homework2-alyssa225/src/build/turtle_brick/build
+[1.427s] running develop
+[1.428s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[1.428s]   warnings.warn(
+[1.429s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[1.429s]   warnings.warn(
+[1.552s] /usr/lib/python3/dist-packages/pkg_resources/__init__.py:116: PkgResourcesDeprecationWarning: 1.16.0-unknown is an invalid version and will not be supported in a future release
+[1.552s]   warnings.warn(
+[1.553s] /usr/lib/python3/dist-packages/pkg_resources/__init__.py:116: PkgResourcesDeprecationWarning: 1.1build1 is an invalid version and will not be supported in a future release
+[1.553s]   warnings.warn(
+[1.553s] /usr/lib/python3/dist-packages/pkg_resources/__init__.py:116: PkgResourcesDeprecationWarning: 0.1.43ubuntu1 is an invalid version and will not be supported in a future release
+[1.553s]   warnings.warn(
+[1.756s] Invoked command in '/home/alyssa/homework2-alyssa225/src/build/turtle_brick' returned '0': PYTHONPATH=/home/alyssa/homework2-alyssa225/src/install/turtle_brick/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/alyssa/homework2-alyssa225/src/install/turtle_brick --uninstall --editable --build-directory /home/alyssa/homework2-alyssa225/src/build/turtle_brick/build
+[1.758s] Invoking command in '/home/alyssa/homework2-alyssa225/src/turtle_brick': PYTHONPATH=/home/alyssa/homework2-alyssa225/src/install/turtle_brick/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/turtle_brick build --build-base /home/alyssa/homework2-alyssa225/src/build/turtle_brick/build install --prefix /home/alyssa/homework2-alyssa225/src/install/turtle_brick --record /home/alyssa/homework2-alyssa225/src/build/turtle_brick/install.log --single-version-externally-managed
+[2.129s] running egg_info
+[2.129s] writing ../build/turtle_brick/turtle_brick.egg-info/PKG-INFO
+[2.130s] writing dependency_links to ../build/turtle_brick/turtle_brick.egg-info/dependency_links.txt
+[2.130s] writing entry points to ../build/turtle_brick/turtle_brick.egg-info/entry_points.txt
+[2.130s] writing requirements to ../build/turtle_brick/turtle_brick.egg-info/requires.txt
+[2.130s] writing top-level names to ../build/turtle_brick/turtle_brick.egg-info/top_level.txt
+[2.134s] reading manifest file '../build/turtle_brick/turtle_brick.egg-info/SOURCES.txt'
+[2.135s] writing manifest file '../build/turtle_brick/turtle_brick.egg-info/SOURCES.txt'
+[2.135s] running build
+[2.135s] running build_py
+[2.136s] running install
+[2.136s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[2.136s]   warnings.warn(
+[2.137s] running install_lib
+[2.139s] running install_data
+[2.139s] running install_egg_info
+[2.141s] removing '/home/alyssa/homework2-alyssa225/src/install/turtle_brick/lib/python3.10/site-packages/turtle_brick-0.0.0-py3.10.egg-info' (and everything under it)
+[2.142s] Copying ../build/turtle_brick/turtle_brick.egg-info to /home/alyssa/homework2-alyssa225/src/install/turtle_brick/lib/python3.10/site-packages/turtle_brick-0.0.0-py3.10.egg-info
+[2.143s] running install_scripts
+[2.175s] Installing arena script to /home/alyssa/homework2-alyssa225/src/install/turtle_brick/lib/turtle_brick
+[2.176s] Installing turtle_robot script to /home/alyssa/homework2-alyssa225/src/install/turtle_brick/lib/turtle_brick
+[2.176s] writing list of installed files to '/home/alyssa/homework2-alyssa225/src/build/turtle_brick/install.log'
+[2.226s] Invoked command in '/home/alyssa/homework2-alyssa225/src/turtle_brick' returned '0': PYTHONPATH=/home/alyssa/homework2-alyssa225/src/install/turtle_brick/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/turtle_brick build --build-base /home/alyssa/homework2-alyssa225/src/build/turtle_brick/build install --prefix /home/alyssa/homework2-alyssa225/src/install/turtle_brick --record /home/alyssa/homework2-alyssa225/src/build/turtle_brick/install.log --single-version-externally-managed

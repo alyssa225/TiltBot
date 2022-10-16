@@ -1,0 +1,138 @@
+[0.335s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.335s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7f12bb502620>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f12bbfcf760>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f12bbfcf760>>, mixin_verb=('build',))
+[0.373s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.373s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.373s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.373s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.374s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.374s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.374s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/alyssa/homework2-alyssa225/src'
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(turtle_brick) by extensions ['ignore', 'ignore_ament_install']
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(turtle_brick) by extension 'ignore'
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(turtle_brick) by extension 'ignore_ament_install'
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(turtle_brick) by extensions ['colcon_pkg']
+[0.388s] Level 1:colcon.colcon_core.package_identification:_identify(turtle_brick) by extension 'colcon_pkg'
+[0.388s] Level 1:colcon.colcon_core.package_identification:_identify(turtle_brick) by extensions ['colcon_meta']
+[0.388s] Level 1:colcon.colcon_core.package_identification:_identify(turtle_brick) by extension 'colcon_meta'
+[0.388s] Level 1:colcon.colcon_core.package_identification:_identify(turtle_brick) by extensions ['ros']
+[0.388s] Level 1:colcon.colcon_core.package_identification:_identify(turtle_brick) by extension 'ros'
+[0.390s] DEBUG:colcon.colcon_core.package_identification:Package 'turtle_brick' with type 'ros.ament_python' and name 'turtle_brick'
+[0.390s] Level 1:colcon.colcon_core.package_identification:_identify(turtle_brick_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.390s] Level 1:colcon.colcon_core.package_identification:_identify(turtle_brick_interfaces) by extension 'ignore'
+[0.390s] Level 1:colcon.colcon_core.package_identification:_identify(turtle_brick_interfaces) by extension 'ignore_ament_install'
+[0.390s] Level 1:colcon.colcon_core.package_identification:_identify(turtle_brick_interfaces) by extensions ['colcon_pkg']
+[0.390s] Level 1:colcon.colcon_core.package_identification:_identify(turtle_brick_interfaces) by extension 'colcon_pkg'
+[0.390s] Level 1:colcon.colcon_core.package_identification:_identify(turtle_brick_interfaces) by extensions ['colcon_meta']
+[0.390s] Level 1:colcon.colcon_core.package_identification:_identify(turtle_brick_interfaces) by extension 'colcon_meta'
+[0.390s] Level 1:colcon.colcon_core.package_identification:_identify(turtle_brick_interfaces) by extensions ['ros']
+[0.391s] Level 1:colcon.colcon_core.package_identification:_identify(turtle_brick_interfaces) by extension 'ros'
+[0.391s] DEBUG:colcon.colcon_core.package_identification:Package 'turtle_brick_interfaces' with type 'ros.ament_cmake' and name 'turtle_brick_interfaces'
+[0.391s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.391s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.391s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.391s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.391s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.413s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.414s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.416s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 2 installed packages in /home/alyssa/homework2-alyssa225/src/install
+[0.417s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/alyssa/install
+[0.419s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 321 installed packages in /opt/ros/humble
+[0.421s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.485s] Level 5:colcon.colcon_core.verb:set package 'turtle_brick' build argument 'cmake_args' from command line to 'None'
+[0.486s] Level 5:colcon.colcon_core.verb:set package 'turtle_brick' build argument 'cmake_target' from command line to 'None'
+[0.486s] Level 5:colcon.colcon_core.verb:set package 'turtle_brick' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.486s] Level 5:colcon.colcon_core.verb:set package 'turtle_brick' build argument 'cmake_clean_cache' from command line to 'False'
+[0.486s] Level 5:colcon.colcon_core.verb:set package 'turtle_brick' build argument 'cmake_clean_first' from command line to 'False'
+[0.486s] Level 5:colcon.colcon_core.verb:set package 'turtle_brick' build argument 'cmake_force_configure' from command line to 'False'
+[0.486s] Level 5:colcon.colcon_core.verb:set package 'turtle_brick' build argument 'ament_cmake_args' from command line to 'None'
+[0.486s] Level 5:colcon.colcon_core.verb:set package 'turtle_brick' build argument 'catkin_cmake_args' from command line to 'None'
+[0.486s] Level 5:colcon.colcon_core.verb:set package 'turtle_brick' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.486s] DEBUG:colcon.colcon_core.verb:Building package 'turtle_brick' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/alyssa/homework2-alyssa225/src/build/turtle_brick', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/alyssa/homework2-alyssa225/src/install/turtle_brick', 'merge_install': False, 'path': '/home/alyssa/homework2-alyssa225/src/turtle_brick', 'symlink_install': False, 'test_result_base': None}
+[0.487s] Level 5:colcon.colcon_core.verb:set package 'turtle_brick_interfaces' build argument 'cmake_args' from command line to 'None'
+[0.487s] Level 5:colcon.colcon_core.verb:set package 'turtle_brick_interfaces' build argument 'cmake_target' from command line to 'None'
+[0.487s] Level 5:colcon.colcon_core.verb:set package 'turtle_brick_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.487s] Level 5:colcon.colcon_core.verb:set package 'turtle_brick_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[0.487s] Level 5:colcon.colcon_core.verb:set package 'turtle_brick_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[0.487s] Level 5:colcon.colcon_core.verb:set package 'turtle_brick_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[0.487s] Level 5:colcon.colcon_core.verb:set package 'turtle_brick_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[0.487s] Level 5:colcon.colcon_core.verb:set package 'turtle_brick_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[0.487s] Level 5:colcon.colcon_core.verb:set package 'turtle_brick_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.487s] DEBUG:colcon.colcon_core.verb:Building package 'turtle_brick_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/alyssa/homework2-alyssa225/src/install/turtle_brick_interfaces', 'merge_install': False, 'path': '/home/alyssa/homework2-alyssa225/src/turtle_brick_interfaces', 'symlink_install': False, 'test_result_base': None}
+[0.488s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.492s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.492s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/alyssa/homework2-alyssa225/src/turtle_brick' with build type 'ament_python'
+[0.492s] Level 1:colcon.colcon_core.shell:create_environment_hook('turtle_brick', 'ament_prefix_path')
+[0.496s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.497s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alyssa/homework2-alyssa225/src/install/turtle_brick/share/turtle_brick/hook/ament_prefix_path.ps1'
+[0.497s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alyssa/homework2-alyssa225/src/install/turtle_brick/share/turtle_brick/hook/ament_prefix_path.dsv'
+[0.498s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alyssa/homework2-alyssa225/src/install/turtle_brick/share/turtle_brick/hook/ament_prefix_path.sh'
+[0.499s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.500s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.505s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/alyssa/homework2-alyssa225/src/turtle_brick_interfaces' with build type 'ament_cmake'
+[0.505s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/alyssa/homework2-alyssa225/src/turtle_brick_interfaces'
+[0.506s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.506s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.831s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/alyssa/homework2-alyssa225/src/turtle_brick'
+[0.832s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.832s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.842s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/alyssa/homework2-alyssa225/src/install/turtle_brick:/opt/ros/humble /usr/bin/cmake --build /home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces -- -j8 -l8
+[1.399s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/alyssa/homework2-alyssa225/src/build/turtle_brick': PYTHONPATH=/home/alyssa/homework2-alyssa225/src/install/turtle_brick/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/alyssa/homework2-alyssa225/src/install/turtle_brick --uninstall --editable --build-directory /home/alyssa/homework2-alyssa225/src/build/turtle_brick/build
+[1.562s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/alyssa/homework2-alyssa225/src/install/turtle_brick:/opt/ros/humble /usr/bin/cmake --build /home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces -- -j8 -l8
+[1.589s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(turtle_brick_interfaces)
+[1.594s] Level 1:colcon.colcon_core.environment:checking '/home/alyssa/homework2-alyssa225/src/install/turtle_brick_interfaces' for CMake module files
+[1.594s] Level 1:colcon.colcon_core.environment:checking '/home/alyssa/homework2-alyssa225/src/install/turtle_brick_interfaces' for CMake config files
+[1.595s] Level 1:colcon.colcon_core.shell:create_environment_hook('turtle_brick_interfaces', 'cmake_prefix_path')
+[1.598s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alyssa/homework2-alyssa225/src/install/turtle_brick_interfaces/share/turtle_brick_interfaces/hook/cmake_prefix_path.ps1'
+[1.599s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/alyssa/homework2-alyssa225/src/install/turtle_brick_interfaces/share/turtle_brick_interfaces/hook/cmake_prefix_path.dsv'
+[1.599s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/alyssa/homework2-alyssa225/src/install/turtle_brick_interfaces/share/turtle_brick_interfaces/hook/cmake_prefix_path.sh'
+[1.600s] Level 1:colcon.colcon_core.environment:checking '/home/alyssa/homework2-alyssa225/src/install/turtle_brick_interfaces/bin'
+[1.600s] Level 1:colcon.colcon_core.environment:checking '/home/alyssa/homework2-alyssa225/src/install/turtle_brick_interfaces/lib/pkgconfig/turtle_brick_interfaces.pc'
+[1.601s] Level 1:colcon.colcon_core.environment:checking '/home/alyssa/homework2-alyssa225/src/install/turtle_brick_interfaces/lib/python3.10/site-packages'
+[1.601s] Level 1:colcon.colcon_core.environment:checking '/home/alyssa/homework2-alyssa225/src/install/turtle_brick_interfaces/bin'
+[1.604s] INFO:colcon.colcon_core.shell:Creating package script '/home/alyssa/homework2-alyssa225/src/install/turtle_brick_interfaces/share/turtle_brick_interfaces/package.ps1'
+[1.605s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/alyssa/homework2-alyssa225/src/install/turtle_brick_interfaces/share/turtle_brick_interfaces/package.dsv'
+[1.606s] INFO:colcon.colcon_core.shell:Creating package script '/home/alyssa/homework2-alyssa225/src/install/turtle_brick_interfaces/share/turtle_brick_interfaces/package.sh'
+[1.608s] INFO:colcon.colcon_core.shell:Creating package script '/home/alyssa/homework2-alyssa225/src/install/turtle_brick_interfaces/share/turtle_brick_interfaces/package.bash'
+[1.609s] INFO:colcon.colcon_core.shell:Creating package script '/home/alyssa/homework2-alyssa225/src/install/turtle_brick_interfaces/share/turtle_brick_interfaces/package.zsh'
+[1.610s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/alyssa/homework2-alyssa225/src/install/turtle_brick_interfaces/share/colcon-core/packages/turtle_brick_interfaces)
+[2.013s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[2.013s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[2.014s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '2'
+[2.014s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[2.022s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[2.022s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[2.022s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[2.039s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[2.041s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/alyssa/homework2-alyssa225/src/install/local_setup.ps1'
+[2.043s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/alyssa/homework2-alyssa225/src/install/_local_setup_util_ps1.py'
+[2.045s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/alyssa/homework2-alyssa225/src/install/setup.ps1'
+[2.048s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/alyssa/homework2-alyssa225/src/install/local_setup.sh'
+[2.050s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/alyssa/homework2-alyssa225/src/install/_local_setup_util_sh.py'
+[2.051s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/alyssa/homework2-alyssa225/src/install/setup.sh'
+[2.055s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/alyssa/homework2-alyssa225/src/install/local_setup.bash'
+[2.057s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/alyssa/homework2-alyssa225/src/install/setup.bash'
+[2.060s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/alyssa/homework2-alyssa225/src/install/local_setup.zsh'
+[2.060s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/alyssa/homework2-alyssa225/src/install/setup.zsh'

@@ -1,0 +1,26 @@
+[0.923s] Invoking command in '/home/alyssa/homework2-alyssa225/src/turtle_brick': PYTHONPATH=/home/alyssa/homework2-alyssa225/install/turtle_brick/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/turtle_brick build --build-base /home/alyssa/homework2-alyssa225/build/turtle_brick/build install --prefix /home/alyssa/homework2-alyssa225/install/turtle_brick --record /home/alyssa/homework2-alyssa225/build/turtle_brick/install.log --single-version-externally-managed
+[1.407s] running egg_info
+[1.408s] writing ../../build/turtle_brick/turtle_brick.egg-info/PKG-INFO
+[1.408s] writing dependency_links to ../../build/turtle_brick/turtle_brick.egg-info/dependency_links.txt
+[1.409s] writing entry points to ../../build/turtle_brick/turtle_brick.egg-info/entry_points.txt
+[1.409s] writing requirements to ../../build/turtle_brick/turtle_brick.egg-info/requires.txt
+[1.409s] writing top-level names to ../../build/turtle_brick/turtle_brick.egg-info/top_level.txt
+[1.412s] reading manifest file '../../build/turtle_brick/turtle_brick.egg-info/SOURCES.txt'
+[1.413s] writing manifest file '../../build/turtle_brick/turtle_brick.egg-info/SOURCES.txt'
+[1.413s] running build
+[1.413s] running build_py
+[1.414s] copying turtle_brick/arena.py -> /home/alyssa/homework2-alyssa225/build/turtle_brick/build/lib/turtle_brick
+[1.414s] copying turtle_brick/turtle_robot.py -> /home/alyssa/homework2-alyssa225/build/turtle_brick/build/lib/turtle_brick
+[1.414s] running install
+[1.414s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[1.414s]   warnings.warn(
+[1.415s] running install_lib
+[1.419s] copying /home/alyssa/homework2-alyssa225/build/turtle_brick/build/lib/turtle_brick/arena.py -> /home/alyssa/homework2-alyssa225/install/turtle_brick/lib/python3.10/site-packages/turtle_brick
+[1.419s] copying /home/alyssa/homework2-alyssa225/build/turtle_brick/build/lib/turtle_brick/turtle_robot.py -> /home/alyssa/homework2-alyssa225/install/turtle_brick/lib/python3.10/site-packages/turtle_brick
+[1.421s] byte-compiling /home/alyssa/homework2-alyssa225/install/turtle_brick/lib/python3.10/site-packages/turtle_brick/arena.py to arena.cpython-310.pyc
+[1.424s] byte-compiling /home/alyssa/homework2-alyssa225/install/turtle_brick/lib/python3.10/site-packages/turtle_brick/turtle_robot.py to turtle_robot.cpython-310.pyc
+[1.426s] running install_data
+[1.428s] copying package.xml -> /home/alyssa/homework2-alyssa225/install/turtle_brick/share/turtle_brick
+[1.428s] copying launch/show_turtle.launch.py -> /home/alyssa/homework2-alyssa225/install/turtle_brick/share/turtle_brick
+[1.431s] error: can't copy 'config/view.rviz': doesn't exist or not a regular file
+[1.488s] Invoked command in '/home/alyssa/homework2-alyssa225/src/turtle_brick' returned '1': PYTHONPATH=/home/alyssa/homework2-alyssa225/install/turtle_brick/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/turtle_brick build --build-base /home/alyssa/homework2-alyssa225/build/turtle_brick/build install --prefix /home/alyssa/homework2-alyssa225/install/turtle_brick --record /home/alyssa/homework2-alyssa225/build/turtle_brick/install.log --single-version-externally-managed

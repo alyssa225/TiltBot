@@ -3,18 +3,19 @@ from ament_index_python.packages import get_package_share_path
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument
 from launch.conditions import IfCondition, UnlessCondition
-from launch.substitutions import Command, LaunchConfiguration
+from launch.substitutions import Command, LaunchConfiguration, PythonExpression
 
 from launch_ros.actions import Node
 from launch_ros.parameter_descriptions import ParameterValue
 
 def generate_launch_description():
-    turtle_brick_path= get_package_share_path('turtle_brick')
-    default_model_path = turtle_brick_path/ 'turtle.urdf'
-    default_rviz_config_path = turtle_brick_path / 'urdf.rviz'
-
-    gui_arg = DeclareLaunchArgument(name='gui', default_value='true', choices=['true', 'false'],
-                                    description='Flag to enable joint_state_publisher_gui')
+    turtle_brick_path= 'src/turtle_brick'
+    default_model_path = turtle_brick_path + '/urdf/turtle.urdf.xacro'
+    default_rviz_config_path = turtle_brick_path +'/config/turtle_urdf.rviz'
+    
+    use_jsp = LaunchConfiguration('use_jsp')
+    use_jsp_arg = DeclareLaunchArgument(name='use_jsp', default_value='"gui"', choices=['"gui"', '"jsp"','"none"'],
+                                    description='Flag to enable joint_state_publisher_gui')#change
     model_arg = DeclareLaunchArgument(name='model', default_value=str(default_model_path),
                                       description='Absolute path to robot urdf file')
     rviz_arg = DeclareLaunchArgument(name='rvizconfig', default_value=str(default_rviz_config_path),
@@ -33,13 +34,13 @@ def generate_launch_description():
     joint_state_publisher_node = Node(
         package='joint_state_publisher',
         executable='joint_state_publisher',
-        condition=UnlessCondition(LaunchConfiguration('gui'))
+        condition=IfCondition(PythonExpression([use_jsp,"=='jsp'"]))
     )
 
     joint_state_publisher_gui_node = Node(
         package='joint_state_publisher_gui',
         executable='joint_state_publisher_gui',
-        condition=IfCondition(LaunchConfiguration('gui'))
+        condition=IfCondition(PythonExpression([use_jsp,"=='gui'"]))
     )
 
     rviz_node = Node(
@@ -51,7 +52,7 @@ def generate_launch_description():
     )
 
     return LaunchDescription([
-        gui_arg,
+        use_jsp_arg,
         model_arg,
         rviz_arg,
         joint_state_publisher_node,

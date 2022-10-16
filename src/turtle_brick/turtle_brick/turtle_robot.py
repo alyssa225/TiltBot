@@ -16,11 +16,12 @@ import rclpy
 from rclpy.node import Node
 from tf2_ros.static_transform_broadcaster import StaticTransformBroadcaster
 from tf2_ros import TransformBroadcaster
-from geometry_msgs.msg import TransformStamped
 from sensor_msgs.msg import JointState
 from nav_msgs.msg import Odometry 
-from geometry_msgs.msg import Twist, Vector3
-from visualization_msg.msg import Marker  
+from geometry_msgs.msg import Twist, Vector3, TransformStamped, PoseStamped
+from turtlesim.msg import Pose
+from visualization_msgs.msg import Marker 
+from turtle_brick_interfaces.msg import Tilt 
 from math import pi
 #from .quaternion import angle_axis_to_quaternion
 
@@ -61,9 +62,9 @@ class Turtle_robot(Node):
         self.odom_pub = self.create_publisher(Odometry,'odom',10)
         self.vel_pub = self.create_publisher(Twist,'/cmd_vel',10)
         # initializing subscribers
-        # self.goal_sub = self.create_subscription("""**type**""",'goal_pose',self.listener_callback,10)
-        # self.tilt_sub = self.create_subscription(turtle_brick_interfaces/msg/Tilt,'tilt',self.listener_callback,10)
-        # self.pose_sub = self.create_subscription(turtle1/pose, 'pose', self.listener_callback,10)
+        self.goal_sub = self.create_subscription(PoseStamped,'/goal_pose',self.pose_callback,10)
+        self.tilt_sub = self.create_subscription(Tilt,'tilt',self.tilt_callback,10)
+        # self.pose_sub = self.create_subscription(Pose, 'pose', self.listener_callback,10)
         # Static broadcasters publish on /tf_static.        
         self.static_broadcaster = StaticTransformBroadcaster(self)
         self.broadcaster = TransformBroadcaster(self)
@@ -89,13 +90,17 @@ class Turtle_robot(Node):
         # create the broadcaster
         self.broadcaster = TransformBroadcaster(self)
         # Create a timer to do the rest of the transforms
-        self.tmr = self.create_timer(1, self.timer_callback)
+        self.tmr = self.create_timer(0.01, self.timer_callback)
     
-    # def listener_callback(self,msg):
-    #     self.get_logger().info('message recieved: "%s"' % msg.data)
+    def pose_callback(self,msg):
+        self.get_logger().info('message recieved: %f' % (msg.pose.position.x) )
+
+    def tilt_callback(self,msg):
+        self.get_logger().info('message recieved: "%s %s"' % (msg.alpha, type(msg.alpha )))
+
 
     def timer_callback(self):
-        #inputing values for the the publisher
+        # inputing values for the the publisher
         # joint_states = turtle_joint()
         # odometry = turtle_odom()
         # twist = turtle_twist(self.dx,self.dy,self.omega)
@@ -122,9 +127,9 @@ class Turtle_robot(Node):
         #self.broadcaster.sendTransform(world_base_tf)
         #self.broadcaster.sendTransform(base_up)
         # update the movement
-        self.dx -= 1
-        if self.dx == 0:
-            self.dx = 10
+        # self.dx -= 1
+        # if self.dx == 0:
+        #     self.dx = 10
 
 
 def main(args=None):

@@ -310,6 +310,84 @@ message(STATUS "Execute custom install script")
 
 # begin of custom install code
 
+# install(FILES "/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/ament_cmake_index/share/ament_index/resource_index/rosidl_interfaces/turtle_brick_interfaces" "DESTINATION" "share/ament_index/resource_index/rosidl_interfaces")
+ament_cmake_symlink_install_files("/home/alyssa/homework2-alyssa225/src/turtle_brick_interfaces" FILES "/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/ament_cmake_index/share/ament_index/resource_index/rosidl_interfaces/turtle_brick_interfaces" "DESTINATION" "share/ament_index/resource_index/rosidl_interfaces")
+
+# install(DIRECTORY "/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/rosidl_generator_c/turtle_brick_interfaces/" "DESTINATION" "include/turtle_brick_interfaces/turtle_brick_interfaces" "PATTERN" "*.h")
+ament_cmake_symlink_install_directory("/home/alyssa/homework2-alyssa225/src/turtle_brick_interfaces" DIRECTORY "/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/rosidl_generator_c/turtle_brick_interfaces/" "DESTINATION" "include/turtle_brick_interfaces/turtle_brick_interfaces" "PATTERN" "*.h")
+
+# install(FILES "/opt/ros/humble/lib/python3.10/site-packages/ament_package/template/environment_hook/library_path.sh" "DESTINATION" "share/turtle_brick_interfaces/environment")
+ament_cmake_symlink_install_files("/home/alyssa/homework2-alyssa225/src/turtle_brick_interfaces" FILES "/opt/ros/humble/lib/python3.10/site-packages/ament_package/template/environment_hook/library_path.sh" "DESTINATION" "share/turtle_brick_interfaces/environment")
+
+# install(FILES "/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/ament_cmake_environment_hooks/library_path.dsv" "DESTINATION" "share/turtle_brick_interfaces/environment")
+ament_cmake_symlink_install_files("/home/alyssa/homework2-alyssa225/src/turtle_brick_interfaces" FILES "/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/ament_cmake_environment_hooks/library_path.dsv" "DESTINATION" "share/turtle_brick_interfaces/environment")
+
+# install(DIRECTORY "/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/rosidl_typesupport_fastrtps_c/turtle_brick_interfaces/" "DESTINATION" "include/turtle_brick_interfaces/turtle_brick_interfaces" "PATTERN_EXCLUDE" "*.cpp")
+ament_cmake_symlink_install_directory("/home/alyssa/homework2-alyssa225/src/turtle_brick_interfaces" DIRECTORY "/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/rosidl_typesupport_fastrtps_c/turtle_brick_interfaces/" "DESTINATION" "include/turtle_brick_interfaces/turtle_brick_interfaces" "PATTERN_EXCLUDE" "*.cpp")
+
+# install(DIRECTORY "/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/rosidl_typesupport_introspection_c/turtle_brick_interfaces/" "DESTINATION" "include/turtle_brick_interfaces/turtle_brick_interfaces" "PATTERN" "*.h")
+ament_cmake_symlink_install_directory("/home/alyssa/homework2-alyssa225/src/turtle_brick_interfaces" DIRECTORY "/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/rosidl_typesupport_introspection_c/turtle_brick_interfaces/" "DESTINATION" "include/turtle_brick_interfaces/turtle_brick_interfaces" "PATTERN" "*.h")
+
+# install(DIRECTORY "/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/rosidl_generator_cpp/turtle_brick_interfaces/" "DESTINATION" "include/turtle_brick_interfaces/turtle_brick_interfaces" "PATTERN" "*.hpp")
+ament_cmake_symlink_install_directory("/home/alyssa/homework2-alyssa225/src/turtle_brick_interfaces" DIRECTORY "/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/rosidl_generator_cpp/turtle_brick_interfaces/" "DESTINATION" "include/turtle_brick_interfaces/turtle_brick_interfaces" "PATTERN" "*.hpp")
+
+# install(DIRECTORY "/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/rosidl_typesupport_fastrtps_cpp/turtle_brick_interfaces/" "DESTINATION" "include/turtle_brick_interfaces/turtle_brick_interfaces" "PATTERN_EXCLUDE" "*.cpp")
+ament_cmake_symlink_install_directory("/home/alyssa/homework2-alyssa225/src/turtle_brick_interfaces" DIRECTORY "/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/rosidl_typesupport_fastrtps_cpp/turtle_brick_interfaces/" "DESTINATION" "include/turtle_brick_interfaces/turtle_brick_interfaces" "PATTERN_EXCLUDE" "*.cpp")
+
+# install(DIRECTORY "/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/rosidl_typesupport_introspection_cpp/turtle_brick_interfaces/" "DESTINATION" "include/turtle_brick_interfaces/turtle_brick_interfaces" "PATTERN" "*.hpp")
+ament_cmake_symlink_install_directory("/home/alyssa/homework2-alyssa225/src/turtle_brick_interfaces" DIRECTORY "/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/rosidl_typesupport_introspection_cpp/turtle_brick_interfaces/" "DESTINATION" "include/turtle_brick_interfaces/turtle_brick_interfaces" "PATTERN" "*.hpp")
+
+# install(FILES "/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/ament_cmake_environment_hooks/pythonpath.sh" "DESTINATION" "share/turtle_brick_interfaces/environment")
+ament_cmake_symlink_install_files("/home/alyssa/homework2-alyssa225/src/turtle_brick_interfaces" FILES "/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/ament_cmake_environment_hooks/pythonpath.sh" "DESTINATION" "share/turtle_brick_interfaces/environment")
+
+# install(FILES "/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/ament_cmake_environment_hooks/pythonpath.dsv" "DESTINATION" "share/turtle_brick_interfaces/environment")
+ament_cmake_symlink_install_files("/home/alyssa/homework2-alyssa225/src/turtle_brick_interfaces" FILES "/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/ament_cmake_environment_hooks/pythonpath.dsv" "DESTINATION" "share/turtle_brick_interfaces/environment")
+
+# install(DIRECTORY "/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/ament_cmake_python/turtle_brick_interfaces/turtle_brick_interfaces.egg-info/" "DESTINATION" "local/lib/python3.10/dist-packages/turtle_brick_interfaces-0.0.0-py3.10.egg-info")
+ament_cmake_symlink_install_directory("/home/alyssa/homework2-alyssa225/src/turtle_brick_interfaces" DIRECTORY "/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/ament_cmake_python/turtle_brick_interfaces/turtle_brick_interfaces.egg-info/" "DESTINATION" "local/lib/python3.10/dist-packages/turtle_brick_interfaces-0.0.0-py3.10.egg-info")
+
+# install(DIRECTORY "/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/rosidl_generator_py/turtle_brick_interfaces/" "DESTINATION" "local/lib/python3.10/dist-packages/turtle_brick_interfaces" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
+ament_cmake_symlink_install_directory("/home/alyssa/homework2-alyssa225/src/turtle_brick_interfaces" DIRECTORY "/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/rosidl_generator_py/turtle_brick_interfaces/" "DESTINATION" "local/lib/python3.10/dist-packages/turtle_brick_interfaces" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
+
+# install("TARGETS" "turtle_brick_interfaces__rosidl_typesupport_fastrtps_c__pyext" "DESTINATION" "local/lib/python3.10/dist-packages/turtle_brick_interfaces")
+include("/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+
+# install("TARGETS" "turtle_brick_interfaces__rosidl_typesupport_introspection_c__pyext" "DESTINATION" "local/lib/python3.10/dist-packages/turtle_brick_interfaces")
+include("/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/ament_cmake_symlink_install_targets_1_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+
+# install("TARGETS" "turtle_brick_interfaces__rosidl_typesupport_c__pyext" "DESTINATION" "local/lib/python3.10/dist-packages/turtle_brick_interfaces")
+include("/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/ament_cmake_symlink_install_targets_2_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+
+# install(FILES "/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/rosidl_adapter/turtle_brick_interfaces/msg/Tilt.idl" "DESTINATION" "share/turtle_brick_interfaces/msg")
+ament_cmake_symlink_install_files("/home/alyssa/homework2-alyssa225/src/turtle_brick_interfaces" FILES "/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/rosidl_adapter/turtle_brick_interfaces/msg/Tilt.idl" "DESTINATION" "share/turtle_brick_interfaces/msg")
+
+# install(FILES "/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/rosidl_adapter/turtle_brick_interfaces/srv/Place.idl" "DESTINATION" "share/turtle_brick_interfaces/srv")
+ament_cmake_symlink_install_files("/home/alyssa/homework2-alyssa225/src/turtle_brick_interfaces" FILES "/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/rosidl_adapter/turtle_brick_interfaces/srv/Place.idl" "DESTINATION" "share/turtle_brick_interfaces/srv")
+
+# install(FILES "/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/rosidl_adapter/turtle_brick_interfaces/srv/Drop.idl" "DESTINATION" "share/turtle_brick_interfaces/srv")
+ament_cmake_symlink_install_files("/home/alyssa/homework2-alyssa225/src/turtle_brick_interfaces" FILES "/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/rosidl_adapter/turtle_brick_interfaces/srv/Drop.idl" "DESTINATION" "share/turtle_brick_interfaces/srv")
+
+# install(FILES "/home/alyssa/homework2-alyssa225/src/turtle_brick_interfaces/msg/Tilt.msg" "DESTINATION" "share/turtle_brick_interfaces/msg")
+ament_cmake_symlink_install_files("/home/alyssa/homework2-alyssa225/src/turtle_brick_interfaces" FILES "/home/alyssa/homework2-alyssa225/src/turtle_brick_interfaces/msg/Tilt.msg" "DESTINATION" "share/turtle_brick_interfaces/msg")
+
+# install(FILES "/home/alyssa/homework2-alyssa225/src/turtle_brick_interfaces/srv/Place.srv" "DESTINATION" "share/turtle_brick_interfaces/srv")
+ament_cmake_symlink_install_files("/home/alyssa/homework2-alyssa225/src/turtle_brick_interfaces" FILES "/home/alyssa/homework2-alyssa225/src/turtle_brick_interfaces/srv/Place.srv" "DESTINATION" "share/turtle_brick_interfaces/srv")
+
+# install(FILES "/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/rosidl_cmake/srv/Place_Request.msg" "DESTINATION" "share/turtle_brick_interfaces/srv")
+ament_cmake_symlink_install_files("/home/alyssa/homework2-alyssa225/src/turtle_brick_interfaces" FILES "/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/rosidl_cmake/srv/Place_Request.msg" "DESTINATION" "share/turtle_brick_interfaces/srv")
+
+# install(FILES "/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/rosidl_cmake/srv/Place_Response.msg" "DESTINATION" "share/turtle_brick_interfaces/srv")
+ament_cmake_symlink_install_files("/home/alyssa/homework2-alyssa225/src/turtle_brick_interfaces" FILES "/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/rosidl_cmake/srv/Place_Response.msg" "DESTINATION" "share/turtle_brick_interfaces/srv")
+
+# install(FILES "/home/alyssa/homework2-alyssa225/src/turtle_brick_interfaces/srv/Drop.srv" "DESTINATION" "share/turtle_brick_interfaces/srv")
+ament_cmake_symlink_install_files("/home/alyssa/homework2-alyssa225/src/turtle_brick_interfaces" FILES "/home/alyssa/homework2-alyssa225/src/turtle_brick_interfaces/srv/Drop.srv" "DESTINATION" "share/turtle_brick_interfaces/srv")
+
+# install(FILES "/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/rosidl_cmake/srv/Drop_Request.msg" "DESTINATION" "share/turtle_brick_interfaces/srv")
+ament_cmake_symlink_install_files("/home/alyssa/homework2-alyssa225/src/turtle_brick_interfaces" FILES "/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/rosidl_cmake/srv/Drop_Request.msg" "DESTINATION" "share/turtle_brick_interfaces/srv")
+
+# install(FILES "/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/rosidl_cmake/srv/Drop_Response.msg" "DESTINATION" "share/turtle_brick_interfaces/srv")
+ament_cmake_symlink_install_files("/home/alyssa/homework2-alyssa225/src/turtle_brick_interfaces" FILES "/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/rosidl_cmake/srv/Drop_Response.msg" "DESTINATION" "share/turtle_brick_interfaces/srv")
+
 # install(FILES "/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/turtle_brick_interfaces" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/alyssa/homework2-alyssa225/src/turtle_brick_interfaces" FILES "/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/turtle_brick_interfaces" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 
@@ -345,6 +423,27 @@ ament_cmake_symlink_install_files("/home/alyssa/homework2-alyssa225/src/turtle_b
 
 # install(FILES "/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/ament_cmake_index/share/ament_index/resource_index/packages/turtle_brick_interfaces" "DESTINATION" "share/ament_index/resource_index/packages")
 ament_cmake_symlink_install_files("/home/alyssa/homework2-alyssa225/src/turtle_brick_interfaces" FILES "/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/ament_cmake_index/share/ament_index/resource_index/packages/turtle_brick_interfaces" "DESTINATION" "share/ament_index/resource_index/packages")
+
+# install(FILES "/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/rosidl_cmake/rosidl_cmake-extras.cmake" "DESTINATION" "share/turtle_brick_interfaces/cmake")
+ament_cmake_symlink_install_files("/home/alyssa/homework2-alyssa225/src/turtle_brick_interfaces" FILES "/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/rosidl_cmake/rosidl_cmake-extras.cmake" "DESTINATION" "share/turtle_brick_interfaces/cmake")
+
+# install(FILES "/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/ament_cmake_export_include_directories/ament_cmake_export_include_directories-extras.cmake" "DESTINATION" "share/turtle_brick_interfaces/cmake")
+ament_cmake_symlink_install_files("/home/alyssa/homework2-alyssa225/src/turtle_brick_interfaces" FILES "/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/ament_cmake_export_include_directories/ament_cmake_export_include_directories-extras.cmake" "DESTINATION" "share/turtle_brick_interfaces/cmake")
+
+# install(FILES "/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/ament_cmake_export_libraries/ament_cmake_export_libraries-extras.cmake" "DESTINATION" "share/turtle_brick_interfaces/cmake")
+ament_cmake_symlink_install_files("/home/alyssa/homework2-alyssa225/src/turtle_brick_interfaces" FILES "/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/ament_cmake_export_libraries/ament_cmake_export_libraries-extras.cmake" "DESTINATION" "share/turtle_brick_interfaces/cmake")
+
+# install(FILES "/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/ament_cmake_export_targets/ament_cmake_export_targets-extras.cmake" "DESTINATION" "share/turtle_brick_interfaces/cmake")
+ament_cmake_symlink_install_files("/home/alyssa/homework2-alyssa225/src/turtle_brick_interfaces" FILES "/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/ament_cmake_export_targets/ament_cmake_export_targets-extras.cmake" "DESTINATION" "share/turtle_brick_interfaces/cmake")
+
+# install(FILES "/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/rosidl_cmake/rosidl_cmake_export_typesupport_targets-extras.cmake" "DESTINATION" "share/turtle_brick_interfaces/cmake")
+ament_cmake_symlink_install_files("/home/alyssa/homework2-alyssa225/src/turtle_brick_interfaces" FILES "/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/rosidl_cmake/rosidl_cmake_export_typesupport_targets-extras.cmake" "DESTINATION" "share/turtle_brick_interfaces/cmake")
+
+# install(FILES "/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/ament_cmake_export_dependencies/ament_cmake_export_dependencies-extras.cmake" "DESTINATION" "share/turtle_brick_interfaces/cmake")
+ament_cmake_symlink_install_files("/home/alyssa/homework2-alyssa225/src/turtle_brick_interfaces" FILES "/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/ament_cmake_export_dependencies/ament_cmake_export_dependencies-extras.cmake" "DESTINATION" "share/turtle_brick_interfaces/cmake")
+
+# install(FILES "/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/rosidl_cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake" "DESTINATION" "share/turtle_brick_interfaces/cmake")
+ament_cmake_symlink_install_files("/home/alyssa/homework2-alyssa225/src/turtle_brick_interfaces" FILES "/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/rosidl_cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake" "DESTINATION" "share/turtle_brick_interfaces/cmake")
 
 # install(FILES "/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/ament_cmake_core/turtle_brick_interfacesConfig.cmake" "/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/ament_cmake_core/turtle_brick_interfacesConfig-version.cmake" "DESTINATION" "share/turtle_brick_interfaces/cmake")
 ament_cmake_symlink_install_files("/home/alyssa/homework2-alyssa225/src/turtle_brick_interfaces" FILES "/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/ament_cmake_core/turtle_brick_interfacesConfig.cmake" "/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/ament_cmake_core/turtle_brick_interfacesConfig-version.cmake" "DESTINATION" "share/turtle_brick_interfaces/cmake")

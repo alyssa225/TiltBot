@@ -1,0 +1,11 @@
+[0.381s] Invoking command in '/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/alyssa/homework2-alyssa225/src/install/turtle_brick:/opt/ros/humble /usr/bin/cmake --build /home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces -- -j8 -l8
+[0.404s] -- Found ament_cmake: 1.3.2 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.632s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.652s] [31mCMake Error at CMakeLists.txt:15 (rosidl_generate_interfaces):
+[0.652s]   Unknown CMake command "rosidl_generate_interfaces".
+[0.652s] 
+[0.653s] [0m
+[0.653s] -- Configuring incomplete, errors occurred!
+[0.653s] See also "/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/CMakeFiles/CMakeOutput.log".
+[0.657s] gmake: *** [Makefile:226: cmake_check_build_system] Error 1
+[0.660s] Invoked command in '/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/alyssa/homework2-alyssa225/src/install/turtle_brick:/opt/ros/humble /usr/bin/cmake --build /home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces -- -j8 -l8

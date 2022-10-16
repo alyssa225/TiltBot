@@ -11,8 +11,7 @@ setup(
     data_files=[
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
-        ('share/' + package_name, ['package.xml', 'launch/show_turtle.launch.py']),('share/' + package_name,
-         ['package.xml', 'config/view.rviz']),
+        ('share/' + package_name, ['package.xml', 'launch/show_turtle.launch.py', 'config/turtle_urdf.rviz', 'launch/run_turtle.launch.py']),
     ],
     install_requires=['setuptools', 'urdf','rviz'],
     zip_safe=True,

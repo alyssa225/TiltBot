@@ -1,0 +1,15 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from turtle_brick_interfaces/srv/Drop.srv
+// generated code does not contain a copyright notice
+
+
+module turtle_brick_interfaces {
+  module srv {
+    struct Drop_Request {
+      float g;
+    };
+    struct Drop_Response {
+      double g;
+    };
+  };
+};
