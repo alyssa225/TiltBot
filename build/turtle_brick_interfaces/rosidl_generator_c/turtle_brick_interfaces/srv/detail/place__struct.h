@@ -38,12 +38,14 @@ typedef struct turtle_brick_interfaces__srv__Place_Request__Sequence
 
 // Constants defined in the message
 
+// Include directives for member types
+// Member 'msg'
+#include "rosidl_runtime_c/string.h"
+
 /// Struct defined in srv/Place in the package turtle_brick_interfaces.
 typedef struct turtle_brick_interfaces__srv__Place_Response
 {
-  double x;
-  double y;
-  double z;
+  rosidl_runtime_c__String msg;
 } turtle_brick_interfaces__srv__Place_Response;
 
 // Struct for a sequence of turtle_brick_interfaces__srv__Place_Response.

@@ -13,11 +13,7 @@ module turtle_brick_interfaces {
       float z;
     };
     struct Place_Response {
-      double x;
-
-      double y;
-
-      double z;
+      string msg;
     };
   };
 };

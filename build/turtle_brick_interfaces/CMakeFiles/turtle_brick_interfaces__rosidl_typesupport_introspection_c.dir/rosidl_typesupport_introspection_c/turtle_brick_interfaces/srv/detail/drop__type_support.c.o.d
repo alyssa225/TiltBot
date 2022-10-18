@@ -58,4 +58,7 @@ CMakeFiles/turtle_brick_interfaces__rosidl_typesupport_introspection_c.dir/rosid
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
  /home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces/rosidl_generator_c/turtle_brick_interfaces/msg/rosidl_generator_c__visibility_control.h \
  /home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces/rosidl_generator_c/turtle_brick_interfaces/srv/detail/drop__struct.h \
+ /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
+ /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
+ /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string_functions.h \
  /opt/ros/humble/include/rosidl_typesupport_introspection_c/rosidl_typesupport_introspection_c/service_introspection.h

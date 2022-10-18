@@ -251,15 +251,21 @@ turtle_brick_interfaces__srv__Place_Request__Sequence__copy(
 }
 
 
+// Include directives for member types
+// Member `msg`
+#include "rosidl_runtime_c/string_functions.h"
+
 bool
 turtle_brick_interfaces__srv__Place_Response__init(turtle_brick_interfaces__srv__Place_Response * msg)
 {
   if (!msg) {
     return false;
   }
-  // x
-  // y
-  // z
+  // msg
+  if (!rosidl_runtime_c__String__init(&msg->msg)) {
+    turtle_brick_interfaces__srv__Place_Response__fini(msg);
+    return false;
+  }
   return true;
 }
 
@@ -269,9 +275,8 @@ turtle_brick_interfaces__srv__Place_Response__fini(turtle_brick_interfaces__srv_
   if (!msg) {
     return;
   }
-  // x
-  // y
-  // z
+  // msg
+  rosidl_runtime_c__String__fini(&msg->msg);
 }
 
 bool
@@ -280,16 +285,10 @@ turtle_brick_interfaces__srv__Place_Response__are_equal(const turtle_brick_inter
   if (!lhs || !rhs) {
     return false;
   }
-  // x
-  if (lhs->x != rhs->x) {
-    return false;
-  }
-  // y
-  if (lhs->y != rhs->y) {
-    return false;
-  }
-  // z
-  if (lhs->z != rhs->z) {
+  // msg
+  if (!rosidl_runtime_c__String__are_equal(
+      &(lhs->msg), &(rhs->msg)))
+  {
     return false;
   }
   return true;
@@ -303,12 +302,12 @@ turtle_brick_interfaces__srv__Place_Response__copy(
   if (!input || !output) {
     return false;
   }
-  // x
-  output->x = input->x;
-  // y
-  output->y = input->y;
-  // z
-  output->z = input->z;
+  // msg
+  if (!rosidl_runtime_c__String__copy(
+      &(input->msg), &(output->msg)))
+  {
+    return false;
+  }
   return true;
 }
 

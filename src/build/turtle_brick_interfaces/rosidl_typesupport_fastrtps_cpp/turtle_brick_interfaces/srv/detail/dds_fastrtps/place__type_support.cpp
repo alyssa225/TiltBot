@@ -267,12 +267,8 @@ cdr_serialize(
   const turtle_brick_interfaces::srv::Place_Response & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Member: x
-  cdr << ros_message.x;
-  // Member: y
-  cdr << ros_message.y;
-  // Member: z
-  cdr << ros_message.z;
+  // Member: msg
+  cdr << ros_message.msg;
   return true;
 }
 
@@ -282,14 +278,8 @@ cdr_deserialize(
   eprosima::fastcdr::Cdr & cdr,
   turtle_brick_interfaces::srv::Place_Response & ros_message)
 {
-  // Member: x
-  cdr >> ros_message.x;
-
-  // Member: y
-  cdr >> ros_message.y;
-
-  // Member: z
-  cdr >> ros_message.z;
+  // Member: msg
+  cdr >> ros_message.msg;
 
   return true;
 }
@@ -307,24 +297,10 @@ get_serialized_size(
   (void)padding;
   (void)wchar_size;
 
-  // Member: x
-  {
-    size_t item_size = sizeof(ros_message.x);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-  // Member: y
-  {
-    size_t item_size = sizeof(ros_message.y);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-  // Member: z
-  {
-    size_t item_size = sizeof(ros_message.z);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
+  // Member: msg
+  current_alignment += padding +
+    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+    (ros_message.msg.size() + 1);
 
   return current_alignment - initial_alignment;
 }
@@ -347,28 +323,17 @@ max_serialized_size_Place_Response(
   is_plain = true;
 
 
-  // Member: x
+  // Member: msg
   {
     size_t array_size = 1;
 
-    current_alignment += array_size * sizeof(uint64_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
-  }
-
-  // Member: y
-  {
-    size_t array_size = 1;
-
-    current_alignment += array_size * sizeof(uint64_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
-  }
-
-  // Member: z
-  {
-    size_t array_size = 1;
-
-    current_alignment += array_size * sizeof(uint64_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+    full_bounded = false;
+    is_plain = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
   }
 
   return current_alignment - initial_alignment;

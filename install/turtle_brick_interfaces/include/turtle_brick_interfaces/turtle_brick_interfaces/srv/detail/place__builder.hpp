@@ -95,48 +95,16 @@ namespace srv
 namespace builder
 {
 
-class Init_Place_Response_z
+class Init_Place_Response_msg
 {
 public:
-  explicit Init_Place_Response_z(::turtle_brick_interfaces::srv::Place_Response & msg)
-  : msg_(msg)
-  {}
-  ::turtle_brick_interfaces::srv::Place_Response z(::turtle_brick_interfaces::srv::Place_Response::_z_type arg)
-  {
-    msg_.z = std::move(arg);
-    return std::move(msg_);
-  }
-
-private:
-  ::turtle_brick_interfaces::srv::Place_Response msg_;
-};
-
-class Init_Place_Response_y
-{
-public:
-  explicit Init_Place_Response_y(::turtle_brick_interfaces::srv::Place_Response & msg)
-  : msg_(msg)
-  {}
-  Init_Place_Response_z y(::turtle_brick_interfaces::srv::Place_Response::_y_type arg)
-  {
-    msg_.y = std::move(arg);
-    return Init_Place_Response_z(msg_);
-  }
-
-private:
-  ::turtle_brick_interfaces::srv::Place_Response msg_;
-};
-
-class Init_Place_Response_x
-{
-public:
-  Init_Place_Response_x()
+  Init_Place_Response_msg()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  Init_Place_Response_y x(::turtle_brick_interfaces::srv::Place_Response::_x_type arg)
+  ::turtle_brick_interfaces::srv::Place_Response msg(::turtle_brick_interfaces::srv::Place_Response::_msg_type arg)
   {
-    msg_.x = std::move(arg);
-    return Init_Place_Response_y(msg_);
+    msg_.msg = std::move(arg);
+    return std::move(msg_);
   }
 
 private:
@@ -154,7 +122,7 @@ template<>
 inline
 auto build<::turtle_brick_interfaces::srv::Place_Response>()
 {
-  return turtle_brick_interfaces::srv::builder::Init_Place_Response_x();
+  return turtle_brick_interfaces::srv::builder::Init_Place_Response_msg();
 }
 
 }  // namespace turtle_brick_interfaces

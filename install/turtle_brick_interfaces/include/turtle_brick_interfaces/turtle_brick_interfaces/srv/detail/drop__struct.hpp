@@ -152,30 +152,30 @@ struct Drop_Response_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->g = 0.0;
+      this->msg = "";
     }
   }
 
   explicit Drop_Response_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
+  : msg(_alloc)
   {
-    (void)_alloc;
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->g = 0.0;
+      this->msg = "";
     }
   }
 
   // field types and members
-  using _g_type =
-    double;
-  _g_type g;
+  using _msg_type =
+    std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>;
+  _msg_type msg;
 
   // setters for named parameter idiom
-  Type & set__g(
-    const double & _arg)
+  Type & set__msg(
+    const std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> & _arg)
   {
-    this->g = _arg;
+    this->msg = _arg;
     return *this;
   }
 
@@ -221,7 +221,7 @@ struct Drop_Response_
   // comparison operators
   bool operator==(const Drop_Response_ & other) const
   {
-    if (this->g != other.g) {
+    if (this->msg != other.msg) {
       return false;
     }
     return true;

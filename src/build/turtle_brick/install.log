@@ -11,6 +11,8 @@
 /home/alyssa/homework2-alyssa225/src/install/turtle_brick/share/turtle_brick/show_turtle.launch.py
 /home/alyssa/homework2-alyssa225/src/install/turtle_brick/share/turtle_brick/turtle_urdf.rviz
 /home/alyssa/homework2-alyssa225/src/install/turtle_brick/share/turtle_brick/run_turtle.launch.py
+/home/alyssa/homework2-alyssa225/src/install/turtle_brick/share/turtle_brick/turtle.urdf.xacro
+/home/alyssa/homework2-alyssa225/src/install/turtle_brick/share/turtle_brick/config/turtle.yaml
 /home/alyssa/homework2-alyssa225/src/install/turtle_brick/lib/python3.10/site-packages/turtle_brick-0.0.0-py3.10.egg-info/requires.txt
 /home/alyssa/homework2-alyssa225/src/install/turtle_brick/lib/python3.10/site-packages/turtle_brick-0.0.0-py3.10.egg-info/zip-safe
 /home/alyssa/homework2-alyssa225/src/install/turtle_brick/lib/python3.10/site-packages/turtle_brick-0.0.0-py3.10.egg-info/top_level.txt

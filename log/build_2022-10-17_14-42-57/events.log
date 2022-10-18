@@ -1,0 +1,11 @@
+[0.000000] (-) TimerEvent: {}
+[0.000270] (turtle_brick) JobQueued: {'identifier': 'turtle_brick', 'dependencies': OrderedDict()}
+[0.000343] (turtle_brick_interfaces) JobQueued: {'identifier': 'turtle_brick_interfaces', 'dependencies': OrderedDict()}
+[0.000376] (turtle_brick) JobStarted: {'identifier': 'turtle_brick'}
+[0.012242] (turtle_brick_interfaces) JobStarted: {'identifier': 'turtle_brick_interfaces'}
+[0.098734] (-) TimerEvent: {}
+[0.199015] (-) TimerEvent: {}
+[0.241250] (turtle_brick) StderrLine: {'line': b'Traceback (most recent call last):\n  File "/usr/lib/python3/dist-packages/colcon_core/executor/__init__.py", line 91, in __call__\n    rc = await self.task(*args, **kwargs)\n  File "/usr/lib/python3/dist-packages/colcon_core/task/__init__.py", line 93, in __call__\n    return await task_method(*args, **kwargs)\n  File "/usr/lib/python3/dist-packages/colcon_ros/task/ament_python/build.py", line 54, in build\n    data_files = get_data_files_mapping(\n  File "/usr/lib/python3/dist-packages/colcon_core/task/python/__init__.py", line 42, in get_data_files_mapping\n    assert not os.path.isabs(source), \\\n  File "/usr/lib/python3.10/posixpath.py", line 62, in isabs\n    s = os.fspath(s)\nTypeError: expected str, bytes or os.PathLike object, not list\n'}
+[0.242101] (turtle_brick) JobEnded: {'identifier': 'turtle_brick', 'rc': 1}
+[0.242423] (turtle_brick_interfaces) JobEnded: {'identifier': 'turtle_brick_interfaces', 'rc': 'SIGINT'}
+[0.252757] (-) EventReactorShutdown: {}

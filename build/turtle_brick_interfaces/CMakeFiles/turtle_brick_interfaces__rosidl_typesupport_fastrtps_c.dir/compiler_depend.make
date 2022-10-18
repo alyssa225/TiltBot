@@ -450,9 +450,11 @@ CMakeFiles/turtle_brick_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typ
   /usr/include/c++/11/bits/istream.tcc \
   /usr/include/malloc.h \
   rosidl_generator_c/turtle_brick_interfaces/srv/detail/drop__struct.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
   rosidl_generator_c/turtle_brick_interfaces/srv/detail/drop__functions.h \
   /usr/include/c++/11/stdlib.h \
   rosidl_generator_c/turtle_brick_interfaces/msg/rosidl_generator_c__visibility_control.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string_functions.h \
   /opt/ros/humble/include/rosidl_typesupport_fastrtps_cpp/rosidl_typesupport_fastrtps_cpp/service_type_support.h \
   /opt/ros/humble/include/rmw/rmw/types.h \
   /opt/ros/humble/include/rcutils/rcutils/logging.h \
@@ -719,9 +721,11 @@ CMakeFiles/turtle_brick_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typ
   /usr/include/c++/11/bits/istream.tcc \
   /usr/include/malloc.h \
   rosidl_generator_c/turtle_brick_interfaces/srv/detail/place__struct.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
   rosidl_generator_c/turtle_brick_interfaces/srv/detail/place__functions.h \
   /usr/include/c++/11/stdlib.h \
   rosidl_generator_c/turtle_brick_interfaces/msg/rosidl_generator_c__visibility_control.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string_functions.h \
   /opt/ros/humble/include/rosidl_typesupport_fastrtps_cpp/rosidl_typesupport_fastrtps_cpp/service_type_support.h \
   /opt/ros/humble/include/rmw/rmw/types.h \
   /opt/ros/humble/include/rcutils/rcutils/logging.h \
@@ -789,6 +793,8 @@ rosidl_typesupport_fastrtps_c/turtle_brick_interfaces/srv/detail/place__type_sup
 /opt/ros/humble/include/rmw/rmw/init.h:
 
 /opt/ros/humble/include/rmw/rmw/events_statuses/requested_deadline_missed.h:
+
+/opt/ros/humble/include/rmw/rmw/events_statuses/offered_deadline_missed.h:
 
 /usr/include/stdlib.h:
 
@@ -888,6 +894,10 @@ rosidl_typesupport_fastrtps_c/turtle_brick_interfaces/srv/detail/drop__rosidl_ty
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
 
+/opt/ros/humble/include/rmw/rmw/events_statuses/message_lost.h:
+
+/opt/ros/humble/include/rmw/rmw/qos_policy_kind.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
@@ -965,8 +975,6 @@ rosidl_generator_c/turtle_brick_interfaces/msg/detail/tilt__functions.h:
 /usr/include/c++/11/bits/memoryfwd.h:
 
 /usr/include/c++/11/bits/stl_function.h:
-
-/opt/ros/humble/include/rmw/rmw/events_statuses/offered_deadline_missed.h:
 
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
 
@@ -1284,6 +1292,8 @@ rosidl_typesupport_fastrtps_c/turtle_brick_interfaces/srv/detail/drop__type_supp
 
 rosidl_generator_c/turtle_brick_interfaces/srv/detail/drop__struct.h:
 
+/opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h:
+
 /usr/include/c++/11/bits/ostream_insert.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
@@ -1291,6 +1301,8 @@ rosidl_generator_c/turtle_brick_interfaces/srv/detail/drop__struct.h:
 /opt/ros/humble/include/rcutils/rcutils/allocator.h:
 
 rosidl_generator_c/turtle_brick_interfaces/srv/detail/drop__functions.h:
+
+/opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string_functions.h:
 
 /opt/ros/humble/include/rmw/rmw/types.h:
 
@@ -1315,7 +1327,3 @@ rosidl_generator_c/turtle_brick_interfaces/srv/detail/drop__functions.h:
 /opt/ros/humble/include/rmw/rmw/events_statuses/incompatible_qos.h:
 
 /opt/ros/humble/include/rmw/rmw/events_statuses/liveliness_changed.h:
-
-/opt/ros/humble/include/rmw/rmw/qos_policy_kind.h:
-
-/opt/ros/humble/include/rmw/rmw/events_statuses/message_lost.h:

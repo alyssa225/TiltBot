@@ -180,22 +180,22 @@ class Drop_Response(metaclass=Metaclass_Drop_Response):
     """Message class 'Drop_Response'."""
 
     __slots__ = [
-        '_g',
+        '_msg',
     ]
 
     _fields_and_field_types = {
-        'g': 'double',
+        'msg': 'string',
     }
 
     SLOT_TYPES = (
-        rosidl_parser.definition.BasicType('double'),  # noqa: E501
+        rosidl_parser.definition.UnboundedString(),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
-        self.g = kwargs.get('g', float())
+        self.msg = kwargs.get('msg', str())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -226,7 +226,7 @@ class Drop_Response(metaclass=Metaclass_Drop_Response):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
-        if self.g != other.g:
+        if self.msg != other.msg:
             return False
         return True
 
@@ -236,19 +236,17 @@ class Drop_Response(metaclass=Metaclass_Drop_Response):
         return copy(cls._fields_and_field_types)
 
     @builtins.property
-    def g(self):
-        """Message field 'g'."""
-        return self._g
+    def msg(self):
+        """Message field 'msg'."""
+        return self._msg
 
-    @g.setter
-    def g(self, value):
+    @msg.setter
+    def msg(self, value):
         if __debug__:
             assert \
-                isinstance(value, float), \
-                "The 'g' field must be of type 'float'"
-            assert value >= -1.7976931348623157e+308 and value <= 1.7976931348623157e+308, \
-                "The 'g' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
-        self._g = value
+                isinstance(value, str), \
+                "The 'msg' field must be of type 'str'"
+        self._msg = value
 
 
 class Metaclass_Drop(type):

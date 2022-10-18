@@ -63,15 +63,15 @@ namespace srv
 namespace builder
 {
 
-class Init_Drop_Response_g
+class Init_Drop_Response_msg
 {
 public:
-  Init_Drop_Response_g()
+  Init_Drop_Response_msg()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  ::turtle_brick_interfaces::srv::Drop_Response g(::turtle_brick_interfaces::srv::Drop_Response::_g_type arg)
+  ::turtle_brick_interfaces::srv::Drop_Response msg(::turtle_brick_interfaces::srv::Drop_Response::_msg_type arg)
   {
-    msg_.g = std::move(arg);
+    msg_.msg = std::move(arg);
     return std::move(msg_);
   }
 
@@ -90,7 +90,7 @@ template<>
 inline
 auto build<::turtle_brick_interfaces::srv::Drop_Response>()
 {
-  return turtle_brick_interfaces::srv::builder::Init_Drop_Response_g();
+  return turtle_brick_interfaces::srv::builder::Init_Drop_Response_msg();
 }
 
 }  // namespace turtle_brick_interfaces

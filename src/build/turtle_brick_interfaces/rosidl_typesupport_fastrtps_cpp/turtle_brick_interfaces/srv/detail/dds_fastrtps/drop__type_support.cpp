@@ -229,8 +229,8 @@ cdr_serialize(
   const turtle_brick_interfaces::srv::Drop_Response & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Member: g
-  cdr << ros_message.g;
+  // Member: msg
+  cdr << ros_message.msg;
   return true;
 }
 
@@ -240,8 +240,8 @@ cdr_deserialize(
   eprosima::fastcdr::Cdr & cdr,
   turtle_brick_interfaces::srv::Drop_Response & ros_message)
 {
-  // Member: g
-  cdr >> ros_message.g;
+  // Member: msg
+  cdr >> ros_message.msg;
 
   return true;
 }
@@ -259,12 +259,10 @@ get_serialized_size(
   (void)padding;
   (void)wchar_size;
 
-  // Member: g
-  {
-    size_t item_size = sizeof(ros_message.g);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
+  // Member: msg
+  current_alignment += padding +
+    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+    (ros_message.msg.size() + 1);
 
   return current_alignment - initial_alignment;
 }
@@ -287,12 +285,17 @@ max_serialized_size_Drop_Response(
   is_plain = true;
 
 
-  // Member: g
+  // Member: msg
   {
     size_t array_size = 1;
 
-    current_alignment += array_size * sizeof(uint64_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+    full_bounded = false;
+    is_plain = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
   }
 
   return current_alignment - initial_alignment;

@@ -1,4 +1,5 @@
-from ament_index_python.packages import get_package_share_path
+import os
+from ament_index_python.packages import get_package_share_path, get_package_share_directory
 from launch_ros.substitutions import FindPackageShare
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription
@@ -18,6 +19,12 @@ def generate_launch_description():
             ])
         ])
     )
+    config = os.path.join(
+      get_package_share_directory('turtle_brick'),
+      'config',
+      'turtle.yaml'
+      )
+
     return LaunchDescription([
         showlaunch,
         Node(
@@ -30,16 +37,8 @@ def generate_launch_description():
             package='turtle_brick',
             namespace='turtle_robot',
             executable='turtle_robot',
-            name='sim'
-        ),
-
-        # Node(
-        #     package='turtlesim',
-        #     executable='mimic',
-        #     name='mimic',
-        #     remappings=[
-        #         ('/input/pose', '/turtlesim1/turtle1/pose'),
-        #         ('/output/cmd_vel', '/turtlesim2/turtle1/cmd_vel'),
-        #     ]
-        # )
+            name='sim',
+            parameters=[config]
+        )
+        
     ])

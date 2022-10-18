@@ -180,52 +180,30 @@ struct Place_Response_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->x = 0.0;
-      this->y = 0.0;
-      this->z = 0.0;
+      this->msg = "";
     }
   }
 
   explicit Place_Response_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
+  : msg(_alloc)
   {
-    (void)_alloc;
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->x = 0.0;
-      this->y = 0.0;
-      this->z = 0.0;
+      this->msg = "";
     }
   }
 
   // field types and members
-  using _x_type =
-    double;
-  _x_type x;
-  using _y_type =
-    double;
-  _y_type y;
-  using _z_type =
-    double;
-  _z_type z;
+  using _msg_type =
+    std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>;
+  _msg_type msg;
 
   // setters for named parameter idiom
-  Type & set__x(
-    const double & _arg)
+  Type & set__msg(
+    const std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> & _arg)
   {
-    this->x = _arg;
-    return *this;
-  }
-  Type & set__y(
-    const double & _arg)
-  {
-    this->y = _arg;
-    return *this;
-  }
-  Type & set__z(
-    const double & _arg)
-  {
-    this->z = _arg;
+    this->msg = _arg;
     return *this;
   }
 
@@ -271,13 +249,7 @@ struct Place_Response_
   // comparison operators
   bool operator==(const Place_Response_ & other) const
   {
-    if (this->x != other.x) {
-      return false;
-    }
-    if (this->y != other.y) {
-      return false;
-    }
-    if (this->z != other.z) {
+    if (this->msg != other.msg) {
       return false;
     }
     return true;

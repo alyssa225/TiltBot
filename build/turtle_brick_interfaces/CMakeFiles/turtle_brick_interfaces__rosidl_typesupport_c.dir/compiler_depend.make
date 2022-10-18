@@ -66,6 +66,8 @@ CMakeFiles/turtle_brick_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_
   /usr/include/x86_64-linux-gnu/bits/wchar.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
   rosidl_generator_c/turtle_brick_interfaces/srv/detail/drop__type_support.h \
   rosidl_generator_c/turtle_brick_interfaces/msg/rosidl_generator_c__visibility_control.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/service_type_support_struct.h \
@@ -104,6 +106,8 @@ CMakeFiles/turtle_brick_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_
   /usr/include/x86_64-linux-gnu/bits/wchar.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
   rosidl_generator_c/turtle_brick_interfaces/srv/detail/place__type_support.h \
   rosidl_generator_c/turtle_brick_interfaces/msg/rosidl_generator_c__visibility_control.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/service_type_support_struct.h \
@@ -114,15 +118,19 @@ CMakeFiles/turtle_brick_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_
   /opt/ros/humble/include/rosidl_typesupport_c/rosidl_typesupport_c/service_type_support_dispatch.h
 
 
-rosidl_generator_c/turtle_brick_interfaces/srv/detail/place__type_support.h:
-
 rosidl_generator_c/turtle_brick_interfaces/srv/detail/place__struct.h:
 
 /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/service_type_support_struct.h:
 
+rosidl_generator_c/turtle_brick_interfaces/srv/detail/place__type_support.h:
+
+/opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h:
+
 rosidl_generator_c/turtle_brick_interfaces/srv/detail/drop__struct.h:
 
 /opt/ros/humble/include/rosidl_typesupport_c/rosidl_typesupport_c/type_support_map.h:
+
+/opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h:
 
 /opt/ros/humble/include/rosidl_typesupport_c/rosidl_typesupport_c/identifier.h:
 

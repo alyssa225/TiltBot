@@ -100,6 +100,10 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspecti
 // #include "turtle_brick_interfaces/srv/detail/drop__struct.h"
 
 
+// Include directives for member types
+// Member `msg`
+#include "rosidl_runtime_c/string_functions.h"
+
 #ifdef __cplusplus
 extern "C"
 {
@@ -121,14 +125,14 @@ void turtle_brick_interfaces__srv__Drop_Response__rosidl_typesupport_introspecti
 
 static rosidl_typesupport_introspection_c__MessageMember turtle_brick_interfaces__srv__Drop_Response__rosidl_typesupport_introspection_c__Drop_Response_message_member_array[1] = {
   {
-    "g",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
+    "msg",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_STRING,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(turtle_brick_interfaces__srv__Drop_Response, g),  // bytes offset in struct
+    offsetof(turtle_brick_interfaces__srv__Drop_Response, msg),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer

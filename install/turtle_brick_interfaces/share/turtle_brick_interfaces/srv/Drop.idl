@@ -9,7 +9,7 @@ module turtle_brick_interfaces {
       float g;
     };
     struct Drop_Response {
-      double g;
+      string msg;
     };
   };
 };

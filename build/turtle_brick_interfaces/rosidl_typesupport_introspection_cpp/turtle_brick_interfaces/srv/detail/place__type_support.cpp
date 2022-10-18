@@ -190,50 +190,16 @@ void Place_Response_fini_function(void * message_memory)
   typed_message->~Place_Response();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember Place_Response_message_member_array[3] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember Place_Response_message_member_array[1] = {
   {
-    "x",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
+    "msg",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_STRING,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(turtle_brick_interfaces::srv::Place_Response, x),  // bytes offset in struct
-    nullptr,  // default value
-    nullptr,  // size() function pointer
-    nullptr,  // get_const(index) function pointer
-    nullptr,  // get(index) function pointer
-    nullptr,  // fetch(index, &value) function pointer
-    nullptr,  // assign(index, value) function pointer
-    nullptr  // resize(index) function pointer
-  },
-  {
-    "y",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
-    0,  // upper bound of string
-    nullptr,  // members of sub message
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(turtle_brick_interfaces::srv::Place_Response, y),  // bytes offset in struct
-    nullptr,  // default value
-    nullptr,  // size() function pointer
-    nullptr,  // get_const(index) function pointer
-    nullptr,  // get(index) function pointer
-    nullptr,  // fetch(index, &value) function pointer
-    nullptr,  // assign(index, value) function pointer
-    nullptr  // resize(index) function pointer
-  },
-  {
-    "z",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
-    0,  // upper bound of string
-    nullptr,  // members of sub message
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(turtle_brick_interfaces::srv::Place_Response, z),  // bytes offset in struct
+    offsetof(turtle_brick_interfaces::srv::Place_Response, msg),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
@@ -247,7 +213,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember Place_Respons
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers Place_Response_message_members = {
   "turtle_brick_interfaces::srv",  // message namespace
   "Place_Response",  // message name
-  3,  // number of fields
+  1,  // number of fields
   sizeof(turtle_brick_interfaces::srv::Place_Response),
   Place_Response_message_member_array,  // message members
   Place_Response_init_function,  // function to initialize message memory (memory has to be allocated)

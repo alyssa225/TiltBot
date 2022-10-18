@@ -1,5 +1,5 @@
-from ament_index_python.packages import get_package_share_path
-
+from ament_index_python.packages import get_package_share_path,get_package_share_directory
+import os
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument
 from launch.conditions import IfCondition, UnlessCondition
@@ -13,6 +13,7 @@ def generate_launch_description():
     default_model_path = turtle_brick_path + '/urdf/turtle.urdf.xacro'
     default_rviz_config_path = turtle_brick_path +'/config/turtle_urdf.rviz'
     
+    use_sim_time = LaunchConfiguration('use_sim_time', default='false')
     use_jsp = LaunchConfiguration('use_jsp')
     use_jsp_arg = DeclareLaunchArgument(name='use_jsp', default_value='"gui"', choices=['"gui"', '"jsp"','"none"'],
                                     description='Flag to enable joint_state_publisher_gui')#change
@@ -23,11 +24,16 @@ def generate_launch_description():
 
     robot_description = ParameterValue(Command(['xacro ', LaunchConfiguration('model')]),
                                        value_type=str)
+    config = os.path.join(
+      get_package_share_directory('turtle_brick'),
+      'config',
+      'turtle.yaml'
+      )
 
     robot_state_publisher_node = Node(
         package='robot_state_publisher',
         executable='robot_state_publisher',
-        parameters=[{'robot_description': robot_description}]
+        parameters=[{'use_sim_time': use_sim_time,'robot_description': robot_description},config]
     )
 
     # Depending on gui parameter, either launch joint_state_publisher or joint_state_publisher_gui

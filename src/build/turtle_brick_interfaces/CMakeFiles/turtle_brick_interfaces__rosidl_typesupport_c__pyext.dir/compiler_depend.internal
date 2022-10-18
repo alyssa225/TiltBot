@@ -249,6 +249,8 @@ CMakeFiles/turtle_brick_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_gener
  /home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/rosidl_generator_c/turtle_brick_interfaces/msg/detail/tilt__functions.h
  /home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/rosidl_generator_c/turtle_brick_interfaces/srv/detail/place__type_support.h
  /home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/rosidl_generator_c/turtle_brick_interfaces/srv/detail/place__struct.h
+ /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h
+ /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h
  /home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/rosidl_generator_c/turtle_brick_interfaces/srv/detail/place__functions.h
  /home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/rosidl_generator_c/turtle_brick_interfaces/srv/detail/drop__type_support.h
  /home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/rosidl_generator_c/turtle_brick_interfaces/srv/detail/drop__struct.h

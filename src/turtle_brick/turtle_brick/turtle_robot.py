@@ -17,6 +17,7 @@ from rclpy.node import Node
 from tf2_ros.static_transform_broadcaster import StaticTransformBroadcaster
 from tf2_ros import TransformBroadcaster
 from sensor_msgs.msg import JointState
+from rclpy.qos import QoSProfile
 from nav_msgs.msg import Odometry 
 from geometry_msgs.msg import Twist, Vector3, TransformStamped, PoseStamped
 from turtlesim.msg import Pose
@@ -30,8 +31,8 @@ def turtle_joint():
     #returns the joint state of the robot
     return JointState
 
-def turtle_odom():
-    ##### does this need an input?
+def turtle_odom():#, child_id, x,y,z,):
+    
     ##and how to write the return
     #returns the joint state of the robot
     return Odometry
@@ -57,8 +58,23 @@ class Turtle_robot(Node):
     """
     def __init__(self):
         super().__init__('turtle_robot')
+        #params
+        # self.declare_parameters( 
+        #     namespace='',
+        #     parameters=[
+        #         ('platform_height', None),
+        #         ('wheel_radius', None),
+        #         ('max_velocity',None),
+        #         ('gravity',None)
+        #     ]
+        # )
+        # self.height = self.get_parameter("platform_height").get_parameter_value().double_value
+        # self.rwheel = self.get_parameter("wheel_radius").get_parameter_value().double_value
+        # self.vmax = self.get_parameter("max_velocity").get_parameter_value().double_value
+        # self.g = self.get_parameter("gravity").get_parameter_value().double_value
         #initializing publishers
-        self.joint_publisher_ = self.create_publisher(JointState,'joint_states',10)
+        qos_profile = QoSProfile(depth=10)
+        self.joint_publisher_ = self.create_publisher(JointState,'joint_states',qos_profile)
         self.odom_pub = self.create_publisher(Odometry,'odom',10)
         self.vel_pub = self.create_publisher(Twist,'/cmd_vel',10)
         # initializing subscribers
@@ -74,63 +90,74 @@ class Turtle_robot(Node):
         world_odom_tf.header.frame_id = "world"
         world_odom_tf.child_frame_id = "odom"
 
-        world_odom_tf.transform.translation.x = 0.5
-        world_odom_tf.transform.translation.y = 0.50
+        world_odom_tf.transform.translation.x = 0.0
+        world_odom_tf.transform.translation.y = 0.0
         self.static_broadcaster.sendTransform(world_odom_tf)
 
-        # self.odom_base_link = TransformStamped()
-        # self.odom_base_link.header.frame_id = "odom"
-        # self.odom_base_link.child_frame_id = "base_link"
-        
 	
         # The header contains the timing information and frame id
-        self.dx = 10.0 # used to control frame movement
-        self.dy = 0.0
-        self.omega = 0.0
+        self.currentx = 3.0 # used to control frame movement
+        self.currenty = 0.0
+        self.currentomega = 0.0
         # create the broadcaster
-        self.broadcaster = TransformBroadcaster(self)
+        self.broadcaster = TransformBroadcaster(self, qos=qos_profile)
+        self.odom_base_link = TransformStamped()
+        self.odom_base_link.header.frame_id = "odom"
+        self.odom_base_link.child_frame_id = "base_link"
+        self.odom_base_link.transform.translation.z = 2*0.3+0.15+0.25 #0.3 = rwheel
+
+        #joint state publisher
+        self.joint_state = JointState()
+        self.joint_state.header.frame_id = 'base_link'
+        self.wheel_ang = 0.5
+        self.direction_ang = -0.6
+        self.tilt_ang = 0.30
         # Create a timer to do the rest of the transforms
         self.tmr = self.create_timer(0.01, self.timer_callback)
     
     def pose_callback(self,msg):
-        self.get_logger().info('message recieved: %f' % (msg.pose.position.x) )
+        self.get_logger().info('message recieved: %f %f %f' % (msg.pose.position.x,msg.pose.position.y,msg.pose.orientation.z) )
+        self.currentx = msg.pose.position.x
+        self.currenty = msg.pose.position.y
 
     def tilt_callback(self,msg):
         self.get_logger().info('message recieved: "%s %s"' % (msg.alpha, type(msg.alpha )))
 
 
     def timer_callback(self):
-        # inputing values for the the publisher
-        # joint_states = turtle_joint()
+        time = self.get_clock().now().to_msg()
+
+        self.joint_state.header.stamp = self.get_clock().now().to_msg()
+        self.joint_state.name = ['stem_wheel','base_stem','link_platform1']
+        self.joint_state.position = [self.wheel_ang, self.direction_ang, self.tilt_ang]
+        self.wheel_ang = 0.5
+        self.direction_ang = -0.6
+        self.tilt_ang = 0.30
+        self.odom_base_link.transform.translation.x = self.currentx 
+        self.odom_base_link.transform.translation.y = self.currenty 
+        
+        self.odom_base_link.header.stamp = time
+        #  inputing values for the the publisher
         # odometry = turtle_odom()
         # twist = turtle_twist(self.dx,self.dy,self.omega)
 
         #publisher and broadcaster
-        # self.joint_publisher_.publish(joint_states)        
+               
         # self.odom_pub.publish(odometry)  
         # self.vel_pub.publish(twist)  
-        
-        odom_base_link = TransformStamped()
-        odom_base_link.header.frame_id = "odom"
-        odom_base_link.child_frame_id = "base_link"
-        odom_base_link.transform.translation.x = -float(self.dx)        
-
-        # don't forget to put a timestamp
-        time = self.get_clock().now().to_msg()
-        # world_base_link.header.stamp = time
-        odom_base_link.header.stamp = time
 
         #broadcasting 
-        # self.broadcaster.sendTransform(brick)
-        self.broadcaster.sendTransform(odom_base_link)
-        # self.broadcaster.sendTransform(self.odom_base_link)
-        #self.broadcaster.sendTransform(world_base_tf)
-        #self.broadcaster.sendTransform(base_up)
-        # update the movement
-        # self.dx -= 1
-        # if self.dx == 0:
-        #     self.dx = 10
+        self.joint_publisher_.publish(self.joint_state) 
+        self.broadcaster.sendTransform(self.odom_base_link)
+        # self.currentx -= 0.01
+        # if self.currentx <= 0:
+        #     self.currentx = 10
+        # self.tilt_ang-=0.01
+        # if self.tilt_ang <= 0:
+        #     self.tilt_ang = 0.5
 
+        
+        
 
 def main(args=None):
     rclpy.init(args=args)

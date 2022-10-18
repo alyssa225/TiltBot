@@ -222,30 +222,22 @@ class Place_Response(metaclass=Metaclass_Place_Response):
     """Message class 'Place_Response'."""
 
     __slots__ = [
-        '_x',
-        '_y',
-        '_z',
+        '_msg',
     ]
 
     _fields_and_field_types = {
-        'x': 'double',
-        'y': 'double',
-        'z': 'double',
+        'msg': 'string',
     }
 
     SLOT_TYPES = (
-        rosidl_parser.definition.BasicType('double'),  # noqa: E501
-        rosidl_parser.definition.BasicType('double'),  # noqa: E501
-        rosidl_parser.definition.BasicType('double'),  # noqa: E501
+        rosidl_parser.definition.UnboundedString(),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
-        self.x = kwargs.get('x', float())
-        self.y = kwargs.get('y', float())
-        self.z = kwargs.get('z', float())
+        self.msg = kwargs.get('msg', str())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -276,11 +268,7 @@ class Place_Response(metaclass=Metaclass_Place_Response):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
-        if self.x != other.x:
-            return False
-        if self.y != other.y:
-            return False
-        if self.z != other.z:
+        if self.msg != other.msg:
             return False
         return True
 
@@ -290,49 +278,17 @@ class Place_Response(metaclass=Metaclass_Place_Response):
         return copy(cls._fields_and_field_types)
 
     @builtins.property
-    def x(self):
-        """Message field 'x'."""
-        return self._x
+    def msg(self):
+        """Message field 'msg'."""
+        return self._msg
 
-    @x.setter
-    def x(self, value):
+    @msg.setter
+    def msg(self, value):
         if __debug__:
             assert \
-                isinstance(value, float), \
-                "The 'x' field must be of type 'float'"
-            assert value >= -1.7976931348623157e+308 and value <= 1.7976931348623157e+308, \
-                "The 'x' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
-        self._x = value
-
-    @builtins.property
-    def y(self):
-        """Message field 'y'."""
-        return self._y
-
-    @y.setter
-    def y(self, value):
-        if __debug__:
-            assert \
-                isinstance(value, float), \
-                "The 'y' field must be of type 'float'"
-            assert value >= -1.7976931348623157e+308 and value <= 1.7976931348623157e+308, \
-                "The 'y' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
-        self._y = value
-
-    @builtins.property
-    def z(self):
-        """Message field 'z'."""
-        return self._z
-
-    @z.setter
-    def z(self, value):
-        if __debug__:
-            assert \
-                isinstance(value, float), \
-                "The 'z' field must be of type 'float'"
-            assert value >= -1.7976931348623157e+308 and value <= 1.7976931348623157e+308, \
-                "The 'z' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
-        self._z = value
+                isinstance(value, str), \
+                "The 'msg' field must be of type 'str'"
+        self._msg = value
 
 
 class Metaclass_Place(type):

@@ -36,10 +36,14 @@ typedef struct turtle_brick_interfaces__srv__Drop_Request__Sequence
 
 // Constants defined in the message
 
+// Include directives for member types
+// Member 'msg'
+#include "rosidl_runtime_c/string.h"
+
 /// Struct defined in srv/Drop in the package turtle_brick_interfaces.
 typedef struct turtle_brick_interfaces__srv__Drop_Response
 {
-  double g;
+  rosidl_runtime_c__String msg;
 } turtle_brick_interfaces__srv__Drop_Response;
 
 // Struct for a sequence of turtle_brick_interfaces__srv__Drop_Response.

@@ -25,6 +25,8 @@ CMakeFiles/turtle_brick_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_
  /usr/include/x86_64-linux-gnu/bits/wchar.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+ /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
+ /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
  /home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces/rosidl_generator_c/turtle_brick_interfaces/srv/detail/drop__type_support.h \
  /home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces/rosidl_generator_c/turtle_brick_interfaces/msg/rosidl_generator_c__visibility_control.h \
  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/service_type_support_struct.h \

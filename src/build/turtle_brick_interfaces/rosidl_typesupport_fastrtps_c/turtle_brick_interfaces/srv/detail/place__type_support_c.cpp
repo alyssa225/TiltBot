@@ -258,6 +258,8 @@ extern "C"
 {
 #endif
 
+#include "rosidl_runtime_c/string.h"  // msg
+#include "rosidl_runtime_c/string_functions.h"  // msg
 
 // forward declare type support functions
 
@@ -273,19 +275,18 @@ static bool _Place_Response__cdr_serialize(
     return false;
   }
   const _Place_Response__ros_msg_type * ros_message = static_cast<const _Place_Response__ros_msg_type *>(untyped_ros_message);
-  // Field name: x
+  // Field name: msg
   {
-    cdr << ros_message->x;
-  }
-
-  // Field name: y
-  {
-    cdr << ros_message->y;
-  }
-
-  // Field name: z
-  {
-    cdr << ros_message->z;
+    const rosidl_runtime_c__String * str = &ros_message->msg;
+    if (str->capacity == 0 || str->capacity <= str->size) {
+      fprintf(stderr, "string capacity not greater than size\n");
+      return false;
+    }
+    if (str->data[str->size] != '\0') {
+      fprintf(stderr, "string not null-terminated\n");
+      return false;
+    }
+    cdr << str->data;
   }
 
   return true;
@@ -300,19 +301,20 @@ static bool _Place_Response__cdr_deserialize(
     return false;
   }
   _Place_Response__ros_msg_type * ros_message = static_cast<_Place_Response__ros_msg_type *>(untyped_ros_message);
-  // Field name: x
+  // Field name: msg
   {
-    cdr >> ros_message->x;
-  }
-
-  // Field name: y
-  {
-    cdr >> ros_message->y;
-  }
-
-  // Field name: z
-  {
-    cdr >> ros_message->z;
+    std::string tmp;
+    cdr >> tmp;
+    if (!ros_message->msg.data) {
+      rosidl_runtime_c__String__init(&ros_message->msg);
+    }
+    bool succeeded = rosidl_runtime_c__String__assign(
+      &ros_message->msg,
+      tmp.c_str());
+    if (!succeeded) {
+      fprintf(stderr, "failed to assign string into field 'msg'\n");
+      return false;
+    }
   }
 
   return true;
@@ -332,24 +334,10 @@ size_t get_serialized_size_turtle_brick_interfaces__srv__Place_Response(
   (void)padding;
   (void)wchar_size;
 
-  // field.name x
-  {
-    size_t item_size = sizeof(ros_message->x);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-  // field.name y
-  {
-    size_t item_size = sizeof(ros_message->y);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-  // field.name z
-  {
-    size_t item_size = sizeof(ros_message->z);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
+  // field.name msg
+  current_alignment += padding +
+    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+    (ros_message->msg.size + 1);
 
   return current_alignment - initial_alignment;
 }
@@ -377,26 +365,17 @@ size_t max_serialized_size_turtle_brick_interfaces__srv__Place_Response(
   full_bounded = true;
   is_plain = true;
 
-  // member: x
+  // member: msg
   {
     size_t array_size = 1;
 
-    current_alignment += array_size * sizeof(uint64_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
-  }
-  // member: y
-  {
-    size_t array_size = 1;
-
-    current_alignment += array_size * sizeof(uint64_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
-  }
-  // member: z
-  {
-    size_t array_size = 1;
-
-    current_alignment += array_size * sizeof(uint64_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+    full_bounded = false;
+    is_plain = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
   }
 
   return current_alignment - initial_alignment;

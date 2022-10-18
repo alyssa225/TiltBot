@@ -1,0 +1,13 @@
+[  2%] Built target turtle_brick_interfaces__cpp
+[  4%] [32mBuilding C object CMakeFiles/turtle_brick_interfaces__rosidl_generator_c.dir/rosidl_generator_c/turtle_brick_interfaces/srv/detail/drop__functions.c.o[0m
+[  4%] Built target ament_cmake_python_copy_turtle_brick_interfaces
+[  6%] [32mBuilding CXX object CMakeFiles/turtle_brick_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/turtle_brick_interfaces/srv/detail/drop__type_support.cpp.o[0m
+[  8%] [32mBuilding CXX object CMakeFiles/turtle_brick_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/turtle_brick_interfaces/srv/drop__type_support.cpp.o[0m
+[ 10%] [32mBuilding CXX object CMakeFiles/turtle_brick_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/turtle_brick_interfaces/srv/detail/dds_fastrtps/drop__type_support.cpp.o[0m
+running egg_info
+writing turtle_brick_interfaces.egg-info/PKG-INFO
+writing dependency_links to turtle_brick_interfaces.egg-info/dependency_links.txt
+writing top-level names to turtle_brick_interfaces.egg-info/top_level.txt
+reading manifest file 'turtle_brick_interfaces.egg-info/SOURCES.txt'
+writing manifest file 'turtle_brick_interfaces.egg-info/SOURCES.txt'
+[ 10%] Built target ament_cmake_python_build_turtle_brick_interfaces_egg

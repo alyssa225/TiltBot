@@ -129,6 +129,9 @@ CMakeFiles/turtle_brick_interfaces__rosidl_typesupport_introspection_c.dir/rosid
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   rosidl_generator_c/turtle_brick_interfaces/msg/rosidl_generator_c__visibility_control.h \
   rosidl_generator_c/turtle_brick_interfaces/srv/detail/drop__struct.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string_functions.h \
   /opt/ros/humble/include/rosidl_typesupport_introspection_c/rosidl_typesupport_introspection_c/service_introspection.h
 
 CMakeFiles/turtle_brick_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/turtle_brick_interfaces/srv/detail/place__type_support.c.o: rosidl_typesupport_introspection_c/turtle_brick_interfaces/srv/detail/place__type_support.c \
@@ -195,6 +198,9 @@ CMakeFiles/turtle_brick_interfaces__rosidl_typesupport_introspection_c.dir/rosid
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   rosidl_generator_c/turtle_brick_interfaces/msg/rosidl_generator_c__visibility_control.h \
   rosidl_generator_c/turtle_brick_interfaces/srv/detail/place__struct.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string_functions.h \
   /opt/ros/humble/include/rosidl_typesupport_introspection_c/rosidl_typesupport_introspection_c/service_introspection.h
 
 
@@ -217,6 +223,8 @@ rosidl_generator_c/turtle_brick_interfaces/srv/detail/drop__functions.h:
 rosidl_generator_c/turtle_brick_interfaces/srv/detail/place__struct.h:
 
 /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
+
+/opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string_functions.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
 
@@ -241,6 +249,8 @@ rosidl_typesupport_introspection_c/turtle_brick_interfaces/msg/detail/tilt__type
 rosidl_typesupport_introspection_c/turtle_brick_interfaces/srv/detail/drop__rosidl_typesupport_introspection_c.h:
 
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
+
+/opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h:
 
 /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h:
 
@@ -333,6 +343,8 @@ rosidl_typesupport_introspection_c/turtle_brick_interfaces/msg/detail/tilt__rosi
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
 
 /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
+
+/opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h:
 
