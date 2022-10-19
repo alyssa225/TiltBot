@@ -11,7 +11,7 @@ setup(
     data_files=[
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
-        ('share/' + package_name, ['package.xml', 'launch/show_turtle.launch.py', 'config/turtle_urdf.rviz', 'launch/run_turtle.launch.py']),
+        ('share/' + package_name, ['package.xml', 'launch/show_turtle.launch.py', 'config/turtle_urdf.rviz', 'launch/run_turtle.launch.py', 'launch/turtle_arena.launch.py']),
         (os.path.join('share', package_name), glob('urdf/*')),
         (os.path.join('share', package_name, 'config'), glob('config/*.yaml'))
     ],
@@ -25,7 +25,8 @@ setup(
     entry_points={
         'console_scripts': [
             'turtle_robot = turtle_brick.turtle_robot:main',
-            'arena = turtle_brick.arena:arena_entry'
+            'arena = turtle_brick.arena:arena_entry',
+            'catcher = turtle_brick.catcher:catcher_entry'
         ],
     },
 )

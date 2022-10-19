@@ -10,8 +10,7 @@ from tf2_ros import TransformBroadcaster
 from sensor_msgs.msg import JointState
 from rclpy.qos import QoSProfile
 from nav_msgs.msg import Odometry 
-from geometry_msgs.msg import Twist, Vector3, TransformStamped, PoseStamped
-from turtlesim.msg import Pose
+from geometry_msgs.msg import Twist, Vector3, TransformStamped, PoseStamped, Pose
 from visualization_msgs.msg import Marker 
 from turtle_brick_interfaces.msg import Tilt 
 import math 
@@ -26,10 +25,10 @@ class Turtle_robot(Node):
         self.declare_parameters( 
             namespace='',
             parameters=[
-                ('platform_height', 0.0),
-                ('wheel_radius', 0.0),
-                ('max_velocity',0.0),
-                ('gravity',0.0)
+                ('platform_height', 1.7),
+                ('wheel_radius', 0.3),
+                ('max_velocity',3.0),
+                ('gravity',9.8)
             ]
         )
         self.height = self.get_parameter("platform_height").get_parameter_value().double_value
@@ -42,6 +41,7 @@ class Turtle_robot(Node):
         self.joint_publisher_ = self.create_publisher(JointState,'/joint_states',qos_profile)
         self.odom_pub = self.create_publisher(Odometry,'/odom',10)
         self.vel_pub = self.create_publisher(Twist,'/cmd_vel',10)
+        self.robot_pub = self.create_publisher(Pose,'/robot',10)
         # initializing subscribers
         self.goal_sub = self.create_subscription(PoseStamped,'/goal_pose',self.pose_callback,10)
         self.tilt_sub = self.create_subscription(Tilt,'tilt',self.tilt_callback,10)
@@ -95,6 +95,9 @@ class Turtle_robot(Node):
         #cmd_vel publisher
         self.twist = Twist()
 
+        #create pose publisher
+        self.robo_pose = Pose()
+
         # Create a timer to do movements
         self.freq = 100.0
         self.period = 1/self.freq
@@ -116,7 +119,6 @@ class Turtle_robot(Node):
     def tilt_callback(self,msg):
         self.get_logger().info('message recieved: "%s"' % (msg.angle))
         self.tilt_angf = msg.angle
-        self.get_logger().info('angle "%s"' % (msg.angle))
 
     def timer_callback(self):
         time = self.get_clock().now().to_msg()
@@ -125,15 +127,30 @@ class Turtle_robot(Node):
         self.odom.header.stamp = self.get_clock().now().to_msg()
         self.odom.pose.pose.position.x = self.currentx
         self.odom.pose.pose.position.y = self.currenty
-        self.odom.twist.twist.linear.x = self.vx
-        self.odom.twist.twist.linear.y = self.vy
+        if self.distx >= 0.0:
+            self.odom.twist.twist.linear.x = self.vx
+            self.odom.twist.twist.linear.y = self.vy
+        elif self.distx < 0.0:
+            self.odom.twist.twist.linear.x = -self.vx
+            self.odom.twist.twist.linear.y = -self.vy
+        
         #updating joint states
         self.joint_state.header.stamp = self.get_clock().now().to_msg()
         self.joint_state.name = ['stem_wheel','base_stem','link_platform1']
         self.joint_state.position = [self.wheel_ang, self.direction_ang, self.tilt_ang]
         #update twist
-        self.twist.linear.x = self.vx
-        self.twist.linear.y = self.vy
+        if self.distx >= 0.0:
+            self.twist.linear.x = self.vx
+            self.twist.linear.y = self.vy
+        elif self.distx < 0.0:
+            self.twist.linear.x = -self.vx
+            self.twist.linear.y = -self.vy
+        
+        #update robot pose
+        self.robo_pose.position.x=self.currentx
+        self.robo_pose.position.y=self.currenty
+        self.robo_pose.position.z=self.height
+
         #update transforms
         self.odom_base_link.transform.translation.x = self.currentx 
         self.odom_base_link.transform.translation.y = self.currenty 
@@ -143,8 +160,9 @@ class Turtle_robot(Node):
         self.joint_publisher_.publish(self.joint_state) 
         self.odom_pub.publish(self.odom)
         self.vel_pub.publish(self.twist)
+        self.robot_pub.publish(self.robo_pose)
         self.broadcaster.sendTransform(self.odom_base_link)
-        #
+        #moving the robot to goal pose
         if self.distx >= 0.0:
             self.currentx += self.dx
             # self.get_logger().info('adding dx:')
@@ -163,13 +181,11 @@ class Turtle_robot(Node):
         if abs(self.currenty-self.goaly) <= 0.05:
             self.vy = 0.0
             self.dy = 0.0
-        self.get_logger().info('tilt diff "%f"' % (abs(self.tilt_ang-self.tilt_angf)))
+        #tilt if tilt is called
         if abs(self.tilt_ang-self.tilt_angf) >=0.01:       
             if self.tilt_angf-self.tilt_ang < 0.0:
-                self.get_logger().info('subtract ang:')
                 self.tilt_ang-=0.005
             elif self.tilt_angf-self.tilt_ang >= 0.0:
-                self.get_logger().info('adding ang:')
                 self.tilt_ang+=0.005
 
         

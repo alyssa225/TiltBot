@@ -17,10 +17,11 @@ import rclpy
 from rclpy.node import Node
 from tf2_ros.static_transform_broadcaster import StaticTransformBroadcaster
 from tf2_ros import TransformBroadcaster
-from geometry_msgs.msg import TransformStamped
+from geometry_msgs.msg import TransformStamped, Pose
 from std_srvs.srv import Empty
 from math import pi
 from turtle_brick_interfaces.srv import Place, Drop
+from turtle_brick_interfaces.msg import Tilt
 from visualization_msgs.msg import Marker 
 from builtin_interfaces.msg import Duration
 from visualization_msgs.msg import MarkerArray
@@ -46,10 +47,10 @@ class Arena(Node):
         self.declare_parameters( 
             namespace='',
             parameters=[
-                ('platform_height', 0.0),
-                ('wheel_radius', 0.0),
-                ('max_velocity',0.0),
-                ('gravity',0.0)
+                ('platform_height', 1.7),
+                ('wheel_radius', 0.3),
+                ('max_velocity',3.0),
+                ('gravity',9.8)
             ]
         )
         self.height = self.get_parameter("platform_height").get_parameter_value().double_value
@@ -58,6 +59,14 @@ class Arena(Node):
         self.g = self.get_parameter("gravity").get_parameter_value().double_value
         #setting state of brick
         self.brick_state = BState.PLACED
+        # variables
+        self.landing = 0.0
+        self.platformx = 0.0
+        self.platformy = 0.0
+        self.tilt_ang = 0
+        #set up subscribers
+        self.land_spot = self.create_subscription(Pose,'/land',self.land_callback,10)
+        self.tilt_sub = self.create_subscription(Tilt,'tilt',self.tilt_callback,10)
         # set up brick to world transforms and broadcaster
         self.static_broadcaster = TransformBroadcaster(self)
         self.world_brick = TransformStamped()
@@ -104,8 +113,6 @@ class Arena(Node):
         self.left_wall_marker.header.stamp = self.get_clock().now().to_msg()
         self.left_wall_marker.ns = "left_wall"
         self.left_wall_marker.id = 1
-        # self.left_wall_marker.lifetime.sec = 0
-        # self.left_wall_marker.lifetime.nanosec = 0
         self.left_wall_marker.lifetime = Duration()
         self.left_wall_marker.type = Marker.CUBE
         self.left_wall_marker.action = Marker.ADD
@@ -127,8 +134,6 @@ class Arena(Node):
         self.right_wall_marker.header.stamp = self.get_clock().now().to_msg()
         self.right_wall_marker.ns = "right_wall"
         self.right_wall_marker.id = 2
-        # self.right_wall_marker.lifetime.sec = 0
-        # self.right_wall_marker.lifetime.nanosec = 0
         self.right_wall_marker.lifetime = Duration()
         self.right_wall_marker.type = Marker.CUBE
         self.right_wall_marker.action = Marker.ADD
@@ -150,8 +155,6 @@ class Arena(Node):
         self.front_wall_marker.header.stamp = self.get_clock().now().to_msg()
         self.front_wall_marker.ns = "front_wall"
         self.front_wall_marker.id = 3
-        # self.front_wall_marker.lifetime.sec = 0
-        # self.front_wall_marker.lifetime.nanosec = 0
         self.front_wall_marker.lifetime = Duration()
         self.front_wall_marker.type = Marker.CUBE
         self.front_wall_marker.action = Marker.ADD
@@ -173,8 +176,6 @@ class Arena(Node):
         self.back_wall_marker.header.stamp = self.get_clock().now().to_msg()
         self.back_wall_marker.ns = "back_wall"
         self.back_wall_marker.id = 4
-        # self.back_wall_marker.lifetime.sec = 0
-        # self.back_wall_marker.lifetime.nanosec = 0
         self.back_wall_marker.lifetime = Duration()
         self.back_wall_marker.type = Marker.CUBE
         self.back_wall_marker.action = Marker.ADD
@@ -196,69 +197,85 @@ class Arena(Node):
         self.brickx = 0.0
         self.bricky = 0.0
         self.brickz = 0.0 
+        self.brickzplace = 0.0
         self.gravity = 0.0
         self.seconds = 0.0
+
         # # Create a timer to do the actions
         self.freq = 250.0
         self.period = 1/self.freq
         self.tmr = self.create_timer(self.period, self.timer_callback)
+        self.wall = self.create_timer(0.001,self.wall_callback)
 
     def place_callback(self, request,response):
         self.brickx = request.x
         self.bricky = request.y
         self.brickz = request.z
+        self.brickzplace = request.z
         self.brick_marker.pose.position.x = self.brickx
         self.brick_marker.pose.position.y = self.bricky
-        self.brick_marker.pose.position.z = self.brickz 
-        self.brick_marker.color.a = 0.60
+        
+        self.brick_marker.color.a = 1.0
         response.msg = 'placed'
         return response
+
+    def tilt_callback(self,msg):
+        self.get_logger().info('message recieved: "%s"' % (msg.angle))
+        self.tilt_ang = msg.angle
 
     def drop_callback(self, request,response):
         self.brick_state = BState.DROPPING
         return response
 
-    def timer_callback(self):
-        #creating the brick marker
-        self.marker_pub.publish(self.brick_marker)
-        
+    def land_callback(self,msg):
+        self.get_logger().info('message recieved: "%s" "%s" "%s"' % (msg.position.x, msg.position.y, msg.position.z))
+        self.landing = msg.position.z
+        self.platformx = msg.position.x
+        self.platformy = msg.position.y
+
+    def wall_callback(self):
         #publishing wall markers
         self.marker_pub.publish(self.left_wall_marker)
         self.marker_pub.publish(self.right_wall_marker)
         self.marker_pub.publish(self.front_wall_marker)
         self.marker_pub.publish(self.back_wall_marker)
 
+
+    def timer_callback(self):
+        #creating the brick marker
+        self.marker_pub.publish(self.brick_marker)
+        
         #update transform
         self.world_brick.transform.translation.x = self.brickx
         self.world_brick.transform.translation.y = self.bricky 
         
-
         #updating brick frame 
         if self.brick_state == BState.PLACED:
-            self.world_brick.transform.translation.z = self.brickz
+            self.world_brick.transform.translation.z = self.brickzplace
+            self.brick_marker.pose.position.z = self.brickzplace +0.1
         elif self.brick_state == BState.DROPPING:
             self.world_brick.transform.translation.z = self.brickz
+            self.brick_marker.pose.position.z = self.brickz +0.1
             self.seconds = self.seconds +0.004
             self.brickz = self.brickz-0.5*self.g*self.seconds**2 #has to grab gravity this from yaml
-            if self.brickz <= 0.05: #change the 0 to height of platform or 
-                self.brickz = 0.05 
-                self.sec = 0.0
+            if self.brickz <= self.landing: #change the 0 to height of platform or 
+                self.brickz = self.landing 
+                self.seconds = 0.0
                 self.brick_state = BState.SITTING
-        # elif self.brick_state == BState.SITTING:
-            #self.world_brick.transform.translation.x = platform.x
-            #self.world_brick.transform.translation.y = platform.y
-            #if tilt subscriber not = 0.0 
+        elif self.brick_state == BState.SITTING:
+            self.world_brick.transform.translation.x = self.platformx
+            self.world_brick.transform.translation.y = self.platformy
+            self.brick_marker.pose.position.x = self.platformx
+            self.brick_marker.pose.position.y = self.platformy
+            if self.tilt_ang != 0.0:
+                self.brick_state = BState.PLACED
+                
 
         time = self.get_clock().now().to_msg()
         self.world_brick.header.stamp = time
 
         
         self.broadcaster.sendTransform(self.world_brick)
-        # self.broadcaster.sendTransform(base_link)
-        # #self.broadcaster.sendTransform(world_base_tf)
-        # #self.broadcaster.sendTransform(base_up)
-        # # update the movement
-        # self.dx -= 1
 
 
 def arena_entry(args=None):
