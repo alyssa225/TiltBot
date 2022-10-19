@@ -38,7 +38,7 @@ struct Tilt_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->alpha = 0.0f;
+      this->angle = 0.0f;
     }
   }
 
@@ -48,20 +48,20 @@ struct Tilt_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->alpha = 0.0f;
+      this->angle = 0.0f;
     }
   }
 
   // field types and members
-  using _alpha_type =
+  using _angle_type =
     float;
-  _alpha_type alpha;
+  _angle_type angle;
 
   // setters for named parameter idiom
-  Type & set__alpha(
+  Type & set__angle(
     const float & _arg)
   {
-    this->alpha = _arg;
+    this->angle = _arg;
     return *this;
   }
 
@@ -107,7 +107,7 @@ struct Tilt_
   // comparison operators
   bool operator==(const Tilt_ & other) const
   {
-    if (this->alpha != other.alpha) {
+    if (this->angle != other.angle) {
       return false;
     }
     return true;

@@ -1,0 +1,46 @@
+[0.275s] Invoking command in '/home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/alyssa/homework2-alyssa225/install/turtle_brick:/home/alyssa/homework2-alyssa225/src/install/turtle_brick:/opt/ros/humble /usr/bin/cmake --build /home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces -- -j8 -l8
+[0.299s] -- Found ament_cmake: 1.3.2 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.462s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.464s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.467s] -- Found rosidl_adapter: 3.1.3 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.512s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.855s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[1.057s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.319s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.344s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[1.367s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.367s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[1.367s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[1.378s] -- Found ament_lint_auto: 0.12.4 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.388s] -- Added test 'lint_cmake' to check CMake code style
+[1.389s] -- Added test 'xmllint' to check XML markup files
+[1.392s] -- Configuring done
+[1.434s] -- Generating done
+[1.439s] -- Build files have been written to: /home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces
+[1.464s] [  2%] [34m[1mGenerating C code for ROS interfaces[0m
+[1.477s] [  4%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[1.488s] [  4%] Built target ament_cmake_python_copy_turtle_brick_interfaces
+[1.813s] running egg_info
+[1.814s] writing turtle_brick_interfaces.egg-info/PKG-INFO
+[1.814s] writing dependency_links to turtle_brick_interfaces.egg-info/dependency_links.txt
+[1.814s] writing top-level names to turtle_brick_interfaces.egg-info/top_level.txt
+[1.819s] reading manifest file 'turtle_brick_interfaces.egg-info/SOURCES.txt'
+[1.820s] writing manifest file 'turtle_brick_interfaces.egg-info/SOURCES.txt'
+[1.851s] [  4%] Built target ament_cmake_python_build_turtle_brick_interfaces_egg
+[2.002s] [35m[1mConsolidate compiler generated dependencies of target turtle_brick_interfaces__rosidl_generator_c[0m
+[2.016s] [  6%] [32mBuilding C object CMakeFiles/turtle_brick_interfaces__rosidl_generator_c.dir/rosidl_generator_c/turtle_brick_interfaces/srv/detail/place__functions.c.o[0m
+[2.016s] [  8%] [32mBuilding C object CMakeFiles/turtle_brick_interfaces__rosidl_generator_c.dir/rosidl_generator_c/turtle_brick_interfaces/srv/detail/drop__functions.c.o[0m
+[2.018s] [ 10%] [32mBuilding C object CMakeFiles/turtle_brick_interfaces__rosidl_generator_c.dir/rosidl_generator_c/turtle_brick_interfaces/msg/detail/tilt__functions.c.o[0m
+[2.036s] In file included from [01m[K/home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces/rosidl_generator_c/turtle_brick_interfaces/msg/detail/tilt__functions.h:19[m[K,
+[2.036s]                  from [01m[K/home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces/rosidl_generator_c/turtle_brick_interfaces/msg/detail/tilt__functions.c:4[m[K:
+[2.036s] [01m[K/home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces/rosidl_generator_c/turtle_brick_interfaces/msg/detail/tilt__struct.h:22:10:[m[K [01;31m[Kfatal error: [m[Kturtle_brick_interfaces/msg/detail/boolean__struct.h: No such file or directory
+[2.036s]    22 | #include [01;31m[K"turtle_brick_interfaces/msg/detail/boolean__struct.h"[m[K
+[2.036s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.037s] compilation terminated.
+[2.037s] gmake[2]: *** [CMakeFiles/turtle_brick_interfaces__rosidl_generator_c.dir/build.make:137: CMakeFiles/turtle_brick_interfaces__rosidl_generator_c.dir/rosidl_generator_c/turtle_brick_interfaces/msg/detail/tilt__functions.c.o] Error 1
+[2.037s] gmake[2]: *** Waiting for unfinished jobs....
+[2.097s] gmake[1]: *** [CMakeFiles/Makefile2:213: CMakeFiles/turtle_brick_interfaces__rosidl_generator_c.dir/all] Error 2
+[2.097s] gmake[1]: *** Waiting for unfinished jobs....
+[2.128s] [ 10%] Built target turtle_brick_interfaces__cpp
+[2.130s] gmake: *** [Makefile:146: all] Error 2
+[2.132s] Invoked command in '/home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/alyssa/homework2-alyssa225/install/turtle_brick:/home/alyssa/homework2-alyssa225/src/install/turtle_brick:/opt/ros/humble /usr/bin/cmake --build /home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces -- -j8 -l8

@@ -1,0 +1,11 @@
+-- run_test.py: invoking following command in '/home/alyssa/homework2-alyssa225/src/turtle_brick_interfaces':
+ - /opt/ros/humble/bin/ament_lint_cmake --xunit-file /home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces/test_results/turtle_brick_interfaces/lint_cmake.xunit.xml
+
+CMakeLists.txt:15: Mismatching spaces inside () after command [whitespace/mismatch]
+
+
+1 errors
+
+
+-- run_test.py: return code 1
+-- run_test.py: verify result file '/home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces/test_results/turtle_brick_interfaces/lint_cmake.xunit.xml'

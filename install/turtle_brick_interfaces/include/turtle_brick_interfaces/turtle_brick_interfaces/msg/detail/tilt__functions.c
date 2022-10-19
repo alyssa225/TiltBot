@@ -17,7 +17,7 @@ turtle_brick_interfaces__msg__Tilt__init(turtle_brick_interfaces__msg__Tilt * ms
   if (!msg) {
     return false;
   }
-  // alpha
+  // angle
   return true;
 }
 
@@ -27,7 +27,7 @@ turtle_brick_interfaces__msg__Tilt__fini(turtle_brick_interfaces__msg__Tilt * ms
   if (!msg) {
     return;
   }
-  // alpha
+  // angle
 }
 
 bool
@@ -36,8 +36,8 @@ turtle_brick_interfaces__msg__Tilt__are_equal(const turtle_brick_interfaces__msg
   if (!lhs || !rhs) {
     return false;
   }
-  // alpha
-  if (lhs->alpha != rhs->alpha) {
+  // angle
+  if (lhs->angle != rhs->angle) {
     return false;
   }
   return true;
@@ -51,8 +51,8 @@ turtle_brick_interfaces__msg__Tilt__copy(
   if (!input || !output) {
     return false;
   }
-  // alpha
-  output->alpha = input->alpha;
+  // angle
+  output->angle = input->angle;
   return true;
 }
 

@@ -6,7 +6,7 @@
 module turtle_brick_interfaces {
   module msg {
     struct Tilt {
-      float alpha;
+      float angle;
     };
   };
 };

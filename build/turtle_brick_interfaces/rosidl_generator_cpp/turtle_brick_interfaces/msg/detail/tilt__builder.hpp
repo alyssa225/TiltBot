@@ -21,15 +21,15 @@ namespace msg
 namespace builder
 {
 
-class Init_Tilt_alpha
+class Init_Tilt_angle
 {
 public:
-  Init_Tilt_alpha()
+  Init_Tilt_angle()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  ::turtle_brick_interfaces::msg::Tilt alpha(::turtle_brick_interfaces::msg::Tilt::_alpha_type arg)
+  ::turtle_brick_interfaces::msg::Tilt angle(::turtle_brick_interfaces::msg::Tilt::_angle_type arg)
   {
-    msg_.alpha = std::move(arg);
+    msg_.angle = std::move(arg);
     return std::move(msg_);
   }
 
@@ -48,7 +48,7 @@ template<>
 inline
 auto build<::turtle_brick_interfaces::msg::Tilt>()
 {
-  return turtle_brick_interfaces::msg::builder::Init_Tilt_alpha();
+  return turtle_brick_interfaces::msg::builder::Init_Tilt_angle();
 }
 
 }  // namespace turtle_brick_interfaces

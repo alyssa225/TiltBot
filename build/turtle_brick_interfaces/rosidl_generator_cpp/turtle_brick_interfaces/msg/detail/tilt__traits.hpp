@@ -25,10 +25,10 @@ inline void to_flow_style_yaml(
   std::ostream & out)
 {
   out << "{";
-  // member: alpha
+  // member: angle
   {
-    out << "alpha: ";
-    rosidl_generator_traits::value_to_yaml(msg.alpha, out);
+    out << "angle: ";
+    rosidl_generator_traits::value_to_yaml(msg.angle, out);
   }
   out << "}";
 }  // NOLINT(readability/fn_size)
@@ -37,13 +37,13 @@ inline void to_block_style_yaml(
   const Tilt & msg,
   std::ostream & out, size_t indentation = 0)
 {
-  // member: alpha
+  // member: angle
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "alpha: ";
-    rosidl_generator_traits::value_to_yaml(msg.alpha, out);
+    out << "angle: ";
+    rosidl_generator_traits::value_to_yaml(msg.angle, out);
     out << "\n";
   }
 }  // NOLINT(readability/fn_size)

@@ -39,14 +39,14 @@ void Tilt_fini_function(void * message_memory)
 
 static const ::rosidl_typesupport_introspection_cpp::MessageMember Tilt_message_member_array[1] = {
   {
-    "alpha",  // name
+    "angle",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_FLOAT,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(turtle_brick_interfaces::msg::Tilt, alpha),  // bytes offset in struct
+    offsetof(turtle_brick_interfaces::msg::Tilt, angle),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer

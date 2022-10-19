@@ -20,7 +20,7 @@ extern "C"
 /// Struct defined in msg/Tilt in the package turtle_brick_interfaces.
 typedef struct turtle_brick_interfaces__msg__Tilt
 {
-  float alpha;
+  float angle;
 } turtle_brick_interfaces__msg__Tilt;
 
 // Struct for a sequence of turtle_brick_interfaces__msg__Tilt.

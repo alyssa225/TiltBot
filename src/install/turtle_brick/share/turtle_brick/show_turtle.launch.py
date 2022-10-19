@@ -33,7 +33,7 @@ def generate_launch_description():
     robot_state_publisher_node = Node(
         package='robot_state_publisher',
         executable='robot_state_publisher',
-        parameters=[{'use_sim_time': use_sim_time,'robot_description': robot_description},config]
+        parameters=[{'robot_description': robot_description, 'publish_frequency': 100.0},config,]
     )
 
     # Depending on gui parameter, either launch joint_state_publisher or joint_state_publisher_gui

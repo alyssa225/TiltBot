@@ -20,8 +20,11 @@ from geometry_msgs.msg import TransformStamped
 from math import pi
 from .quaternion import angle_axis_to_quaternion
 
-
-class InOut(Node):
+#states
+#WAIT
+#FAIL
+#CATCH
+class Catcher(Node):
     """
     Moves some frames around.
 
@@ -32,61 +35,30 @@ class InOut(Node):
     """
 
     def __init__(self):
-        super().__init__('in_out')
-        # Static broadcasters publish on /tf_static. We will only need to publish this once
-        self.static_broadcaster = StaticTransformBroadcaster(self)
-
-        # Now create the transform, noted that it must have a parent frame and a timestamp
-        # The header contains the timing information and frame id
-        world_base_tf = TransformStamped()
-        world_base_tf.header.stamp = self.get_clock().now().to_msg()
-        world_base_tf.header.frame_id = "world"
-        world_base_tf.child_frame_id = "base"
-
-        # The base frame will be raised in the z direction by 1 meter
-        # and be aligned with world We are relying on the default values
-        # of the transform message (which defaults to no rotation)
-        world_base_tf.transform.translation.z = 1.0
-        self.static_broadcaster.sendTransform(world_base_tf)
-
-        self.dx = 10  # used to control frame movement
-        # create the broadcaster
-        self.broadcaster = TransformBroadcaster(self)
-        # Create a timer to do the rest of the transforms
+        super().__init__('catcher')
+        #client to place topic and place callback
+        #client to drop topic and drop callback
+        #publish to goal_pose
         self.tmr = self.create_timer(1, self.timer_callback)
-
+    
+    #place callback grabs x,y,z placement 
+        #calc time takes robot to move to x,y position from current position in max velocity speed (0.22)
+        #calc time it takes for brick to fall from placed height to platform height
+        #if time robot < time fall --> CATCH
+        #if time robot > time fall --> FAIL
+    #drop callback 
+        # if state = fail --> marker for 3 sec
+        # if state = catch 
     def timer_callback(self):
-        base_left = TransformStamped()
-        base_left.header.frame_id = "base"
-        base_left.child_frame_id = "left"
-        base_left.transform.translation.x = -float(self.dx)
-        # get a quaternion corresponding to a rotation by theta about an axis
-        degrees = 36 * self.dx
-        radians = degrees * pi / 180.0
-        base_left.transform.rotation = angle_axis_to_quaternion(radians, [0, 0, 1.0])
-
-        base_right = TransformStamped()
-        base_right.header.frame_id = "base"
-        base_right.child_frame_id = "right"
-        base_right.transform.translation.x = float(self.dx)
-        base_right.transform.rotation = angle_axis_to_quaternion(radians, [0, 0, -1.0])
-
-        # don't forget to put a timestamp
-        time = self.get_clock().now().to_msg()
-        base_right.header.stamp = time
-        base_left.header.stamp = time
-
-        self.broadcaster.sendTransform(base_left)
-        self.broadcaster.sendTransform(base_right)
-
+        
         # update the movement
         self.dx -= 1
         if self.dx == 0:
             self.dx = 10
 
 
-def in_out_entry(args=None):
+def catcher_entry(args=None):
     rclpy.init(args=args)
-    node = InOut()
+    node = Catcher()
     rclpy.spin(node)
     rclpy.shutdown()

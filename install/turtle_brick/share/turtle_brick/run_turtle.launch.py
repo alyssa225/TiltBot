@@ -37,6 +37,7 @@ def generate_launch_description():
             package='turtle_brick',
             namespace='turtle_robot',
             executable='turtle_robot',
+            remappings = [('/cmd_vel', '/turtlesim1/turtle1/cmd_vel'),],
             name='sim',
             parameters=[config]
         )

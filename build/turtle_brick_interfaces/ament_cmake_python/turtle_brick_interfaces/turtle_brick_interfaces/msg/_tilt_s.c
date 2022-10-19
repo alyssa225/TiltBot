@@ -50,13 +50,13 @@ bool turtle_brick_interfaces__msg__tilt__convert_from_py(PyObject * _pymsg, void
     assert(strncmp("turtle_brick_interfaces.msg._tilt.Tilt", full_classname_dest, 38) == 0);
   }
   turtle_brick_interfaces__msg__Tilt * ros_message = _ros_message;
-  {  // alpha
-    PyObject * field = PyObject_GetAttrString(_pymsg, "alpha");
+  {  // angle
+    PyObject * field = PyObject_GetAttrString(_pymsg, "angle");
     if (!field) {
       return false;
     }
     assert(PyFloat_Check(field));
-    ros_message->alpha = (float)PyFloat_AS_DOUBLE(field);
+    ros_message->angle = (float)PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
 
@@ -81,11 +81,11 @@ PyObject * turtle_brick_interfaces__msg__tilt__convert_to_py(void * raw_ros_mess
     }
   }
   turtle_brick_interfaces__msg__Tilt * ros_message = (turtle_brick_interfaces__msg__Tilt *)raw_ros_message;
-  {  // alpha
+  {  // angle
     PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->alpha);
+    field = PyFloat_FromDouble(ros_message->angle);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "alpha", field);
+      int rc = PyObject_SetAttrString(_pymessage, "angle", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

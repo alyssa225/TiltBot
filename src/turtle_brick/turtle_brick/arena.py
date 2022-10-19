@@ -37,9 +37,25 @@ class BState(Enum):
     SITTING = auto()
 
 class Arena(Node):
-  
+    """
+    add what node does
+    """
     def __init__(self):
         super().__init__('arena')
+        #params
+        self.declare_parameters( 
+            namespace='',
+            parameters=[
+                ('platform_height', 0.0),
+                ('wheel_radius', 0.0),
+                ('max_velocity',0.0),
+                ('gravity',0.0)
+            ]
+        )
+        self.height = self.get_parameter("platform_height").get_parameter_value().double_value
+        self.rwheel = self.get_parameter("wheel_radius").get_parameter_value().double_value
+        self.vmax = self.get_parameter("max_velocity").get_parameter_value().double_value
+        self.g = self.get_parameter("gravity").get_parameter_value().double_value
         #setting state of brick
         self.brick_state = BState.PLACED
         # set up brick to world transforms and broadcaster
@@ -182,8 +198,10 @@ class Arena(Node):
         self.brickz = 0.0 
         self.gravity = 0.0
         self.seconds = 0.0
-        # # Create a timer to do the rest of the transforms
-        self.tmr = self.create_timer(0.004, self.timer_callback)
+        # # Create a timer to do the actions
+        self.freq = 250.0
+        self.period = 1/self.freq
+        self.tmr = self.create_timer(self.period, self.timer_callback)
 
     def place_callback(self, request,response):
         self.brickx = request.x
@@ -221,21 +239,19 @@ class Arena(Node):
         elif self.brick_state == BState.DROPPING:
             self.world_brick.transform.translation.z = self.brickz
             self.seconds = self.seconds +0.004
-            self.brickz = self.brickz-0.5*9.8*self.seconds**2 #has to grab gravity this from yaml
+            self.brickz = self.brickz-0.5*self.g*self.seconds**2 #has to grab gravity this from yaml
             if self.brickz <= 0.05: #change the 0 to height of platform or 
                 self.brickz = 0.05 
+                self.sec = 0.0
                 self.brick_state = BState.SITTING
         # elif self.brick_state == BState.SITTING:
             #self.world_brick.transform.translation.x = platform.x
             #self.world_brick.transform.translation.y = platform.y
             #if tilt subscriber not = 0.0 
-        
-        # # don't forget to put a timestamp
+
         time = self.get_clock().now().to_msg()
-        # base_link.header.stamp = time
         self.world_brick.header.stamp = time
-        # #world_base_tf.header.stamp = time
-        # #base_up.header.stamp = time
+
         
         self.broadcaster.sendTransform(self.world_brick)
         # self.broadcaster.sendTransform(base_link)

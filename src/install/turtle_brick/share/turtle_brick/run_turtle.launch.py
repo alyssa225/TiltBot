@@ -31,6 +31,7 @@ def generate_launch_description():
             package='turtlesim',
             namespace='turtlesim1',
             executable='turtlesim_node',
+            remappings = [('/cmd_vel', '/turtlesim1/turtle1/cmd_vel'),],
             parameters=[{'holonomic': "True"}]
         ),
         Node(

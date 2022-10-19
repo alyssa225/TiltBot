@@ -49,9 +49,9 @@ static bool _Tilt__cdr_serialize(
     return false;
   }
   const _Tilt__ros_msg_type * ros_message = static_cast<const _Tilt__ros_msg_type *>(untyped_ros_message);
-  // Field name: alpha
+  // Field name: angle
   {
-    cdr << ros_message->alpha;
+    cdr << ros_message->angle;
   }
 
   return true;
@@ -66,9 +66,9 @@ static bool _Tilt__cdr_deserialize(
     return false;
   }
   _Tilt__ros_msg_type * ros_message = static_cast<_Tilt__ros_msg_type *>(untyped_ros_message);
-  // Field name: alpha
+  // Field name: angle
   {
-    cdr >> ros_message->alpha;
+    cdr >> ros_message->angle;
   }
 
   return true;
@@ -88,9 +88,9 @@ size_t get_serialized_size_turtle_brick_interfaces__msg__Tilt(
   (void)padding;
   (void)wchar_size;
 
-  // field.name alpha
+  // field.name angle
   {
-    size_t item_size = sizeof(ros_message->alpha);
+    size_t item_size = sizeof(ros_message->angle);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -121,7 +121,7 @@ size_t max_serialized_size_turtle_brick_interfaces__msg__Tilt(
   full_bounded = true;
   is_plain = true;
 
-  // member: alpha
+  // member: angle
   {
     size_t array_size = 1;
 

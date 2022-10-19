@@ -33,14 +33,14 @@ void turtle_brick_interfaces__msg__Tilt__rosidl_typesupport_introspection_c__Til
 
 static rosidl_typesupport_introspection_c__MessageMember turtle_brick_interfaces__msg__Tilt__rosidl_typesupport_introspection_c__Tilt_message_member_array[1] = {
   {
-    "alpha",  // name
+    "angle",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(turtle_brick_interfaces__msg__Tilt, alpha),  // bytes offset in struct
+    offsetof(turtle_brick_interfaces__msg__Tilt, angle),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer

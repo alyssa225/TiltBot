@@ -32,8 +32,8 @@ cdr_serialize(
   const turtle_brick_interfaces::msg::Tilt & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Member: alpha
-  cdr << ros_message.alpha;
+  // Member: angle
+  cdr << ros_message.angle;
   return true;
 }
 
@@ -43,8 +43,8 @@ cdr_deserialize(
   eprosima::fastcdr::Cdr & cdr,
   turtle_brick_interfaces::msg::Tilt & ros_message)
 {
-  // Member: alpha
-  cdr >> ros_message.alpha;
+  // Member: angle
+  cdr >> ros_message.angle;
 
   return true;
 }
@@ -62,9 +62,9 @@ get_serialized_size(
   (void)padding;
   (void)wchar_size;
 
-  // Member: alpha
+  // Member: angle
   {
-    size_t item_size = sizeof(ros_message.alpha);
+    size_t item_size = sizeof(ros_message.angle);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -90,7 +90,7 @@ max_serialized_size_Tilt(
   is_plain = true;
 
 
-  // Member: alpha
+  // Member: angle
   {
     size_t array_size = 1;
 

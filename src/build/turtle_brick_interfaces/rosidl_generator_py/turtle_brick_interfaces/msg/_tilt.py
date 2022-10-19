@@ -55,11 +55,11 @@ class Tilt(metaclass=Metaclass_Tilt):
     """Message class 'Tilt'."""
 
     __slots__ = [
-        '_alpha',
+        '_angle',
     ]
 
     _fields_and_field_types = {
-        'alpha': 'float',
+        'angle': 'float',
     }
 
     SLOT_TYPES = (
@@ -70,7 +70,7 @@ class Tilt(metaclass=Metaclass_Tilt):
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
-        self.alpha = kwargs.get('alpha', float())
+        self.angle = kwargs.get('angle', float())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -101,7 +101,7 @@ class Tilt(metaclass=Metaclass_Tilt):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
-        if self.alpha != other.alpha:
+        if self.angle != other.angle:
             return False
         return True
 
@@ -111,16 +111,16 @@ class Tilt(metaclass=Metaclass_Tilt):
         return copy(cls._fields_and_field_types)
 
     @builtins.property
-    def alpha(self):
-        """Message field 'alpha'."""
-        return self._alpha
+    def angle(self):
+        """Message field 'angle'."""
+        return self._angle
 
-    @alpha.setter
-    def alpha(self, value):
+    @angle.setter
+    def angle(self, value):
         if __debug__:
             assert \
                 isinstance(value, float), \
-                "The 'alpha' field must be of type 'float'"
+                "The 'angle' field must be of type 'float'"
             assert value >= -3.402823e+38 and value <= 3.402823e+38, \
-                "The 'alpha' field must be a float in [-3.402823e+38, 3.402823e+38]"
-        self._alpha = value
+                "The 'angle' field must be a float in [-3.402823e+38, 3.402823e+38]"
+        self._angle = value
