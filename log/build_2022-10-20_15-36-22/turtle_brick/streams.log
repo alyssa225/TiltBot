@@ -1,0 +1,25 @@
+[0.924s] Invoking command in '/home/alyssa/homework2-alyssa225/src/turtle_brick': PYTHONPATH=/home/alyssa/homework2-alyssa225/install/turtle_brick/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/turtle_brick build --build-base /home/alyssa/homework2-alyssa225/build/turtle_brick/build install --prefix /home/alyssa/homework2-alyssa225/install/turtle_brick --record /home/alyssa/homework2-alyssa225/build/turtle_brick/install.log --single-version-externally-managed
+[1.344s] running egg_info
+[1.347s] writing ../../build/turtle_brick/turtle_brick.egg-info/PKG-INFO
+[1.347s] writing dependency_links to ../../build/turtle_brick/turtle_brick.egg-info/dependency_links.txt
+[1.348s] writing entry points to ../../build/turtle_brick/turtle_brick.egg-info/entry_points.txt
+[1.354s] writing requirements to ../../build/turtle_brick/turtle_brick.egg-info/requires.txt
+[1.354s] writing top-level names to ../../build/turtle_brick/turtle_brick.egg-info/top_level.txt
+[1.366s] reading manifest file '../../build/turtle_brick/turtle_brick.egg-info/SOURCES.txt'
+[1.367s] writing manifest file '../../build/turtle_brick/turtle_brick.egg-info/SOURCES.txt'
+[1.368s] running build
+[1.368s] running build_py
+[1.369s] running install
+[1.369s] running install_lib
+[1.369s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[1.369s]   warnings.warn(
+[1.371s] running install_data
+[1.371s] running install_egg_info
+[1.371s] removing '/home/alyssa/homework2-alyssa225/install/turtle_brick/lib/python3.10/site-packages/turtle_brick-0.0.0-py3.10.egg-info' (and everything under it)
+[1.371s] Copying ../../build/turtle_brick/turtle_brick.egg-info to /home/alyssa/homework2-alyssa225/install/turtle_brick/lib/python3.10/site-packages/turtle_brick-0.0.0-py3.10.egg-info
+[1.372s] running install_scripts
+[1.396s] Installing arena script to /home/alyssa/homework2-alyssa225/install/turtle_brick/lib/turtle_brick
+[1.397s] Installing catcher script to /home/alyssa/homework2-alyssa225/install/turtle_brick/lib/turtle_brick
+[1.397s] Installing turtle_robot script to /home/alyssa/homework2-alyssa225/install/turtle_brick/lib/turtle_brick
+[1.397s] writing list of installed files to '/home/alyssa/homework2-alyssa225/build/turtle_brick/install.log'
+[1.445s] Invoked command in '/home/alyssa/homework2-alyssa225/src/turtle_brick' returned '0': PYTHONPATH=/home/alyssa/homework2-alyssa225/install/turtle_brick/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/turtle_brick build --build-base /home/alyssa/homework2-alyssa225/build/turtle_brick/build install --prefix /home/alyssa/homework2-alyssa225/install/turtle_brick --record /home/alyssa/homework2-alyssa225/build/turtle_brick/install.log --single-version-externally-managed

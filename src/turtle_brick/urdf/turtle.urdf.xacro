@@ -2,15 +2,15 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="turtle">
     <xacro:property name="yaml_file" value="$(find turtle_brick)/config/turtle.yaml" />
     <xacro:property name="turtle" value="${load_yaml(yaml_file)}" />
-    <xacro:property name="platform_h"  value="${turtle['/**']['ros__parameters']['platform_height']}" /> <!-- ${turtle['platform_height']} 1.7 -->
+    <xacro:property name="platform_h"  value="${turtle['/**']['ros__parameters']['platform_height']}" /> 
     <xacro:property name="width" value="0.5"/>
     <xacro:property name="length" value="0.1"/>
     <xacro:property name="stem_length" value="0.15"/>
     <xacro:property name="pradius" value="0.35"/>
     <xacro:property name="sradius" value="0.1"/>
-    <xacro:property name="wradius" value="${turtle['/**']['ros__parameters']['wheel_radius']}"/> <!-- ${turtle['wheel_radius']} 0.3 -->
+    <xacro:property name="wradius" value="${turtle['/**']['ros__parameters']['wheel_radius']}"/> 
     <xacro:property name="force" value="100.0"/>
-    <xacro:property name="max_vel" value="${turtle['/**']['ros__parameters']['max_velocity']}"/>  <!--${turtle['max_velocity']} 0.22-->
+    <xacro:property name="max_vel" value="${turtle['/**']['ros__parameters']['max_velocity']}"/> 
    
     <material name="blue">
         <color rgba="0 0 1.0 1.0"/>

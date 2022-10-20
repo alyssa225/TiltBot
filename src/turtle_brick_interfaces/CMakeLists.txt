@@ -16,7 +16,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/Tilt.msg"
   "srv/Place.srv"
   "srv/Drop.srv"
-  )
+)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)

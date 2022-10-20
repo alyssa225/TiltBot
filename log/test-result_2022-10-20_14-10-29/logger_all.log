@@ -1,0 +1,15 @@
+[0.240s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'test-result', '--verbose']
+[0.240s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='test-result', test_result_base='build', all=False, result_files_only=False, verbose=True, delete=False, delete_yes=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7f6ee3e6b760>, verb_extension=<colcon_test_result.verb.test_result.TestResultVerb object at 0x7f6ee4052d10>, main=<bound method TestResultVerb.main of <colcon_test_result.verb.test_result.TestResultVerb object at 0x7f6ee4052d10>>, mixin_verb=('test-result',))
+[0.243s] Level 1:colcon.colcon_test_result.test_result:get_test_results(ctest)
+[0.247s] Level 1:colcon.colcon_test_result.test_result:get_test_results(xunit)
+[0.250s] DEBUG:colcon.colcon_test_result.test_result.xunit:Skipping 'build/turtle_brick_interfaces/Testing/20221019-0125/Test.xml': the root tag is neither 'testsuite' nor 'testsuites'
+[0.250s] DEBUG:colcon.colcon_test_result.test_result.xunit:Skipping 'build/turtle_brick_interfaces/Testing/20221019-1344/Test.xml': the root tag is neither 'testsuite' nor 'testsuites'
+[0.250s] DEBUG:colcon.colcon_test_result.test_result.xunit:Skipping 'build/turtle_brick_interfaces/Testing/20221020-0153/Test.xml': the root tag is neither 'testsuite' nor 'testsuites'
+[0.251s] DEBUG:colcon.colcon_test_result.test_result.xunit:Skipping 'build/turtle_brick_interfaces/Testing/20221020-0356/Test.xml': the root tag is neither 'testsuite' nor 'testsuites'
+[0.251s] DEBUG:colcon.colcon_test_result.test_result.xunit:Skipping 'build/turtle_brick_interfaces/Testing/20221020-1331/Test.xml': the root tag is neither 'testsuite' nor 'testsuites'
+[0.251s] DEBUG:colcon.colcon_test_result.test_result.xunit:Skipping 'build/turtle_brick_interfaces/Testing/20221020-1338/Test.xml': the root tag is neither 'testsuite' nor 'testsuites'
+[0.251s] DEBUG:colcon.colcon_test_result.test_result.xunit:Skipping 'build/turtle_brick_interfaces/Testing/20221020-1432/Test.xml': the root tag is neither 'testsuite' nor 'testsuites'
+[0.252s] DEBUG:colcon.colcon_test_result.test_result.xunit:Skipping 'build/turtle_brick_interfaces/Testing/20221020-1845/Test.xml': the root tag is neither 'testsuite' nor 'testsuites'
+[0.252s] DEBUG:colcon.colcon_test_result.test_result.xunit:Skipping 'build/turtle_brick_interfaces/Testing/20221020-1852/Test.xml': the root tag is neither 'testsuite' nor 'testsuites'
+[0.252s] DEBUG:colcon.colcon_test_result.test_result.xunit:Skipping 'build/turtle_brick_interfaces/Testing/20221020-1900/Test.xml': the root tag is neither 'testsuite' nor 'testsuites'
+[0.252s] DEBUG:colcon.colcon_test_result.test_result.xunit:Skipping 'build/turtle_brick_interfaces/Testing/20221020-1910/Test.xml': the root tag is neither 'testsuite' nor 'testsuites'

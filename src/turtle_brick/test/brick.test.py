@@ -1,11 +1,12 @@
-from ament_copyright.main import main
-import pytest
-import launch
-import launch_pytest
-import sys
-import launch_ros
-from pathlib import Path
-#found this example here https://github.com/ros2/launch/blob/humble/launch_pytest/test/launch_pytest/examples/check_node_msgs.py
+# from ament_copyright.main import main
+# import pytest
+# import launch
+# import launch_pytest
+# import sys
+# import launch_ros
+# from pathlib import Path
+# found this example here
+# https://github.com/ros2/launch/blob/humble/launch_pytest/test/launch_pytest/examples/check_node_msgs.py
 
 # def generate_test_description():
 #     path_to_test = Path(__file__).parent

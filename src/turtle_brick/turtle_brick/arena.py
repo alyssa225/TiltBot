@@ -1,75 +1,85 @@
-from xmlrpc.client import Boolean
 import rclpy
 # import rospy
 from rclpy.node import Node
-from tf2_ros.static_transform_broadcaster import StaticTransformBroadcaster
 from tf2_ros import TransformBroadcaster
 from geometry_msgs.msg import TransformStamped, Pose, Vector3
 from std_srvs.srv import Empty
-from math import pi
-from turtle_brick_interfaces.srv import Place, Drop
-from turtle_brick_interfaces.msg import Tilt
-from visualization_msgs.msg import Marker 
+from turtle_brick_interfaces.srv import Place
+from visualization_msgs.msg import Marker
 from builtin_interfaces.msg import Duration
-from visualization_msgs.msg import MarkerArray
 from std_msgs.msg import Bool
 import math
 from enum import Enum, auto
-#from .quaternion import angle_axis_to_quaternion
 
-# make states for the brick drop (PLACED, DROPPING, SITTING)
+
 class BState(Enum):
     """ Current state of the brick.
+        PLACED: brick is placed
+        DROPPING: brick is dropping with accelleraction od gravity
+        PLATFORM: The platfom of turtle robot is below the brick
+        FLOOR: The turtle robot is not below the brick
     """
     PLACED = auto(),
     DROPPING = auto(),
     PLATFORM = auto(),
     FLOOR = auto()
 
+
 class Arena(Node):
     """
-
+    Creates the arena and places brick when called in command line.
+    Will drop the robot when called in command line.
+        -if robot is underneath the brick, the brick will land on the robot
+        -if nothing is under brick, brick will land on ground
+    SUBSCRIPTIONS:
+        -robot_sub: continuous robot position
+    PUBLISHERS:
+        -marker_pub: publishes walls and brick
+        -drop_pub: sends placement, drop coordinates
+        -platform_pub: sends true if platform is under brick
+    SERVICES:
+        -Place: place brick at x, y, z location
+        -Drop: Empty drops brick
+    TRANSFORMS:
+        -world_brick: connects brick to world
     """
     def __init__(self):
         super().__init__('arena')
-        #params
-        self.declare_parameters( 
+        # params
+        self.declare_parameters(
             namespace='',
             parameters=[
                 ('platform_height', 1.7),
                 ('wheel_radius', 0.3),
-                ('max_velocity',3.0),
-                ('gravity',9.8)
+                ('max_velocity', 3.0),
+                ('gravity', 9.8)
             ]
         )
         self.height = self.get_parameter("platform_height").get_parameter_value().double_value
         self.rwheel = self.get_parameter("wheel_radius").get_parameter_value().double_value
         self.vmax = self.get_parameter("max_velocity").get_parameter_value().double_value
         self.g = self.get_parameter("gravity").get_parameter_value().double_value
-        #setting state of brick
+        # setting state of brick
         self.brick_state = BState.PLACED
         # variables
         self.platformz = 0.0
         self.platformx = 0.0
         self.platformy = 0.0
         self.tilt_ang = 0
-        #set up subscribers
-        self.robot_sub = self.create_subscription(Pose,'/robot',self.robot_callback,10)
-        #publisher
-        self.marker_pub = self.create_publisher(Marker,'/marker',10)
-        self.drop_pub = self.create_publisher(Vector3,'/drop',10)
-        self.platform_pub = self.create_publisher(Bool,'/catch',10)
+        # set up subscribers
+        self.robot_sub = self.create_subscription(Pose, '/robot', self.robot_callback, 10)
+        # publisher
+        self.marker_pub = self.create_publisher(Marker, '/marker', 10)
+        self.drop_pub = self.create_publisher(Vector3, '/drop', 10)
+        self.platform_pub = self.create_publisher(Bool, '/catch', 10)
         # set up brick to world transforms and broadcaster
         self.static_broadcaster = TransformBroadcaster(self)
-        
-        # # create the broadcaster
+        # create the broadcaster
         self.broadcaster = TransformBroadcaster(self)
-        
-        #initialize services
-        self.place = self.create_service(Place,"/place",self.place_callback)
-        self.drop = self.create_service(Empty,"/drop",self.drop_callback)
-        
-        #creating brick marker
+        # initialize services
+        self.place = self.create_service(Place, "/place", self.place_callback)
+        self.drop = self.create_service(Empty, "/drop", self.drop_callback)
+        # creating brick marker
         self.brick_marker = Marker()
         self.brick_marker.header.frame_id = "world"
         self.brick_marker.header.stamp = self.get_clock().now().to_msg()
@@ -85,8 +95,7 @@ class Arena(Node):
         self.brick_marker.color.g = 0.3
         self.brick_marker.color.b = 0.3
         self.brick_marker.pose.orientation.w = 1.0
-
-        #creating wall markers
+        # creating left wall marker
         self.left_wall_marker = Marker()
         self.left_wall_marker.header.frame_id = "world"
         self.left_wall_marker.header.stamp = self.get_clock().now().to_msg()
@@ -107,7 +116,7 @@ class Arena(Node):
         self.left_wall_marker.pose.position.y = 0.0
         self.left_wall_marker.pose.position.z = 1.0
         self.left_wall_marker.frame_locked = True
-
+        # creating right wall marker
         self.right_wall_marker = Marker()
         self.right_wall_marker.header.frame_id = "world"
         self.right_wall_marker.header.stamp = self.get_clock().now().to_msg()
@@ -128,7 +137,7 @@ class Arena(Node):
         self.right_wall_marker.pose.position.y = 0.0
         self.right_wall_marker.pose.position.z = 1.0
         self.right_wall_marker.frame_locked = True
-
+        # creating front wall marker
         self.front_wall_marker = Marker()
         self.front_wall_marker.header.frame_id = "world"
         self.front_wall_marker.header.stamp = self.get_clock().now().to_msg()
@@ -149,7 +158,7 @@ class Arena(Node):
         self.front_wall_marker.pose.position.y = 5.55
         self.front_wall_marker.pose.position.z = 1.0
         self.front_wall_marker.frame_locked = True
-
+        # creating back wall marker
         self.back_wall_marker = Marker()
         self.back_wall_marker.header.frame_id = "world"
         self.back_wall_marker.header.stamp = self.get_clock().now().to_msg()
@@ -170,46 +179,42 @@ class Arena(Node):
         self.back_wall_marker.pose.position.y = -5.55
         self.back_wall_marker.pose.position.z = 1.0
         self.back_wall_marker.frame_locked = True
-
-
-        #initializing brick variables
+        # initializing brick variables
         self.brickx = 0.0
         self.bricky = 0.0
-        self.brickz = 0.0 
+        self.brickz = 0.0
         self.brickxplace = 0.0
         self.brickyplace = 0.0
         self.brickzplace = 0.0
         self.gravity = 0.0
         self.seconds = 0.0
-
-        # # Create a timer to do the actions
+        # Create a timer to do the actions
         self.freq = 250.0
         self.period = 1/self.freq
         self.tmr = self.create_timer(self.period, self.timer_callback)
-
         self.walls_published = False
-        self.wall = self.create_timer(0.5,self.wall_callback)
+        self.wall = self.create_timer(0.5, self.wall_callback)
 
-    def place_callback(self, request,response):
-        self.place_brick(request.x,request.y,request.z)
+    def place_callback(self, request, response):
+        self.place_brick(request.x, request.y, request.z)
         response.msg = 'placed'
         return response
-    
-    def robot_callback(self,msg):
+
+    def robot_callback(self, msg):
         # self.get_logger().info('robot position: "%s" "%s"' % (msg.position.x, msg.position.y))
         self.platformz = self.height
         self.platformx = msg.position.x
         self.platformy = msg.position.y
         tilt_ang = msg.orientation.w
         if self.brick_state == BState.PLATFORM:
-            if tilt_ang>=0.5:
+            if tilt_ang >= 0.5:
                 self.brick_state = BState.PLACED
-                self.set_brick(self.brickxplace,self.brickyplace,self.brickzplace)
+                self.set_brick(self.brickxplace, self.brickyplace, self.brickzplace)
             else:
-                self.set_brick(self.platformx,self.platformy,self.platformz)
+                self.set_brick(self.platformx, self.platformy, self.platformz)
 
-    def drop_callback(self, request,response):
-        drop=Vector3()
+    def drop_callback(self, request, response):
+        drop = Vector3()
         drop.x = self.brickx
         drop.y = self.bricky
         drop.z = self.brickz
@@ -219,7 +224,7 @@ class Arena(Node):
         return response
 
     def wall_callback(self):
-        #publishing wall markers
+        # publishing wall markers
         self.marker_pub.publish(self.left_wall_marker)
         self.marker_pub.publish(self.right_wall_marker)
         self.marker_pub.publish(self.front_wall_marker)
@@ -236,29 +241,28 @@ class Arena(Node):
         world_brick.transform.translation.z = self.brickz
         self.brick_marker.pose.position.x = self.brickx
         self.brick_marker.pose.position.y = self.bricky
-        self.brick_marker.pose.position.z = self.brickz +0.1
+        self.brick_marker.pose.position.z = self.brickz + 0.1
         self.marker_pub.publish(self.brick_marker)
         self.broadcaster.sendTransform(world_brick)
-        
-    
-    def set_brick(self,x,y,z):
+
+    def set_brick(self, x, y, z):
         self.brickx = x
         self.bricky = y
         self.brickz = z
         self.publish_brick()
-    
+
     def place_brick(self, x, y, z):
         self.brickxplace = x
         self.brickyplace = y
         self.brickzplace = z
         self.brick_state = BState.PLACED
         self.brick_marker.color.a = 1.0
-        self.set_brick(x,y,z)
+        self.set_brick(x, y, z)
 
-    def timer_callback(self):    
+    def timer_callback(self):
         if self.brick_state == BState.DROPPING:
-            self.seconds = self.seconds +0.004
-            self.brickz = self.brickz-0.5*self.g*self.seconds**2 #has to grab gravity this from yaml
+            self.seconds = self.seconds + 0.004
+            self.brickz = self.brickz - 0.5 * self.g * self.seconds**2
             if self.brickz <= 0.0:
                 self.brickz = 0.0
                 self.brick_state = BState.FLOOR
@@ -275,7 +279,6 @@ class Arena(Node):
 
 def arena_entry(args=None):
     rclpy.init(args=args)
-    node= Arena()
+    node = Arena()
     rclpy.spin(node)
-    rclpy.shutdown 
-
+    rclpy.shutdown

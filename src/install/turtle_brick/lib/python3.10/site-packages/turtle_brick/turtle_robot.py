@@ -1,7 +1,4 @@
-"""
-uupdate
 
-"""
 from tokenize import Double, String
 import rclpy
 from rclpy.node import Node
@@ -17,7 +14,7 @@ import math
 #from .quaternion import angle_axis_to_quaternion
 
 class Turtle_robot(Node):
-    """ update
+    """
     """
     def __init__(self):
         super().__init__('turtle_robot')
@@ -44,7 +41,7 @@ class Turtle_robot(Node):
         self.robot_pub = self.create_publisher(Pose,'/robot',10)
         # initializing subscribers
         self.goal_sub = self.create_subscription(PoseStamped,'/goal_pose',self.pose_callback,10)
-        self.tilt_sub = self.create_subscription(Tilt,'tilt',self.tilt_callback,10)
+        self.tilt_sub = self.create_subscription(Tilt,'/tilt',self.tilt_callback,10)
         # self.pose_sub = self.create_subscription(Pose, 'pose', self.listener_callback,10)
         # Static broadcasters publish on /tf_static.        
         self.static_broadcaster = StaticTransformBroadcaster(self)
@@ -72,6 +69,8 @@ class Turtle_robot(Node):
         self.vy = 0.0
         self.dx = 0.0
         self.dy = 0.0
+        self.dtheta = 0.0
+        self.stem_ang = 0.0
         # create the broadcaster
         self.broadcaster = TransformBroadcaster(self, qos=qos_profile)
         self.odom_base_link = TransformStamped()
@@ -104,20 +103,27 @@ class Turtle_robot(Node):
         self.tmr = self.create_timer(self.period, self.timer_callback)
     
     def pose_callback(self,msg):
-        self.get_logger().info('message recieved: %f %f %f' % (msg.pose.position.x,msg.pose.position.y,msg.pose.orientation.z) )
+        self.get_logger().info('goal pose: %f %f %f' % (msg.pose.position.x,msg.pose.position.y,msg.pose.orientation.z) )
         self.goalx = msg.pose.position.x
         self.goaly = msg.pose.position.y
-        self.distx = self.goalx - self.currentx
-        self.disty = self.goaly - self.currenty
-        self.get_logger().info('distx: "%f"' % self.distx)
-        self.get_logger().info('disty: "%f"' % self.disty)
-        self.vx = math.sqrt(self.vmax**2/(1.0+(self.disty/self.distx)**2))
-        self.vy = self.disty/self.distx * self.vx
+        dx = self.goalx - self.currentx
+        dy = self.goaly - self.currenty
+        self.stem_ang = math.atan(dy/dx)
+        d = math.sqrt(dx**2 + dy**2)
+        self.vx = dx / d * self.vmax
+        self.vy = dy / d * self.vmax
+        if (dy<0 and dx>0) or (dy>0 and dx>0):
+            omega = -self.vmax/self.rwheel
+        else:
+            omega = self.vmax/self.rwheel
+        self.get_logger().info('distx: "%f"' % dx)
+        self.get_logger().info('disty: "%f"' % dy)
         self.dx = self.vx*self.period
         self.dy = self.vy*self.period
+        self.dtheta = omega * self.period
 
     def tilt_callback(self,msg):
-        self.get_logger().info('message recieved: "%s"' % (msg.angle))
+        self.get_logger().info('tilt angle: "%s"' % (msg.angle))
         self.tilt_angf = msg.angle
 
     def timer_callback(self):
@@ -127,29 +133,24 @@ class Turtle_robot(Node):
         self.odom.header.stamp = self.get_clock().now().to_msg()
         self.odom.pose.pose.position.x = self.currentx
         self.odom.pose.pose.position.y = self.currenty
-        if self.distx >= 0.0:
-            self.odom.twist.twist.linear.x = self.vx
-            self.odom.twist.twist.linear.y = self.vy
-        elif self.distx < 0.0:
-            self.odom.twist.twist.linear.x = -self.vx
-            self.odom.twist.twist.linear.y = -self.vy
+        self.odom.twist.twist.linear.x = self.vx
+        self.odom.twist.twist.linear.y = self.vy
+
         
         #updating joint states
         self.joint_state.header.stamp = self.get_clock().now().to_msg()
         self.joint_state.name = ['stem_wheel','base_stem','link_platform1']
         self.joint_state.position = [self.wheel_ang, self.direction_ang, self.tilt_ang]
+        
         #update twist
-        if self.distx >= 0.0:
-            self.twist.linear.x = self.vx
-            self.twist.linear.y = self.vy
-        elif self.distx < 0.0:
-            self.twist.linear.x = -self.vx
-            self.twist.linear.y = -self.vy
+        self.twist.linear.x = self.vx
+        self.twist.linear.y = self.vy
         
         #update robot pose
         self.robo_pose.position.x=self.currentx
         self.robo_pose.position.y=self.currenty
         self.robo_pose.position.z=self.height
+        self.robo_pose.orientation.w = self.tilt_ang
 
         #update transforms
         self.odom_base_link.transform.translation.x = self.currentx 
@@ -163,31 +164,36 @@ class Turtle_robot(Node):
         self.robot_pub.publish(self.robo_pose)
         self.broadcaster.sendTransform(self.odom_base_link)
         #moving the robot to goal pose
-        if self.distx >= 0.0:
-            self.currentx += self.dx
-            # self.get_logger().info('adding dx:')
-        elif self.distx < 0.0:
-            self.currentx -= self.dx
-            # self.get_logger().info('subtract dx:')
-        if abs(self.currentx-self.goalx) <= 0.05:
+        self.currentx += self.dx
+        self.currenty += self.dy
+        if abs(self.currentx-self.goalx) <= 0.03:
             self.vx = 0.0
             self.dx = 0.0
-        if self.disty >= 0.0:
-            self.currenty += self.dy
-            # self.get_logger().info('adding dy:')
-        elif self.disty < 0.0:
-            self.currenty -= self.dy
-            # self.get_logger().info('subtract dy:')
-        if abs(self.currenty-self.goaly) <= 0.05:
+        if abs(self.currenty-self.goaly)<= 0.03:
             self.vy = 0.0
             self.dy = 0.0
+        
+        #move the wheel and stem to face direction and roll
+        if self.vx != 0.0 and self.vy!=0.0:
+            self.wheel_ang += self.dtheta
+        if abs(self.stem_ang-self.direction_ang)>= 0.2:
+            if self.stem_ang-self.direction_ang >=0:
+                self.direction_ang += 0.1
+                self.get_logger().info('stem angle: "%s"' % (self.direction_ang ))
+            else:
+                self.direction_ang -= 0.1
+                self.get_logger().info('stem angle: "%s"' % (self.direction_ang))
         #tilt if tilt is called
-        if abs(self.tilt_ang-self.tilt_angf) >=0.01:       
-            if self.tilt_angf-self.tilt_ang < 0.0:
-                self.tilt_ang-=0.005
-            elif self.tilt_angf-self.tilt_ang >= 0.0:
-                self.tilt_ang+=0.005
-
+        if self.tilt_ang != 0.0 or self.tilt_angf != 0.0:
+            if abs(self.tilt_ang-self.tilt_angf) >=0.01:       
+                if self.tilt_angf-self.tilt_ang < 0.0:
+                    self.tilt_ang-=0.005
+                elif self.tilt_angf-self.tilt_ang >= 0.0:
+                    self.tilt_ang+=0.005
+            elif self.tilt_angf == 0.0:
+                self.tilt_ang = 0.0
+            else:
+                self.tilt_angf = 0.0
         
         
 

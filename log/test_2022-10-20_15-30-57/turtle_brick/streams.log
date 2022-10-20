@@ -1,0 +1,183 @@
+[0.254s] Invoking command in '/home/alyssa/homework2-alyssa225/src/turtle_brick': AMENT_PREFIX_PATH=/home/alyssa/homework2-alyssa225/install/turtle_brick:/home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces:/opt/ros/humble PYTEST_ADDOPTS=--tb=short --junit-xml=/home/alyssa/homework2-alyssa225/build/turtle_brick/pytest.xml --junit-prefix=turtle_brick -o cache_dir=/home/alyssa/homework2-alyssa225/build/turtle_brick/.pytest_cache PYTHONPATH=/home/alyssa/homework2-alyssa225/install/turtle_brick/lib/python3.10/site-packages:/home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/python3 -m pytest
+[0.533s] [1m============================= test session starts ==============================[0m
+[0.533s] platform linux -- Python 3.10.6, pytest-6.2.5, py-1.10.0, pluggy-0.13.0
+[0.538s] cachedir: /home/alyssa/homework2-alyssa225/build/turtle_brick/.pytest_cache
+[0.538s] rootdir: /home/alyssa/homework2-alyssa225/src/turtle_brick
+[0.538s] plugins: ament-lint-0.12.4, ament-xmllint-0.12.4, launch-testing-ros-0.19.3, launch-testing-1.0.2, ament-flake8-0.12.4, ament-pep257-0.12.4, ament-copyright-0.12.4, colcon-core-0.10.0, cov-3.0.0
+[0.619s] [1mcollecting ... [0m[1m
+[0.619s] collected 4 items                                                              [0m
+[0.619s] 
+[0.628s] test/math_test.py [32m.[0m[32m                                                      [ 25%][0m
+[0.629s] test/test_copyright.py [33ms[0m[32m                                                 [ 50%][0m
+[0.825s] test/test_flake8.py [31mF[0m[31m                                                    [ 75%][0m
+[0.886s] test/test_pep257.py [31mF[0m[31m                                                    [100%][0m
+[0.886s] 
+[0.886s] =================================== FAILURES ===================================
+[0.886s] [31m[1m_________________________________ test_flake8 __________________________________[0m
+[0.886s] [1m[31mtest/test_flake8.py[0m:23: in test_flake8
+[0.921s]     [94massert[39;49;00m rc == [94m0[39;49;00m, \
+[0.922s] [1m[31mE   AssertionError: Found 13 code style errors / warnings:[0m
+[0.922s] [1m[31mE     ./launch/run_turtle.launch.py:11:69: W291 trailing whitespace[0m
+[0.922s] [1m[31mE     ./launch/run_turtle.launch.py:15:1: E302 expected 2 blank lines, found 1[0m
+[0.923s] [1m[31mE     ./launch/run_turtle.launch.py:42:23: E251 unexpected spaces around keyword / parameter equals[0m
+[0.923s] [1m[31mE     ./launch/run_turtle.launch.py:42:25: E251 unexpected spaces around keyword / parameter equals[0m
+[0.923s] [1m[31mE     ./launch/run_turtle.launch.py:42:70: E231 missing whitespace after ','[0m
+[0.924s] [1m[31mE     ./launch/run_turtle.launch.py:45:1: W293 blank line contains whitespace[0m
+[0.924s] [1m[31mE     ./launch/run_turtle.launch.py:46:7: W292 no newline at end of file[0m
+[0.924s] [1m[31mE     ./launch/turtle_arena.launch.py:5:27: E271 multiple spaces after keyword[0m
+[0.924s] [1m[31mE     ./launch/turtle_arena.launch.py:10:61: W291 trailing whitespace[0m
+[0.924s] [1m[31mE     ./launch/turtle_arena.launch.py:12:54: W291 trailing whitespace[0m
+[0.924s] [1m[31mE     ./launch/turtle_arena.launch.py:15:1: E302 expected 2 blank lines, found 1[0m
+[0.924s] [1m[31mE     ./launch/turtle_arena.launch.py:44:1: W293 blank line contains whitespace[0m
+[0.925s] [1m[31mE     ./launch/turtle_arena.launch.py:45:7: W292 no newline at end of file[0m
+[0.925s] [1m[31mE   assert 1 == 0[0m
+[0.925s] ----------------------------- Captured stdout call -----------------------------
+[0.925s] 
+[0.925s] ./launch/run_turtle.launch.py:11:69: W291 trailing whitespace
+[0.925s] """
+[0.925s] launches turtlesim and turtle_robot node along with all the nodes in 
+[0.925s] show_turtle launch file. Also connects yaml file to turtle_robot
+[0.926s] """
+[0.926s]    
+[0.926s]                                                                 ^
+[0.926s] 
+[0.926s] ./launch/run_turtle.launch.py:15:1: E302 expected 2 blank lines, found 1
+[0.926s] def generate_launch_description():
+[0.926s] ^
+[0.927s] 
+[0.927s] ./launch/run_turtle.launch.py:42:23: E251 unexpected spaces around keyword / parameter equals
+[0.927s]             remappings = [('/cmd_vel', '/turtlesim1/turtle1/cmd_vel'),],
+[0.927s]                       ^
+[0.927s] 
+[0.927s] ./launch/run_turtle.launch.py:42:25: E251 unexpected spaces around keyword / parameter equals
+[0.927s]             remappings = [('/cmd_vel', '/turtlesim1/turtle1/cmd_vel'),],
+[0.927s]                         ^
+[0.928s] 
+[0.928s] ./launch/run_turtle.launch.py:42:70: E231 missing whitespace after ','
+[0.928s]             remappings = [('/cmd_vel', '/turtlesim1/turtle1/cmd_vel'),],
+[0.928s]                                                                      ^
+[0.928s] 
+[0.928s] ./launch/run_turtle.launch.py:45:1: W293 blank line contains whitespace
+[0.929s]         
+[0.929s] ^
+[0.929s] 
+[0.929s] ./launch/run_turtle.launch.py:46:7: W292 no newline at end of file
+[0.929s]     ])      ^
+[0.929s] 
+[0.929s] ./launch/turtle_arena.launch.py:5:27: E271 multiple spaces after keyword
+[0.929s] from launch.actions import  IncludeLaunchDescription
+[0.930s]                           ^
+[0.930s] 
+[0.930s] ./launch/turtle_arena.launch.py:10:61: W291 trailing whitespace
+[0.930s] """
+[0.930s] launches arena and catcher nodes along with all the nodes in 
+[0.930s] show_turtle launch file.
+[0.930s] Also connects to yaml files to arena and catcher node 
+[0.930s] """
+[0.931s]    
+[0.931s]                                                         ^
+[0.931s] 
+[0.931s] ./launch/turtle_arena.launch.py:12:54: W291 trailing whitespace
+[0.931s] """
+[0.931s] launches arena and catcher nodes along with all the nodes in 
+[0.931s] show_turtle launch file.
+[0.931s] Also connects to yaml files to arena and catcher node 
+[0.931s] """
+[0.931s]    
+[0.932s]                                                  ^
+[0.932s] 
+[0.932s] ./launch/turtle_arena.launch.py:15:1: E302 expected 2 blank lines, found 1
+[0.932s] def generate_launch_description():
+[0.932s] ^
+[0.932s] 
+[0.932s] ./launch/turtle_arena.launch.py:44:1: W293 blank line contains whitespace
+[0.932s]         
+[0.932s] ^
+[0.933s] 
+[0.933s] ./launch/turtle_arena.launch.py:45:7: W292 no newline at end of file
+[0.933s]     ])      ^
+[0.933s] 
+[0.933s] 1     E231 missing whitespace after ','
+[0.933s] 2     E251 unexpected spaces around keyword / parameter equals
+[0.933s] 1     E271 multiple spaces after keyword
+[0.933s] 2     E302 expected 2 blank lines, found 1
+[0.933s] 3     W291 trailing whitespace
+[0.933s] 2     W292 no newline at end of file
+[0.934s] 2     W293 blank line contains whitespace
+[0.934s] 
+[0.934s] 13 files checked
+[0.934s] 13 errors
+[0.934s] 
+[0.934s] 'E'-type errors: 6
+[0.934s] 'W'-type errors: 7
+[0.934s] 
+[0.935s] Checked files:
+[0.935s] 
+[0.935s] * ./setup.py
+[0.935s] * ./turtle_brick/arena.py
+[0.935s] * ./turtle_brick/turtle_robot.py
+[0.935s] * ./turtle_brick/catcher.py
+[0.935s] * ./turtle_brick/__init__.py
+[0.936s] * ./test/math_test.py
+[0.936s] * ./test/test_flake8.py
+[0.936s] * ./test/test_copyright.py
+[0.936s] * ./test/test_pep257.py
+[0.936s] * ./test/brick.test.py
+[0.936s] * ./launch/show_turtle.launch.py
+[0.936s] * ./launch/run_turtle.launch.py
+[0.936s] * ./launch/turtle_arena.launch.py
+[0.936s] ----------------------------- Captured stderr call -----------------------------
+[0.937s] option --max-complexity: please update from optparse string `type=` to argparse callable `type=` -- this will be an error in the future
+[0.937s] [31m[1m_________________________________ test_pep257 __________________________________[0m
+[0.937s] [1m[31mtest/test_pep257.py[0m:23: in test_pep257
+[0.937s]     [94massert[39;49;00m rc == [94m0[39;49;00m, [33m'[39;49;00m[33mFound code style errors / warnings[39;49;00m[33m'[39;49;00m
+[0.937s] [1m[31mE   AssertionError: Found code style errors / warnings[0m
+[0.937s] [1m[31mE   assert 1 == 0[0m
+[0.937s] ----------------------------- Captured stdout call -----------------------------
+[0.938s] [33m=============================== warnings summary ===============================[0m
+[0.938s] test/test_flake8.py::test_flake8
+[0.938s] test/test_flake8.py::test_flake8
+[0.938s]   Warning: SelectableGroups dict interface is deprecated. Use select.
+[0.938s] 
+[0.938s] -- Docs: https://docs.pytest.org/en/stable/warnings.html
+[0.938s] checking ./launch/run_turtle.launch.py
+[0.939s] checking ./launch/show_turtle.launch.py
+[0.939s] checking ./launch/turtle_arena.launch.py
+[0.939s] checking ./setup.py
+[0.939s] checking ./test/brick.test.py
+[0.939s] checking ./test/math_test.py
+[0.939s] checking ./test/test_copyright.py
+[0.939s] checking ./test/test_flake8.py
+[0.939s] checking ./test/test_pep257.py
+[0.939s] checking ./turtle_brick/__init__.py
+[0.940s] checking ./turtle_brick/arena.py
+[0.940s] ./turtle_brick/arena.py:16 in public class `BState`: D204: 1 blank line required after class docstring (found 0)
+[0.940s] ./turtle_brick/arena.py:16 in public class `BState`: D205: 1 blank line required between summary line and description (found 0)
+[0.940s] ./turtle_brick/arena.py:16 in public class `BState`: D208: Docstring is over-indented
+[0.940s] ./turtle_brick/arena.py:16 in public class `BState`: D210: No whitespaces allowed surrounding docstring text
+[0.940s] ./turtle_brick/arena.py:16 in public class `BState`: D213: Multi-line docstring summary should start at the second line
+[0.940s] ./turtle_brick/arena.py:29 in public class `Arena`: D204: 1 blank line required after class docstring (found 0)
+[0.940s] ./turtle_brick/arena.py:29 in public class `Arena`: D205: 1 blank line required between summary line and description (found 0)
+[0.941s] checking ./turtle_brick/catcher.py
+[0.941s] ./turtle_brick/catcher.py:13 in public class `State`: D204: 1 blank line required after class docstring (found 0)
+[0.941s] ./turtle_brick/catcher.py:13 in public class `State`: D205: 1 blank line required between summary line and description (found 0)
+[0.941s] ./turtle_brick/catcher.py:13 in public class `State`: D400: First line should end with a period (not 't')
+[0.941s] ./turtle_brick/catcher.py:13 in public class `State`: D415: First line should end with a period, question mark, or exclamation point (not 't')
+[0.941s] ./turtle_brick/catcher.py:23 in public class `Catcher`: D205: 1 blank line required between summary line and description (found 0)
+[0.941s] ./turtle_brick/catcher.py:23 in public class `Catcher`: D400: First line should end with a period (not 't')
+[0.941s] ./turtle_brick/catcher.py:23 in public class `Catcher`: D415: First line should end with a period, question mark, or exclamation point (not 't')
+[0.941s] checking ./turtle_brick/turtle_robot.py
+[0.942s] ./turtle_brick/turtle_robot.py:14 in public class `Turtle_robot`: D204: 1 blank line required after class docstring (found 0)
+[0.942s] ./turtle_brick/turtle_robot.py:14 in public class `Turtle_robot`: D205: 1 blank line required between summary line and description (found 0)
+[0.942s] checking test/brick.test.py
+[0.942s] checking test/math_test.py
+[0.942s] checking test/test_copyright.py
+[0.942s] checking test/test_flake8.py
+[0.942s] checking test/test_pep257.py
+[0.942s] 16 errors
+[0.943s] - generated xml file: /home/alyssa/homework2-alyssa225/build/turtle_brick/pytest.xml -
+[0.943s] =========================== short test summary info ============================
+[0.943s] FAILED test/test_flake8.py::test_flake8 - AssertionError: Found 13 code style...
+[0.943s] FAILED test/test_pep257.py::test_pep257 - AssertionError: Found code style er...
+[0.943s] [31m============== [31m[1m2 failed[0m, [32m1 passed[0m, [33m1 skipped[0m, [33m2 warnings[0m[31m in 0.39s[0m[31m ==============[0m
+[1.000s] Invoked command in '/home/alyssa/homework2-alyssa225/src/turtle_brick' returned '1': AMENT_PREFIX_PATH=/home/alyssa/homework2-alyssa225/install/turtle_brick:/home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces:/opt/ros/humble PYTEST_ADDOPTS=--tb=short --junit-xml=/home/alyssa/homework2-alyssa225/build/turtle_brick/pytest.xml --junit-prefix=turtle_brick -o cache_dir=/home/alyssa/homework2-alyssa225/build/turtle_brick/.pytest_cache PYTHONPATH=/home/alyssa/homework2-alyssa225/install/turtle_brick/lib/python3.10/site-packages:/home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/python3 -m pytest

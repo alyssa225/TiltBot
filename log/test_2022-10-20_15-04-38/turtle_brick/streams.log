@@ -1,0 +1,532 @@
+[0.253s] Invoking command in '/home/alyssa/homework2-alyssa225/src/turtle_brick': AMENT_PREFIX_PATH=/home/alyssa/homework2-alyssa225/install/turtle_brick:/home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces:/opt/ros/humble PYTEST_ADDOPTS=--tb=short --junit-xml=/home/alyssa/homework2-alyssa225/build/turtle_brick/pytest.xml --junit-prefix=turtle_brick -o cache_dir=/home/alyssa/homework2-alyssa225/build/turtle_brick/.pytest_cache PYTHONPATH=/home/alyssa/homework2-alyssa225/install/turtle_brick/lib/python3.10/site-packages:/home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/python3 -m pytest
+[0.545s] [1m============================= test session starts ==============================[0m
+[0.545s] platform linux -- Python 3.10.6, pytest-6.2.5, py-1.10.0, pluggy-0.13.0
+[0.550s] cachedir: /home/alyssa/homework2-alyssa225/build/turtle_brick/.pytest_cache
+[0.550s] rootdir: /home/alyssa/homework2-alyssa225/src/turtle_brick
+[0.550s] plugins: ament-lint-0.12.4, ament-xmllint-0.12.4, launch-testing-ros-0.19.3, launch-testing-1.0.2, ament-flake8-0.12.4, ament-pep257-0.12.4, ament-copyright-0.12.4, colcon-core-0.10.0, cov-3.0.0
+[0.629s] [1mcollecting ... [0m[1m
+[0.629s] collected 4 items                                                              [0m
+[0.629s] 
+[0.639s] test/math_test.py [32m.[0m[32m                                                      [ 25%][0m
+[0.640s] test/test_copyright.py [33ms[0m[32m                                                 [ 50%][0m
+[0.877s] test/test_flake8.py [31mF[0m[31m                                                    [ 75%][0m
+[0.947s] test/test_pep257.py [31mF[0m[31m                                                    [100%][0m
+[0.948s] 
+[0.948s] =================================== FAILURES ===================================
+[0.948s] [31m[1m_________________________________ test_flake8 __________________________________[0m
+[0.948s] [1m[31mtest/test_flake8.py[0m:23: in test_flake8
+[0.987s]     [94massert[39;49;00m rc == [94m0[39;49;00m, \
+[0.988s] [1m[31mE   AssertionError: Found 70 code style errors / warnings:[0m
+[0.989s] [1m[31mE     ./turtle_brick/catcher.py:6:42: W291 trailing whitespace[0m
+[0.989s] [1m[31mE     ./turtle_brick/catcher.py:7:12: W291 trailing whitespace[0m
+[0.989s] [1m[31mE     ./turtle_brick/catcher.py:11:1: E302 expected 2 blank lines, found 1[0m
+[0.989s] [1m[31mE     ./turtle_brick/catcher.py:12:4: W291 trailing whitespace[0m
+[0.990s] [1m[31mE     ./turtle_brick/catcher.py:24:69: W291 trailing whitespace[0m
+[0.990s] [1m[31mE     ./turtle_brick/catcher.py:30:82: W291 trailing whitespace[0m
+[0.990s] [1m[31mE     ./turtle_brick/catcher.py:41:33: W291 trailing whitespace[0m
+[0.990s] [1m[31mE     ./turtle_brick/catcher.py:64:22: E225 missing whitespace around operator[0m
+[0.990s] [1m[31mE     ./turtle_brick/catcher.py:65:22: E225 missing whitespace around operator[0m
+[0.990s] [1m[31mE     ./turtle_brick/catcher.py:95:100: E501 line too long (100 > 99 characters)[0m
+[0.990s] [1m[31mE     ./turtle_brick/catcher.py:101:1: W293 blank line contains whitespace[0m
+[0.990s] [1m[31mE     ./turtle_brick/catcher.py:118:100: E501 line too long (103 > 99 characters)[0m
+[0.991s] [1m[31mE     ./turtle_brick/catcher.py:118:104: W291 trailing whitespace[0m
+[0.991s] [1m[31mE     ./turtle_brick/catcher.py:121:24: E128 continuation line under-indented for visual indent[0m
+[0.991s] [1m[31mE     ./turtle_brick/catcher.py:122:43: E261 at least two spaces before inline comment[0m
+[0.991s] [1m[31mE     ./turtle_brick/catcher.py:122:100: E501 line too long (111 > 99 characters)[0m
+[0.991s] [1m[31mE     ./turtle_brick/catcher.py:137:21: W292 no newline at end of file[0m
+[0.991s] [1m[31mE     ./test/math_test.py:4:1: W293 blank line contains whitespace[0m
+[0.991s] [1m[31mE     ./test/math_test.py:4:9: W292 no newline at end of file[0m
+[0.991s] [1m[31mE     ./test/brick.test.py:1:1: F401 'ament_copyright.main.main' imported but unused[0m
+[0.992s] [1m[31mE     ./test/brick.test.py:2:1: F401 'pytest' imported but unused[0m
+[0.992s] [1m[31mE     ./test/brick.test.py:3:1: F401 'launch' imported but unused[0m
+[0.992s] [1m[31mE     ./test/brick.test.py:4:1: F401 'launch_pytest' imported but unused[0m
+[0.992s] [1m[31mE     ./test/brick.test.py:5:1: F401 'sys' imported but unused[0m
+[0.992s] [1m[31mE     ./test/brick.test.py:6:1: F401 'launch_ros' imported but unused[0m
+[0.992s] [1m[31mE     ./test/brick.test.py:7:1: F401 'pathlib.Path' imported but unused[0m
+[0.992s] [1m[31mE     ./test/brick.test.py:8:1: E265 block comment should start with '# '[0m
+[0.992s] [1m[31mE     ./test/brick.test.py:8:100: E501 line too long (128 > 99 characters)[0m
+[0.993s] [1m[31mE     ./test/brick.test.py:21:9: W292 no newline at end of file[0m
+[0.993s] [1m[31mE     ./launch/show_turtle.launch.py:1:1: F401 'ament_index_python.packages.get_package_share_path' imported but unused[0m
+[0.993s] [1m[31mE     ./launch/show_turtle.launch.py:1:63: E231 missing whitespace after ','[0m
+[0.993s] [1m[31mE     ./launch/show_turtle.launch.py:5:1: F401 'launch.conditions.UnlessCondition' imported but unused[0m
+[0.993s] [1m[31mE     ./launch/show_turtle.launch.py:12:90: W291 trailing whitespace[0m
+[0.993s] [1m[31mE     ./launch/show_turtle.launch.py:15:14: W291 trailing whitespace[0m
+[0.993s] [1m[31mE     ./launch/show_turtle.launch.py:23:1: E302 expected 2 blank lines, found 1[0m
+[0.994s] [1m[31mE     ./launch/show_turtle.launch.py:24:22: E225 missing whitespace around operator[0m
+[0.994s] [1m[31mE     ./launch/show_turtle.launch.py:26:51: E225 missing whitespace around operator[0m
+[0.994s] [1m[31mE     ./launch/show_turtle.launch.py:27:1: W293 blank line contains whitespace[0m
+[0.994s] [1m[31mE     ./launch/show_turtle.launch.py:28:5: F841 local variable 'use_sim_time' is assigned to but never used[0m
+[0.994s] [1m[31mE     ./launch/show_turtle.launch.py:30:100: E501 line too long (115 > 99 characters)[0m
+[0.994s] [1m[31mE     ./launch/show_turtle.launch.py:30:105: E231 missing whitespace after ','[0m
+[0.994s] [1m[31mE     ./launch/show_turtle.launch.py:31:37: E128 continuation line under-indented for visual indent[0m
+[0.994s] [1m[31mE     ./launch/show_turtle.launch.py:31:92: E261 at least two spaces before inline comment[0m
+[0.995s] [1m[31mE     ./launch/show_turtle.launch.py:31:92: E262 inline comment should start with '# '[0m
+[0.995s] [1m[31mE     ./launch/show_turtle.launch.py:34:100: E501 line too long (100 > 99 characters)[0m
+[0.995s] [1m[31mE     ./launch/show_turtle.launch.py:48:89: E231 missing whitespace after ','[0m
+[0.995s] [1m[31mE     ./launch/show_turtle.launch.py:48:96: E231 missing whitespace after ','[0m
+[0.995s] [1m[31mE     ./launch/show_turtle.launch.py:55:56: E231 missing whitespace after ','[0m
+[0.995s] [1m[31mE     ./launch/show_turtle.launch.py:61:56: E231 missing whitespace after ','[0m
+[0.995s] [1m[31mE     ./launch/show_turtle.launch.py:80:7: W292 no newline at end of file[0m
+[0.995s] [1m[31mE     ./launch/run_turtle.launch.py:2:1: F401 'ament_index_python.packages.get_package_share_path' imported but unused[0m
+[0.996s] [1m[31mE     ./launch/run_turtle.launch.py:5:1: F401 'launch.actions.DeclareLaunchArgument' imported but unused[0m
+[0.996s] [1m[31mE     ./launch/run_turtle.launch.py:6:1: F401 'launch.conditions.IfCondition' imported but unused[0m
+[0.996s] [1m[31mE     ./launch/run_turtle.launch.py:6:1: F401 'launch.conditions.UnlessCondition' imported but unused[0m
+[0.996s] [1m[31mE     ./launch/run_turtle.launch.py:7:1: F401 'launch.substitutions.Command' imported but unused[0m
+[0.996s] [1m[31mE     ./launch/run_turtle.launch.py:7:1: F401 'launch.substitutions.LaunchConfiguration' imported but unused[0m
+[0.996s] [1m[31mE     ./launch/run_turtle.launch.py:10:1: F401 'launch_ros.parameter_descriptions.ParameterValue' imported but unused[0m
+[0.996s] [1m[31mE     ./launch/run_turtle.launch.py:13:69: W291 trailing whitespace[0m
+[0.996s] [1m[31mE     ./launch/run_turtle.launch.py:16:1: E302 expected 2 blank lines, found 0[0m
+[0.996s] [1m[31mE     ./launch/run_turtle.launch.py:43:23: E251 unexpected spaces around keyword / parameter equals[0m
+[0.996s] [1m[31mE     ./launch/run_turtle.launch.py:43:25: E251 unexpected spaces around keyword / parameter equals[0m
+[0.996s] [1m[31mE     ./launch/run_turtle.launch.py:43:70: E231 missing whitespace after ','[0m
+[0.996s] [1m[31mE     ./launch/run_turtle.launch.py:46:1: W293 blank line contains whitespace[0m
+[0.996s] [1m[31mE     ./launch/run_turtle.launch.py:47:7: W292 no newline at end of file[0m
+[0.996s] [1m[31mE     ./launch/turtle_arena.launch.py:5:27: E271 multiple spaces after keyword[0m
+[0.997s] [1m[31mE     ./launch/turtle_arena.launch.py:10:61: W291 trailing whitespace[0m
+[0.997s] [1m[31mE     ./launch/turtle_arena.launch.py:12:54: W291 trailing whitespace[0m
+[0.997s] [1m[31mE     ./launch/turtle_arena.launch.py:15:1: E302 expected 2 blank lines, found 1[0m
+[0.997s] [1m[31mE     ./launch/turtle_arena.launch.py:44:1: W293 blank line contains whitespace[0m
+[0.997s] [1m[31mE     ./launch/turtle_arena.launch.py:45:7: W292 no newline at end of file[0m
+[0.997s] [1m[31mE   assert 1 == 0[0m
+[0.997s] ----------------------------- Captured stdout call -----------------------------
+[0.997s] 
+[0.997s] ./turtle_brick/catcher.py:6:42: W291 trailing whitespace
+[0.997s] from visualization_msgs.msg import Marker 
+[0.997s]                                          ^
+[0.997s] 
+[0.997s] ./turtle_brick/catcher.py:7:12: W291 trailing whitespace
+[0.997s] import math 
+[0.998s]            ^
+[0.998s] 
+[0.998s] ./turtle_brick/catcher.py:11:1: E302 expected 2 blank lines, found 1
+[0.998s] class State(Enum):
+[0.998s] ^
+[0.998s] 
+[0.998s] ./turtle_brick/catcher.py:12:4: W291 trailing whitespace
+[0.998s]     """ 
+[0.998s]     Current state of the robot
+[0.998s]         WAITING: waiting for robot
+[0.998s]         TILT: tilt the platform
+[0.998s]     """
+[0.998s]    ^
+[0.999s] 
+[0.999s] ./turtle_brick/catcher.py:24:69: W291 trailing whitespace
+[0.999s]     """
+[0.999s]     calculates if robot can catch placed brick in time or not
+[0.999s]     -If it can catch, robot travels to drop location, catches brick, 
+[0.999s]         travels back to origin, and tilts brick off
+[0.999s]     -If the robot can't reach brick in time, the screen publishes "UNREACHABLE",
+[0.999s]         and lets brick fall to ground
+[0.999s]     SUBSCRIPTIONS:
+[0.999s]         -robot_sub:continuous robot position
+[0.999s]         -drop_sub: gets placed brick position and sends if drop service is called 
+[0.999s]         -catch_sub: gets True the brick is caught on the platform
+[0.999s]     PUBLISHERS:
+[0.999s]         -goal_pose: send pose to turtle robot
+[1.000s]         -tilt: send tilt angle to platform on turtle robot
+[1.000s]         -text marker: publishes "UNREACHABLE" if robot can't reach in time
+[1.000s]     """
+[1.000s]        
+[1.000s]                                                             ^
+[1.000s] 
+[1.000s] ./turtle_brick/catcher.py:30:82: W291 trailing whitespace
+[1.000s]     """
+[1.000s]     calculates if robot can catch placed brick in time or not
+[1.000s]     -If it can catch, robot travels to drop location, catches brick, 
+[1.000s]         travels back to origin, and tilts brick off
+[1.000s]     -If the robot can't reach brick in time, the screen publishes "UNREACHABLE",
+[1.000s]         and lets brick fall to ground
+[1.001s]     SUBSCRIPTIONS:
+[1.001s]         -robot_sub:continuous robot position
+[1.001s]         -drop_sub: gets placed brick position and sends if drop service is called 
+[1.001s]         -catch_sub: gets True the brick is caught on the platform
+[1.001s]     PUBLISHERS:
+[1.001s]         -goal_pose: send pose to turtle robot
+[1.001s]         -tilt: send tilt angle to platform on turtle robot
+[1.001s]         -text marker: publishes "UNREACHABLE" if robot can't reach in time
+[1.001s]     """
+[1.001s]        
+[1.001s]                                                              
+[1.001s]            ^
+[1.001s] 
+[1.001s] ./turtle_brick/catcher.py:41:33: W291 trailing whitespace
+[1.002s]         self.declare_parameters( 
+[1.002s]                                 ^
+[1.002s] 
+[1.002s] ./turtle_brick/catcher.py:64:22: E225 missing whitespace around operator
+[1.002s]         self.goal_pub= self.create_publisher(PoseStamped, '/goal_pose', 10)
+[1.002s]                      ^
+[1.003s] 
+[1.003s] ./turtle_brick/catcher.py:65:22: E225 missing whitespace around operator
+[1.003s]         self.tilt_pub= self.create_publisher(Tilt, '/tilt', 10)
+[1.003s]                      ^
+[1.003s] 
+[1.003s] ./turtle_brick/catcher.py:95:100: E501 line too long (100 > 99 characters)
+[1.003s]         if self.state == State.TILT and abs(self.platformx) <= 0.05 and abs(self.platformy) <= 0.05:
+[1.003s]                                                                                                    ^
+[1.003s] 
+[1.004s] ./turtle_brick/catcher.py:101:1: W293 blank line contains whitespace
+[1.004s]     
+[1.004s] ^
+[1.004s] 
+[1.004s] ./turtle_brick/catcher.py:118:100: E501 line too long (103 > 99 characters)
+[1.004s]             # calc time takes robot to move to x,y position from current position in max velocity speed 
+[1.004s]                                                                                                    ^
+[1.004s] 
+[1.004s] ./turtle_brick/catcher.py:118:104: W291 trailing whitespace
+[1.004s]             # calc time takes robot to move to x,y position from current position in max velocity speed 
+[1.004s]                                                                                                        ^
+[1.004s] 
+[1.004s] ./turtle_brick/catcher.py:121:24: E128 continuation line under-indented for visual indent
+[1.005s]                        + (abs(self.brick_pose.position.y - self.platformy) - 0.3)**2) / self.vmax
+[1.005s]                        ^
+[1.005s] 
+[1.005s] ./turtle_brick/catcher.py:122:43: E261 at least two spaces before inline comment
+[1.005s]             if timerobo + 1.0 <= timefall: # 1.0 is to give some time for message to be revieved and acted upon
+[1.005s]                                           ^
+[1.005s] 
+[1.005s] ./turtle_brick/catcher.py:122:100: E501 line too long (111 > 99 characters)
+[1.005s]             if timerobo + 1.0 <= timefall: # 1.0 is to give some time for message to be revieved and acted upon
+[1.005s]                                                                                                    ^
+[1.005s] 
+[1.005s] ./turtle_brick/catcher.py:137:21: W292 no newline at end of file
+[1.005s]     rclpy.shutdown()                    ^
+[1.005s] 
+[1.006s] ./test/math_test.py:4:1: W293 blank line contains whitespace
+[1.006s]         ^
+[1.006s] 
+[1.006s] ./test/math_test.py:4:9: W292 no newline at end of file
+[1.006s]                 ^
+[1.006s] 
+[1.006s] ./test/brick.test.py:1:1: F401 'ament_copyright.main.main' imported but unused
+[1.006s] from ament_copyright.main import main
+[1.006s] ^
+[1.006s] 
+[1.006s] ./test/brick.test.py:2:1: F401 'pytest' imported but unused
+[1.006s] import pytest
+[1.006s] ^
+[1.006s] 
+[1.007s] ./test/brick.test.py:3:1: F401 'launch' imported but unused
+[1.007s] import launch
+[1.007s] ^
+[1.007s] 
+[1.007s] ./test/brick.test.py:4:1: F401 'launch_pytest' imported but unused
+[1.007s] import launch_pytest
+[1.007s] ^
+[1.007s] 
+[1.007s] ./test/brick.test.py:5:1: F401 'sys' imported but unused
+[1.008s] import sys
+[1.008s] ^
+[1.008s] 
+[1.008s] ./test/brick.test.py:6:1: F401 'launch_ros' imported but unused
+[1.008s] import launch_ros
+[1.008s] ^
+[1.008s] 
+[1.008s] ./test/brick.test.py:7:1: F401 'pathlib.Path' imported but unused
+[1.008s] from pathlib import Path
+[1.008s] ^
+[1.008s] 
+[1.008s] ./test/brick.test.py:8:1: E265 block comment should start with '# '
+[1.008s] #found this example here https://github.com/ros2/launch/blob/humble/launch_pytest/test/launch_pytest/examples/check_node_msgs.py
+[1.008s] ^
+[1.009s] 
+[1.009s] ./test/brick.test.py:8:100: E501 line too long (128 > 99 characters)
+[1.009s] #found this example here https://github.com/ros2/launch/blob/humble/launch_pytest/test/launch_pytest/examples/check_node_msgs.py
+[1.009s]                                                                                                    ^
+[1.009s] 
+[1.009s] ./test/brick.test.py:21:9: W292 no newline at end of file
+[1.009s] #     ])        ^
+[1.009s] 
+[1.009s] ./launch/show_turtle.launch.py:1:1: F401 'ament_index_python.packages.get_package_share_path' imported but unused
+[1.009s] from ament_index_python.packages import get_package_share_path,get_package_share_directory
+[1.009s] ^
+[1.009s] 
+[1.009s] ./launch/show_turtle.launch.py:1:63: E231 missing whitespace after ','
+[1.010s] from ament_index_python.packages import get_package_share_path,get_package_share_directory
+[1.010s]                                                               ^
+[1.010s] 
+[1.010s] ./launch/show_turtle.launch.py:5:1: F401 'launch.conditions.UnlessCondition' imported but unused
+[1.010s] from launch.conditions import IfCondition, UnlessCondition
+[1.010s] ^
+[1.010s] 
+[1.010s] ./launch/show_turtle.launch.py:12:90: W291 trailing whitespace
+[1.010s] """
+[1.010s] took bases from https://github.com/ros/urdf_tutorial/blob/ros2/launch/display.launch.py
+[1.010s] launches the rviz, robot publisher, and choosen joint state publisher nodes and takes the 
+[1.010s] turtle_robot.urdf.xacro file from the urdf folder
+[1.010s] LAUNCH ARGUMENTS:
+[1.010s]     -use_jsp: 
+[1.011s]         default: '"gui"'
+[1.011s]         arguments: ['"gui"', '"jsp"', '"none"']
+[1.011s]             '"gui"': launches with joint_state_publisher_gui_node
+[1.011s]             '"jsp"': launches with joint_state_publisher_node
+[1.011s]             '"none"': does not use either joint state publisher
+[1.011s] """
+[1.011s]    
+[1.011s] [33m=============================== warnings summary ===============================[0m
+[1.011s]                                                                                      ^
+[1.011s] 
+[1.011s] ./launch/show_turtle.launch.py:15:14: W291 trailing whitespace
+[1.011s] """
+[1.011s] took bases from https://github.com/ros/urdf_tutorial/blob/ros2/launch/display.launch.py
+[1.012s] launches the rviz, robot publisher, and choosen joint state publisher nodes and takes the 
+[1.012s] turtle_robot.urdf.xacro file from the urdf folder
+[1.012s] LAUNCH ARGUMENTS:
+[1.012s]     -use_jsp: 
+[1.012s]         default: '"gui"'
+[1.012s]         arguments: ['"gui"', '"jsp"', '"none"']
+[1.012s]             '"gui"': launches with joint_state_publisher_gui_node
+[1.012s]             '"jsp"': launches with joint_state_publisher_node
+[1.012s]             '"none"': does not use either joint state publisher
+[1.012s] """
+[1.012s]    
+[1.012s]          ^
+[1.012s] 
+[1.012s] ./launch/show_turtle.launch.py:23:1: E302 expected 2 blank lines, found 1
+[1.012s] def generate_launch_description():
+[1.013s] ^
+[1.013s] 
+[1.013s] ./launch/show_turtle.launch.py:24:22: E225 missing whitespace around operator
+[1.013s]     turtle_brick_path= 'src/turtle_brick'
+[1.013s]                      ^
+[1.013s] 
+[1.013s] ./launch/show_turtle.launch.py:26:51: E225 missing whitespace around operator
+[1.013s]     default_rviz_config_path = turtle_brick_path +'/config/turtle_urdf.rviz'
+[1.013s]                                                   ^
+[1.013s] 
+[1.013s] ./launch/show_turtle.launch.py:27:1: W293 blank line contains whitespace
+[1.013s]     
+[1.013s] ^
+[1.013s] 
+[1.014s] ./launch/show_turtle.launch.py:28:5: F841 local variable 'use_sim_time' is assigned to but never used
+[1.014s]     use_sim_time = LaunchConfiguration('use_sim_time', default='false')
+[1.014s]     ^
+[1.014s] 
+[1.014s] ./launch/show_turtle.launch.py:30:100: E501 line too long (115 > 99 characters)
+[1.014s]     use_jsp_arg = DeclareLaunchArgument(name='use_jsp', default_value='"gui"', choices=['"gui"', '"jsp"','"none"'],
+[1.014s]                                                                                                    ^
+[1.014s] 
+[1.014s] ./launch/show_turtle.launch.py:30:105: E231 missing whitespace after ','
+[1.014s]     use_jsp_arg = DeclareLaunchArgument(name='use_jsp', default_value='"gui"', choices=['"gui"', '"jsp"','"none"'],
+[1.014s]                                                                                                         ^
+[1.014s] 
+[1.015s] ./launch/show_turtle.launch.py:31:37: E128 continuation line under-indented for visual indent
+[1.015s]                                     description='Flag to enable joint_state_publisher_gui')#change
+[1.015s]                                     ^
+[1.015s] 
+[1.015s] ./launch/show_turtle.launch.py:31:92: E261 at least two spaces before inline comment
+[1.015s]                                     description='Flag to enable joint_state_publisher_gui')#change
+[1.015s]                                                                                            ^
+[1.015s] 
+[1.015s] ./launch/show_turtle.launch.py:31:92: E262 inline comment should start with '# '
+[1.015s]                                     description='Flag to enable joint_state_publisher_gui')#change
+[1.015s]                                                                                            ^
+[1.015s] 
+[1.015s] ./launch/show_turtle.launch.py:34:100: E501 line too long (100 > 99 characters)
+[1.016s]     rviz_arg = DeclareLaunchArgument(name='rvizconfig', default_value=str(default_rviz_config_path),
+[1.016s]                                                                                                    ^
+[1.016s] 
+[1.016s] ./launch/show_turtle.launch.py:48:89: E231 missing whitespace after ','
+[1.016s]         parameters=[{'robot_description': robot_description, 'publish_frequency': 100.0},config,]
+[1.016s]                                                                                         ^
+[1.016s] 
+[1.016s] ./launch/show_turtle.launch.py:48:96: E231 missing whitespace after ','
+[1.016s]         parameters=[{'robot_description': robot_description, 'publish_frequency': 100.0},config,]
+[1.016s]                                                                                                ^
+[1.016s] 
+[1.016s] ./launch/show_turtle.launch.py:55:56: E231 missing whitespace after ','
+[1.016s]         condition=IfCondition(PythonExpression([use_jsp,"=='jsp'"]))
+[1.016s]                                                        ^
+[1.016s] 
+[1.017s] ./launch/show_turtle.launch.py:61:56: E231 missing whitespace after ','
+[1.017s]         condition=IfCondition(PythonExpression([use_jsp,"=='gui'"]))
+[1.017s]                                                        ^
+[1.017s] 
+[1.017s] test/test_flake8.py::test_flake8
+[1.017s] test/test_flake8.py::test_flake8
+[1.017s]   Warning: SelectableGroups dict interface is deprecated. Use select.
+[1.017s] 
+[1.017s] -- Docs: https://docs.pytest.org/en/stable/warnings.html
+[1.017s] ./launch/show_turtle.launch.py:80:7: W292 no newline at end of file
+[1.017s]     ])      ^
+[1.017s] 
+[1.018s] ./launch/run_turtle.launch.py:2:1: F401 'ament_index_python.packages.get_package_share_path' imported but unused
+[1.018s] from ament_index_python.packages import get_package_share_path, get_package_share_directory
+[1.018s] ^
+[1.018s] 
+[1.018s] ./launch/run_turtle.launch.py:5:1: F401 'launch.actions.DeclareLaunchArgument' imported but unused
+[1.018s] from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription
+[1.018s] ^
+[1.018s] 
+[1.018s] ./launch/run_turtle.launch.py:6:1: F401 'launch.conditions.IfCondition' imported but unused
+[1.018s] from launch.conditions import IfCondition, UnlessCondition
+[1.018s] ^
+[1.018s] 
+[1.018s] ./launch/run_turtle.launch.py:6:1: F401 'launch.conditions.UnlessCondition' imported but unused
+[1.019s] from launch.conditions import IfCondition, UnlessCondition
+[1.019s] ^
+[1.019s] 
+[1.019s] ./launch/run_turtle.launch.py:7:1: F401 'launch.substitutions.Command' imported but unused
+[1.019s] from launch.substitutions import Command, LaunchConfiguration, PathJoinSubstitution
+[1.019s] ^
+[1.019s] 
+[1.019s] ./launch/run_turtle.launch.py:7:1: F401 'launch.substitutions.LaunchConfiguration' imported but unused
+[1.019s] from launch.substitutions import Command, LaunchConfiguration, PathJoinSubstitution
+[1.019s] ^
+[1.019s] 
+[1.019s] ./launch/run_turtle.launch.py:10:1: F401 'launch_ros.parameter_descriptions.ParameterValue' imported but unused
+[1.020s] from launch_ros.parameter_descriptions import ParameterValue
+[1.020s] ^
+[1.020s] 
+[1.020s] ./launch/run_turtle.launch.py:13:69: W291 trailing whitespace
+[1.020s] """
+[1.020s] launches turtlesim and turtle_robot node along with all the nodes in 
+[1.020s] show_turtle launch file. Also connects yaml file to turtle_robot
+[1.020s] """
+[1.020s]    
+[1.020s]                                                                 ^
+[1.020s] 
+[1.020s] ./launch/run_turtle.launch.py:16:1: E302 expected 2 blank lines, found 0
+[1.020s] def generate_launch_description():
+[1.020s] ^
+[1.021s] 
+[1.021s] ./launch/run_turtle.launch.py:43:23: E251 unexpected spaces around keyword / parameter equals
+[1.021s]             remappings = [('/cmd_vel', '/turtlesim1/turtle1/cmd_vel'),],
+[1.021s]                       ^
+[1.021s] 
+[1.021s] ./launch/run_turtle.launch.py:43:25: E251 unexpected spaces around keyword / parameter equals
+[1.021s]             remappings = [('/cmd_vel', '/turtlesim1/turtle1/cmd_vel'),],
+[1.021s]                         ^
+[1.021s] 
+[1.021s] ./launch/run_turtle.launch.py:43:70: E231 missing whitespace after ','
+[1.021s]             remappings = [('/cmd_vel', '/turtlesim1/turtle1/cmd_vel'),],
+[1.021s]                                                                      ^
+[1.021s] 
+[1.021s] ./launch/run_turtle.launch.py:46:1: W293 blank line contains whitespace
+[1.022s]         
+[1.022s] ^
+[1.022s] 
+[1.022s] ./launch/run_turtle.launch.py:47:7: W292 no newline at end of file
+[1.022s]     ])      ^
+[1.022s] 
+[1.022s] ./launch/turtle_arena.launch.py:5:27: E271 multiple spaces after keyword
+[1.022s] from launch.actions import  IncludeLaunchDescription
+[1.022s]                           ^
+[1.022s] 
+[1.022s] ./launch/turtle_arena.launch.py:10:61: W291 trailing whitespace
+[1.022s] """
+[1.022s] launches arena and catcher nodes along with all the nodes in 
+[1.023s] show_turtle launch file.
+[1.023s] Also connects to yaml files to arena and catcher node 
+[1.023s] """
+[1.023s]    
+[1.023s]                                                         ^
+[1.023s] 
+[1.023s] ./launch/turtle_arena.launch.py:12:54: W291 trailing whitespace
+[1.023s] """
+[1.023s] launches arena and catcher nodes along with all the nodes in 
+[1.023s] show_turtle launch file.
+[1.023s] Also connects to yaml files to arena and catcher node 
+[1.023s] """
+[1.023s]    
+[1.024s]                                                  ^
+[1.024s] 
+[1.024s] ./launch/turtle_arena.launch.py:15:1: E302 expected 2 blank lines, found 1
+[1.024s] def generate_launch_description():
+[1.024s] ^
+[1.024s] 
+[1.024s] ./launch/turtle_arena.launch.py:44:1: W293 blank line contains whitespace
+[1.024s]         
+[1.025s] ^
+[1.025s] 
+[1.025s] ./launch/turtle_arena.launch.py:45:7: W292 no newline at end of file
+[1.025s]     ])      ^
+[1.025s] 
+[1.025s] 2     E128 continuation line under-indented for visual indent
+[1.025s] 4     E225 missing whitespace around operator
+[1.025s] 7     E231 missing whitespace after ','
+[1.026s] 2     E251 unexpected spaces around keyword / parameter equals
+[1.026s] 2     E261 at least two spaces before inline comment
+[1.026s] 1     E262 inline comment should start with '# '
+[1.026s] 1     E265 block comment should start with '# '
+[1.026s] 1     E271 multiple spaces after keyword
+[1.026s] 4     E302 expected 2 blank lines, found 0
+[1.026s] 6     E501 line too long (115 > 99 characters)
+[1.026s] 16    F401 'ament_index_python.packages.get_package_share_path' imported but unused
+[1.027s] 1     F841 local variable 'use_sim_time' is assigned to but never used
+[1.027s] 12    W291 trailing whitespace
+[1.027s] 6     W292 no newline at end of file
+[1.027s] 5     W293 blank line contains whitespace
+[1.027s] 
+[1.027s] 13 files checked
+[1.028s] 70 errors
+[1.028s] 
+[1.028s] 'E'-type errors: 30
+[1.028s] 'F'-type errors: 17
+[1.028s] 'W'-type errors: 23
+[1.028s] 
+[1.028s] Checked files:
+[1.028s] 
+[1.028s] * ./setup.py
+[1.028s] * ./turtle_brick/arena.py
+[1.028s] * ./turtle_brick/turtle_robot.py
+[1.028s] * ./turtle_brick/catcher.py
+[1.028s] * ./turtle_brick/__init__.py
+[1.028s] * ./test/math_test.py
+[1.029s] * ./test/test_flake8.py
+[1.029s] * ./test/test_copyright.py
+[1.029s] * ./test/test_pep257.py
+[1.029s] * ./test/brick.test.py
+[1.029s] * ./launch/show_turtle.launch.py
+[1.029s] * ./launch/run_turtle.launch.py
+[1.029s] * ./launch/turtle_arena.launch.py
+[1.029s] ----------------------------- Captured stderr call -----------------------------
+[1.029s] option --max-complexity: please update from optparse string `type=` to argparse callable `type=` -- this will be an error in the future
+[1.029s] [31m[1m_________________________________ test_pep257 __________________________________[0m
+[1.029s] [1m[31mtest/test_pep257.py[0m:23: in test_pep257
+[1.029s]     [94massert[39;49;00m rc == [94m0[39;49;00m, [33m'[39;49;00m[33mFound code style errors / warnings[39;49;00m[33m'[39;49;00m
+[1.029s] [1m[31mE   AssertionError: Found code style errors / warnings[0m
+[1.029s] [1m[31mE   assert 1 == 0[0m
+[1.030s] ----------------------------- Captured stdout call -----------------------------
+[1.030s] checking ./launch/run_turtle.launch.py
+[1.030s] checking ./launch/show_turtle.launch.py
+[1.030s] checking ./launch/turtle_arena.launch.py
+[1.030s] checking ./setup.py
+[1.030s] checking ./test/brick.test.py
+[1.030s] checking ./test/math_test.py
+[1.030s] checking ./test/test_copyright.py
+[1.030s] checking ./test/test_flake8.py
+[1.030s] checking ./test/test_pep257.py
+[1.030s] checking ./turtle_brick/__init__.py
+[1.031s] checking ./turtle_brick/arena.py
+[1.031s] ./turtle_brick/arena.py:16 in public class `BState`: D204: 1 blank line required after class docstring (found 0)
+[1.031s] ./turtle_brick/arena.py:16 in public class `BState`: D205: 1 blank line required between summary line and description (found 0)
+[1.031s] ./turtle_brick/arena.py:16 in public class `BState`: D208: Docstring is over-indented
+[1.031s] ./turtle_brick/arena.py:16 in public class `BState`: D210: No whitespaces allowed surrounding docstring text
+[1.031s] ./turtle_brick/arena.py:16 in public class `BState`: D213: Multi-line docstring summary should start at the second line
+[1.031s] ./turtle_brick/arena.py:29 in public class `Arena`: D204: 1 blank line required after class docstring (found 0)
+[1.032s] ./turtle_brick/arena.py:29 in public class `Arena`: D205: 1 blank line required between summary line and description (found 0)
+[1.032s] checking ./turtle_brick/catcher.py
+[1.032s] ./turtle_brick/catcher.py:12 in public class `State`: D204: 1 blank line required after class docstring (found 0)
+[1.032s] ./turtle_brick/catcher.py:12 in public class `State`: D205: 1 blank line required between summary line and description (found 0)
+[1.032s] ./turtle_brick/catcher.py:12 in public class `State`: D210: No whitespaces allowed surrounding docstring text
+[1.032s] ./turtle_brick/catcher.py:12 in public class `State`: D400: First line should end with a period (not 't')
+[1.032s] ./turtle_brick/catcher.py:12 in public class `State`: D415: First line should end with a period, question mark, or exclamation point (not 't')
+[1.032s] ./turtle_brick/catcher.py:22 in public class `Catcher`: D205: 1 blank line required between summary line and description (found 0)
+[1.033s] ./turtle_brick/catcher.py:22 in public class `Catcher`: D400: First line should end with a period (not 't')
+[1.033s] ./turtle_brick/catcher.py:22 in public class `Catcher`: D415: First line should end with a period, question mark, or exclamation point (not 't')
+[1.033s] checking ./turtle_brick/turtle_robot.py
+[1.033s] ./turtle_brick/turtle_robot.py:14 in public class `Turtle_robot`: D204: 1 blank line required after class docstring (found 0)
+[1.033s] ./turtle_brick/turtle_robot.py:14 in public class `Turtle_robot`: D205: 1 blank line required between summary line and description (found 0)
+[1.033s] checking test/brick.test.py
+[1.033s] checking test/math_test.py
+[1.034s] checking test/test_copyright.py
+[1.034s] checking test/test_flake8.py
+[1.034s] checking test/test_pep257.py
+[1.034s] 17 errors
+[1.034s] - generated xml file: /home/alyssa/homework2-alyssa225/build/turtle_brick/pytest.xml -
+[1.034s] =========================== short test summary info ============================
+[1.035s] FAILED test/test_flake8.py::test_flake8 - AssertionError: Found 70 code style...
+[1.035s] FAILED test/test_pep257.py::test_pep257 - AssertionError: Found code style er...
+[1.035s] [31m============== [31m[1m2 failed[0m, [32m1 passed[0m, [33m1 skipped[0m, [33m2 warnings[0m[31m in 0.44s[0m[31m ==============[0m
+[1.072s] Invoked command in '/home/alyssa/homework2-alyssa225/src/turtle_brick' returned '1': AMENT_PREFIX_PATH=/home/alyssa/homework2-alyssa225/install/turtle_brick:/home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces:/opt/ros/humble PYTEST_ADDOPTS=--tb=short --junit-xml=/home/alyssa/homework2-alyssa225/build/turtle_brick/pytest.xml --junit-prefix=turtle_brick -o cache_dir=/home/alyssa/homework2-alyssa225/build/turtle_brick/.pytest_cache PYTHONPATH=/home/alyssa/homework2-alyssa225/install/turtle_brick/lib/python3.10/site-packages:/home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/python3 -m pytest

@@ -1,63 +1,74 @@
-
-from tokenize import Double, String
 import rclpy
 from rclpy.node import Node
 from tf2_ros.static_transform_broadcaster import StaticTransformBroadcaster
 from tf2_ros import TransformBroadcaster
 from sensor_msgs.msg import JointState
 from rclpy.qos import QoSProfile
-from nav_msgs.msg import Odometry 
-from geometry_msgs.msg import Twist, Vector3, TransformStamped, PoseStamped, Pose
-from visualization_msgs.msg import Marker 
-from turtle_brick_interfaces.msg import Tilt 
-import math 
-#from .quaternion import angle_axis_to_quaternion
+from nav_msgs.msg import Odometry
+from geometry_msgs.msg import Twist,  TransformStamped, PoseStamped, Pose
+from turtle_brick_interfaces.msg import Tilt
+import math
+
 
 class Turtle_robot(Node):
     """
+    Creates the turtle_robot and controls joint and translation movements.
+    Additionally, places it in the world and connects to turtlesim.
+    SUBSCRIPTIONS:
+        -goal_sub: subscribes to goal_sub and
+            recieves the positions that will
+            calculate movement towards goal_pose
+        -tilt_sub: subscribes to tilt and will
+            recieve the angle that the robot platform will tilt to
+    PUBLISHERS:
+        -joint_state: publishes joint angles of the turtle_robot
+        -odom_pub: sends positions and twists
+        -vel_pub: sends twist to cmd_vel
+        -robot_pub: sends continuous robot pose
+            # also just relized I could have potentially taken from odom publisher
+            # instead of creating a whole new object and publisher, but too late now
+    TRANSFORMS:
+        -world_odom: connects odom frame to world frame
+        -odom_base_link: connects base_link frame to odom frame
     """
     def __init__(self):
         super().__init__('turtle_robot')
-        #params
-        self.declare_parameters( 
+        # params
+        self.declare_parameters(
             namespace='',
             parameters=[
                 ('platform_height', 1.7),
                 ('wheel_radius', 0.3),
-                ('max_velocity',3.0),
-                ('gravity',9.8)
+                ('max_velocity', 3.0),
+                ('gravity', 9.8)
             ]
         )
         self.height = self.get_parameter("platform_height").get_parameter_value().double_value
         self.rwheel = self.get_parameter("wheel_radius").get_parameter_value().double_value
         self.vmax = self.get_parameter("max_velocity").get_parameter_value().double_value
         self.g = self.get_parameter("gravity").get_parameter_value().double_value
-
         # initializing publishers
         qos_profile = QoSProfile(depth=10)
-        self.joint_publisher_ = self.create_publisher(JointState,'/joint_states',qos_profile)
-        self.odom_pub = self.create_publisher(Odometry,'/odom',10)
-        self.vel_pub = self.create_publisher(Twist,'/cmd_vel',10)
-        self.robot_pub = self.create_publisher(Pose,'/robot',10)
+        self.joint_publisher_ = self.create_publisher(JointState, '/joint_states', qos_profile)
+        self.odom_pub = self.create_publisher(Odometry, '/odom', 10)
+        self.vel_pub = self.create_publisher(Twist, '/cmd_vel', 10)
+        self.robot_pub = self.create_publisher(Pose, '/robot', 10)
         # initializing subscribers
-        self.goal_sub = self.create_subscription(PoseStamped,'/goal_pose',self.pose_callback,10)
-        self.tilt_sub = self.create_subscription(Tilt,'/tilt',self.tilt_callback,10)
-        # self.pose_sub = self.create_subscription(Pose, 'pose', self.listener_callback,10)
-        # Static broadcasters publish on /tf_static.        
+        self.goal_sub = self.create_subscription(PoseStamped, '/goal_pose', self.pose_callback, 10)
+        self.tilt_sub = self.create_subscription(Tilt, '/tilt', self.tilt_callback, 10)
+        # Static broadcasters publish on /tf_static.
         self.static_broadcaster = StaticTransformBroadcaster(self)
         self.broadcaster = TransformBroadcaster(self)
+        # world to odom transform
         world_odom_tf = TransformStamped()
-        
         world_odom_tf.header.stamp = self.get_clock().now().to_msg()
         world_odom_tf.header.frame_id = "world"
         world_odom_tf.child_frame_id = "odom"
-
         world_odom_tf.transform.translation.x = 0.0
         world_odom_tf.transform.translation.y = 0.0
         self.static_broadcaster.sendTransform(world_odom_tf)
-
-        #positions 
-        self.currentx = 0.0 
+        # positions
+        self.currentx = 0.0
         self.currenty = 0.0
         self.currentomega = 0.0
         self.goalx = 0.0
@@ -71,136 +82,122 @@ class Turtle_robot(Node):
         self.dy = 0.0
         self.dtheta = 0.0
         self.stem_ang = 0.0
-        # create the broadcaster
+        # create the odom to baselink transform
         self.broadcaster = TransformBroadcaster(self, qos=qos_profile)
         self.odom_base_link = TransformStamped()
         self.odom_base_link.header.frame_id = "odom"
         self.odom_base_link.child_frame_id = "base_link"
-        self.odom_base_link.transform.translation.z = 2*self.rwheel+0.15+0.25
-
-        #joint state publisher
+        self.odom_base_link.transform.translation.z = 2 * self.rwheel + 0.15 + 0.25
+        # joint state object
         self.joint_state = JointState()
         self.joint_state.header.frame_id = 'base_link'
         self.wheel_ang = 0.0
         self.direction_ang = 0.0
         self.tilt_ang = 0.0
-        self.tilt_angf= 0.0
-
-        # odommetry publisher
+        self.tilt_angf = 0.0
+        # odommetry object
         self.odom = Odometry()
         self.odom.header.frame_id = "odom"
         self.odom.child_frame_id = "base_link"
-
-        #cmd_vel publisher
+        # cmd_vel object
         self.twist = Twist()
-
-        #create pose publisher
+        # create pose object
         self.robo_pose = Pose()
-
         # Create a timer to do movements
         self.freq = 100.0
-        self.period = 1/self.freq
+        self.period = 1 / self.freq
         self.tmr = self.create_timer(self.period, self.timer_callback)
-    
-    def pose_callback(self,msg):
-        self.get_logger().info('goal pose: %f %f %f' % (msg.pose.position.x,msg.pose.position.y,msg.pose.orientation.z) )
+
+    def pose_callback(self, msg):
+        self.get_logger().info('goal pose: %f %f %f'
+                               % (msg.pose.position.x, msg.pose.position.y,
+                                  msg.pose.orientation.z))
         self.goalx = msg.pose.position.x
         self.goaly = msg.pose.position.y
         dx = self.goalx - self.currentx
         dy = self.goaly - self.currenty
-        self.stem_ang = math.atan(dy/dx)
+        self.stem_ang = math.atan(dy / dx)
         d = math.sqrt(dx**2 + dy**2)
         self.vx = dx / d * self.vmax
         self.vy = dy / d * self.vmax
-        if (dy<0 and dx>0) or (dy>0 and dx>0):
-            omega = -self.vmax/self.rwheel
+        if (dy < 0 and dx > 0) or (dy > 0 and dx > 0):
+            omega = -self.vmax / self.rwheel
         else:
-            omega = self.vmax/self.rwheel
+            omega = self.vmax / self.rwheel
         self.get_logger().info('distx: "%f"' % dx)
         self.get_logger().info('disty: "%f"' % dy)
-        self.dx = self.vx*self.period
-        self.dy = self.vy*self.period
+        self.dx = self.vx * self.period
+        self.dy = self.vy * self.period
         self.dtheta = omega * self.period
 
-    def tilt_callback(self,msg):
+    def tilt_callback(self, msg):
         self.get_logger().info('tilt angle: "%s"' % (msg.angle))
         self.tilt_angf = msg.angle
 
     def timer_callback(self):
         time = self.get_clock().now().to_msg()
-        
-        #update odom
+        # update odom
         self.odom.header.stamp = self.get_clock().now().to_msg()
         self.odom.pose.pose.position.x = self.currentx
         self.odom.pose.pose.position.y = self.currenty
         self.odom.twist.twist.linear.x = self.vx
         self.odom.twist.twist.linear.y = self.vy
-
-        
-        #updating joint states
+        # updating joint states
         self.joint_state.header.stamp = self.get_clock().now().to_msg()
-        self.joint_state.name = ['stem_wheel','base_stem','link_platform1']
+        self.joint_state.name = ['stem_wheel', 'base_stem', 'link_platform1']
         self.joint_state.position = [self.wheel_ang, self.direction_ang, self.tilt_ang]
-        
-        #update twist
+        # update twist
         self.twist.linear.x = self.vx
         self.twist.linear.y = self.vy
-        
-        #update robot pose
-        self.robo_pose.position.x=self.currentx
-        self.robo_pose.position.y=self.currenty
-        self.robo_pose.position.z=self.height
+        # update robot pose
+        self.robo_pose.position.x = self.currentx
+        self.robo_pose.position.y = self.currenty
+        self.robo_pose.position.z = self.height
         self.robo_pose.orientation.w = self.tilt_ang
-
-        #update transforms
-        self.odom_base_link.transform.translation.x = self.currentx 
-        self.odom_base_link.transform.translation.y = self.currenty 
-        self.odom_base_link.header.stamp = time 
-
-        #broadcasting and publishing
-        self.joint_publisher_.publish(self.joint_state) 
+        # update transforms
+        self.odom_base_link.transform.translation.x = self.currentx
+        self.odom_base_link.transform.translation.y = self.currenty
+        self.odom_base_link.header.stamp = time
+        # broadcasting and publishing
+        self.joint_publisher_.publish(self.joint_state)
         self.odom_pub.publish(self.odom)
         self.vel_pub.publish(self.twist)
         self.robot_pub.publish(self.robo_pose)
         self.broadcaster.sendTransform(self.odom_base_link)
-        #moving the robot to goal pose
+        # moving the robot to goal pose
         self.currentx += self.dx
         self.currenty += self.dy
         if abs(self.currentx-self.goalx) <= 0.03:
             self.vx = 0.0
             self.dx = 0.0
-        if abs(self.currenty-self.goaly)<= 0.03:
+        if abs(self.currenty-self.goaly) <= 0.03:
             self.vy = 0.0
             self.dy = 0.0
-        
-        #move the wheel and stem to face direction and roll
-        if self.vx != 0.0 and self.vy!=0.0:
+        # move the wheel and stem to face direction and roll
+        if self.vx != 0.0 and self.vy != 0.0:
             self.wheel_ang += self.dtheta
-        if abs(self.stem_ang-self.direction_ang)>= 0.2:
-            if self.stem_ang-self.direction_ang >=0:
+        if abs(self.stem_ang - self.direction_ang) >= 0.2:
+            if self.stem_ang - self.direction_ang >= 0:
                 self.direction_ang += 0.1
-                self.get_logger().info('stem angle: "%s"' % (self.direction_ang ))
+                self.get_logger().info('stem angle: "%s"' % (self.direction_ang))
             else:
                 self.direction_ang -= 0.1
                 self.get_logger().info('stem angle: "%s"' % (self.direction_ang))
-        #tilt if tilt is called
+        # tilt if tilt is called
         if self.tilt_ang != 0.0 or self.tilt_angf != 0.0:
-            if abs(self.tilt_ang-self.tilt_angf) >=0.01:       
-                if self.tilt_angf-self.tilt_ang < 0.0:
-                    self.tilt_ang-=0.005
+            if abs(self.tilt_ang - self.tilt_angf) >= 0.01:
+                if self.tilt_angf - self.tilt_ang < 0.0:
+                    self.tilt_ang -= 0.005
                 elif self.tilt_angf-self.tilt_ang >= 0.0:
-                    self.tilt_ang+=0.005
+                    self.tilt_ang += 0.005
             elif self.tilt_angf == 0.0:
                 self.tilt_ang = 0.0
             else:
                 self.tilt_angf = 0.0
-        
-        
+
 
 def main(args=None):
     rclpy.init(args=args)
-    turtleRobot= Turtle_robot()
+    turtleRobot = Turtle_robot()
     rclpy.spin(turtleRobot)
-    rclpy.shutdown 
-
-
+    rclpy.shutdown

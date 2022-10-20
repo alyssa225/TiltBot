@@ -1,13 +1,17 @@
 import os
-from ament_index_python.packages import get_package_share_path, get_package_share_directory
+from ament_index_python.packages import get_package_share_directory
 from launch_ros.substitutions import FindPackageShare
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription
-from launch.conditions import IfCondition, UnlessCondition
-from launch.substitutions import Command, LaunchConfiguration, PathJoinSubstitution
+from launch.actions import IncludeLaunchDescription
+from launch.substitutions import PathJoinSubstitution
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch_ros.actions import Node
-from launch_ros.parameter_descriptions import ParameterValue
+
+"""
+launches arena and catcher nodes along with all the nodes in
+show_turtle launch file.
+Also connects to yaml files to arena and catcher node
+"""
 
 
 def generate_launch_description():
@@ -39,5 +43,4 @@ def generate_launch_description():
             executable='catcher',
             parameters=[config]
         )
-        
     ])

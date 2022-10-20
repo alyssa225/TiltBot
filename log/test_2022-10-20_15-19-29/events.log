@@ -1,0 +1,405 @@
+[0.000000] (-) TimerEvent: {}
+[0.000191] (turtle_brick) JobQueued: {'identifier': 'turtle_brick', 'dependencies': OrderedDict([('turtle_brick', '/home/alyssa/homework2-alyssa225/install/turtle_brick')])}
+[0.000230] (turtle_brick_interfaces) JobQueued: {'identifier': 'turtle_brick_interfaces', 'dependencies': OrderedDict([('turtle_brick_interfaces', '/home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces')])}
+[0.000259] (turtle_brick) JobStarted: {'identifier': 'turtle_brick'}
+[0.009603] (turtle_brick_interfaces) JobStarted: {'identifier': 'turtle_brick_interfaces'}
+[0.098638] (-) TimerEvent: {}
+[0.198915] (-) TimerEvent: {}
+[0.249325] (turtle_brick) Command: {'cmd': ['/usr/bin/python3', '-m', 'pytest'], 'cwd': '/home/alyssa/homework2-alyssa225/src/turtle_brick', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'alyssa', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/alyssa', 'OLDPWD': '/home/alyssa/homework2-alyssa225/src', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '418763', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/alyssa/homework2-alyssa225/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'alyssa', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'alyssa', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/alyssa-Galago-Pro:@/tmp/.ICE-unix/1005,unix/alyssa-Galago-Pro:/tmp/.ICE-unix/1005', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/6d4b914e_9fd7_45b5_b317_afa2fd1ab6a4', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.BJT0T1', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.10137', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/alyssa/homework2-alyssa225/install/turtle_brick:/home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces:/opt/ros/humble', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/alyssa/homework2-alyssa225/build/turtle_brick', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/alyssa/homework2-alyssa225/install/turtle_brick/lib/python3.10/site-packages:/home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800', 'CMAKE_PREFIX_PATH': '/home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces:/home/alyssa/homework2-alyssa225/install/turtle_brick_interface', 'PYTEST_ADDOPTS': '--tb=short --junit-xml=/home/alyssa/homework2-alyssa225/build/turtle_brick/pytest.xml --junit-prefix=turtle_brick -o cache_dir=/home/alyssa/homework2-alyssa225/build/turtle_brick/.pytest_cache'}, 'shell': False}
+[0.261711] (turtle_brick_interfaces) Command: {'cmd': ['/usr/bin/ctest', '-C', 'Release', '-D', 'ExperimentalTest', '--no-compress-output', '-V', '--force-new-ctest-process'], 'cwd': '/home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'alyssa'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/alyssa'), ('OLDPWD', '/home/alyssa/homework2-alyssa225/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '418763'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/alyssa/homework2-alyssa225/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'alyssa'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'alyssa'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/alyssa-Galago-Pro:@/tmp/.ICE-unix/1005,unix/alyssa-Galago-Pro:/tmp/.ICE-unix/1005'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/6d4b914e_9fd7_45b5_b317_afa2fd1ab6a4'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.BJT0T1'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.10137'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces:/home/alyssa/homework2-alyssa225/install/turtle_brick:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/local/lib/python3.10/dist-packages:/home/alyssa/homework2-alyssa225/install/turtle_brick/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces:/home/alyssa/homework2-alyssa225/install/turtle_brick_interface')]), 'shell': False}
+[0.268917] (turtle_brick_interfaces) StdoutLine: {'line': b'UpdateCTestConfiguration  from :/home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces/CTestConfiguration.ini\n'}
+[0.269093] (turtle_brick_interfaces) StdoutLine: {'line': b'Parse Config file:/home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces/CTestConfiguration.ini\n'}
+[0.269215] (turtle_brick_interfaces) StdoutLine: {'line': b'   Site: alyssa-Galago-Pro\n'}
+[0.269445] (turtle_brick_interfaces) StdoutLine: {'line': b'   Build name: (empty)\n'}
+[0.269602] (turtle_brick_interfaces) StdoutLine: {'line': b' Add coverage exclude regular expressions.\n'}
+[0.269728] (turtle_brick_interfaces) StdoutLine: {'line': b'Create new tag: 20221020-2019 - Experimental\n'}
+[0.269846] (turtle_brick_interfaces) StdoutLine: {'line': b'UpdateCTestConfiguration  from :/home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces/CTestConfiguration.ini\n'}
+[0.270027] (turtle_brick_interfaces) StdoutLine: {'line': b'Parse Config file:/home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces/CTestConfiguration.ini\n'}
+[0.270295] (turtle_brick_interfaces) StdoutLine: {'line': b'Test project /home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces\n'}
+[0.270414] (turtle_brick_interfaces) StdoutLine: {'line': b'Constructing a list of tests\n'}
+[0.270529] (turtle_brick_interfaces) StdoutLine: {'line': b'Done constructing a list of tests\n'}
+[0.270644] (turtle_brick_interfaces) StdoutLine: {'line': b'Updating test list for fixtures\n'}
+[0.270759] (turtle_brick_interfaces) StdoutLine: {'line': b'Added 0 tests to meet fixture requirements\n'}
+[0.270874] (turtle_brick_interfaces) StdoutLine: {'line': b'Checking test dependency graph...\n'}
+[0.270989] (turtle_brick_interfaces) StdoutLine: {'line': b'Checking test dependency graph end\n'}
+[0.271104] (turtle_brick_interfaces) StdoutLine: {'line': b'test 1\n'}
+[0.271217] (turtle_brick_interfaces) StdoutLine: {'line': b'    Start 1: lint_cmake\n'}
+[0.271331] (turtle_brick_interfaces) StdoutLine: {'line': b'\n'}
+[0.271445] (turtle_brick_interfaces) StdoutLine: {'line': b'1: Test command: /usr/bin/python3.10 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces/test_results/turtle_brick_interfaces/lint_cmake.xunit.xml" "--package-name" "turtle_brick_interfaces" "--output-file" "/home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces/ament_lint_cmake/lint_cmake.txt" "--command" "/opt/ros/humble/bin/ament_lint_cmake" "--xunit-file" "/home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces/test_results/turtle_brick_interfaces/lint_cmake.xunit.xml"\n'}
+[0.271576] (turtle_brick_interfaces) StdoutLine: {'line': b'1: Test timeout computed to be: 60\n'}
+[0.299026] (-) TimerEvent: {}
+[0.324193] (turtle_brick_interfaces) StdoutLine: {'line': b"1: -- run_test.py: invoking following command in '/home/alyssa/homework2-alyssa225/src/turtle_brick_interfaces':\n"}
+[0.324353] (turtle_brick_interfaces) StdoutLine: {'line': b'1:  - /opt/ros/humble/bin/ament_lint_cmake --xunit-file /home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces/test_results/turtle_brick_interfaces/lint_cmake.xunit.xml\n'}
+[0.385404] (turtle_brick_interfaces) StdoutLine: {'line': b'1: CMakeLists.txt:15: Mismatching spaces inside () after command [whitespace/mismatch]\n'}
+[0.385542] (turtle_brick_interfaces) StdoutLine: {'line': b'1: \n'}
+[0.385621] (turtle_brick_interfaces) StdoutLine: {'line': b'1: \n'}
+[0.385709] (turtle_brick_interfaces) StdoutLine: {'line': b'1: 1 errors\n'}
+[0.394115] (turtle_brick_interfaces) StdoutLine: {'line': b'1: -- run_test.py: return code 1\n'}
+[0.394369] (turtle_brick_interfaces) StdoutLine: {'line': b"1: -- run_test.py: verify result file '/home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces/test_results/turtle_brick_interfaces/lint_cmake.xunit.xml'\n"}
+[0.399139] (-) TimerEvent: {}
+[0.401936] (turtle_brick_interfaces) StdoutLine: {'line': b'1/2 Test #1: lint_cmake .......................***Failed    0.13 sec\n'}
+[0.402201] (turtle_brick_interfaces) StdoutLine: {'line': b'test 2\n'}
+[0.402286] (turtle_brick_interfaces) StdoutLine: {'line': b'    Start 2: xmllint\n'}
+[0.402359] (turtle_brick_interfaces) StdoutLine: {'line': b'\n'}
+[0.402437] (turtle_brick_interfaces) StdoutLine: {'line': b'2: Test command: /usr/bin/python3.10 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces/test_results/turtle_brick_interfaces/xmllint.xunit.xml" "--package-name" "turtle_brick_interfaces" "--output-file" "/home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces/ament_xmllint/xmllint.txt" "--command" "/opt/ros/humble/bin/ament_xmllint" "--xunit-file" "/home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces/test_results/turtle_brick_interfaces/xmllint.xunit.xml"\n'}
+[0.402529] (turtle_brick_interfaces) StdoutLine: {'line': b'2: Test timeout computed to be: 60\n'}
+[0.456462] (turtle_brick_interfaces) StdoutLine: {'line': b"2: -- run_test.py: invoking following command in '/home/alyssa/homework2-alyssa225/src/turtle_brick_interfaces':\n"}
+[0.456695] (turtle_brick_interfaces) StdoutLine: {'line': b'2:  - /opt/ros/humble/bin/ament_xmllint --xunit-file /home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces/test_results/turtle_brick_interfaces/xmllint.xunit.xml\n'}
+[0.499260] (-) TimerEvent: {}
+[0.529640] (turtle_brick) StdoutLine: {'line': b'\x1b[1m============================= test session starts ==============================\x1b[0m\n'}
+[0.529889] (turtle_brick) StdoutLine: {'line': b'platform linux -- Python 3.10.6, pytest-6.2.5, py-1.10.0, pluggy-0.13.0\n'}
+[0.534398] (turtle_brick) StdoutLine: {'line': b'cachedir: /home/alyssa/homework2-alyssa225/build/turtle_brick/.pytest_cache\n'}
+[0.534576] (turtle_brick) StdoutLine: {'line': b'rootdir: /home/alyssa/homework2-alyssa225/src/turtle_brick\n'}
+[0.534668] (turtle_brick) StdoutLine: {'line': b'plugins: ament-lint-0.12.4, ament-xmllint-0.12.4, launch-testing-ros-0.19.3, launch-testing-1.0.2, ament-flake8-0.12.4, ament-pep257-0.12.4, ament-copyright-0.12.4, colcon-core-0.10.0, cov-3.0.0\n'}
+[0.566802] (turtle_brick_interfaces) StdoutLine: {'line': b"2: File 'package.xml' is valid\n"}
+[0.566985] (turtle_brick_interfaces) StdoutLine: {'line': b'2: \n'}
+[0.567095] (turtle_brick_interfaces) StdoutLine: {'line': b'2: No problems found\n'}
+[0.591766] (turtle_brick_interfaces) StdoutLine: {'line': b'2: -- run_test.py: return code 0\n'}
+[0.592062] (turtle_brick_interfaces) StdoutLine: {'line': b"2: -- run_test.py: verify result file '/home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces/test_results/turtle_brick_interfaces/xmllint.xunit.xml'\n"}
+[0.599370] (-) TimerEvent: {}
+[0.600424] (turtle_brick_interfaces) StdoutLine: {'line': b'2/2 Test #2: xmllint ..........................   Passed    0.20 sec\n'}
+[0.600783] (turtle_brick_interfaces) StdoutLine: {'line': b'\n'}
+[0.600944] (turtle_brick_interfaces) StdoutLine: {'line': b'50% tests passed\x1b[0;0m, \x1b[0;31m1 tests failed\x1b[0;0m out of 2\n'}
+[0.601186] (turtle_brick_interfaces) StdoutLine: {'line': b'\n'}
+[0.601345] (turtle_brick_interfaces) StdoutLine: {'line': b'Label Time Summary:\n'}
+[0.601497] (turtle_brick_interfaces) StdoutLine: {'line': b'lint_cmake    =   0.13 sec*proc (1 test)\n'}
+[0.601675] (turtle_brick_interfaces) StdoutLine: {'line': b'linter        =   0.33 sec*proc (2 tests)\n'}
+[0.601824] (turtle_brick_interfaces) StdoutLine: {'line': b'xmllint       =   0.20 sec*proc (1 test)\n'}
+[0.601968] (turtle_brick_interfaces) StdoutLine: {'line': b'\n'}
+[0.602104] (turtle_brick_interfaces) StdoutLine: {'line': b'Total Test time (real) =   0.33 sec\n'}
+[0.602236] (turtle_brick_interfaces) StdoutLine: {'line': b'\n'}
+[0.602371] (turtle_brick_interfaces) StdoutLine: {'line': b'The following tests FAILED:\n'}
+[0.602511] (turtle_brick_interfaces) StdoutLine: {'line': b'\t\x1b[0;31m  1 - lint_cmake (Failed)\x1b[0;0m\n'}
+[0.631645] (turtle_brick_interfaces) StderrLine: {'line': b'Errors while running CTest\n'}
+[0.631959] (turtle_brick_interfaces) StderrLine: {'line': b'Output from these tests are in: /home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces/Testing/Temporary/LastTest.log\n'}
+[0.632137] (turtle_brick_interfaces) StderrLine: {'line': b'Use "--rerun-failed --output-on-failure" to re-run the failed cases verbosely.\n'}
+[0.632292] (turtle_brick_interfaces) CommandEnded: {'returncode': 8}
+[0.632829] (turtle_brick_interfaces) TestFailure: {'identifier': 'turtle_brick_interfaces'}
+[0.632882] (turtle_brick_interfaces) JobEnded: {'identifier': 'turtle_brick_interfaces', 'rc': 0}
+[0.638533] (turtle_brick) StdoutLine: {'line': b'\x1b[1mcollecting ... \x1b[0m\x1b[1m\n'}
+[0.638811] (turtle_brick) StdoutLine: {'line': b'collected 4 items                                                              \x1b[0m\n'}
+[0.639085] (turtle_brick) StdoutLine: {'line': b'\n'}
+[0.650983] (turtle_brick) StdoutLine: {'line': b'test/math_test.py \x1b[32m.\x1b[0m\x1b[32m                                                      [ 25%]\x1b[0m\n'}
+[0.652019] (turtle_brick) StdoutLine: {'line': b'test/test_copyright.py \x1b[33ms\x1b[0m\x1b[32m                                                 [ 50%]\x1b[0m\n'}
+[0.699459] (-) TimerEvent: {}
+[0.799767] (-) TimerEvent: {}
+[0.887499] (turtle_brick) StdoutLine: {'line': b'test/test_flake8.py \x1b[31mF\x1b[0m\x1b[31m                                                    [ 75%]\x1b[0m\n'}
+[0.899851] (-) TimerEvent: {}
+[0.953051] (turtle_brick) StdoutLine: {'line': b'test/test_pep257.py \x1b[31mF\x1b[0m\x1b[31m                                                    [100%]\x1b[0m\n'}
+[0.953364] (turtle_brick) StdoutLine: {'line': b'\n'}
+[0.953634] (turtle_brick) StdoutLine: {'line': b'=================================== FAILURES ===================================\n'}
+[0.953826] (turtle_brick) StdoutLine: {'line': b'\x1b[31m\x1b[1m_________________________________ test_flake8 __________________________________\x1b[0m\n'}
+[0.953983] (turtle_brick) StdoutLine: {'line': b'\x1b[1m\x1b[31mtest/test_flake8.py\x1b[0m:23: in test_flake8\n'}
+[0.991450] (turtle_brick) StdoutLine: {'line': b'    \x1b[94massert\x1b[39;49;00m rc == \x1b[94m0\x1b[39;49;00m, \\\n'}
+[0.991844] (turtle_brick) StdoutLine: {'line': b'\x1b[1m\x1b[31mE   AssertionError: Found 36 code style errors / warnings:\x1b[0m\n'}
+[0.992054] (turtle_brick) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./test/brick.test.py:8:100: E501 line too long (129 > 99 characters)\x1b[0m\n'}
+[0.993442] (turtle_brick) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./test/brick.test.py:21:9: W292 no newline at end of file\x1b[0m\n'}
+[0.993594] (turtle_brick) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./launch/show_turtle.launch.py:12:90: W291 trailing whitespace\x1b[0m\n'}
+[0.993793] (turtle_brick) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./launch/show_turtle.launch.py:15:14: W291 trailing whitespace\x1b[0m\n'}
+[0.993926] (turtle_brick) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./launch/show_turtle.launch.py:25:22: E225 missing whitespace around operator\x1b[0m\n'}
+[0.994061] (turtle_brick) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./launch/show_turtle.launch.py:27:51: E225 missing whitespace around operator\x1b[0m\n'}
+[0.994193] (turtle_brick) StdoutLine: {'line': b"\x1b[1m\x1b[31mE     ./launch/show_turtle.launch.py:28:5: F841 local variable 'use_sim_time' is assigned to but never used\x1b[0m\n"}
+[0.994328] (turtle_brick) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./launch/show_turtle.launch.py:30:100: E501 line too long (115 > 99 characters)\x1b[0m\n'}
+[0.994466] (turtle_brick) StdoutLine: {'line': b"\x1b[1m\x1b[31mE     ./launch/show_turtle.launch.py:30:105: E231 missing whitespace after ','\x1b[0m\n"}
+[0.994600] (turtle_brick) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./launch/show_turtle.launch.py:31:37: E128 continuation line under-indented for visual indent\x1b[0m\n'}
+[0.994739] (turtle_brick) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./launch/show_turtle.launch.py:34:100: E501 line too long (100 > 99 characters)\x1b[0m\n'}
+[0.994873] (turtle_brick) StdoutLine: {'line': b"\x1b[1m\x1b[31mE     ./launch/show_turtle.launch.py:48:89: E231 missing whitespace after ','\x1b[0m\n"}
+[0.995004] (turtle_brick) StdoutLine: {'line': b"\x1b[1m\x1b[31mE     ./launch/show_turtle.launch.py:48:96: E231 missing whitespace after ','\x1b[0m\n"}
+[0.995140] (turtle_brick) StdoutLine: {'line': b"\x1b[1m\x1b[31mE     ./launch/show_turtle.launch.py:55:56: E231 missing whitespace after ','\x1b[0m\n"}
+[0.995270] (turtle_brick) StdoutLine: {'line': b"\x1b[1m\x1b[31mE     ./launch/show_turtle.launch.py:61:56: E231 missing whitespace after ','\x1b[0m\n"}
+[0.995405] (turtle_brick) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./launch/show_turtle.launch.py:80:7: W292 no newline at end of file\x1b[0m\n'}
+[0.995530] (turtle_brick) StdoutLine: {'line': b"\x1b[1m\x1b[31mE     ./launch/run_turtle.launch.py:2:1: F401 'ament_index_python.packages.get_package_share_path' imported but unused\x1b[0m\n"}
+[0.995713] (turtle_brick) StdoutLine: {'line': b"\x1b[1m\x1b[31mE     ./launch/run_turtle.launch.py:5:1: F401 'launch.actions.DeclareLaunchArgument' imported but unused\x1b[0m\n"}
+[0.996096] (turtle_brick) StdoutLine: {'line': b"\x1b[1m\x1b[31mE     ./launch/run_turtle.launch.py:6:1: F401 'launch.conditions.IfCondition' imported but unused\x1b[0m\n"}
+[0.996279] (turtle_brick) StdoutLine: {'line': b"\x1b[1m\x1b[31mE     ./launch/run_turtle.launch.py:6:1: F401 'launch.conditions.UnlessCondition' imported but unused\x1b[0m\n"}
+[0.996418] (turtle_brick) StdoutLine: {'line': b"\x1b[1m\x1b[31mE     ./launch/run_turtle.launch.py:7:1: F401 'launch.substitutions.Command' imported but unused\x1b[0m\n"}
+[0.996550] (turtle_brick) StdoutLine: {'line': b"\x1b[1m\x1b[31mE     ./launch/run_turtle.launch.py:7:1: F401 'launch.substitutions.LaunchConfiguration' imported but unused\x1b[0m\n"}
+[0.996722] (turtle_brick) StdoutLine: {'line': b"\x1b[1m\x1b[31mE     ./launch/run_turtle.launch.py:10:1: F401 'launch_ros.parameter_descriptions.ParameterValue' imported but unused\x1b[0m\n"}
+[0.996926] (turtle_brick) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./launch/run_turtle.launch.py:13:69: W291 trailing whitespace\x1b[0m\n'}
+[0.997129] (turtle_brick) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./launch/run_turtle.launch.py:16:1: E302 expected 2 blank lines, found 0\x1b[0m\n'}
+[0.997271] (turtle_brick) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./launch/run_turtle.launch.py:43:23: E251 unexpected spaces around keyword / parameter equals\x1b[0m\n'}
+[0.997421] (turtle_brick) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./launch/run_turtle.launch.py:43:25: E251 unexpected spaces around keyword / parameter equals\x1b[0m\n'}
+[0.997552] (turtle_brick) StdoutLine: {'line': b"\x1b[1m\x1b[31mE     ./launch/run_turtle.launch.py:43:70: E231 missing whitespace after ','\x1b[0m\n"}
+[0.997734] (turtle_brick) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./launch/run_turtle.launch.py:46:1: W293 blank line contains whitespace\x1b[0m\n'}
+[0.997889] (turtle_brick) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./launch/run_turtle.launch.py:47:7: W292 no newline at end of file\x1b[0m\n'}
+[0.998045] (turtle_brick) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./launch/turtle_arena.launch.py:5:27: E271 multiple spaces after keyword\x1b[0m\n'}
+[0.998200] (turtle_brick) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./launch/turtle_arena.launch.py:10:61: W291 trailing whitespace\x1b[0m\n'}
+[0.998334] (turtle_brick) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./launch/turtle_arena.launch.py:12:54: W291 trailing whitespace\x1b[0m\n'}
+[0.998469] (turtle_brick) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./launch/turtle_arena.launch.py:15:1: E302 expected 2 blank lines, found 1\x1b[0m\n'}
+[0.998585] (turtle_brick) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./launch/turtle_arena.launch.py:44:1: W293 blank line contains whitespace\x1b[0m\n'}
+[0.998714] (turtle_brick) StdoutLine: {'line': b'\x1b[1m\x1b[31mE     ./launch/turtle_arena.launch.py:45:7: W292 no newline at end of file\x1b[0m\n'}
+[0.998832] (turtle_brick) StdoutLine: {'line': b'\x1b[1m\x1b[31mE   assert 1 == 0\x1b[0m\n'}
+[0.998952] (turtle_brick) StdoutLine: {'line': b'----------------------------- Captured stdout call -----------------------------\n'}
+[0.999075] (turtle_brick) StdoutLine: {'line': b'\n'}
+[0.999200] (turtle_brick) StdoutLine: {'line': b'./test/brick.test.py:8:100: E501 line too long (129 > 99 characters)\n'}
+[0.999337] (turtle_brick) StdoutLine: {'line': b'# found this example here https://github.com/ros2/launch/blob/humble/launch_pytest/test/launch_pytest/examples/check_node_msgs.py\n'}
+[0.999465] (turtle_brick) StdoutLine: {'line': b'                                                                                                   ^\n'}
+[0.999593] (turtle_brick) StdoutLine: {'line': b'\n'}
+[0.999746] (turtle_brick) StdoutLine: {'line': b'./test/brick.test.py:21:9: W292 no newline at end of file\n'}
+[0.999858] (-) TimerEvent: {}
+[0.999986] (turtle_brick) StdoutLine: {'line': b'#     ])        ^\n'}
+[1.000119] (turtle_brick) StdoutLine: {'line': b'\n'}
+[1.000241] (turtle_brick) StdoutLine: {'line': b'./launch/show_turtle.launch.py:12:90: W291 trailing whitespace\n'}
+[1.000373] (turtle_brick) StdoutLine: {'line': b'"""\n'}
+[1.000484] (turtle_brick) StdoutLine: {'line': b'took bases from https://github.com/ros/urdf_tutorial/blob/ros2/launch/display.launch.py\n'}
+[1.000605] (turtle_brick) StdoutLine: {'line': b'launches the rviz, robot publisher, and choosen joint state publisher nodes and takes the \n'}
+[1.000719] (turtle_brick) StdoutLine: {'line': b'turtle_robot.urdf.xacro file from the urdf folder\n'}
+[1.000830] (turtle_brick) StdoutLine: {'line': b'LAUNCH ARGUMENTS:\n'}
+[1.000939] (turtle_brick) StdoutLine: {'line': b'    -use_jsp: \n'}
+[1.001049] (turtle_brick) StdoutLine: {'line': b'        default: \'"gui"\'\n'}
+[1.001160] (turtle_brick) StdoutLine: {'line': b'        arguments: [\'"gui"\', \'"jsp"\', \'"none"\']\n'}
+[1.001272] (turtle_brick) StdoutLine: {'line': b'            \'"gui"\': launches with joint_state_publisher_gui_node\n'}
+[1.001388] (turtle_brick) StdoutLine: {'line': b'            \'"jsp"\': launches with joint_state_publisher_node\n'}
+[1.001497] (turtle_brick) StdoutLine: {'line': b'            \'"none"\': does not use either joint state publisher\n'}
+[1.001607] (turtle_brick) StdoutLine: {'line': b'"""\n'}
+[1.001716] (turtle_brick) StdoutLine: {'line': b'   \n'}
+[1.001822] (turtle_brick) StdoutLine: {'line': b'                                                                                     ^\n'}
+[1.001948] (turtle_brick) StdoutLine: {'line': b'\n'}
+[1.002056] (turtle_brick) StdoutLine: {'line': b'./launch/show_turtle.launch.py:15:14: W291 trailing whitespace\n'}
+[1.002165] (turtle_brick) StdoutLine: {'line': b'"""\n'}
+[1.002273] (turtle_brick) StdoutLine: {'line': b'took bases from https://github.com/ros/urdf_tutorial/blob/ros2/launch/display.launch.py\n'}
+[1.002381] (turtle_brick) StdoutLine: {'line': b'launches the rviz, robot publisher, and choosen joint state publisher nodes and takes the \n'}
+[1.002486] (turtle_brick) StdoutLine: {'line': b'turtle_robot.urdf.xacro file from the urdf folder\n'}
+[1.002591] (turtle_brick) StdoutLine: {'line': b'LAUNCH ARGUMENTS:\n'}
+[1.002714] (turtle_brick) StdoutLine: {'line': b'    -use_jsp: \n'}
+[1.002832] (turtle_brick) StdoutLine: {'line': b'        default: \'"gui"\'\n'}
+[1.002949] (turtle_brick) StdoutLine: {'line': b'        arguments: [\'"gui"\', \'"jsp"\', \'"none"\']\n'}
+[1.003068] (turtle_brick) StdoutLine: {'line': b'            \'"gui"\': launches with joint_state_publisher_gui_node\n'}
+[1.003184] (turtle_brick) StdoutLine: {'line': b'            \'"jsp"\': launches with joint_state_publisher_node\n'}
+[1.003300] (turtle_brick) StdoutLine: {'line': b'            \'"none"\': does not use either joint state publisher\n'}
+[1.003427] (turtle_brick) StdoutLine: {'line': b'"""\n'}
+[1.003544] (turtle_brick) StdoutLine: {'line': b'   \n'}
+[1.003673] (turtle_brick) StdoutLine: {'line': b'         ^\n'}
+[1.003791] (turtle_brick) StdoutLine: {'line': b'\n'}
+[1.003909] (turtle_brick) StdoutLine: {'line': b'./launch/show_turtle.launch.py:25:22: E225 missing whitespace around operator\n'}
+[1.004028] (turtle_brick) StdoutLine: {'line': b"    turtle_brick_path= 'src/turtle_brick'\n"}
+[1.004142] (turtle_brick) StdoutLine: {'line': b'                     ^\n'}
+[1.004259] (turtle_brick) StdoutLine: {'line': b'\n'}
+[1.004376] (turtle_brick) StdoutLine: {'line': b'./launch/show_turtle.launch.py:27:51: E225 missing whitespace around operator\n'}
+[1.004492] (turtle_brick) StdoutLine: {'line': b"    default_rviz_config_path = turtle_brick_path +'/config/turtle_urdf.rviz'\n"}
+[1.004606] (turtle_brick) StdoutLine: {'line': b'                                                  ^\n'}
+[1.004723] (turtle_brick) StdoutLine: {'line': b'\n'}
+[1.004838] (turtle_brick) StdoutLine: {'line': b"./launch/show_turtle.launch.py:28:5: F841 local variable 'use_sim_time' is assigned to but never used\n"}
+[1.004954] (turtle_brick) StdoutLine: {'line': b"    use_sim_time = LaunchConfiguration('use_sim_time', default='false')\n"}
+[1.005071] (turtle_brick) StdoutLine: {'line': b'    ^\n'}
+[1.005190] (turtle_brick) StdoutLine: {'line': b'\n'}
+[1.005307] (turtle_brick) StdoutLine: {'line': b'./launch/show_turtle.launch.py:30:100: E501 line too long (115 > 99 characters)\n'}
+[1.005427] (turtle_brick) StdoutLine: {'line': b'    use_jsp_arg = DeclareLaunchArgument(name=\'use_jsp\', default_value=\'"gui"\', choices=[\'"gui"\', \'"jsp"\',\'"none"\'],\n'}
+[1.005547] (turtle_brick) StdoutLine: {'line': b'                                                                                                   ^\n'}
+[1.005680] (turtle_brick) StdoutLine: {'line': b'\n'}
+[1.005801] (turtle_brick) StdoutLine: {'line': b"./launch/show_turtle.launch.py:30:105: E231 missing whitespace after ','\n"}
+[1.005925] (turtle_brick) StdoutLine: {'line': b'    use_jsp_arg = DeclareLaunchArgument(name=\'use_jsp\', default_value=\'"gui"\', choices=[\'"gui"\', \'"jsp"\',\'"none"\'],\n'}
+[1.006050] (turtle_brick) StdoutLine: {'line': b'                                                                                                        ^\n'}
+[1.006169] (turtle_brick) StdoutLine: {'line': b'\n'}
+[1.006291] (turtle_brick) StdoutLine: {'line': b'./launch/show_turtle.launch.py:31:37: E128 continuation line under-indented for visual indent\n'}
+[1.006415] (turtle_brick) StdoutLine: {'line': b"                                    description='choose which jointstate publisher to use or none')\n"}
+[1.006541] (turtle_brick) StdoutLine: {'line': b'                                    ^\n'}
+[1.006693] (turtle_brick) StdoutLine: {'line': b'\n'}
+[1.006813] (turtle_brick) StdoutLine: {'line': b'./launch/show_turtle.launch.py:34:100: E501 line too long (100 > 99 characters)\n'}
+[1.006933] (turtle_brick) StdoutLine: {'line': b"    rviz_arg = DeclareLaunchArgument(name='rvizconfig', default_value=str(default_rviz_config_path),\n"}
+[1.007070] (turtle_brick) StdoutLine: {'line': b'                                                                                                   ^\n'}
+[1.007189] (turtle_brick) StdoutLine: {'line': b'\n'}
+[1.007304] (turtle_brick) StdoutLine: {'line': b"./launch/show_turtle.launch.py:48:89: E231 missing whitespace after ','\n"}
+[1.007420] (turtle_brick) StdoutLine: {'line': b"        parameters=[{'robot_description': robot_description, 'publish_frequency': 100.0},config,]\n"}
+[1.007537] (turtle_brick) StdoutLine: {'line': b'                                                                                        ^\n'}
+[1.007666] (turtle_brick) StdoutLine: {'line': b'\n'}
+[1.007791] (turtle_brick) StdoutLine: {'line': b"./launch/show_turtle.launch.py:48:96: E231 missing whitespace after ','\n"}
+[1.007898] (turtle_brick) StdoutLine: {'line': b"        parameters=[{'robot_description': robot_description, 'publish_frequency': 100.0},config,]\n"}
+[1.008002] (turtle_brick) StdoutLine: {'line': b'                                                                                               ^\n'}
+[1.008107] (turtle_brick) StdoutLine: {'line': b'\n'}
+[1.008210] (turtle_brick) StdoutLine: {'line': b"./launch/show_turtle.launch.py:55:56: E231 missing whitespace after ','\n"}
+[1.008311] (turtle_brick) StdoutLine: {'line': b'        condition=IfCondition(PythonExpression([use_jsp,"==\'jsp\'"]))\n'}
+[1.008412] (turtle_brick) StdoutLine: {'line': b'                                                       ^\n'}
+[1.008515] (turtle_brick) StdoutLine: {'line': b'\n'}
+[1.008619] (turtle_brick) StdoutLine: {'line': b"./launch/show_turtle.launch.py:61:56: E231 missing whitespace after ','\n"}
+[1.008723] (turtle_brick) StdoutLine: {'line': b'        condition=IfCondition(PythonExpression([use_jsp,"==\'gui\'"]))\n'}
+[1.008830] (turtle_brick) StdoutLine: {'line': b'                                                       ^\n'}
+[1.008934] (turtle_brick) StdoutLine: {'line': b'\n'}
+[1.009038] (turtle_brick) StdoutLine: {'line': b'./launch/show_turtle.launch.py:80:7: W292 no newline at end of file\n'}
+[1.009145] (turtle_brick) StdoutLine: {'line': b'    ])      ^\n'}
+[1.009253] (turtle_brick) StdoutLine: {'line': b'\n'}
+[1.009355] (turtle_brick) StdoutLine: {'line': b"./launch/run_turtle.launch.py:2:1: F401 'ament_index_python.packages.get_package_share_path' imported but unused\n"}
+[1.009465] (turtle_brick) StdoutLine: {'line': b'from ament_index_python.packages import get_package_share_path, get_package_share_directory\n'}
+[1.009576] (turtle_brick) StdoutLine: {'line': b'^\n'}
+[1.009701] (turtle_brick) StdoutLine: {'line': b'\n'}
+[1.009822] (turtle_brick) StdoutLine: {'line': b"./launch/run_turtle.launch.py:5:1: F401 'launch.actions.DeclareLaunchArgument' imported but unused\n"}
+[1.009941] (turtle_brick) StdoutLine: {'line': b'from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription\n'}
+[1.010060] (turtle_brick) StdoutLine: {'line': b'^\n'}
+[1.010182] (turtle_brick) StdoutLine: {'line': b'\n'}
+[1.010302] (turtle_brick) StdoutLine: {'line': b"./launch/run_turtle.launch.py:6:1: F401 'launch.conditions.IfCondition' imported but unused\n"}
+[1.010420] (turtle_brick) StdoutLine: {'line': b'from launch.conditions import IfCondition, UnlessCondition\n'}
+[1.010538] (turtle_brick) StdoutLine: {'line': b'^\n'}
+[1.010657] (turtle_brick) StdoutLine: {'line': b'\n'}
+[1.010784] (turtle_brick) StdoutLine: {'line': b"./launch/run_turtle.launch.py:6:1: F401 'launch.conditions.UnlessCondition' imported but unused\n"}
+[1.010899] (turtle_brick) StdoutLine: {'line': b'from launch.conditions import IfCondition, UnlessCondition\n'}
+[1.011012] (turtle_brick) StdoutLine: {'line': b'^\n'}
+[1.011137] (turtle_brick) StdoutLine: {'line': b'\n'}
+[1.011250] (turtle_brick) StdoutLine: {'line': b"./launch/run_turtle.launch.py:7:1: F401 'launch.substitutions.Command' imported but unused\n"}
+[1.011368] (turtle_brick) StdoutLine: {'line': b'from launch.substitutions import Command, LaunchConfiguration, PathJoinSubstitution\n'}
+[1.011482] (turtle_brick) StdoutLine: {'line': b'^\n'}
+[1.011594] (turtle_brick) StdoutLine: {'line': b'\n'}
+[1.011730] (turtle_brick) StdoutLine: {'line': b"./launch/run_turtle.launch.py:7:1: F401 'launch.substitutions.LaunchConfiguration' imported but unused\n"}
+[1.011842] (turtle_brick) StdoutLine: {'line': b'from launch.substitutions import Command, LaunchConfiguration, PathJoinSubstitution\n'}
+[1.011951] (turtle_brick) StdoutLine: {'line': b'^\n'}
+[1.012060] (turtle_brick) StdoutLine: {'line': b'\n'}
+[1.012167] (turtle_brick) StdoutLine: {'line': b"./launch/run_turtle.launch.py:10:1: F401 'launch_ros.parameter_descriptions.ParameterValue' imported but unused\n"}
+[1.012276] (turtle_brick) StdoutLine: {'line': b'from launch_ros.parameter_descriptions import ParameterValue\n'}
+[1.012387] (turtle_brick) StdoutLine: {'line': b'^\n'}
+[1.012496] (turtle_brick) StdoutLine: {'line': b'\n'}
+[1.012607] (turtle_brick) StdoutLine: {'line': b'./launch/run_turtle.launch.py:13:69: W291 trailing whitespace\n'}
+[1.012713] (turtle_brick) StdoutLine: {'line': b'"""\n'}
+[1.012821] (turtle_brick) StdoutLine: {'line': b'launches turtlesim and turtle_robot node along with all the nodes in \n'}
+[1.012935] (turtle_brick) StdoutLine: {'line': b'show_turtle launch file. Also connects yaml file to turtle_robot\n'}
+[1.013052] (turtle_brick) StdoutLine: {'line': b'"""\n'}
+[1.013168] (turtle_brick) StdoutLine: {'line': b'   \n'}
+[1.013283] (turtle_brick) StdoutLine: {'line': b'                                                                ^\n'}
+[1.013399] (turtle_brick) StdoutLine: {'line': b'\n'}
+[1.013513] (turtle_brick) StdoutLine: {'line': b'./launch/run_turtle.launch.py:16:1: E302 expected 2 blank lines, found 0\n'}
+[1.013628] (turtle_brick) StdoutLine: {'line': b'def generate_launch_description():\n'}
+[1.013763] (turtle_brick) StdoutLine: {'line': b'^\n'}
+[1.013885] (turtle_brick) StdoutLine: {'line': b'\n'}
+[1.014009] (turtle_brick) StdoutLine: {'line': b'./launch/run_turtle.launch.py:43:23: E251 unexpected spaces around keyword / parameter equals\n'}
+[1.014133] (turtle_brick) StdoutLine: {'line': b"            remappings = [('/cmd_vel', '/turtlesim1/turtle1/cmd_vel'),],\n"}
+[1.014256] (turtle_brick) StdoutLine: {'line': b'                      ^\n'}
+[1.014378] (turtle_brick) StdoutLine: {'line': b'\n'}
+[1.014499] (turtle_brick) StdoutLine: {'line': b'./launch/run_turtle.launch.py:43:25: E251 unexpected spaces around keyword / parameter equals\n'}
+[1.014619] (turtle_brick) StdoutLine: {'line': b"            remappings = [('/cmd_vel', '/turtlesim1/turtle1/cmd_vel'),],\n"}
+[1.014741] (turtle_brick) StdoutLine: {'line': b'                        ^\n'}
+[1.014867] (turtle_brick) StdoutLine: {'line': b'\n'}
+[1.014984] (turtle_brick) StdoutLine: {'line': b"./launch/run_turtle.launch.py:43:70: E231 missing whitespace after ','\n"}
+[1.015097] (turtle_brick) StdoutLine: {'line': b"            remappings = [('/cmd_vel', '/turtlesim1/turtle1/cmd_vel'),],\n"}
+[1.015208] (turtle_brick) StdoutLine: {'line': b'                                                                     ^\n'}
+[1.015317] (turtle_brick) StdoutLine: {'line': b'\n'}
+[1.015427] (turtle_brick) StdoutLine: {'line': b'./launch/run_turtle.launch.py:46:1: W293 blank line contains whitespace\n'}
+[1.015536] (turtle_brick) StdoutLine: {'line': b'        \n'}
+[1.015652] (turtle_brick) StdoutLine: {'line': b'^\n'}
+[1.015782] (turtle_brick) StdoutLine: {'line': b'\n'}
+[1.015897] (turtle_brick) StdoutLine: {'line': b'./launch/run_turtle.launch.py:47:7: W292 no newline at end of file\n'}
+[1.016013] (turtle_brick) StdoutLine: {'line': b'    ])      ^\n'}
+[1.016125] (turtle_brick) StdoutLine: {'line': b'\n'}
+[1.016239] (turtle_brick) StdoutLine: {'line': b'./launch/turtle_arena.launch.py:5:27: E271 multiple spaces after keyword\n'}
+[1.016366] (turtle_brick) StdoutLine: {'line': b'from launch.actions import  IncludeLaunchDescription\n'}
+[1.016479] (turtle_brick) StdoutLine: {'line': b'                          ^\n'}
+[1.016590] (turtle_brick) StdoutLine: {'line': b'\n'}
+[1.016702] (turtle_brick) StdoutLine: {'line': b'./launch/turtle_arena.launch.py:10:61: W291 trailing whitespace\n'}
+[1.016815] (turtle_brick) StdoutLine: {'line': b'"""\n'}
+[1.016934] (turtle_brick) StdoutLine: {'line': b'launches arena and catcher nodes along with all the nodes in \n'}
+[1.017048] (turtle_brick) StdoutLine: {'line': b'show_turtle launch file.\n'}
+[1.017163] (turtle_brick) StdoutLine: {'line': b'Also connects to yaml files to arena and catcher node \n'}
+[1.017280] (turtle_brick) StdoutLine: {'line': b'"""\n'}
+[1.017395] (turtle_brick) StdoutLine: {'line': b'   \n'}
+[1.017511] (turtle_brick) StdoutLine: {'line': b'                                                        ^\n'}
+[1.017626] (turtle_brick) StdoutLine: {'line': b'\n'}
+[1.017743] (turtle_brick) StdoutLine: {'line': b'./launch/turtle_arena.launch.py:12:54: W291 trailing whitespace\n'}
+[1.017862] (turtle_brick) StdoutLine: {'line': b'"""\n'}
+[1.017979] (turtle_brick) StdoutLine: {'line': b'launches arena and catcher nodes along with all the nodes in \n'}
+[1.018118] (turtle_brick) StdoutLine: {'line': b'show_turtle launch file.\n'}
+[1.018235] (turtle_brick) StdoutLine: {'line': b'Also connects to yaml files to arena and catcher node \n'}
+[1.018352] (turtle_brick) StdoutLine: {'line': b'"""\n'}
+[1.018468] (turtle_brick) StdoutLine: {'line': b'   \n'}
+[1.018581] (turtle_brick) StdoutLine: {'line': b'                                                 ^\n'}
+[1.018707] (turtle_brick) StdoutLine: {'line': b'\n'}
+[1.018817] (turtle_brick) StdoutLine: {'line': b'./launch/turtle_arena.launch.py:15:1: E302 expected 2 blank lines, found 1\n'}
+[1.018926] (turtle_brick) StdoutLine: {'line': b'def generate_launch_description():\n'}
+[1.019035] (turtle_brick) StdoutLine: {'line': b'^\n'}
+[1.019145] (turtle_brick) StdoutLine: {'line': b'\n'}
+[1.019253] (turtle_brick) StdoutLine: {'line': b'./launch/turtle_arena.launch.py:44:1: W293 blank line contains whitespace\n'}
+[1.019374] (turtle_brick) StdoutLine: {'line': b'        \n'}
+[1.019483] (turtle_brick) StdoutLine: {'line': b'^\n'}
+[1.019593] (turtle_brick) StdoutLine: {'line': b'\n'}
+[1.019734] (turtle_brick) StdoutLine: {'line': b'./launch/turtle_arena.launch.py:45:7: W292 no newline at end of file\n'}
+[1.019850] (turtle_brick) StdoutLine: {'line': b'    ])      ^\n'}
+[1.019964] (turtle_brick) StdoutLine: {'line': b'\n'}
+[1.020078] (turtle_brick) StdoutLine: {'line': b'1     E128 continuation line under-indented for visual indent\n'}
+[1.020190] (turtle_brick) StdoutLine: {'line': b'2     E225 missing whitespace around operator\n'}
+[1.020302] (turtle_brick) StdoutLine: {'line': b"6     E231 missing whitespace after ','\n"}
+[1.020416] (turtle_brick) StdoutLine: {'line': b'2     E251 unexpected spaces around keyword / parameter equals\n'}
+[1.020530] (turtle_brick) StdoutLine: {'line': b'1     E271 multiple spaces after keyword\n'}
+[1.020647] (turtle_brick) StdoutLine: {'line': b'2     E302 expected 2 blank lines, found 0\n'}
+[1.020762] (turtle_brick) StdoutLine: {'line': b'3     E501 line too long (115 > 99 characters)\n'}
+[1.020874] (turtle_brick) StdoutLine: {'line': b"7     F401 'ament_index_python.packages.get_package_share_path' imported but unused\n"}
+[1.020988] (turtle_brick) StdoutLine: {'line': b"1     F841 local variable 'use_sim_time' is assigned to but never used\n"}
+[1.021098] (turtle_brick) StdoutLine: {'line': b'5     W291 trailing whitespace\n'}
+[1.021211] (turtle_brick) StdoutLine: {'line': b'4     W292 no newline at end of file\n'}
+[1.021323] (turtle_brick) StdoutLine: {'line': b'2     W293 blank line contains whitespace\n'}
+[1.021432] (turtle_brick) StdoutLine: {'line': b'\n'}
+[1.021539] (turtle_brick) StdoutLine: {'line': b'13 files checked\n'}
+[1.021646] (turtle_brick) StdoutLine: {'line': b'36 errors\n'}
+[1.021785] (turtle_brick) StdoutLine: {'line': b'\n'}
+[1.021896] (turtle_brick) StdoutLine: {'line': b"'E'-type errors: 17\n"}
+[1.022007] (turtle_brick) StdoutLine: {'line': b"'F'-type errors: 8\n"}
+[1.022124] (turtle_brick) StdoutLine: {'line': b"'W'-type errors: 11\n"}
+[1.022240] (turtle_brick) StdoutLine: {'line': b'\n'}
+[1.022358] (turtle_brick) StdoutLine: {'line': b'Checked files:\n'}
+[1.022476] (turtle_brick) StdoutLine: {'line': b'\n'}
+[1.022590] (turtle_brick) StdoutLine: {'line': b'* ./setup.py\n'}
+[1.022702] (turtle_brick) StdoutLine: {'line': b'* ./turtle_brick/arena.py\n'}
+[1.022814] (turtle_brick) StdoutLine: {'line': b'* ./turtle_brick/turtle_robot.py\n'}
+[1.022930] (turtle_brick) StdoutLine: {'line': b'* ./turtle_brick/catcher.py\n'}
+[1.023043] (turtle_brick) StdoutLine: {'line': b'* ./turtle_brick/__init__.py\n'}
+[1.023154] (turtle_brick) StdoutLine: {'line': b'* ./test/math_test.py\n'}
+[1.023264] (turtle_brick) StdoutLine: {'line': b'* ./test/test_flake8.py\n'}
+[1.023374] (turtle_brick) StdoutLine: {'line': b'* ./test/test_copyright.py\n'}
+[1.023485] (turtle_brick) StdoutLine: {'line': b'* ./test/test_pep257.py\n'}
+[1.023595] (turtle_brick) StdoutLine: {'line': b'* ./test/brick.test.py\n'}
+[1.023741] (turtle_brick) StdoutLine: {'line': b'* ./launch/show_turtle.launch.py\n'}
+[1.023848] (turtle_brick) StdoutLine: {'line': b'* ./launch/run_turtle.launch.py\n'}
+[1.023952] (turtle_brick) StdoutLine: {'line': b'* ./launch/turtle_arena.launch.py\n'}
+[1.024058] (turtle_brick) StdoutLine: {'line': b'----------------------------- Captured stderr call -----------------------------\n'}
+[1.024164] (turtle_brick) StdoutLine: {'line': b'option --max-complexity: please update from optparse string `type=` to argparse callable `type=` -- this will be an error in the future\n'}
+[1.024273] (turtle_brick) StdoutLine: {'line': b'\x1b[31m\x1b[1m_________________________________ test_pep257 __________________________________\x1b[0m\n'}
+[1.024381] (turtle_brick) StdoutLine: {'line': b'\x1b[1m\x1b[31mtest/test_pep257.py\x1b[0m:23: in test_pep257\n'}
+[1.024487] (turtle_brick) StdoutLine: {'line': b"    \x1b[94massert\x1b[39;49;00m rc == \x1b[94m0\x1b[39;49;00m, \x1b[33m'\x1b[39;49;00m\x1b[33mFound code style errors / warnings\x1b[39;49;00m\x1b[33m'\x1b[39;49;00m\n"}
+[1.024612] (turtle_brick) StdoutLine: {'line': b'\x1b[1m\x1b[31mE   AssertionError: Found code style errors / warnings\x1b[0m\n'}
+[1.024723] (turtle_brick) StdoutLine: {'line': b'\x1b[1m\x1b[31mE   assert 1 == 0\x1b[0m\n'}
+[1.024836] (turtle_brick) StdoutLine: {'line': b'----------------------------- Captured stdout call -----------------------------\n'}
+[1.024947] (turtle_brick) StdoutLine: {'line': b'checking ./launch/run_turtle.launch.py\n'}
+[1.025060] (turtle_brick) StdoutLine: {'line': b'checking ./launch/show_turtle.launch.py\n'}
+[1.025172] (turtle_brick) StdoutLine: {'line': b'checking ./launch/turtle_arena.launch.py\n'}
+[1.025286] (turtle_brick) StdoutLine: {'line': b'checking ./setup.py\n'}
+[1.025400] (turtle_brick) StdoutLine: {'line': b'checking ./test/brick.test.py\n'}
+[1.025509] (turtle_brick) StdoutLine: {'line': b'checking ./test/math_test.py\n'}
+[1.025623] (turtle_brick) StdoutLine: {'line': b'checking ./test/test_copyright.py\n'}
+[1.025762] (turtle_brick) StdoutLine: {'line': b'checking ./test/test_flake8.py\n'}
+[1.025892] (turtle_brick) StdoutLine: {'line': b'checking ./test/test_pep257.py\n'}
+[1.026026] (turtle_brick) StdoutLine: {'line': b'checking ./turtle_brick/__init__.py\n'}
+[1.026159] (turtle_brick) StdoutLine: {'line': b'checking ./turtle_brick/arena.py\n'}
+[1.026293] (turtle_brick) StdoutLine: {'line': b'./turtle_brick/arena.py:16 in public class `BState`: D204: 1 blank line required after class docstring (found 0)\n'}
+[1.026428] (turtle_brick) StdoutLine: {'line': b'./turtle_brick/arena.py:16 in public class `BState`: D205: 1 blank line required between summary line and description (found 0)\n'}
+[1.026564] (turtle_brick) StdoutLine: {'line': b'./turtle_brick/arena.py:16 in public class `BState`: D208: Docstring is over-indented\n'}
+[1.026712] (turtle_brick) StdoutLine: {'line': b'./turtle_brick/arena.py:16 in public class `BState`: D210: No whitespaces allowed surrounding docstring text\n'}
+[1.026847] (turtle_brick) StdoutLine: {'line': b'./turtle_brick/arena.py:16 in public class `BState`: D213: Multi-line docstring summary should start at the second line\n'}
+[1.026979] (turtle_brick) StdoutLine: {'line': b'./turtle_brick/arena.py:29 in public class `Arena`: D204: 1 blank line required after class docstring (found 0)\n'}
+[1.027106] (turtle_brick) StdoutLine: {'line': b'./turtle_brick/arena.py:29 in public class `Arena`: D205: 1 blank line required between summary line and description (found 0)\n'}
+[1.027236] (turtle_brick) StdoutLine: {'line': b'checking ./turtle_brick/catcher.py\n'}
+[1.027363] (turtle_brick) StdoutLine: {'line': b'./turtle_brick/catcher.py:13 in public class `State`: D204: 1 blank line required after class docstring (found 0)\n'}
+[1.027492] (turtle_brick) StdoutLine: {'line': b'./turtle_brick/catcher.py:13 in public class `State`: D205: 1 blank line required between summary line and description (found 0)\n'}
+[1.027635] (turtle_brick) StdoutLine: {'line': b"./turtle_brick/catcher.py:13 in public class `State`: D400: First line should end with a period (not 't')\n"}
+[1.027771] (turtle_brick) StdoutLine: {'line': b"./turtle_brick/catcher.py:13 in public class `State`: D415: First line should end with a period, question mark, or exclamation point (not 't')\n"}
+[1.027900] (turtle_brick) StdoutLine: {'line': b'./turtle_brick/catcher.py:23 in public class `Catcher`: D205: 1 blank line required between summary line and description (found 0)\n'}
+[1.028031] (turtle_brick) StdoutLine: {'line': b"./turtle_brick/catcher.py:23 in public class `Catcher`: D400: First line should end with a period (not 't')\n"}
+[1.028156] (turtle_brick) StdoutLine: {'line': b"./turtle_brick/catcher.py:23 in public class `Catcher`: D415: First line should end with a period, question mark, or exclamation point (not 't')\n"}
+[1.028311] (turtle_brick) StdoutLine: {'line': b'checking ./turtle_brick/turtle_robot.py\n'}
+[1.028442] (turtle_brick) StdoutLine: {'line': b'./turtle_brick/turtle_robot.py:14 in public class `Turtle_robot`: D204: 1 blank line required after class docstring (found 0)\n'}
+[1.028577] (turtle_brick) StdoutLine: {'line': b'./turtle_brick/turtle_robot.py:14 in public class `Turtle_robot`: D205: 1 blank line required between summary line and description (found 0)\n'}
+[1.028720] (turtle_brick) StdoutLine: {'line': b'checking test/brick.test.py\n'}
+[1.028834] (turtle_brick) StdoutLine: {'line': b'checking test/math_test.py\n'}
+[1.028956] (turtle_brick) StdoutLine: {'line': b'checking test/test_copyright.py\n'}
+[1.029074] (turtle_brick) StdoutLine: {'line': b'checking test/test_flake8.py\n'}
+[1.029202] (turtle_brick) StdoutLine: {'line': b'checking test/test_pep257.py\n'}
+[1.029320] (turtle_brick) StdoutLine: {'line': b'16 errors\n'}
+[1.029443] (turtle_brick) StderrLine: {'line': b'\x1b[33m=============================== warnings summary ===============================\x1b[0m\n'}
+[1.029585] (turtle_brick) StderrLine: {'line': b'test/test_flake8.py::test_flake8\n'}
+[1.029704] (turtle_brick) StderrLine: {'line': b'test/test_flake8.py::test_flake8\n'}
+[1.029817] (turtle_brick) StderrLine: {'line': b'  Warning: SelectableGroups dict interface is deprecated. Use select.\n'}
+[1.029931] (turtle_brick) StderrLine: {'line': b'\n'}
+[1.030046] (turtle_brick) StderrLine: {'line': b'-- Docs: https://docs.pytest.org/en/stable/warnings.html\n'}
+[1.030159] (turtle_brick) StdoutLine: {'line': b'- generated xml file: /home/alyssa/homework2-alyssa225/build/turtle_brick/pytest.xml -\n'}
+[1.030279] (turtle_brick) StdoutLine: {'line': b'=========================== short test summary info ============================\n'}
+[1.030406] (turtle_brick) StdoutLine: {'line': b'FAILED test/test_flake8.py::test_flake8 - AssertionError: Found 36 code style...\n'}
+[1.030532] (turtle_brick) StdoutLine: {'line': b'FAILED test/test_pep257.py::test_pep257 - AssertionError: Found code style er...\n'}
+[1.030681] (turtle_brick) StdoutLine: {'line': b'\x1b[31m============== \x1b[31m\x1b[1m2 failed\x1b[0m, \x1b[32m1 passed\x1b[0m, \x1b[33m1 skipped\x1b[0m, \x1b[33m2 warnings\x1b[0m\x1b[31m in 0.46s\x1b[0m\x1b[31m ==============\x1b[0m\n'}
+[1.073911] (turtle_brick) CommandEnded: {'returncode': 1}
+[1.074481] (turtle_brick) TestFailure: {'identifier': 'turtle_brick'}
+[1.074538] (turtle_brick) JobEnded: {'identifier': 'turtle_brick', 'rc': 0}
+[1.074859] (-) EventReactorShutdown: {}
