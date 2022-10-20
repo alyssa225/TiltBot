@@ -44,7 +44,7 @@ class Turtle_robot(Node):
         self.robot_pub = self.create_publisher(Pose,'/robot',10)
         # initializing subscribers
         self.goal_sub = self.create_subscription(PoseStamped,'/goal_pose',self.pose_callback,10)
-        self.tilt_sub = self.create_subscription(Tilt,'tilt',self.tilt_callback,10)
+        self.tilt_sub = self.create_subscription(Tilt,'/tilt',self.tilt_callback,10)
         # self.pose_sub = self.create_subscription(Pose, 'pose', self.listener_callback,10)
         # Static broadcasters publish on /tf_static.        
         self.static_broadcaster = StaticTransformBroadcaster(self)
@@ -104,20 +104,21 @@ class Turtle_robot(Node):
         self.tmr = self.create_timer(self.period, self.timer_callback)
     
     def pose_callback(self,msg):
-        self.get_logger().info('message recieved: %f %f %f' % (msg.pose.position.x,msg.pose.position.y,msg.pose.orientation.z) )
+        self.get_logger().info('goal pose: %f %f %f' % (msg.pose.position.x,msg.pose.position.y,msg.pose.orientation.z) )
         self.goalx = msg.pose.position.x
         self.goaly = msg.pose.position.y
-        self.distx = self.goalx - self.currentx
-        self.disty = self.goaly - self.currenty
-        self.get_logger().info('distx: "%f"' % self.distx)
-        self.get_logger().info('disty: "%f"' % self.disty)
-        self.vx = math.sqrt(self.vmax**2/(1.0+(self.disty/self.distx)**2))
-        self.vy = self.disty/self.distx * self.vx
+        dx = self.goalx - self.currentx
+        dy = self.goaly - self.currenty
+        d = math.sqrt(dx**2 + dy**2)
+        self.vx = dx / d * self.vmax
+        self.vy = dy / d * self.vmax
+        self.get_logger().info('distx: "%f"' % dx)
+        self.get_logger().info('disty: "%f"' % dy)
         self.dx = self.vx*self.period
         self.dy = self.vy*self.period
 
     def tilt_callback(self,msg):
-        self.get_logger().info('message recieved: "%s"' % (msg.angle))
+        self.get_logger().info('tilt angle: "%s"' % (msg.angle))
         self.tilt_angf = msg.angle
 
     def timer_callback(self):
@@ -127,29 +128,24 @@ class Turtle_robot(Node):
         self.odom.header.stamp = self.get_clock().now().to_msg()
         self.odom.pose.pose.position.x = self.currentx
         self.odom.pose.pose.position.y = self.currenty
-        if self.distx >= 0.0:
-            self.odom.twist.twist.linear.x = self.vx
-            self.odom.twist.twist.linear.y = self.vy
-        elif self.distx < 0.0:
-            self.odom.twist.twist.linear.x = -self.vx
-            self.odom.twist.twist.linear.y = -self.vy
+        self.odom.twist.twist.linear.x = self.vx
+        self.odom.twist.twist.linear.y = self.vy
+
         
         #updating joint states
         self.joint_state.header.stamp = self.get_clock().now().to_msg()
         self.joint_state.name = ['stem_wheel','base_stem','link_platform1']
         self.joint_state.position = [self.wheel_ang, self.direction_ang, self.tilt_ang]
+        
         #update twist
-        if self.distx >= 0.0:
-            self.twist.linear.x = self.vx
-            self.twist.linear.y = self.vy
-        elif self.distx < 0.0:
-            self.twist.linear.x = -self.vx
-            self.twist.linear.y = -self.vy
+        self.twist.linear.x = self.vx
+        self.twist.linear.y = self.vy
         
         #update robot pose
         self.robo_pose.position.x=self.currentx
         self.robo_pose.position.y=self.currenty
         self.robo_pose.position.z=self.height
+        self.robo_pose.orientation.w = self.tilt_ang
 
         #update transforms
         self.odom_base_link.transform.translation.x = self.currentx 
@@ -163,31 +159,27 @@ class Turtle_robot(Node):
         self.robot_pub.publish(self.robo_pose)
         self.broadcaster.sendTransform(self.odom_base_link)
         #moving the robot to goal pose
-        if self.distx >= 0.0:
-            self.currentx += self.dx
-            # self.get_logger().info('adding dx:')
-        elif self.distx < 0.0:
-            self.currentx -= self.dx
-            # self.get_logger().info('subtract dx:')
+        self.currentx += self.dx
+        self.currenty += self.dy
         if abs(self.currentx-self.goalx) <= 0.05:
             self.vx = 0.0
             self.dx = 0.0
-        if self.disty >= 0.0:
-            self.currenty += self.dy
-            # self.get_logger().info('adding dy:')
-        elif self.disty < 0.0:
-            self.currenty -= self.dy
-            # self.get_logger().info('subtract dy:')
-        if abs(self.currenty-self.goaly) <= 0.05:
+        if abs(self.currenty-self.goaly)<= 0.05:
             self.vy = 0.0
             self.dy = 0.0
+        
+        #move the wheel and stem to face direction and roll
         #tilt if tilt is called
-        if abs(self.tilt_ang-self.tilt_angf) >=0.01:       
-            if self.tilt_angf-self.tilt_ang < 0.0:
-                self.tilt_ang-=0.005
-            elif self.tilt_angf-self.tilt_ang >= 0.0:
-                self.tilt_ang+=0.005
-
+        if self.tilt_ang != 0.0 or self.tilt_angf != 0.0:
+            if abs(self.tilt_ang-self.tilt_angf) >=0.01:       
+                if self.tilt_angf-self.tilt_ang < 0.0:
+                    self.tilt_ang-=0.005
+                elif self.tilt_angf-self.tilt_ang >= 0.0:
+                    self.tilt_ang+=0.005
+            elif self.tilt_angf == 0.0:
+                self.tilt_ang = 0.0
+            else:
+                self.tilt_angf = 0.0
         
         
 
