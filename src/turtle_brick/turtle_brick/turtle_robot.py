@@ -161,10 +161,10 @@ class Turtle_robot(Node):
         #moving the robot to goal pose
         self.currentx += self.dx
         self.currenty += self.dy
-        if abs(self.currentx-self.goalx) <= 0.05:
+        if abs(self.currentx-self.goalx) <= 0.03:
             self.vx = 0.0
             self.dx = 0.0
-        if abs(self.currenty-self.goaly)<= 0.05:
+        if abs(self.currenty-self.goaly)<= 0.03:
             self.vy = 0.0
             self.dy = 0.0
         

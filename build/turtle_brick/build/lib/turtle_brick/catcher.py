@@ -80,22 +80,22 @@ class Catcher(Node):
         self.text_marker = Marker()
         self.text_marker.header.frame_id = "world"
         self.text_marker.header.stamp = self.get_clock().now().to_msg()
-        self.text_marker.ns = "brick"
-        self.text_marker.id = 0
+        self.text_marker.ns = "text"
+        self.text_marker.id = 5
         self.text_marker.lifetime.sec = 3
         self.text_marker.type = Marker.TEXT_VIEW_FACING
         self.text_marker.action = Marker.ADD
-        self.text_marker.scale.x = 2.0
-        self.text_marker.scale.y = 4.0
-        self.text_marker.scale.z = 1.0
+        self.text_marker.scale.x = 10.0
+        self.text_marker.scale.y = 10.0
+        self.text_marker.scale.z = 10.0
         self.text_marker.color.a = 1.0
         self.text_marker.color.r = 1.0
         self.text_marker.color.g = 0.0
         self.text_marker.color.b = 0.0
         self.text_marker.pose.orientation.w = 1.0
         self.text_marker.pose.position.x = 0.0
-        self.text_marker.pose.position.y = -5.55
-        self.text_marker.pose.position.z = 5.0
+        self.text_marker.pose.position.y = 0.0
+        self.text_marker.pose.position.z = 2.0
         self.text_marker.text = 'UNREACHABLE'
 
 
@@ -128,15 +128,16 @@ class Catcher(Node):
         self.brick_pose.position.z = msg.z
         if self.brick_pose.position.z >self.height:
             timefall = math.sqrt((2*(self.brick_pose.position.z-self.height)/self.g))
-            #calc time takes robot to move to x,y position from current position in max velocity speed (3.0 m/s)
-            timerobo = math.sqrt((abs(self.brick_pose.position.x-self.platformx)-0.35)**2+(abs(self.brick_pose.position.y-self.platformy)-0.35)**2)/self.vmax
-            if timerobo<=timefall:
+            #calc time takes robot to move to x,y position from current position in max velocity speed (3.0 m/s) to 0.3 radius of the platform
+            timerobo = math.sqrt((abs(self.brick_pose.position.x-self.platformx)-0.3)**2+(abs(self.brick_pose.position.y-self.platformy)-0.3)**2)/self.vmax
+            if timerobo+1.0<=timefall: #1.0 is to give some time for message to be revieved and acted upon
                 goal_pos = PoseStamped()
                 goal_pos.pose.position.x = self.brick_pose.position.x
                 goal_pos.pose.position.y = self.brick_pose.position.y
                 self.goal_pub.publish(goal_pos)
             else:
-                self.marker_pub.publish(self.text_marker)
+                for i in range(10):
+                    self.marker_pub.publish(self.text_marker)
 
         
         

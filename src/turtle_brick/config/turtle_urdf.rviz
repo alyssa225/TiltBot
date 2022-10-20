@@ -105,7 +105,6 @@ Visualization Manager:
       Name: Marker
       Namespaces:
         back_wall: true
-        brick: true
         front_wall: true
         left_wall: true
         right_wall: true
@@ -115,7 +114,7 @@ Visualization Manager:
         Filter size: 10
         History Policy: Keep Last
         Reliability Policy: Reliable
-        Value: /arena/marker
+        Value: /marker
       Value: true
   Enabled: true
   Global Options:
@@ -163,7 +162,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 28.885757446289062
+      Distance: 19.578472137451172
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -178,10 +177,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.8603981733322144
+      Pitch: 1.0247961282730103
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 1.100398063659668
+      Yaw: 6.223578453063965
     Saved: ~
 Window Geometry:
   Displays:
@@ -199,5 +198,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 1200
-  X: 400
-  Y: 205
+  X: 53
+  Y: 109

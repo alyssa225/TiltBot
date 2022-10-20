@@ -61,17 +61,17 @@
 
     <link name="fix_link">
         <visual>
-        <origin xyz="0 0 ${width/2+(platform_h-wradius-stem_length-width-length)/2}" rpy="0 0 0" />
+        <origin xyz="0 0 ${width/2+(platform_h-wradius*2-stem_length-width-length)/2}" rpy="0 0 0" />
         <geometry>
-            <cylinder radius="${sradius}" length="${platform_h-wradius-stem_length-width-length}" />
+            <cylinder radius="${sradius}" length="${platform_h-wradius*2-stem_length-width-length}" />
         </geometry>
         <material name="red"/>
         </visual>
 
         <collision>
-            <origin xyz="0 0 ${width/2+(platform_h-wradius-stem_length-width-length)/2}" rpy="0 0 0"/>
+            <origin xyz="0 0 ${width/2+(platform_h-wradius*2-stem_length-width-length)/2}" rpy="0 0 0"/>
             <geometry>
-                <cylinder radius="${sradius}" length="${platform_h-wradius-stem_length-width-length}" />
+                <cylinder radius="${sradius}" length="${platform_h-wradius*2-stem_length-width-length}" />
             </geometry>
         </collision>
     </link>
@@ -117,7 +117,7 @@
     </joint>
 
     <joint name='link_platform1' type="continuous">
-        <origin xyz="0 0 ${width/2+(platform_h-wradius-stem_length-width-length/2)}" rpy="0 0 0"/>
+        <origin xyz="0 0 ${width/2+(platform_h-wradius*2-stem_length-width-length/2)}" rpy="0 0 0"/>
         <parent link="fix_link"/>
         <child link="platform"/>
         <axis xyz="1 0 0"/>

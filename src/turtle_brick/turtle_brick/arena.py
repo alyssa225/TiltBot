@@ -70,7 +70,7 @@ class Arena(Node):
         #set up subscribers
         self.robot_sub = self.create_subscription(Pose,'/robot',self.robot_callback,10)
         #publisher
-        self.marker_pub = self.create_publisher(Marker,'marker',10)
+        self.marker_pub = self.create_publisher(Marker,'/marker',10)
         self.drop_pub = self.create_publisher(Vector3,'/drop',10)
         self.platform_pub = self.create_publisher(Bool,'/catch',10)
         # set up brick to world transforms and broadcaster
@@ -283,7 +283,7 @@ class Arena(Node):
                     msg.data = True
                     self.platform_pub.publish(msg)
                     self.brick_state = BState.PLATFORM
-                    self.brickz = self.height
+
             self.publish_brick()
 
 
