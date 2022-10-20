@@ -1,4 +1,4 @@
 lint_cmake 0 0
-xmllint 3 0.178243
+xmllint 4 0.107817
 ---
 lint_cmake
