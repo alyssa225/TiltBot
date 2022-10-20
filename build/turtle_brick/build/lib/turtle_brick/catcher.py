@@ -1,17 +1,4 @@
-"""
-Create one static frame and two moving frames.
 
-The tf tree produced from this node will look like
-
-      world
-       |
-      base
-      /  \
-    left right
-
-The left and right nodes will move in and out and rotate about the base z axis
-
-"""
 from cmath import sqrt
 from time import sleep
 import rclpy
@@ -28,19 +15,13 @@ from .quaternion import angle_axis_to_quaternion
 from enum import Enum, auto
 
 class State(Enum):
-    """ Current state of the brick.
+    """ Current state of the robot
     """
     WAITING = auto(),
     TILT = auto(),
 
 class Catcher(Node):
     """
-    Moves some frames around.
-
-    Static Broadcasts:
-       world -> base
-    Broadcasts:
-       base -> left and base -> right
     """
 
     def __init__(self):
@@ -101,7 +82,7 @@ class Catcher(Node):
 
     
     def robot_callback(self,msg):
-        self.get_logger().info('robot position: "%s" "%s"' % (msg.position.x, msg.position.y))
+        # self.get_logger().info('robot position: "%s" "%s"' % (msg.position.x, msg.position.y))
         self.platformx = msg.position.x
         self.platformy = msg.position.y
         if self.state == State.TILT and abs(self.platformx) <= 0.05 and abs(self.platformy) <= 0.05:

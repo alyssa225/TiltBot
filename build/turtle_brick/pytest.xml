@@ -1,78 +1,81 @@
-<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="2" skipped="1" tests="3" time="0.360" timestamp="2022-10-19T08:44:02.105292" hostname="alyssa-Galago-Pro"><testcase classname="turtle_brick.test.test_copyright" name="test_copyright" time="0.001"><skipped type="pytest.skip" message="No copyright header has been placed in the generated source file.">/home/alyssa/homework2-alyssa225/src/turtle_brick/test/test_copyright.py:20: No copyright header has been placed in the generated source file.</skipped></testcase><testcase classname="turtle_brick.test.test_flake8" name="test_flake8" time="0.177"><failure message="AssertionError: Found 221 code style errors / warnings:&#10;  ./setup.py:3:1: F401 'setuptools.find_packages' imported but unused&#10;  ./setup.py:14:100: E501 line too long (174 &gt; 99 characters)&#10;  ./setup.py:18:43: E231 missing whitespace after ','&#10;  ./setup.py:24:28: E231 missing whitespace after ','&#10;  ./turtle_brick/arena.py:18:1: F401 'tf2_ros.static_transform_broadcaster.StaticTransformBroadcaster' imported but unused&#10;  ./turtle_brick/arena.py:22:1: F401 'math.pi' imported but unused&#10;  ./turtle_brick/arena.py:23:1: F401 'turtle_brick_interfaces.srv.Drop' imported but unused&#10;  ./turtle_brick/arena.py:25:42: W291 trailing whitespace&#10;  ./turtle_brick/arena.py:27:1: F401 'visualization_msgs.msg.MarkerArray' imported but unused&#10;  ./turtle_brick/arena.py:28:1: F401 'math' imported but unused&#10;  ./turtle_brick/arena.py:30:1: E265 block comment should start with '# '&#10;  ./turtle_brick/arena.py:33:1: E302 expected 2 blank lines, found 1&#10;  ./turtle_brick/arena.py:40:1: E302 expected 2 blank lines, found 1&#10;  ./turtle_brick/arena.py:46:9: E265 block comment should start with '# '&#10;  ./turtle_brick/arena.py:47:33: W291 trailing whitespace&#10;  ./turtle_brick/arena.py:52:32: E231 missing whitespace after ','&#10;  ./turtle_brick/arena.py:53:27: E231 missing whitespace after ','&#10;  ./turtle_brick/arena.py:60:9: E265 block comment should start with '# '&#10;  ./turtle_brick/arena.py:67:9: E265 block comment should start with '# '&#10;  ./turtle_brick/arena.py:68:55: E231 missing whitespace after ','&#10;  ./turtle_brick/arena.py:68:63: E231 missing whitespace after ','&#10;  ./turtle_brick/arena.py:68:82: E231 missing whitespace after ','&#10;  ./turtle_brick/arena.py:69:54: E231 missing whitespace after ','&#10;  ./turtle_brick/arena.py:69:61: E231 missing whitespace after ','&#10;  ./turtle_brick/arena.py:69:80: E231 missing whitespace after ','&#10;  ./turtle_brick/arena.py:77:1: W293 blank line contains whitespace&#10;  ./turtle_brick/arena.py:78:9: E265 block comment should start with '# '&#10;  ./turtle_brick/arena.py:79:47: E231 missing whitespace after ','&#10;  ./turtle_brick/arena.py:79:55: E231 missing whitespace after ','&#10;  ./turtle_brick/arena.py:80:46: E231 missing whitespace after ','&#10;  ./turtle_brick/arena.py:80:53: E231 missing whitespace after ','&#10;  ./turtle_brick/arena.py:83:55: E231 missing whitespace after ','&#10;  ./turtle_brick/arena.py:83:64: E231 missing whitespace after ','&#10;  ./turtle_brick/arena.py:90:9: F841 local variable 'count' is assigned to but never used&#10;  ./turtle_brick/arena.py:93:9: E265 block comment should start with '# '&#10;  ./turtle_brick/arena.py:110:9: E265 block comment should start with '# '&#10;  ./turtle_brick/arena.py:196:9: E303 too many blank lines (2)&#10;  ./turtle_brick/arena.py:196:9: E265 block comment should start with '# '&#10;  ./turtle_brick/arena.py:199:26: W291 trailing whitespace&#10;  ./turtle_brick/arena.py:208:44: E231 missing whitespace after ','&#10;  ./turtle_brick/arena.py:210:37: E231 missing whitespace after ','&#10;  ./turtle_brick/arena.py:217:1: W293 blank line contains whitespace&#10;  ./turtle_brick/arena.py:222:27: E231 missing whitespace after ','&#10;  ./turtle_brick/arena.py:226:36: E231 missing whitespace after ','&#10;  ./turtle_brick/arena.py:230:27: E231 missing whitespace after ','&#10;  ./turtle_brick/arena.py:231:100: E501 line too long (117 &gt; 99 characters)&#10;  ./turtle_brick/arena.py:237:9: E265 block comment should start with '# '&#10;  ./turtle_brick/arena.py:244:5: E303 too many blank lines (2)&#10;  ./turtle_brick/arena.py:245:9: E265 block comment should start with '# '&#10;  ./turtle_brick/arena.py:247:1: W293 blank line contains whitespace&#10;  ./turtle_brick/arena.py:248:9: E265 block comment should start with '# '&#10;  ./turtle_brick/arena.py:250:63: W291 trailing whitespace&#10;  ./turtle_brick/arena.py:251:1: W293 blank line contains whitespace&#10;  ./turtle_brick/arena.py:252:9: E265 block comment should start with '# '&#10;  ./turtle_brick/arena.py:252:30: W291 trailing whitespace&#10;  ./turtle_brick/arena.py:255:67: E225 missing whitespace around operator&#10;  ./turtle_brick/arena.py:258:62: E225 missing whitespace around operator&#10;  ./turtle_brick/arena.py:259:42: E225 missing whitespace around operator&#10;  ./turtle_brick/arena.py:260:65: E261 at least two spaces before inline comment&#10;  ./turtle_brick/arena.py:260:66: E262 inline comment should start with '# '&#10;  ./turtle_brick/arena.py:260:100: E501 line too long (100 &gt; 99 characters)&#10;  ./turtle_brick/arena.py:261:44: E261 at least two spaces before inline comment&#10;  ./turtle_brick/arena.py:261:45: E262 inline comment should start with '# '&#10;  ./turtle_brick/arena.py:261:83: W291 trailing whitespace&#10;  ./turtle_brick/arena.py:262:43: W291 trailing whitespace&#10;  ./turtle_brick/arena.py:272:1: W293 blank line contains whitespace&#10;  ./turtle_brick/arena.py:274:9: E303 too many blank lines (2)&#10;  ./turtle_brick/arena.py:277:1: W293 blank line contains whitespace&#10;  ./turtle_brick/arena.py:278:9: E303 too many blank lines (2)&#10;  ./turtle_brick/arena.py:283:9: E225 missing whitespace around operator&#10;  ./turtle_brick/arena.py:285:19: W291 trailing whitespace&#10;  ./turtle_brick/arena.py:286:1: W391 blank line at end of file&#10;  ./turtle_brick/turtle_robot.py:5:1: F401 'tokenize.Double' imported but unused&#10;  ./turtle_brick/turtle_robot.py:5:1: F401 'tokenize.String' imported but unused&#10;  ./turtle_brick/turtle_robot.py:12:34: W291 trailing whitespace&#10;  ./turtle_brick/turtle_robot.py:13:1: F401 'geometry_msgs.msg.Vector3' imported but unused&#10;  ./turtle_brick/turtle_robot.py:14:1: F401 'visualization_msgs.msg.Marker' imported but unused&#10;  ./turtle_brick/turtle_robot.py:14:42: W291 trailing whitespace&#10;  ./turtle_brick/turtle_robot.py:15:45: W291 trailing whitespace&#10;  ./turtle_brick/turtle_robot.py:16:12: W291 trailing whitespace&#10;  ./turtle_brick/turtle_robot.py:17:1: E265 block comment should start with '# '&#10;  ./turtle_brick/turtle_robot.py:19:1: E302 expected 2 blank lines, found 1&#10;  ./turtle_brick/turtle_robot.py:24:9: E265 block comment should start with '# '&#10;  ./turtle_brick/turtle_robot.py:25:33: W291 trailing whitespace&#10;  ./turtle_brick/turtle_robot.py:30:32: E231 missing whitespace after ','&#10;  ./turtle_brick/turtle_robot.py:31:27: E231 missing whitespace after ','&#10;  ./turtle_brick/turtle_robot.py:41:65: E231 missing whitespace after ','&#10;  ./turtle_brick/turtle_robot.py:41:81: E231 missing whitespace after ','&#10;  ./turtle_brick/turtle_robot.py:42:55: E231 missing whitespace after ','&#10;  ./turtle_brick/turtle_robot.py:42:63: E231 missing whitespace after ','&#10;  ./turtle_brick/turtle_robot.py:43:51: E231 missing whitespace after ','&#10;  ./turtle_brick/turtle_robot.py:43:62: E231 missing whitespace after ','&#10;  ./turtle_brick/turtle_robot.py:44:52: E231 missing whitespace after ','&#10;  ./turtle_brick/turtle_robot.py:44:61: E231 missing whitespace after ','&#10;  ./turtle_brick/turtle_robot.py:46:61: E231 missing whitespace after ','&#10;  ./turtle_brick/turtle_robot.py:46:74: E231 missing whitespace after ','&#10;  ./turtle_brick/turtle_robot.py:46:93: E231 missing whitespace after ','&#10;  ./turtle_brick/turtle_robot.py:47:54: E231 missing whitespace after ','&#10;  ./turtle_brick/turtle_robot.py:47:61: E231 missing whitespace after ','&#10;  ./turtle_brick/turtle_robot.py:47:80: E231 missing whitespace after ','&#10;  ./turtle_brick/turtle_robot.py:49:53: W291 trailing whitespace&#10;  ./turtle_brick/turtle_robot.py:53:1: W293 blank line contains whitespace&#10;  ./turtle_brick/turtle_robot.py:62:9: E265 block comment should start with '# '&#10;  ./turtle_brick/turtle_robot.py:62:19: W291 trailing whitespace&#10;  ./turtle_brick/turtle_robot.py:63:28: W291 trailing whitespace&#10;  ./turtle_brick/turtle_robot.py:82:9: E265 block comment should start with '# '&#10;  ./turtle_brick/turtle_robot.py:88:23: E225 missing whitespace around operator&#10;  ./turtle_brick/turtle_robot.py:95:9: E265 block comment should start with '# '&#10;  ./turtle_brick/turtle_robot.py:98:9: E265 block comment should start with '# '&#10;  ./turtle_brick/turtle_robot.py:105:1: W293 blank line contains whitespace&#10;  ./turtle_brick/turtle_robot.py:106:27: E231 missing whitespace after ','&#10;  ./turtle_brick/turtle_robot.py:107:83: E231 missing whitespace after ','&#10;  ./turtle_brick/turtle_robot.py:107:100: E501 line too long (128 &gt; 99 characters)&#10;  ./turtle_brick/turtle_robot.py:107:103: E231 missing whitespace after ','&#10;  ./turtle_brick/turtle_robot.py:107:127: E202 whitespace before ')'&#10;  ./turtle_brick/turtle_robot.py:119:27: E231 missing whitespace after ','&#10;  ./turtle_brick/turtle_robot.py:125:1: W293 blank line contains whitespace&#10;  ./turtle_brick/turtle_robot.py:126:9: E265 block comment should start with '# '&#10;  ./turtle_brick/turtle_robot.py:136:1: W293 blank line contains whitespace&#10;  ./turtle_brick/turtle_robot.py:137:9: E265 block comment should start with '# '&#10;  ./turtle_brick/turtle_robot.py:139:46: E231 missing whitespace after ','&#10;  ./turtle_brick/turtle_robot.py:139:58: E231 missing whitespace after ','&#10;  ./turtle_brick/turtle_robot.py:141:9: E265 block comment should start with '# '&#10;  ./turtle_brick/turtle_robot.py:148:1: W293 blank line contains whitespace&#10;  ./turtle_brick/turtle_robot.py:149:9: E265 block comment should start with '# '&#10;  ./turtle_brick/turtle_robot.py:150:34: E225 missing whitespace around operator&#10;  ./turtle_brick/turtle_robot.py:151:34: E225 missing whitespace around operator&#10;  ./turtle_brick/turtle_robot.py:152:34: E225 missing whitespace around operator&#10;  ./turtle_brick/turtle_robot.py:154:9: E265 block comment should start with '# '&#10;  ./turtle_brick/turtle_robot.py:155:68: W291 trailing whitespace&#10;  ./turtle_brick/turtle_robot.py:156:68: W291 trailing whitespace&#10;  ./turtle_brick/turtle_robot.py:157:48: W291 trailing whitespace&#10;  ./turtle_brick/turtle_robot.py:159:9: E265 block comment should start with '# '&#10;  ./turtle_brick/turtle_robot.py:160:56: W291 trailing whitespace&#10;  ./turtle_brick/turtle_robot.py:165:9: E265 block comment should start with '# '&#10;  ./turtle_brick/turtle_robot.py:184:9: E265 block comment should start with '# '&#10;  ./turtle_brick/turtle_robot.py:185:48: E225 missing whitespace around operator&#10;  ./turtle_brick/turtle_robot.py:185:53: W291 trailing whitespace&#10;  ./turtle_brick/turtle_robot.py:187:30: E225 missing whitespace around operator&#10;  ./turtle_brick/turtle_robot.py:189:30: E225 missing whitespace around operator&#10;  ./turtle_brick/turtle_robot.py:191:1: W293 blank line contains whitespace&#10;  ./turtle_brick/turtle_robot.py:192:1: W293 blank line contains whitespace&#10;  ./turtle_brick/turtle_robot.py:194:1: E303 too many blank lines (4)&#10;  ./turtle_brick/turtle_robot.py:196:16: E225 missing whitespace around operator&#10;  ./turtle_brick/turtle_robot.py:198:19: W291 trailing whitespace&#10;  ./turtle_brick/turtle_robot.py:200:1: W391 blank line at end of file&#10;  ./turtle_brick/catcher.py:15:1: F401 'cmath.sqrt' imported but unused&#10;  ./turtle_brick/catcher.py:18:1: F401 'tf2_ros.static_transform_broadcaster.StaticTransformBroadcaster' imported but unused&#10;  ./turtle_brick/catcher.py:19:1: F401 'tf2_ros.TransformBroadcaster' imported but unused&#10;  ./turtle_brick/catcher.py:20:1: F401 'geometry_msgs.msg.TransformStamped' imported but unused&#10;  ./turtle_brick/catcher.py:20:1: F401 'geometry_msgs.msg.Pose' imported but unused&#10;  ./turtle_brick/catcher.py:20:1: F401 'geometry_msgs.msg.PoseStamped' imported but unused&#10;  ./turtle_brick/catcher.py:21:1: F401 'turtle_brick_interfaces.srv.Place' imported but unused&#10;  ./turtle_brick/catcher.py:21:1: F401 'turtle_brick_interfaces.srv.Drop' imported but unused&#10;  ./turtle_brick/catcher.py:22:1: F401 'math' imported but unused&#10;  ./turtle_brick/catcher.py:22:12: W291 trailing whitespace&#10;  ./turtle_brick/catcher.py:23:1: F401 '.quaternion.angle_axis_to_quaternion' imported but unused&#10;  ./turtle_brick/catcher.py:26:1: E302 expected 2 blank lines, found 1&#10;  ./turtle_brick/catcher.py:33:1: E302 expected 2 blank lines, found 1&#10;  ./turtle_brick/catcher.py:45:9: E265 block comment should start with '# '&#10;  ./turtle_brick/catcher.py:46:33: W291 trailing whitespace&#10;  ./turtle_brick/catcher.py:51:32: E231 missing whitespace after ','&#10;  ./turtle_brick/catcher.py:52:27: E231 missing whitespace after ','&#10;  ./turtle_brick/catcher.py:87:1: W293 blank line contains whitespace&#10;  ./turtle_brick/catcher.py:88:5: E303 too many blank lines (2)&#10;  ./turtle_brick/catcher.py:89:100: E501 line too long (103 &gt; 99 characters)&#10;  ./turtle_brick/catcher.py:94:44: W291 trailing whitespace&#10;  ./turtle_brick/catcher.py:95:100: E501 line too long (107 &gt; 99 characters)&#10;  ./turtle_brick/catcher.py:97:100: E501 line too long (106 &gt; 99 characters)&#10;  ./turtle_brick/catcher.py:97:107: W291 trailing whitespace&#10;  ./turtle_brick/catcher.py:98:100: E501 line too long (101 &gt; 99 characters)&#10;  ./turtle_brick/catcher.py:98:102: W291 trailing whitespace&#10;  ./turtle_brick/catcher.py:99:21: W291 trailing whitespace&#10;  ./turtle_brick/catcher.py:110:100: E501 line too long (114 &gt; 99 characters)&#10;  ./turtle_brick/catcher.py:111:100: E501 line too long (121 &gt; 99 characters)&#10;  ./turtle_brick/catcher.py:128:100: E501 line too long (113 &gt; 99 characters)&#10;  ./turtle_brick/catcher.py:133:42: W291 trailing whitespace&#10;  ./turtle_brick/catcher.py:134:48: W291 trailing whitespace&#10;  ./turtle_brick/catcher.py:144:5: E303 too many blank lines (2)&#10;  ./turtle_brick/catcher.py:144:55: W291 trailing whitespace&#10;  ./turtle_brick/catcher.py:152:21: W292 no newline at end of file&#10;  ./launch/show_turtle.launch.py:1:1: F401 'ament_index_python.packages.get_package_share_path' imported but unused&#10;  ./launch/show_turtle.launch.py:1:63: E231 missing whitespace after ','&#10;  ./launch/show_turtle.launch.py:5:1: F401 'launch.conditions.UnlessCondition' imported but unused&#10;  ./launch/show_turtle.launch.py:11:1: E302 expected 2 blank lines, found 1&#10;  ./launch/show_turtle.launch.py:12:22: E225 missing whitespace around operator&#10;  ./launch/show_turtle.launch.py:14:51: E225 missing whitespace around operator&#10;  ./launch/show_turtle.launch.py:15:1: W293 blank line contains whitespace&#10;  ./launch/show_turtle.launch.py:16:5: F841 local variable 'use_sim_time' is assigned to but never used&#10;  ./launch/show_turtle.launch.py:18:100: E501 line too long (115 &gt; 99 characters)&#10;  ./launch/show_turtle.launch.py:18:105: E231 missing whitespace after ','&#10;  ./launch/show_turtle.launch.py:19:37: E128 continuation line under-indented for visual indent&#10;  ./launch/show_turtle.launch.py:19:92: E261 at least two spaces before inline comment&#10;  ./launch/show_turtle.launch.py:19:92: E262 inline comment should start with '# '&#10;  ./launch/show_turtle.launch.py:22:100: E501 line too long (100 &gt; 99 characters)&#10;  ./launch/show_turtle.launch.py:36:89: E231 missing whitespace after ','&#10;  ./launch/show_turtle.launch.py:36:96: E231 missing whitespace after ','&#10;  ./launch/show_turtle.launch.py:43:56: E231 missing whitespace after ','&#10;  ./launch/show_turtle.launch.py:49:56: E231 missing whitespace after ','&#10;  ./launch/show_turtle.launch.py:68:7: W292 no newline at end of file&#10;  ./launch/run_turtle.launch.py:2:1: F401 'ament_index_python.packages.get_package_share_path' imported but unused&#10;  ./launch/run_turtle.launch.py:5:1: F401 'launch.actions.DeclareLaunchArgument' imported but unused&#10;  ./launch/run_turtle.launch.py:6:1: F401 'launch.conditions.IfCondition' imported but unused&#10;  ./launch/run_turtle.launch.py:6:1: F401 'launch.conditions.UnlessCondition' imported but unused&#10;  ./launch/run_turtle.launch.py:7:1: F401 'launch.substitutions.Command' imported but unused&#10;  ./launch/run_turtle.launch.py:7:1: F401 'launch.substitutions.LaunchConfiguration' imported but unused&#10;  ./launch/run_turtle.launch.py:10:1: F401 'launch_ros.parameter_descriptions.ParameterValue' imported but unused&#10;  ./launch/run_turtle.launch.py:40:23: E251 unexpected spaces around keyword / parameter equals&#10;  ./launch/run_turtle.launch.py:40:25: E251 unexpected spaces around keyword / parameter equals&#10;  ./launch/run_turtle.launch.py:40:70: E231 missing whitespace after ','&#10;  ./launch/run_turtle.launch.py:43:1: W293 blank line contains whitespace&#10;  ./launch/run_turtle.launch.py:44:7: W292 no newline at end of file&#10;  ./launch/turtle_arena.launch.py:2:1: F401 'ament_index_python.packages.get_package_share_path' imported but unused&#10;  ./launch/turtle_arena.launch.py:5:1: F401 'launch.actions.DeclareLaunchArgument' imported but unused&#10;  ./launch/turtle_arena.launch.py:6:1: F401 'launch.conditions.IfCondition' imported but unused&#10;  ./launch/turtle_arena.launch.py:6:1: F401 'launch.conditions.UnlessCondition' imported but unused&#10;  ./launch/turtle_arena.launch.py:7:1: F401 'launch.substitutions.Command' imported but unused&#10;  ./launch/turtle_arena.launch.py:7:1: F401 'launch.substitutions.LaunchConfiguration' imported but unused&#10;  ./launch/turtle_arena.launch.py:10:1: F401 'launch_ros.parameter_descriptions.ParameterValue' imported but unused&#10;  ./launch/turtle_arena.launch.py:42:1: W293 blank line contains whitespace&#10;  ./launch/turtle_arena.launch.py:43:7: W292 no newline at end of file&#10;assert 1 == 0">test/test_flake8.py:23: in test_flake8
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="2" skipped="1" tests="3" time="0.367" timestamp="2022-10-19T20:53:51.010693" hostname="alyssa-Galago-Pro"><testcase classname="turtle_brick.test.test_copyright" name="test_copyright" time="0.001"><skipped type="pytest.skip" message="No copyright header has been placed in the generated source file.">/home/alyssa/homework2-alyssa225/src/turtle_brick/test/test_copyright.py:20: No copyright header has been placed in the generated source file.</skipped></testcase><testcase classname="turtle_brick.test.test_flake8" name="test_flake8" time="0.172"><failure message="AssertionError: Found 255 code style errors / warnings:&#10;  ./setup.py:3:1: F401 'setuptools.find_packages' imported but unused&#10;  ./setup.py:14:100: E501 line too long (174 &gt; 99 characters)&#10;  ./setup.py:18:43: E231 missing whitespace after ','&#10;  ./setup.py:24:28: E231 missing whitespace after ','&#10;  ./turtle_brick/arena.py:15:1: F401 'xmlrpc.client.Boolean' imported but unused&#10;  ./turtle_brick/arena.py:19:1: F401 'tf2_ros.static_transform_broadcaster.StaticTransformBroadcaster' imported but unused&#10;  ./turtle_brick/arena.py:23:1: F401 'math.pi' imported but unused&#10;  ./turtle_brick/arena.py:24:1: F401 'turtle_brick_interfaces.srv.Drop' imported but unused&#10;  ./turtle_brick/arena.py:25:1: F401 'turtle_brick_interfaces.msg.Tilt' imported but unused&#10;  ./turtle_brick/arena.py:26:42: W291 trailing whitespace&#10;  ./turtle_brick/arena.py:28:1: F401 'visualization_msgs.msg.MarkerArray' imported but unused&#10;  ./turtle_brick/arena.py:32:1: E265 block comment should start with '# '&#10;  ./turtle_brick/arena.py:35:1: E302 expected 2 blank lines, found 1&#10;  ./turtle_brick/arena.py:43:1: E302 expected 2 blank lines, found 1&#10;  ./turtle_brick/arena.py:49:9: E265 block comment should start with '# '&#10;  ./turtle_brick/arena.py:50:33: W291 trailing whitespace&#10;  ./turtle_brick/arena.py:55:32: E231 missing whitespace after ','&#10;  ./turtle_brick/arena.py:56:27: E231 missing whitespace after ','&#10;  ./turtle_brick/arena.py:63:9: E265 block comment should start with '# '&#10;  ./turtle_brick/arena.py:70:9: E265 block comment should start with '# '&#10;  ./turtle_brick/arena.py:71:55: E231 missing whitespace after ','&#10;  ./turtle_brick/arena.py:71:64: E231 missing whitespace after ','&#10;  ./turtle_brick/arena.py:71:84: E231 missing whitespace after ','&#10;  ./turtle_brick/arena.py:72:9: E265 block comment should start with '# '&#10;  ./turtle_brick/arena.py:73:55: E231 missing whitespace after ','&#10;  ./turtle_brick/arena.py:73:65: E231 missing whitespace after ','&#10;  ./turtle_brick/arena.py:74:54: E231 missing whitespace after ','&#10;  ./turtle_brick/arena.py:74:62: E231 missing whitespace after ','&#10;  ./turtle_brick/arena.py:75:55: E231 missing whitespace after ','&#10;  ./turtle_brick/arena.py:75:64: E231 missing whitespace after ','&#10;  ./turtle_brick/arena.py:78:1: W293 blank line contains whitespace&#10;  ./turtle_brick/arena.py:81:1: W293 blank line contains whitespace&#10;  ./turtle_brick/arena.py:82:9: E265 block comment should start with '# '&#10;  ./turtle_brick/arena.py:83:47: E231 missing whitespace after ','&#10;  ./turtle_brick/arena.py:83:56: E231 missing whitespace after ','&#10;  ./turtle_brick/arena.py:84:46: E231 missing whitespace after ','&#10;  ./turtle_brick/arena.py:84:54: E231 missing whitespace after ','&#10;  ./turtle_brick/arena.py:85:1: W293 blank line contains whitespace&#10;  ./turtle_brick/arena.py:86:9: E265 block comment should start with '# '&#10;  ./turtle_brick/arena.py:103:9: E265 block comment should start with '# '&#10;  ./turtle_brick/arena.py:189:9: E303 too many blank lines (2)&#10;  ./turtle_brick/arena.py:189:9: E265 block comment should start with '# '&#10;  ./turtle_brick/arena.py:192:26: W291 trailing whitespace&#10;  ./turtle_brick/arena.py:205:42: E231 missing whitespace after ','&#10;  ./turtle_brick/arena.py:207:37: E231 missing whitespace after ','&#10;  ./turtle_brick/arena.py:208:35: E231 missing whitespace after ','&#10;  ./turtle_brick/arena.py:208:45: E231 missing whitespace after ','&#10;  ./turtle_brick/arena.py:211:1: W293 blank line contains whitespace&#10;  ./turtle_brick/arena.py:212:28: E231 missing whitespace after ','&#10;  ./turtle_brick/arena.py:219:24: E225 missing whitespace around operator&#10;  ./turtle_brick/arena.py:221:48: E231 missing whitespace after ','&#10;  ./turtle_brick/arena.py:221:65: E231 missing whitespace after ','&#10;  ./turtle_brick/arena.py:223:46: E231 missing whitespace after ','&#10;  ./turtle_brick/arena.py:223:61: E231 missing whitespace after ','&#10;  ./turtle_brick/arena.py:225:36: E231 missing whitespace after ','&#10;  ./turtle_brick/arena.py:226:13: E225 missing whitespace around operator&#10;  ./turtle_brick/arena.py:236:9: E265 block comment should start with '# '&#10;  ./turtle_brick/arena.py:253:58: E225 missing whitespace around operator&#10;  ./turtle_brick/arena.py:256:1: W293 blank line contains whitespace&#10;  ./turtle_brick/arena.py:257:1: W293 blank line contains whitespace&#10;  ./turtle_brick/arena.py:258:5: E303 too many blank lines (2)&#10;  ./turtle_brick/arena.py:258:23: E231 missing whitespace after ','&#10;  ./turtle_brick/arena.py:258:25: E231 missing whitespace after ','&#10;  ./turtle_brick/arena.py:258:27: E231 missing whitespace after ','&#10;  ./turtle_brick/arena.py:263:1: W293 blank line contains whitespace&#10;  ./turtle_brick/arena.py:270:25: E231 missing whitespace after ','&#10;  ./turtle_brick/arena.py:270:27: E231 missing whitespace after ','&#10;  ./turtle_brick/arena.py:272:30: W291 trailing whitespace&#10;  ./turtle_brick/arena.py:274:42: E225 missing whitespace around operator&#10;  ./turtle_brick/arena.py:275:65: E261 at least two spaces before inline comment&#10;  ./turtle_brick/arena.py:275:66: E262 inline comment should start with '# '&#10;  ./turtle_brick/arena.py:275:100: E501 line too long (100 &gt; 99 characters)&#10;  ./turtle_brick/arena.py:292:9: E225 missing whitespace around operator&#10;  ./turtle_brick/arena.py:294:19: W291 trailing whitespace&#10;  ./turtle_brick/arena.py:295:1: W391 blank line at end of file&#10;  ./turtle_brick/turtle_robot.py:5:1: F401 'tokenize.Double' imported but unused&#10;  ./turtle_brick/turtle_robot.py:5:1: F401 'tokenize.String' imported but unused&#10;  ./turtle_brick/turtle_robot.py:12:34: W291 trailing whitespace&#10;  ./turtle_brick/turtle_robot.py:13:1: F401 'geometry_msgs.msg.Vector3' imported but unused&#10;  ./turtle_brick/turtle_robot.py:14:1: F401 'visualization_msgs.msg.Marker' imported but unused&#10;  ./turtle_brick/turtle_robot.py:14:42: W291 trailing whitespace&#10;  ./turtle_brick/turtle_robot.py:15:45: W291 trailing whitespace&#10;  ./turtle_brick/turtle_robot.py:16:12: W291 trailing whitespace&#10;  ./turtle_brick/turtle_robot.py:17:1: E265 block comment should start with '# '&#10;  ./turtle_brick/turtle_robot.py:19:1: E302 expected 2 blank lines, found 1&#10;  ./turtle_brick/turtle_robot.py:24:9: E265 block comment should start with '# '&#10;  ./turtle_brick/turtle_robot.py:25:33: W291 trailing whitespace&#10;  ./turtle_brick/turtle_robot.py:30:32: E231 missing whitespace after ','&#10;  ./turtle_brick/turtle_robot.py:31:27: E231 missing whitespace after ','&#10;  ./turtle_brick/turtle_robot.py:41:65: E231 missing whitespace after ','&#10;  ./turtle_brick/turtle_robot.py:41:81: E231 missing whitespace after ','&#10;  ./turtle_brick/turtle_robot.py:42:55: E231 missing whitespace after ','&#10;  ./turtle_brick/turtle_robot.py:42:63: E231 missing whitespace after ','&#10;  ./turtle_brick/turtle_robot.py:43:51: E231 missing whitespace after ','&#10;  ./turtle_brick/turtle_robot.py:43:62: E231 missing whitespace after ','&#10;  ./turtle_brick/turtle_robot.py:44:52: E231 missing whitespace after ','&#10;  ./turtle_brick/turtle_robot.py:44:61: E231 missing whitespace after ','&#10;  ./turtle_brick/turtle_robot.py:46:61: E231 missing whitespace after ','&#10;  ./turtle_brick/turtle_robot.py:46:74: E231 missing whitespace after ','&#10;  ./turtle_brick/turtle_robot.py:46:93: E231 missing whitespace after ','&#10;  ./turtle_brick/turtle_robot.py:47:54: E231 missing whitespace after ','&#10;  ./turtle_brick/turtle_robot.py:47:62: E231 missing whitespace after ','&#10;  ./turtle_brick/turtle_robot.py:47:81: E231 missing whitespace after ','&#10;  ./turtle_brick/turtle_robot.py:49:53: W291 trailing whitespace&#10;  ./turtle_brick/turtle_robot.py:53:1: W293 blank line contains whitespace&#10;  ./turtle_brick/turtle_robot.py:62:9: E265 block comment should start with '# '&#10;  ./turtle_brick/turtle_robot.py:62:19: W291 trailing whitespace&#10;  ./turtle_brick/turtle_robot.py:63:28: W291 trailing whitespace&#10;  ./turtle_brick/turtle_robot.py:82:9: E265 block comment should start with '# '&#10;  ./turtle_brick/turtle_robot.py:88:23: E225 missing whitespace around operator&#10;  ./turtle_brick/turtle_robot.py:95:9: E265 block comment should start with '# '&#10;  ./turtle_brick/turtle_robot.py:98:9: E265 block comment should start with '# '&#10;  ./turtle_brick/turtle_robot.py:105:1: W293 blank line contains whitespace&#10;  ./turtle_brick/turtle_robot.py:106:27: E231 missing whitespace after ','&#10;  ./turtle_brick/turtle_robot.py:107:76: E231 missing whitespace after ','&#10;  ./turtle_brick/turtle_robot.py:107:96: E231 missing whitespace after ','&#10;  ./turtle_brick/turtle_robot.py:107:100: E501 line too long (121 &gt; 99 characters)&#10;  ./turtle_brick/turtle_robot.py:107:120: E202 whitespace before ')'&#10;  ./turtle_brick/turtle_robot.py:120:27: E231 missing whitespace after ','&#10;  ./turtle_brick/turtle_robot.py:126:1: W293 blank line contains whitespace&#10;  ./turtle_brick/turtle_robot.py:127:9: E265 block comment should start with '# '&#10;  ./turtle_brick/turtle_robot.py:134:1: W293 blank line contains whitespace&#10;  ./turtle_brick/turtle_robot.py:135:9: E303 too many blank lines (2)&#10;  ./turtle_brick/turtle_robot.py:135:9: E265 block comment should start with '# '&#10;  ./turtle_brick/turtle_robot.py:137:46: E231 missing whitespace after ','&#10;  ./turtle_brick/turtle_robot.py:137:58: E231 missing whitespace after ','&#10;  ./turtle_brick/turtle_robot.py:139:1: W293 blank line contains whitespace&#10;  ./turtle_brick/turtle_robot.py:140:9: E265 block comment should start with '# '&#10;  ./turtle_brick/turtle_robot.py:143:1: W293 blank line contains whitespace&#10;  ./turtle_brick/turtle_robot.py:144:9: E265 block comment should start with '# '&#10;  ./turtle_brick/turtle_robot.py:145:34: E225 missing whitespace around operator&#10;  ./turtle_brick/turtle_robot.py:146:34: E225 missing whitespace around operator&#10;  ./turtle_brick/turtle_robot.py:147:34: E225 missing whitespace around operator&#10;  ./turtle_brick/turtle_robot.py:150:9: E265 block comment should start with '# '&#10;  ./turtle_brick/turtle_robot.py:151:68: W291 trailing whitespace&#10;  ./turtle_brick/turtle_robot.py:152:68: W291 trailing whitespace&#10;  ./turtle_brick/turtle_robot.py:153:48: W291 trailing whitespace&#10;  ./turtle_brick/turtle_robot.py:155:9: E265 block comment should start with '# '&#10;  ./turtle_brick/turtle_robot.py:156:56: W291 trailing whitespace&#10;  ./turtle_brick/turtle_robot.py:161:9: E265 block comment should start with '# '&#10;  ./turtle_brick/turtle_robot.py:167:41: E225 missing whitespace around operator&#10;  ./turtle_brick/turtle_robot.py:170:1: W293 blank line contains whitespace&#10;  ./turtle_brick/turtle_robot.py:171:9: E265 block comment should start with '# '&#10;  ./turtle_brick/turtle_robot.py:172:9: E265 block comment should start with '# '&#10;  ./turtle_brick/turtle_robot.py:174:52: E225 missing whitespace around operator&#10;  ./turtle_brick/turtle_robot.py:174:57: W291 trailing whitespace&#10;  ./turtle_brick/turtle_robot.py:176:34: E225 missing whitespace around operator&#10;  ./turtle_brick/turtle_robot.py:178:34: E225 missing whitespace around operator&#10;  ./turtle_brick/turtle_robot.py:183:1: W293 blank line contains whitespace&#10;  ./turtle_brick/turtle_robot.py:184:1: W293 blank line contains whitespace&#10;  ./turtle_brick/turtle_robot.py:186:1: E303 too many blank lines (3)&#10;  ./turtle_brick/turtle_robot.py:188:16: E225 missing whitespace around operator&#10;  ./turtle_brick/turtle_robot.py:190:19: W291 trailing whitespace&#10;  ./turtle_brick/turtle_robot.py:192:1: W391 blank line at end of file&#10;  ./turtle_brick/catcher.py:15:1: F401 'cmath.sqrt' imported but unused&#10;  ./turtle_brick/catcher.py:19:1: F401 'tf2_ros.static_transform_broadcaster.StaticTransformBroadcaster' imported but unused&#10;  ./turtle_brick/catcher.py:20:1: F401 'tf2_ros.TransformBroadcaster' imported but unused&#10;  ./turtle_brick/catcher.py:21:1: F401 'geometry_msgs.msg.TransformStamped' imported but unused&#10;  ./turtle_brick/catcher.py:22:1: F401 'turtle_brick_interfaces.srv.Place' imported but unused&#10;  ./turtle_brick/catcher.py:22:1: F401 'turtle_brick_interfaces.srv.Drop' imported but unused&#10;  ./turtle_brick/catcher.py:24:42: W291 trailing whitespace&#10;  ./turtle_brick/catcher.py:25:12: W291 trailing whitespace&#10;  ./turtle_brick/catcher.py:27:1: F401 '.quaternion.angle_axis_to_quaternion' imported but unused&#10;  ./turtle_brick/catcher.py:30:1: E302 expected 2 blank lines, found 1&#10;  ./turtle_brick/catcher.py:36:1: E302 expected 2 blank lines, found 1&#10;  ./turtle_brick/catcher.py:48:9: E265 block comment should start with '# '&#10;  ./turtle_brick/catcher.py:49:33: W291 trailing whitespace&#10;  ./turtle_brick/catcher.py:54:32: E231 missing whitespace after ','&#10;  ./turtle_brick/catcher.py:55:27: E231 missing whitespace after ','&#10;  ./turtle_brick/catcher.py:62:9: E265 block comment should start with '# '&#10;  ./turtle_brick/catcher.py:65:9: E265 block comment should start with '# '&#10;  ./turtle_brick/catcher.py:67:9: E265 block comment should start with '# '&#10;  ./turtle_brick/catcher.py:68:55: E231 missing whitespace after ','&#10;  ./turtle_brick/catcher.py:68:64: E231 missing whitespace after ','&#10;  ./turtle_brick/catcher.py:68:84: E231 missing whitespace after ','&#10;  ./turtle_brick/catcher.py:69:57: E231 missing whitespace after ','&#10;  ./turtle_brick/catcher.py:69:85: E231 missing whitespace after ','&#10;  ./turtle_brick/catcher.py:70:55: E231 missing whitespace after ','&#10;  ./turtle_brick/catcher.py:70:85: E231 missing whitespace after ','&#10;  ./turtle_brick/catcher.py:71:9: E265 block comment should start with '# '&#10;  ./turtle_brick/catcher.py:72:28: E225 missing whitespace around operator&#10;  ./turtle_brick/catcher.py:72:56: E231 missing whitespace after ','&#10;  ./turtle_brick/catcher.py:72:64: E231 missing whitespace after ','&#10;  ./turtle_brick/catcher.py:73:22: E225 missing whitespace around operator&#10;  ./turtle_brick/catcher.py:73:57: E231 missing whitespace after ','&#10;  ./turtle_brick/catcher.py:73:70: E231 missing whitespace after ','&#10;  ./turtle_brick/catcher.py:74:22: E225 missing whitespace around operator&#10;  ./turtle_brick/catcher.py:74:50: E231 missing whitespace after ','&#10;  ./turtle_brick/catcher.py:74:58: E231 missing whitespace after ','&#10;  ./turtle_brick/catcher.py:75:55: E231 missing whitespace after ','&#10;  ./turtle_brick/catcher.py:75:65: E231 missing whitespace after ','&#10;  ./turtle_brick/catcher.py:76:9: E265 block comment should start with '# '&#10;  ./turtle_brick/catcher.py:78:1: W293 blank line contains whitespace&#10;  ./turtle_brick/catcher.py:79:9: E265 block comment should start with '# '&#10;  ./turtle_brick/catcher.py:102:1: W293 blank line contains whitespace&#10;  ./turtle_brick/catcher.py:103:5: E303 too many blank lines (3)&#10;  ./turtle_brick/catcher.py:103:28: E231 missing whitespace after ','&#10;  ./turtle_brick/catcher.py:107:100: E501 line too long (100 &gt; 99 characters)&#10;  ./turtle_brick/catcher.py:113:1: W293 blank line contains whitespace&#10;  ./turtle_brick/catcher.py:114:28: E231 missing whitespace after ','&#10;  ./turtle_brick/catcher.py:124:5: E303 too many blank lines (2)&#10;  ./turtle_brick/catcher.py:124:27: E231 missing whitespace after ','&#10;  ./turtle_brick/catcher.py:129:40: E225 missing whitespace around operator&#10;  ./turtle_brick/catcher.py:131:13: E265 block comment should start with '# '&#10;  ./turtle_brick/catcher.py:131:100: E501 line too long (142 &gt; 99 characters)&#10;  ./turtle_brick/catcher.py:132:100: E501 line too long (155 &gt; 99 characters)&#10;  ./turtle_brick/catcher.py:133:28: E225 missing whitespace around operator&#10;  ./turtle_brick/catcher.py:133:39: E261 at least two spaces before inline comment&#10;  ./turtle_brick/catcher.py:133:40: E262 inline comment should start with '# '&#10;  ./turtle_brick/catcher.py:133:100: E501 line too long (106 &gt; 99 characters)&#10;  ./turtle_brick/catcher.py:142:1: W293 blank line contains whitespace&#10;  ./turtle_brick/catcher.py:143:1: W293 blank line contains whitespace&#10;  ./turtle_brick/catcher.py:144:1: W293 blank line contains whitespace&#10;  ./turtle_brick/catcher.py:147:1: E303 too many blank lines (6)&#10;  ./turtle_brick/catcher.py:151:21: W292 no newline at end of file&#10;  ./launch/show_turtle.launch.py:1:1: F401 'ament_index_python.packages.get_package_share_path' imported but unused&#10;  ./launch/show_turtle.launch.py:1:63: E231 missing whitespace after ','&#10;  ./launch/show_turtle.launch.py:5:1: F401 'launch.conditions.UnlessCondition' imported but unused&#10;  ./launch/show_turtle.launch.py:11:1: E302 expected 2 blank lines, found 1&#10;  ./launch/show_turtle.launch.py:12:22: E225 missing whitespace around operator&#10;  ./launch/show_turtle.launch.py:14:51: E225 missing whitespace around operator&#10;  ./launch/show_turtle.launch.py:15:1: W293 blank line contains whitespace&#10;  ./launch/show_turtle.launch.py:16:5: F841 local variable 'use_sim_time' is assigned to but never used&#10;  ./launch/show_turtle.launch.py:18:100: E501 line too long (115 &gt; 99 characters)&#10;  ./launch/show_turtle.launch.py:18:105: E231 missing whitespace after ','&#10;  ./launch/show_turtle.launch.py:19:37: E128 continuation line under-indented for visual indent&#10;  ./launch/show_turtle.launch.py:19:92: E261 at least two spaces before inline comment&#10;  ./launch/show_turtle.launch.py:19:92: E262 inline comment should start with '# '&#10;  ./launch/show_turtle.launch.py:22:100: E501 line too long (100 &gt; 99 characters)&#10;  ./launch/show_turtle.launch.py:36:89: E231 missing whitespace after ','&#10;  ./launch/show_turtle.launch.py:36:96: E231 missing whitespace after ','&#10;  ./launch/show_turtle.launch.py:43:56: E231 missing whitespace after ','&#10;  ./launch/show_turtle.launch.py:49:56: E231 missing whitespace after ','&#10;  ./launch/show_turtle.launch.py:68:7: W292 no newline at end of file&#10;  ./launch/run_turtle.launch.py:2:1: F401 'ament_index_python.packages.get_package_share_path' imported but unused&#10;  ./launch/run_turtle.launch.py:5:1: F401 'launch.actions.DeclareLaunchArgument' imported but unused&#10;  ./launch/run_turtle.launch.py:6:1: F401 'launch.conditions.IfCondition' imported but unused&#10;  ./launch/run_turtle.launch.py:6:1: F401 'launch.conditions.UnlessCondition' imported but unused&#10;  ./launch/run_turtle.launch.py:7:1: F401 'launch.substitutions.Command' imported but unused&#10;  ./launch/run_turtle.launch.py:7:1: F401 'launch.substitutions.LaunchConfiguration' imported but unused&#10;  ./launch/run_turtle.launch.py:10:1: F401 'launch_ros.parameter_descriptions.ParameterValue' imported but unused&#10;  ./launch/run_turtle.launch.py:40:23: E251 unexpected spaces around keyword / parameter equals&#10;  ./launch/run_turtle.launch.py:40:25: E251 unexpected spaces around keyword / parameter equals&#10;  ./launch/run_turtle.launch.py:40:70: E231 missing whitespace after ','&#10;  ./launch/run_turtle.launch.py:43:1: W293 blank line contains whitespace&#10;  ./launch/run_turtle.launch.py:44:7: W292 no newline at end of file&#10;  ./launch/turtle_arena.launch.py:2:1: F401 'ament_index_python.packages.get_package_share_path' imported but unused&#10;  ./launch/turtle_arena.launch.py:5:1: F401 'launch.actions.DeclareLaunchArgument' imported but unused&#10;  ./launch/turtle_arena.launch.py:6:1: F401 'launch.conditions.IfCondition' imported but unused&#10;  ./launch/turtle_arena.launch.py:6:1: F401 'launch.conditions.UnlessCondition' imported but unused&#10;  ./launch/turtle_arena.launch.py:7:1: F401 'launch.substitutions.Command' imported but unused&#10;  ./launch/turtle_arena.launch.py:7:1: F401 'launch.substitutions.LaunchConfiguration' imported but unused&#10;  ./launch/turtle_arena.launch.py:10:1: F401 'launch_ros.parameter_descriptions.ParameterValue' imported but unused&#10;  ./launch/turtle_arena.launch.py:42:1: W293 blank line contains whitespace&#10;  ./launch/turtle_arena.launch.py:43:7: W292 no newline at end of file&#10;assert 1 == 0">test/test_flake8.py:23: in test_flake8
     assert rc == 0, \
-E   AssertionError: Found 221 code style errors / warnings:
+E   AssertionError: Found 255 code style errors / warnings:
 E     ./setup.py:3:1: F401 'setuptools.find_packages' imported but unused
 E     ./setup.py:14:100: E501 line too long (174 &gt; 99 characters)
 E     ./setup.py:18:43: E231 missing whitespace after ','
 E     ./setup.py:24:28: E231 missing whitespace after ','
-E     ./turtle_brick/arena.py:18:1: F401 'tf2_ros.static_transform_broadcaster.StaticTransformBroadcaster' imported but unused
-E     ./turtle_brick/arena.py:22:1: F401 'math.pi' imported but unused
-E     ./turtle_brick/arena.py:23:1: F401 'turtle_brick_interfaces.srv.Drop' imported but unused
-E     ./turtle_brick/arena.py:25:42: W291 trailing whitespace
-E     ./turtle_brick/arena.py:27:1: F401 'visualization_msgs.msg.MarkerArray' imported but unused
-E     ./turtle_brick/arena.py:28:1: F401 'math' imported but unused
-E     ./turtle_brick/arena.py:30:1: E265 block comment should start with '# '
-E     ./turtle_brick/arena.py:33:1: E302 expected 2 blank lines, found 1
-E     ./turtle_brick/arena.py:40:1: E302 expected 2 blank lines, found 1
-E     ./turtle_brick/arena.py:46:9: E265 block comment should start with '# '
-E     ./turtle_brick/arena.py:47:33: W291 trailing whitespace
-E     ./turtle_brick/arena.py:52:32: E231 missing whitespace after ','
-E     ./turtle_brick/arena.py:53:27: E231 missing whitespace after ','
-E     ./turtle_brick/arena.py:60:9: E265 block comment should start with '# '
-E     ./turtle_brick/arena.py:67:9: E265 block comment should start with '# '
-E     ./turtle_brick/arena.py:68:55: E231 missing whitespace after ','
-E     ./turtle_brick/arena.py:68:63: E231 missing whitespace after ','
-E     ./turtle_brick/arena.py:68:82: E231 missing whitespace after ','
-E     ./turtle_brick/arena.py:69:54: E231 missing whitespace after ','
-E     ./turtle_brick/arena.py:69:61: E231 missing whitespace after ','
-E     ./turtle_brick/arena.py:69:80: E231 missing whitespace after ','
-E     ./turtle_brick/arena.py:77:1: W293 blank line contains whitespace
-E     ./turtle_brick/arena.py:78:9: E265 block comment should start with '# '
-E     ./turtle_brick/arena.py:79:47: E231 missing whitespace after ','
-E     ./turtle_brick/arena.py:79:55: E231 missing whitespace after ','
-E     ./turtle_brick/arena.py:80:46: E231 missing whitespace after ','
-E     ./turtle_brick/arena.py:80:53: E231 missing whitespace after ','
-E     ./turtle_brick/arena.py:83:55: E231 missing whitespace after ','
-E     ./turtle_brick/arena.py:83:64: E231 missing whitespace after ','
-E     ./turtle_brick/arena.py:90:9: F841 local variable 'count' is assigned to but never used
-E     ./turtle_brick/arena.py:93:9: E265 block comment should start with '# '
-E     ./turtle_brick/arena.py:110:9: E265 block comment should start with '# '
-E     ./turtle_brick/arena.py:196:9: E303 too many blank lines (2)
-E     ./turtle_brick/arena.py:196:9: E265 block comment should start with '# '
-E     ./turtle_brick/arena.py:199:26: W291 trailing whitespace
-E     ./turtle_brick/arena.py:208:44: E231 missing whitespace after ','
-E     ./turtle_brick/arena.py:210:37: E231 missing whitespace after ','
-E     ./turtle_brick/arena.py:217:1: W293 blank line contains whitespace
-E     ./turtle_brick/arena.py:222:27: E231 missing whitespace after ','
-E     ./turtle_brick/arena.py:226:36: E231 missing whitespace after ','
-E     ./turtle_brick/arena.py:230:27: E231 missing whitespace after ','
-E     ./turtle_brick/arena.py:231:100: E501 line too long (117 &gt; 99 characters)
-E     ./turtle_brick/arena.py:237:9: E265 block comment should start with '# '
-E     ./turtle_brick/arena.py:244:5: E303 too many blank lines (2)
-E     ./turtle_brick/arena.py:245:9: E265 block comment should start with '# '
-E     ./turtle_brick/arena.py:247:1: W293 blank line contains whitespace
-E     ./turtle_brick/arena.py:248:9: E265 block comment should start with '# '
-E     ./turtle_brick/arena.py:250:63: W291 trailing whitespace
-E     ./turtle_brick/arena.py:251:1: W293 blank line contains whitespace
-E     ./turtle_brick/arena.py:252:9: E265 block comment should start with '# '
-E     ./turtle_brick/arena.py:252:30: W291 trailing whitespace
-E     ./turtle_brick/arena.py:255:67: E225 missing whitespace around operator
-E     ./turtle_brick/arena.py:258:62: E225 missing whitespace around operator
-E     ./turtle_brick/arena.py:259:42: E225 missing whitespace around operator
-E     ./turtle_brick/arena.py:260:65: E261 at least two spaces before inline comment
-E     ./turtle_brick/arena.py:260:66: E262 inline comment should start with '# '
-E     ./turtle_brick/arena.py:260:100: E501 line too long (100 &gt; 99 characters)
-E     ./turtle_brick/arena.py:261:44: E261 at least two spaces before inline comment
-E     ./turtle_brick/arena.py:261:45: E262 inline comment should start with '# '
-E     ./turtle_brick/arena.py:261:83: W291 trailing whitespace
-E     ./turtle_brick/arena.py:262:43: W291 trailing whitespace
-E     ./turtle_brick/arena.py:272:1: W293 blank line contains whitespace
-E     ./turtle_brick/arena.py:274:9: E303 too many blank lines (2)
-E     ./turtle_brick/arena.py:277:1: W293 blank line contains whitespace
-E     ./turtle_brick/arena.py:278:9: E303 too many blank lines (2)
-E     ./turtle_brick/arena.py:283:9: E225 missing whitespace around operator
-E     ./turtle_brick/arena.py:285:19: W291 trailing whitespace
-E     ./turtle_brick/arena.py:286:1: W391 blank line at end of file
+E     ./turtle_brick/arena.py:15:1: F401 'xmlrpc.client.Boolean' imported but unused
+E     ./turtle_brick/arena.py:19:1: F401 'tf2_ros.static_transform_broadcaster.StaticTransformBroadcaster' imported but unused
+E     ./turtle_brick/arena.py:23:1: F401 'math.pi' imported but unused
+E     ./turtle_brick/arena.py:24:1: F401 'turtle_brick_interfaces.srv.Drop' imported but unused
+E     ./turtle_brick/arena.py:25:1: F401 'turtle_brick_interfaces.msg.Tilt' imported but unused
+E     ./turtle_brick/arena.py:26:42: W291 trailing whitespace
+E     ./turtle_brick/arena.py:28:1: F401 'visualization_msgs.msg.MarkerArray' imported but unused
+E     ./turtle_brick/arena.py:32:1: E265 block comment should start with '# '
+E     ./turtle_brick/arena.py:35:1: E302 expected 2 blank lines, found 1
+E     ./turtle_brick/arena.py:43:1: E302 expected 2 blank lines, found 1
+E     ./turtle_brick/arena.py:49:9: E265 block comment should start with '# '
+E     ./turtle_brick/arena.py:50:33: W291 trailing whitespace
+E     ./turtle_brick/arena.py:55:32: E231 missing whitespace after ','
+E     ./turtle_brick/arena.py:56:27: E231 missing whitespace after ','
+E     ./turtle_brick/arena.py:63:9: E265 block comment should start with '# '
+E     ./turtle_brick/arena.py:70:9: E265 block comment should start with '# '
+E     ./turtle_brick/arena.py:71:55: E231 missing whitespace after ','
+E     ./turtle_brick/arena.py:71:64: E231 missing whitespace after ','
+E     ./turtle_brick/arena.py:71:84: E231 missing whitespace after ','
+E     ./turtle_brick/arena.py:72:9: E265 block comment should start with '# '
+E     ./turtle_brick/arena.py:73:55: E231 missing whitespace after ','
+E     ./turtle_brick/arena.py:73:65: E231 missing whitespace after ','
+E     ./turtle_brick/arena.py:74:54: E231 missing whitespace after ','
+E     ./turtle_brick/arena.py:74:62: E231 missing whitespace after ','
+E     ./turtle_brick/arena.py:75:55: E231 missing whitespace after ','
+E     ./turtle_brick/arena.py:75:64: E231 missing whitespace after ','
+E     ./turtle_brick/arena.py:78:1: W293 blank line contains whitespace
+E     ./turtle_brick/arena.py:81:1: W293 blank line contains whitespace
+E     ./turtle_brick/arena.py:82:9: E265 block comment should start with '# '
+E     ./turtle_brick/arena.py:83:47: E231 missing whitespace after ','
+E     ./turtle_brick/arena.py:83:56: E231 missing whitespace after ','
+E     ./turtle_brick/arena.py:84:46: E231 missing whitespace after ','
+E     ./turtle_brick/arena.py:84:54: E231 missing whitespace after ','
+E     ./turtle_brick/arena.py:85:1: W293 blank line contains whitespace
+E     ./turtle_brick/arena.py:86:9: E265 block comment should start with '# '
+E     ./turtle_brick/arena.py:103:9: E265 block comment should start with '# '
+E     ./turtle_brick/arena.py:189:9: E303 too many blank lines (2)
+E     ./turtle_brick/arena.py:189:9: E265 block comment should start with '# '
+E     ./turtle_brick/arena.py:192:26: W291 trailing whitespace
+E     ./turtle_brick/arena.py:205:42: E231 missing whitespace after ','
+E     ./turtle_brick/arena.py:207:37: E231 missing whitespace after ','
+E     ./turtle_brick/arena.py:208:35: E231 missing whitespace after ','
+E     ./turtle_brick/arena.py:208:45: E231 missing whitespace after ','
+E     ./turtle_brick/arena.py:211:1: W293 blank line contains whitespace
+E     ./turtle_brick/arena.py:212:28: E231 missing whitespace after ','
+E     ./turtle_brick/arena.py:219:24: E225 missing whitespace around operator
+E     ./turtle_brick/arena.py:221:48: E231 missing whitespace after ','
+E     ./turtle_brick/arena.py:221:65: E231 missing whitespace after ','
+E     ./turtle_brick/arena.py:223:46: E231 missing whitespace after ','
+E     ./turtle_brick/arena.py:223:61: E231 missing whitespace after ','
+E     ./turtle_brick/arena.py:225:36: E231 missing whitespace after ','
+E     ./turtle_brick/arena.py:226:13: E225 missing whitespace around operator
+E     ./turtle_brick/arena.py:236:9: E265 block comment should start with '# '
+E     ./turtle_brick/arena.py:253:58: E225 missing whitespace around operator
+E     ./turtle_brick/arena.py:256:1: W293 blank line contains whitespace
+E     ./turtle_brick/arena.py:257:1: W293 blank line contains whitespace
+E     ./turtle_brick/arena.py:258:5: E303 too many blank lines (2)
+E     ./turtle_brick/arena.py:258:23: E231 missing whitespace after ','
+E     ./turtle_brick/arena.py:258:25: E231 missing whitespace after ','
+E     ./turtle_brick/arena.py:258:27: E231 missing whitespace after ','
+E     ./turtle_brick/arena.py:263:1: W293 blank line contains whitespace
+E     ./turtle_brick/arena.py:270:25: E231 missing whitespace after ','
+E     ./turtle_brick/arena.py:270:27: E231 missing whitespace after ','
+E     ./turtle_brick/arena.py:272:30: W291 trailing whitespace
+E     ./turtle_brick/arena.py:274:42: E225 missing whitespace around operator
+E     ./turtle_brick/arena.py:275:65: E261 at least two spaces before inline comment
+E     ./turtle_brick/arena.py:275:66: E262 inline comment should start with '# '
+E     ./turtle_brick/arena.py:275:100: E501 line too long (100 &gt; 99 characters)
+E     ./turtle_brick/arena.py:292:9: E225 missing whitespace around operator
+E     ./turtle_brick/arena.py:294:19: W291 trailing whitespace
+E     ./turtle_brick/arena.py:295:1: W391 blank line at end of file
 E     ./turtle_brick/turtle_robot.py:5:1: F401 'tokenize.Double' imported but unused
 E     ./turtle_brick/turtle_robot.py:5:1: F401 'tokenize.String' imported but unused
 E     ./turtle_brick/turtle_robot.py:12:34: W291 trailing whitespace
@@ -99,8 +102,8 @@ E     ./turtle_brick/turtle_robot.py:46:61: E231 missing whitespace after ','
 E     ./turtle_brick/turtle_robot.py:46:74: E231 missing whitespace after ','
 E     ./turtle_brick/turtle_robot.py:46:93: E231 missing whitespace after ','
 E     ./turtle_brick/turtle_robot.py:47:54: E231 missing whitespace after ','
-E     ./turtle_brick/turtle_robot.py:47:61: E231 missing whitespace after ','
-E     ./turtle_brick/turtle_robot.py:47:80: E231 missing whitespace after ','
+E     ./turtle_brick/turtle_robot.py:47:62: E231 missing whitespace after ','
+E     ./turtle_brick/turtle_robot.py:47:81: E231 missing whitespace after ','
 E     ./turtle_brick/turtle_robot.py:49:53: W291 trailing whitespace
 E     ./turtle_brick/turtle_robot.py:53:1: W293 blank line contains whitespace
 E     ./turtle_brick/turtle_robot.py:62:9: E265 block comment should start with '# '
@@ -112,76 +115,107 @@ E     ./turtle_brick/turtle_robot.py:95:9: E265 block comment should start with 
 E     ./turtle_brick/turtle_robot.py:98:9: E265 block comment should start with '# '
 E     ./turtle_brick/turtle_robot.py:105:1: W293 blank line contains whitespace
 E     ./turtle_brick/turtle_robot.py:106:27: E231 missing whitespace after ','
-E     ./turtle_brick/turtle_robot.py:107:83: E231 missing whitespace after ','
-E     ./turtle_brick/turtle_robot.py:107:100: E501 line too long (128 &gt; 99 characters)
-E     ./turtle_brick/turtle_robot.py:107:103: E231 missing whitespace after ','
-E     ./turtle_brick/turtle_robot.py:107:127: E202 whitespace before ')'
-E     ./turtle_brick/turtle_robot.py:119:27: E231 missing whitespace after ','
-E     ./turtle_brick/turtle_robot.py:125:1: W293 blank line contains whitespace
-E     ./turtle_brick/turtle_robot.py:126:9: E265 block comment should start with '# '
-E     ./turtle_brick/turtle_robot.py:136:1: W293 blank line contains whitespace
-E     ./turtle_brick/turtle_robot.py:137:9: E265 block comment should start with '# '
-E     ./turtle_brick/turtle_robot.py:139:46: E231 missing whitespace after ','
-E     ./turtle_brick/turtle_robot.py:139:58: E231 missing whitespace after ','
-E     ./turtle_brick/turtle_robot.py:141:9: E265 block comment should start with '# '
-E     ./turtle_brick/turtle_robot.py:148:1: W293 blank line contains whitespace
-E     ./turtle_brick/turtle_robot.py:149:9: E265 block comment should start with '# '
-E     ./turtle_brick/turtle_robot.py:150:34: E225 missing whitespace around operator
-E     ./turtle_brick/turtle_robot.py:151:34: E225 missing whitespace around operator
-E     ./turtle_brick/turtle_robot.py:152:34: E225 missing whitespace around operator
-E     ./turtle_brick/turtle_robot.py:154:9: E265 block comment should start with '# '
-E     ./turtle_brick/turtle_robot.py:155:68: W291 trailing whitespace
-E     ./turtle_brick/turtle_robot.py:156:68: W291 trailing whitespace
-E     ./turtle_brick/turtle_robot.py:157:48: W291 trailing whitespace
-E     ./turtle_brick/turtle_robot.py:159:9: E265 block comment should start with '# '
-E     ./turtle_brick/turtle_robot.py:160:56: W291 trailing whitespace
-E     ./turtle_brick/turtle_robot.py:165:9: E265 block comment should start with '# '
-E     ./turtle_brick/turtle_robot.py:184:9: E265 block comment should start with '# '
-E     ./turtle_brick/turtle_robot.py:185:48: E225 missing whitespace around operator
-E     ./turtle_brick/turtle_robot.py:185:53: W291 trailing whitespace
-E     ./turtle_brick/turtle_robot.py:187:30: E225 missing whitespace around operator
-E     ./turtle_brick/turtle_robot.py:189:30: E225 missing whitespace around operator
-E     ./turtle_brick/turtle_robot.py:191:1: W293 blank line contains whitespace
-E     ./turtle_brick/turtle_robot.py:192:1: W293 blank line contains whitespace
-E     ./turtle_brick/turtle_robot.py:194:1: E303 too many blank lines (4)
-E     ./turtle_brick/turtle_robot.py:196:16: E225 missing whitespace around operator
-E     ./turtle_brick/turtle_robot.py:198:19: W291 trailing whitespace
-E     ./turtle_brick/turtle_robot.py:200:1: W391 blank line at end of file
+E     ./turtle_brick/turtle_robot.py:107:76: E231 missing whitespace after ','
+E     ./turtle_brick/turtle_robot.py:107:96: E231 missing whitespace after ','
+E     ./turtle_brick/turtle_robot.py:107:100: E501 line too long (121 &gt; 99 characters)
+E     ./turtle_brick/turtle_robot.py:107:120: E202 whitespace before ')'
+E     ./turtle_brick/turtle_robot.py:120:27: E231 missing whitespace after ','
+E     ./turtle_brick/turtle_robot.py:126:1: W293 blank line contains whitespace
+E     ./turtle_brick/turtle_robot.py:127:9: E265 block comment should start with '# '
+E     ./turtle_brick/turtle_robot.py:134:1: W293 blank line contains whitespace
+E     ./turtle_brick/turtle_robot.py:135:9: E303 too many blank lines (2)
+E     ./turtle_brick/turtle_robot.py:135:9: E265 block comment should start with '# '
+E     ./turtle_brick/turtle_robot.py:137:46: E231 missing whitespace after ','
+E     ./turtle_brick/turtle_robot.py:137:58: E231 missing whitespace after ','
+E     ./turtle_brick/turtle_robot.py:139:1: W293 blank line contains whitespace
+E     ./turtle_brick/turtle_robot.py:140:9: E265 block comment should start with '# '
+E     ./turtle_brick/turtle_robot.py:143:1: W293 blank line contains whitespace
+E     ./turtle_brick/turtle_robot.py:144:9: E265 block comment should start with '# '
+E     ./turtle_brick/turtle_robot.py:145:34: E225 missing whitespace around operator
+E     ./turtle_brick/turtle_robot.py:146:34: E225 missing whitespace around operator
+E     ./turtle_brick/turtle_robot.py:147:34: E225 missing whitespace around operator
+E     ./turtle_brick/turtle_robot.py:150:9: E265 block comment should start with '# '
+E     ./turtle_brick/turtle_robot.py:151:68: W291 trailing whitespace
+E     ./turtle_brick/turtle_robot.py:152:68: W291 trailing whitespace
+E     ./turtle_brick/turtle_robot.py:153:48: W291 trailing whitespace
+E     ./turtle_brick/turtle_robot.py:155:9: E265 block comment should start with '# '
+E     ./turtle_brick/turtle_robot.py:156:56: W291 trailing whitespace
+E     ./turtle_brick/turtle_robot.py:161:9: E265 block comment should start with '# '
+E     ./turtle_brick/turtle_robot.py:167:41: E225 missing whitespace around operator
+E     ./turtle_brick/turtle_robot.py:170:1: W293 blank line contains whitespace
+E     ./turtle_brick/turtle_robot.py:171:9: E265 block comment should start with '# '
+E     ./turtle_brick/turtle_robot.py:172:9: E265 block comment should start with '# '
+E     ./turtle_brick/turtle_robot.py:174:52: E225 missing whitespace around operator
+E     ./turtle_brick/turtle_robot.py:174:57: W291 trailing whitespace
+E     ./turtle_brick/turtle_robot.py:176:34: E225 missing whitespace around operator
+E     ./turtle_brick/turtle_robot.py:178:34: E225 missing whitespace around operator
+E     ./turtle_brick/turtle_robot.py:183:1: W293 blank line contains whitespace
+E     ./turtle_brick/turtle_robot.py:184:1: W293 blank line contains whitespace
+E     ./turtle_brick/turtle_robot.py:186:1: E303 too many blank lines (3)
+E     ./turtle_brick/turtle_robot.py:188:16: E225 missing whitespace around operator
+E     ./turtle_brick/turtle_robot.py:190:19: W291 trailing whitespace
+E     ./turtle_brick/turtle_robot.py:192:1: W391 blank line at end of file
 E     ./turtle_brick/catcher.py:15:1: F401 'cmath.sqrt' imported but unused
-E     ./turtle_brick/catcher.py:18:1: F401 'tf2_ros.static_transform_broadcaster.StaticTransformBroadcaster' imported but unused
-E     ./turtle_brick/catcher.py:19:1: F401 'tf2_ros.TransformBroadcaster' imported but unused
-E     ./turtle_brick/catcher.py:20:1: F401 'geometry_msgs.msg.TransformStamped' imported but unused
-E     ./turtle_brick/catcher.py:20:1: F401 'geometry_msgs.msg.Pose' imported but unused
-E     ./turtle_brick/catcher.py:20:1: F401 'geometry_msgs.msg.PoseStamped' imported but unused
-E     ./turtle_brick/catcher.py:21:1: F401 'turtle_brick_interfaces.srv.Place' imported but unused
-E     ./turtle_brick/catcher.py:21:1: F401 'turtle_brick_interfaces.srv.Drop' imported but unused
-E     ./turtle_brick/catcher.py:22:1: F401 'math' imported but unused
-E     ./turtle_brick/catcher.py:22:12: W291 trailing whitespace
-E     ./turtle_brick/catcher.py:23:1: F401 '.quaternion.angle_axis_to_quaternion' imported but unused
-E     ./turtle_brick/catcher.py:26:1: E302 expected 2 blank lines, found 1
-E     ./turtle_brick/catcher.py:33:1: E302 expected 2 blank lines, found 1
-E     ./turtle_brick/catcher.py:45:9: E265 block comment should start with '# '
-E     ./turtle_brick/catcher.py:46:33: W291 trailing whitespace
-E     ./turtle_brick/catcher.py:51:32: E231 missing whitespace after ','
-E     ./turtle_brick/catcher.py:52:27: E231 missing whitespace after ','
-E     ./turtle_brick/catcher.py:87:1: W293 blank line contains whitespace
-E     ./turtle_brick/catcher.py:88:5: E303 too many blank lines (2)
-E     ./turtle_brick/catcher.py:89:100: E501 line too long (103 &gt; 99 characters)
-E     ./turtle_brick/catcher.py:94:44: W291 trailing whitespace
-E     ./turtle_brick/catcher.py:95:100: E501 line too long (107 &gt; 99 characters)
-E     ./turtle_brick/catcher.py:97:100: E501 line too long (106 &gt; 99 characters)
-E     ./turtle_brick/catcher.py:97:107: W291 trailing whitespace
-E     ./turtle_brick/catcher.py:98:100: E501 line too long (101 &gt; 99 characters)
-E     ./turtle_brick/catcher.py:98:102: W291 trailing whitespace
-E     ./turtle_brick/catcher.py:99:21: W291 trailing whitespace
-E     ./turtle_brick/catcher.py:110:100: E501 line too long (114 &gt; 99 characters)
-E     ./turtle_brick/catcher.py:111:100: E501 line too long (121 &gt; 99 characters)
-E     ./turtle_brick/catcher.py:128:100: E501 line too long (113 &gt; 99 characters)
-E     ./turtle_brick/catcher.py:133:42: W291 trailing whitespace
-E     ./turtle_brick/catcher.py:134:48: W291 trailing whitespace
-E     ./turtle_brick/catcher.py:144:5: E303 too many blank lines (2)
-E     ./turtle_brick/catcher.py:144:55: W291 trailing whitespace
-E     ./turtle_brick/catcher.py:152:21: W292 no newline at end of file
+E     ./turtle_brick/catcher.py:19:1: F401 'tf2_ros.static_transform_broadcaster.StaticTransformBroadcaster' imported but unused
+E     ./turtle_brick/catcher.py:20:1: F401 'tf2_ros.TransformBroadcaster' imported but unused
+E     ./turtle_brick/catcher.py:21:1: F401 'geometry_msgs.msg.TransformStamped' imported but unused
+E     ./turtle_brick/catcher.py:22:1: F401 'turtle_brick_interfaces.srv.Place' imported but unused
+E     ./turtle_brick/catcher.py:22:1: F401 'turtle_brick_interfaces.srv.Drop' imported but unused
+E     ./turtle_brick/catcher.py:24:42: W291 trailing whitespace
+E     ./turtle_brick/catcher.py:25:12: W291 trailing whitespace
+E     ./turtle_brick/catcher.py:27:1: F401 '.quaternion.angle_axis_to_quaternion' imported but unused
+E     ./turtle_brick/catcher.py:30:1: E302 expected 2 blank lines, found 1
+E     ./turtle_brick/catcher.py:36:1: E302 expected 2 blank lines, found 1
+E     ./turtle_brick/catcher.py:48:9: E265 block comment should start with '# '
+E     ./turtle_brick/catcher.py:49:33: W291 trailing whitespace
+E     ./turtle_brick/catcher.py:54:32: E231 missing whitespace after ','
+E     ./turtle_brick/catcher.py:55:27: E231 missing whitespace after ','
+E     ./turtle_brick/catcher.py:62:9: E265 block comment should start with '# '
+E     ./turtle_brick/catcher.py:65:9: E265 block comment should start with '# '
+E     ./turtle_brick/catcher.py:67:9: E265 block comment should start with '# '
+E     ./turtle_brick/catcher.py:68:55: E231 missing whitespace after ','
+E     ./turtle_brick/catcher.py:68:64: E231 missing whitespace after ','
+E     ./turtle_brick/catcher.py:68:84: E231 missing whitespace after ','
+E     ./turtle_brick/catcher.py:69:57: E231 missing whitespace after ','
+E     ./turtle_brick/catcher.py:69:85: E231 missing whitespace after ','
+E     ./turtle_brick/catcher.py:70:55: E231 missing whitespace after ','
+E     ./turtle_brick/catcher.py:70:85: E231 missing whitespace after ','
+E     ./turtle_brick/catcher.py:71:9: E265 block comment should start with '# '
+E     ./turtle_brick/catcher.py:72:28: E225 missing whitespace around operator
+E     ./turtle_brick/catcher.py:72:56: E231 missing whitespace after ','
+E     ./turtle_brick/catcher.py:72:64: E231 missing whitespace after ','
+E     ./turtle_brick/catcher.py:73:22: E225 missing whitespace around operator
+E     ./turtle_brick/catcher.py:73:57: E231 missing whitespace after ','
+E     ./turtle_brick/catcher.py:73:70: E231 missing whitespace after ','
+E     ./turtle_brick/catcher.py:74:22: E225 missing whitespace around operator
+E     ./turtle_brick/catcher.py:74:50: E231 missing whitespace after ','
+E     ./turtle_brick/catcher.py:74:58: E231 missing whitespace after ','
+E     ./turtle_brick/catcher.py:75:55: E231 missing whitespace after ','
+E     ./turtle_brick/catcher.py:75:65: E231 missing whitespace after ','
+E     ./turtle_brick/catcher.py:76:9: E265 block comment should start with '# '
+E     ./turtle_brick/catcher.py:78:1: W293 blank line contains whitespace
+E     ./turtle_brick/catcher.py:79:9: E265 block comment should start with '# '
+E     ./turtle_brick/catcher.py:102:1: W293 blank line contains whitespace
+E     ./turtle_brick/catcher.py:103:5: E303 too many blank lines (3)
+E     ./turtle_brick/catcher.py:103:28: E231 missing whitespace after ','
+E     ./turtle_brick/catcher.py:107:100: E501 line too long (100 &gt; 99 characters)
+E     ./turtle_brick/catcher.py:113:1: W293 blank line contains whitespace
+E     ./turtle_brick/catcher.py:114:28: E231 missing whitespace after ','
+E     ./turtle_brick/catcher.py:124:5: E303 too many blank lines (2)
+E     ./turtle_brick/catcher.py:124:27: E231 missing whitespace after ','
+E     ./turtle_brick/catcher.py:129:40: E225 missing whitespace around operator
+E     ./turtle_brick/catcher.py:131:13: E265 block comment should start with '# '
+E     ./turtle_brick/catcher.py:131:100: E501 line too long (142 &gt; 99 characters)
+E     ./turtle_brick/catcher.py:132:100: E501 line too long (155 &gt; 99 characters)
+E     ./turtle_brick/catcher.py:133:28: E225 missing whitespace around operator
+E     ./turtle_brick/catcher.py:133:39: E261 at least two spaces before inline comment
+E     ./turtle_brick/catcher.py:133:40: E262 inline comment should start with '# '
+E     ./turtle_brick/catcher.py:133:100: E501 line too long (106 &gt; 99 characters)
+E     ./turtle_brick/catcher.py:142:1: W293 blank line contains whitespace
+E     ./turtle_brick/catcher.py:143:1: W293 blank line contains whitespace
+E     ./turtle_brick/catcher.py:144:1: W293 blank line contains whitespace
+E     ./turtle_brick/catcher.py:147:1: E303 too many blank lines (6)
+E     ./turtle_brick/catcher.py:151:21: W292 no newline at end of file
 E     ./launch/show_turtle.launch.py:1:1: F401 'ament_index_python.packages.get_package_share_path' imported but unused
 E     ./launch/show_turtle.launch.py:1:63: E231 missing whitespace after ','
 E     ./launch/show_turtle.launch.py:5:1: F401 'launch.conditions.UnlessCondition' imported but unused
@@ -222,7 +256,7 @@ E     ./launch/turtle_arena.launch.py:7:1: F401 'launch.substitutions.LaunchConf
 E     ./launch/turtle_arena.launch.py:10:1: F401 'launch_ros.parameter_descriptions.ParameterValue' imported but unused
 E     ./launch/turtle_arena.launch.py:42:1: W293 blank line contains whitespace
 E     ./launch/turtle_arena.launch.py:43:7: W292 no newline at end of file
-E   assert 1 == 0</failure></testcase><testcase classname="turtle_brick.test.test_pep257" name="test_pep257" time="0.057"><failure message="AssertionError: Found code style errors / warnings&#10;assert 1 == 0">test/test_pep257.py:23: in test_pep257
+E   assert 1 == 0</failure></testcase><testcase classname="turtle_brick.test.test_pep257" name="test_pep257" time="0.069"><failure message="AssertionError: Found code style errors / warnings&#10;assert 1 == 0">test/test_pep257.py:23: in test_pep257
     assert rc == 0, 'Found code style errors / warnings'
 E   AssertionError: Found code style errors / warnings
 E   assert 1 == 0</failure></testcase></testsuite></testsuites>

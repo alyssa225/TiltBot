@@ -1,7 +1,4 @@
-"""
-uupdate
 
-"""
 from tokenize import Double, String
 import rclpy
 from rclpy.node import Node
@@ -17,7 +14,7 @@ import math
 #from .quaternion import angle_axis_to_quaternion
 
 class Turtle_robot(Node):
-    """ update
+    """
     """
     def __init__(self):
         super().__init__('turtle_robot')
@@ -72,6 +69,8 @@ class Turtle_robot(Node):
         self.vy = 0.0
         self.dx = 0.0
         self.dy = 0.0
+        self.dtheta = 0.0
+        self.stem_ang = 0.0
         # create the broadcaster
         self.broadcaster = TransformBroadcaster(self, qos=qos_profile)
         self.odom_base_link = TransformStamped()
@@ -109,13 +108,19 @@ class Turtle_robot(Node):
         self.goaly = msg.pose.position.y
         dx = self.goalx - self.currentx
         dy = self.goaly - self.currenty
+        self.stem_ang = math.atan(dy/dx)
         d = math.sqrt(dx**2 + dy**2)
         self.vx = dx / d * self.vmax
         self.vy = dy / d * self.vmax
+        if (dy<0 and dx>0) or (dy>0 and dx>0):
+            omega = -self.vmax/self.rwheel
+        else:
+            omega = self.vmax/self.rwheel
         self.get_logger().info('distx: "%f"' % dx)
         self.get_logger().info('disty: "%f"' % dy)
         self.dx = self.vx*self.period
         self.dy = self.vy*self.period
+        self.dtheta = omega * self.period
 
     def tilt_callback(self,msg):
         self.get_logger().info('tilt angle: "%s"' % (msg.angle))
@@ -169,6 +174,15 @@ class Turtle_robot(Node):
             self.dy = 0.0
         
         #move the wheel and stem to face direction and roll
+        if self.vx != 0.0 and self.vy!=0.0:
+            self.wheel_ang += self.dtheta
+        if abs(self.stem_ang-self.direction_ang)>= 0.2:
+            if self.stem_ang-self.direction_ang >=0:
+                self.direction_ang += 0.1
+                self.get_logger().info('stem angle: "%s"' % (self.direction_ang ))
+            else:
+                self.direction_ang -= 0.1
+                self.get_logger().info('stem angle: "%s"' % (self.direction_ang))
         #tilt if tilt is called
         if self.tilt_ang != 0.0 or self.tilt_angf != 0.0:
             if abs(self.tilt_ang-self.tilt_angf) >=0.01:       

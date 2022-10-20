@@ -22,7 +22,7 @@
         <color rgba="0 1.0 0 1.0"/>
     </material>
     <material name="black">
-        <color rgba="0.0 0.0 0.0 1.0"/>
+        <color rgba="0.2 0.2 0.2 1.0"/>
     </material>
 
     <link name="base_link">
@@ -95,7 +95,7 @@
 
     <link name="wheel">
         <visual>
-            <origin xyz="0 0 0" rpy="0 ${pi/2} 0" />
+            <origin xyz="0 0 0" rpy="${pi/2}  0 0" />
             <geometry>
                 <cylinder radius="${wradius}" length="0.1" />
             </geometry>
@@ -103,7 +103,7 @@
         </visual>
 
         <collision>
-            <origin xyz="0 0 0" rpy="0 ${pi/2} 0"/>
+            <origin xyz="0 0 0" rpy="${pi/2} 0 0"/>
             <geometry>
                 <cylinder radius="${wradius}" length="0.1" />
             </geometry>
@@ -131,7 +131,7 @@
     </joint>
     
     <joint name='stem_wheel' type="continuous">
-        <axis xyz="1 0 0"/>
+        <axis xyz="0 1 0"/>
         <limit effort="1000.0" velocity="${max_vel/wradius}"/> 
         <parent link="stem"/>
         <child link="wheel"/>

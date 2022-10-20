@@ -1,17 +1,3 @@
-"""
-Create one static frame and two moving frames.
-
-The tf tree produced from this node will look like
-
-      world
-       |
-      base
-      /  \
-    left right
-
-The left and right nodes will move in and out and rotate about the base z axis
-
-"""
 from xmlrpc.client import Boolean
 import rclpy
 # import rospy
@@ -42,7 +28,7 @@ class BState(Enum):
 
 class Arena(Node):
     """
-    add what node does
+
     """
     def __init__(self):
         super().__init__('arena')
