@@ -90,7 +90,7 @@ class Catcher(Node):
         self.text_marker.text = 'UNREACHABLE'
 
     def robot_callback(self, msg):
-        self.get_logger().info('robot position: "%s" "%s"' % (msg.position.x, msg.position.y))
+        # self.get_logger().info('robot position: "%s" "%s"' % (msg.position.x, msg.position.y))
         self.platformx = msg.position.x
         self.platformy = msg.position.y
         if (self.state == State.TILT and abs(self.platformx) <= 0.05

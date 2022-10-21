@@ -1,0 +1,200 @@
+[0.293s] Invoking command in '/home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/alyssa/homework2-alyssa225/install/turtle_brick:/opt/ros/humble /usr/bin/cmake --build /home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces -- -j8 -l8
+[0.347s] [  2%] Built target turtle_brick_interfaces__cpp
+[0.356s] [ 12%] Built target turtle_brick_interfaces__rosidl_generator_c
+[0.372s] [ 12%] Built target ament_cmake_python_copy_turtle_brick_interfaces
+[0.391s] [ 23%] Built target turtle_brick_interfaces__rosidl_typesupport_cpp
+[0.392s] [ 34%] Built target turtle_brick_interfaces__rosidl_typesupport_fastrtps_cpp
+[0.399s] [ 44%] Built target turtle_brick_interfaces__rosidl_typesupport_introspection_cpp
+[0.407s] [ 59%] Built target turtle_brick_interfaces__rosidl_typesupport_c
+[0.407s] [ 65%] Built target turtle_brick_interfaces__rosidl_typesupport_fastrtps_c
+[0.415s] [ 76%] Built target turtle_brick_interfaces__rosidl_typesupport_introspection_c
+[0.439s] [ 76%] Built target turtle_brick_interfaces
+[0.469s] [ 78%] Built target turtle_brick_interfaces__py
+[0.508s] [ 87%] Built target turtle_brick_interfaces__rosidl_generator_py
+[0.628s] [ 91%] Built target turtle_brick_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[0.654s] [ 95%] Built target turtle_brick_interfaces__rosidl_typesupport_introspection_c__pyext
+[0.671s] [100%] Built target turtle_brick_interfaces__rosidl_typesupport_c__pyext
+[0.869s] running egg_info
+[0.870s] writing turtle_brick_interfaces.egg-info/PKG-INFO
+[0.871s] writing dependency_links to turtle_brick_interfaces.egg-info/dependency_links.txt
+[0.871s] writing top-level names to turtle_brick_interfaces.egg-info/top_level.txt
+[0.877s] reading manifest file 'turtle_brick_interfaces.egg-info/SOURCES.txt'
+[0.878s] writing manifest file 'turtle_brick_interfaces.egg-info/SOURCES.txt'
+[0.924s] [100%] Built target ament_cmake_python_build_turtle_brick_interfaces_egg
+[0.952s] Invoked command in '/home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/alyssa/homework2-alyssa225/install/turtle_brick:/opt/ros/humble /usr/bin/cmake --build /home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces -- -j8 -l8
+[1.069s] Invoking command in '/home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/alyssa/homework2-alyssa225/install/turtle_brick:/opt/ros/humble /usr/bin/cmake --install /home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces
+[1.078s] -- Install configuration: ""
+[1.078s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/ament_index/resource_index/rosidl_interfaces/turtle_brick_interfaces
+[1.079s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces
+[1.079s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/srv
+[1.079s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/srv/detail
+[1.079s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/srv/detail/drop__functions.c
+[1.080s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/srv/detail/place__struct.h
+[1.080s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/srv/detail/drop__functions.h
+[1.080s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/srv/detail/place__functions.h
+[1.080s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/srv/detail/drop__struct.h
+[1.080s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/srv/detail/place__functions.c
+[1.081s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/srv/detail/place__type_support.h
+[1.081s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/srv/detail/drop__type_support.h
+[1.081s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/srv/drop.h
+[1.081s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/srv/place.h
+[1.082s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/msg
+[1.082s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/msg/tilt.h
+[1.083s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/msg/detail
+[1.084s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/msg/detail/tilt__struct.h
+[1.084s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/msg/detail/tilt__functions.h
+[1.084s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/msg/detail/tilt__functions.c
+[1.085s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/msg/detail/tilt__type_support.h
+[1.085s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/msg/rosidl_generator_c__visibility_control.h
+[1.085s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/turtle_brick_interfaces/environment/library_path.sh
+[1.086s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/turtle_brick_interfaces/environment/library_path.dsv
+[1.086s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/lib/libturtle_brick_interfaces__rosidl_generator_c.so
+[1.086s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces
+[1.086s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/srv
+[1.086s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/srv/detail
+[1.087s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/srv/detail/drop__rosidl_typesupport_fastrtps_c.h
+[1.087s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/srv/detail/place__rosidl_typesupport_fastrtps_c.h
+[1.088s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/msg
+[1.088s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[1.089s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/msg/detail
+[1.089s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/msg/detail/tilt__rosidl_typesupport_fastrtps_c.h
+[1.089s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/lib/libturtle_brick_interfaces__rosidl_typesupport_fastrtps_c.so
+[1.089s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces
+[1.089s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/srv
+[1.090s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/srv/detail
+[1.090s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/srv/detail/drop__rosidl_typesupport_introspection_c.h
+[1.090s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/srv/detail/place__rosidl_typesupport_introspection_c.h
+[1.090s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/srv/detail/place__type_support.c
+[1.091s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/srv/detail/drop__type_support.c
+[1.091s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/msg
+[1.092s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/msg/detail
+[1.092s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/msg/detail/tilt__type_support.c
+[1.092s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/msg/detail/tilt__rosidl_typesupport_introspection_c.h
+[1.092s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[1.092s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/lib/libturtle_brick_interfaces__rosidl_typesupport_introspection_c.so
+[1.092s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/lib/libturtle_brick_interfaces__rosidl_typesupport_c.so
+[1.093s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces
+[1.093s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/srv
+[1.093s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/srv/place.hpp
+[1.093s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/srv/detail
+[1.093s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/srv/detail/drop__struct.hpp
+[1.094s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/srv/detail/place__traits.hpp
+[1.094s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/srv/detail/place__struct.hpp
+[1.094s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/srv/detail/drop__traits.hpp
+[1.094s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/srv/detail/place__builder.hpp
+[1.094s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/srv/detail/drop__builder.hpp
+[1.095s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/srv/drop.hpp
+[1.104s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/msg
+[1.105s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/msg/detail
+[1.105s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/msg/detail/tilt__traits.hpp
+[1.106s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/msg/detail/tilt__builder.hpp
+[1.106s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/msg/detail/tilt__struct.hpp
+[1.106s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/msg/tilt.hpp
+[1.107s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces
+[1.107s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/srv
+[1.108s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/srv/detail
+[1.108s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/srv/detail/dds_fastrtps
+[1.108s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/srv/detail/drop__rosidl_typesupport_fastrtps_cpp.hpp
+[1.109s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/srv/detail/place__rosidl_typesupport_fastrtps_cpp.hpp
+[1.109s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/msg
+[1.110s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/msg/detail
+[1.110s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/msg/detail/dds_fastrtps
+[1.111s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/msg/detail/tilt__rosidl_typesupport_fastrtps_cpp.hpp
+[1.111s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[1.111s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/lib/libturtle_brick_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[1.112s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces
+[1.112s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/srv
+[1.113s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/srv/detail
+[1.113s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/srv/detail/drop__rosidl_typesupport_introspection_cpp.hpp
+[1.113s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/srv/detail/drop__type_support.cpp
+[1.114s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/srv/detail/place__type_support.cpp
+[1.114s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/srv/detail/place__rosidl_typesupport_introspection_cpp.hpp
+[1.115s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/msg
+[1.115s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/msg/detail
+[1.116s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/msg/detail/tilt__type_support.cpp
+[1.116s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/include/turtle_brick_interfaces/turtle_brick_interfaces/msg/detail/tilt__rosidl_typesupport_introspection_cpp.hpp
+[1.117s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/lib/libturtle_brick_interfaces__rosidl_typesupport_introspection_cpp.so
+[1.117s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/lib/libturtle_brick_interfaces__rosidl_typesupport_cpp.so
+[1.118s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/turtle_brick_interfaces/environment/pythonpath.sh
+[1.118s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/turtle_brick_interfaces/environment/pythonpath.dsv
+[1.118s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/local/lib/python3.10/dist-packages/turtle_brick_interfaces-0.0.0-py3.10.egg-info
+[1.119s] -- Installing: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/local/lib/python3.10/dist-packages/turtle_brick_interfaces-0.0.0-py3.10.egg-info/top_level.txt
+[1.119s] -- Installing: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/local/lib/python3.10/dist-packages/turtle_brick_interfaces-0.0.0-py3.10.egg-info/dependency_links.txt
+[1.120s] -- Installing: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/local/lib/python3.10/dist-packages/turtle_brick_interfaces-0.0.0-py3.10.egg-info/SOURCES.txt
+[1.120s] -- Installing: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/local/lib/python3.10/dist-packages/turtle_brick_interfaces-0.0.0-py3.10.egg-info/PKG-INFO
+[1.120s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/local/lib/python3.10/dist-packages/turtle_brick_interfaces
+[1.121s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/local/lib/python3.10/dist-packages/turtle_brick_interfaces/turtle_brick_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[1.121s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/local/lib/python3.10/dist-packages/turtle_brick_interfaces/srv
+[1.122s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/local/lib/python3.10/dist-packages/turtle_brick_interfaces/srv/_drop.py
+[1.122s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/local/lib/python3.10/dist-packages/turtle_brick_interfaces/srv/_drop_s.c
+[1.122s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/local/lib/python3.10/dist-packages/turtle_brick_interfaces/srv/__init__.py
+[1.123s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/local/lib/python3.10/dist-packages/turtle_brick_interfaces/srv/_place_s.c
+[1.123s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/local/lib/python3.10/dist-packages/turtle_brick_interfaces/srv/_place.py
+[1.124s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/local/lib/python3.10/dist-packages/turtle_brick_interfaces/msg
+[1.124s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/local/lib/python3.10/dist-packages/turtle_brick_interfaces/msg/_tilt.py
+[1.125s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/local/lib/python3.10/dist-packages/turtle_brick_interfaces/msg/_tilt_s.c
+[1.125s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/local/lib/python3.10/dist-packages/turtle_brick_interfaces/msg/__init__.py
+[1.126s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/local/lib/python3.10/dist-packages/turtle_brick_interfaces/_turtle_brick_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[1.126s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/local/lib/python3.10/dist-packages/turtle_brick_interfaces/turtle_brick_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[1.126s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/local/lib/python3.10/dist-packages/turtle_brick_interfaces/_turtle_brick_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[1.127s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/local/lib/python3.10/dist-packages/turtle_brick_interfaces/_turtle_brick_interfaces_s.ep.rosidl_typesupport_c.c
+[1.127s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/local/lib/python3.10/dist-packages/turtle_brick_interfaces/__init__.py
+[1.128s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/local/lib/python3.10/dist-packages/turtle_brick_interfaces/turtle_brick_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[1.128s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/local/lib/python3.10/dist-packages/turtle_brick_interfaces/libturtle_brick_interfaces__rosidl_generator_py.so
+[1.146s] Listing '/home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/local/lib/python3.10/dist-packages/turtle_brick_interfaces'...
+[1.146s] Listing '/home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/local/lib/python3.10/dist-packages/turtle_brick_interfaces/msg'...
+[1.147s] Listing '/home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/local/lib/python3.10/dist-packages/turtle_brick_interfaces/srv'...
+[1.154s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/local/lib/python3.10/dist-packages/turtle_brick_interfaces/turtle_brick_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[1.154s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/local/lib/python3.10/dist-packages/turtle_brick_interfaces/turtle_brick_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[1.156s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/local/lib/python3.10/dist-packages/turtle_brick_interfaces/turtle_brick_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[1.156s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/lib/libturtle_brick_interfaces__rosidl_generator_py.so
+[1.157s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/turtle_brick_interfaces/msg/Tilt.idl
+[1.157s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/turtle_brick_interfaces/srv/Place.idl
+[1.157s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/turtle_brick_interfaces/srv/Drop.idl
+[1.158s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/turtle_brick_interfaces/msg/Tilt.msg
+[1.158s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/turtle_brick_interfaces/srv/Place.srv
+[1.158s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/turtle_brick_interfaces/srv/Place_Request.msg
+[1.159s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/turtle_brick_interfaces/srv/Place_Response.msg
+[1.159s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/turtle_brick_interfaces/srv/Drop.srv
+[1.159s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/turtle_brick_interfaces/srv/Drop_Request.msg
+[1.160s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/turtle_brick_interfaces/srv/Drop_Response.msg
+[1.160s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/ament_index/resource_index/package_run_dependencies/turtle_brick_interfaces
+[1.161s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/ament_index/resource_index/parent_prefix_path/turtle_brick_interfaces
+[1.161s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/turtle_brick_interfaces/environment/ament_prefix_path.sh
+[1.162s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/turtle_brick_interfaces/environment/ament_prefix_path.dsv
+[1.162s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/turtle_brick_interfaces/environment/path.sh
+[1.162s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/turtle_brick_interfaces/environment/path.dsv
+[1.162s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/turtle_brick_interfaces/local_setup.bash
+[1.163s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/turtle_brick_interfaces/local_setup.sh
+[1.163s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/turtle_brick_interfaces/local_setup.zsh
+[1.163s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/turtle_brick_interfaces/local_setup.dsv
+[1.163s] -- Installing: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/turtle_brick_interfaces/package.dsv
+[1.164s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/ament_index/resource_index/packages/turtle_brick_interfaces
+[1.164s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/turtle_brick_interfaces/cmake/export_turtle_brick_interfaces__rosidl_generator_cExport.cmake
+[1.164s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/turtle_brick_interfaces/cmake/export_turtle_brick_interfaces__rosidl_generator_cExport-noconfig.cmake
+[1.164s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/turtle_brick_interfaces/cmake/export_turtle_brick_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[1.165s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/turtle_brick_interfaces/cmake/export_turtle_brick_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[1.165s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/turtle_brick_interfaces/cmake/turtle_brick_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[1.165s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/turtle_brick_interfaces/cmake/turtle_brick_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[1.165s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/turtle_brick_interfaces/cmake/turtle_brick_interfaces__rosidl_typesupport_cExport.cmake
+[1.165s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/turtle_brick_interfaces/cmake/turtle_brick_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[1.166s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/turtle_brick_interfaces/cmake/export_turtle_brick_interfaces__rosidl_generator_cppExport.cmake
+[1.166s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/turtle_brick_interfaces/cmake/export_turtle_brick_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[1.166s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/turtle_brick_interfaces/cmake/export_turtle_brick_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[1.166s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/turtle_brick_interfaces/cmake/turtle_brick_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[1.167s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/turtle_brick_interfaces/cmake/turtle_brick_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[1.167s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/turtle_brick_interfaces/cmake/turtle_brick_interfaces__rosidl_typesupport_cppExport.cmake
+[1.167s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/turtle_brick_interfaces/cmake/turtle_brick_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[1.172s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/turtle_brick_interfaces/cmake/export_turtle_brick_interfaces__rosidl_generator_pyExport.cmake
+[1.174s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/turtle_brick_interfaces/cmake/export_turtle_brick_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[1.176s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/turtle_brick_interfaces/cmake/rosidl_cmake-extras.cmake
+[1.188s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/turtle_brick_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[1.189s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/turtle_brick_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[1.190s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/turtle_brick_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[1.190s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/turtle_brick_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[1.190s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/turtle_brick_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[1.190s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/turtle_brick_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[1.192s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/turtle_brick_interfaces/cmake/turtle_brick_interfacesConfig.cmake
+[1.197s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/turtle_brick_interfaces/cmake/turtle_brick_interfacesConfig-version.cmake
+[1.197s] -- Up-to-date: /home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/share/turtle_brick_interfaces/package.xml
+[1.197s] Invoked command in '/home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/alyssa/homework2-alyssa225/install/turtle_brick:/opt/ros/humble /usr/bin/cmake --install /home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces
