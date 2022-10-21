@@ -188,7 +188,7 @@ class Turtle_robot(Node):
             if abs(self.tilt_ang - self.tilt_angf) >= 0.01:
                 if self.tilt_angf - self.tilt_ang < 0.0:
                     self.tilt_ang -= 0.005
-                elif self.tilt_angf-self.tilt_ang >= 0.0:
+                elif self.tilt_angf - self.tilt_ang >= 0.0:
                     self.tilt_ang += 0.005
             elif self.tilt_angf == 0.0:
                 self.tilt_ang = 0.0
