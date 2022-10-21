@@ -94,7 +94,7 @@ class Catcher(Node):
         self.platformx = msg.position.x
         self.platformy = msg.position.y
         if (self.state == State.TILT and abs(self.platformx) <= 0.05
-                          and abs(self.platformy) <= 0.05):
+           and abs(self.platformy) <= 0.05):
             self.get_logger().info('tilting')
             tilt = Tilt()
             tilt.angle = 1.0
