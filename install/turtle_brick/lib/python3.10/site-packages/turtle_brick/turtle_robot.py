@@ -13,6 +13,7 @@ import math
 class Turtle_robot(Node):
     """
     Creates the turtle_robot and controls joint and translation movements.
+
     Additionally, places it in the world and connects to turtlesim.
     SUBSCRIPTIONS:
         -goal_sub: subscribes to goal_sub and
@@ -31,6 +32,7 @@ class Turtle_robot(Node):
         -world_odom: connects odom frame to world frame
         -odom_base_link: connects base_link frame to odom frame
     """
+
     def __init__(self):
         super().__init__('turtle_robot')
         # params

@@ -1,0 +1,51 @@
+[0.252s] Invoking command in '/home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces': /usr/bin/ctest -C Release -D ExperimentalTest --no-compress-output -V --force-new-ctest-process
+[0.258s] UpdateCTestConfiguration  from :/home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces/CTestConfiguration.ini
+[0.258s] Parse Config file:/home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces/CTestConfiguration.ini
+[0.258s]    Site: alyssa-Galago-Pro
+[0.259s]    Build name: (empty)
+[0.259s]  Add coverage exclude regular expressions.
+[0.259s] Create new tag: 20221022-0209 - Experimental
+[0.259s] UpdateCTestConfiguration  from :/home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces/CTestConfiguration.ini
+[0.259s] Parse Config file:/home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces/CTestConfiguration.ini
+[0.259s] Test project /home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces
+[0.260s] Constructing a list of tests
+[0.260s] Done constructing a list of tests
+[0.260s] Updating test list for fixtures
+[0.260s] Added 0 tests to meet fixture requirements
+[0.260s] Checking test dependency graph...
+[0.260s] Checking test dependency graph end
+[0.261s] test 1
+[0.261s]     Start 1: lint_cmake
+[0.261s] 
+[0.261s] 1: Test command: /usr/bin/python3.10 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces/test_results/turtle_brick_interfaces/lint_cmake.xunit.xml" "--package-name" "turtle_brick_interfaces" "--output-file" "/home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces/ament_lint_cmake/lint_cmake.txt" "--command" "/opt/ros/humble/bin/ament_lint_cmake" "--xunit-file" "/home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces/test_results/turtle_brick_interfaces/lint_cmake.xunit.xml"
+[0.261s] 1: Test timeout computed to be: 60
+[0.312s] 1: -- run_test.py: invoking following command in '/home/alyssa/homework2-alyssa225/src/turtle_brick_interfaces':
+[0.313s] 1:  - /opt/ros/humble/bin/ament_lint_cmake --xunit-file /home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces/test_results/turtle_brick_interfaces/lint_cmake.xunit.xml
+[0.375s] 1: 
+[0.375s] 1: No problems found
+[0.385s] 1: -- run_test.py: return code 0
+[0.385s] 1: -- run_test.py: verify result file '/home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces/test_results/turtle_brick_interfaces/lint_cmake.xunit.xml'
+[0.393s] 1/2 Test #1: lint_cmake .......................   Passed    0.13 sec
+[0.393s] test 2
+[0.394s]     Start 2: xmllint
+[0.394s] 
+[0.394s] 2: Test command: /usr/bin/python3.10 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces/test_results/turtle_brick_interfaces/xmllint.xunit.xml" "--package-name" "turtle_brick_interfaces" "--output-file" "/home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces/ament_xmllint/xmllint.txt" "--command" "/opt/ros/humble/bin/ament_xmllint" "--xunit-file" "/home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces/test_results/turtle_brick_interfaces/xmllint.xunit.xml"
+[0.394s] 2: Test timeout computed to be: 60
+[0.449s] 2: -- run_test.py: invoking following command in '/home/alyssa/homework2-alyssa225/src/turtle_brick_interfaces':
+[0.449s] 2:  - /opt/ros/humble/bin/ament_xmllint --xunit-file /home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces/test_results/turtle_brick_interfaces/xmllint.xunit.xml
+[0.594s] 2: File 'package.xml' is valid
+[0.595s] 2: 
+[0.595s] 2: No problems found
+[0.605s] 2: -- run_test.py: return code 0
+[0.605s] 2: -- run_test.py: verify result file '/home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces/test_results/turtle_brick_interfaces/xmllint.xunit.xml'
+[0.614s] 2/2 Test #2: xmllint ..........................   Passed    0.22 sec
+[0.615s] 
+[0.615s] [0;32m100% tests passed[0;0m, 0 tests failed[0;0m out of 2
+[0.615s] 
+[0.616s] Label Time Summary:
+[0.616s] lint_cmake    =   0.13 sec*proc (1 test)
+[0.616s] linter        =   0.35 sec*proc (2 tests)
+[0.616s] xmllint       =   0.22 sec*proc (1 test)
+[0.616s] 
+[0.617s] Total Test time (real) =   0.36 sec
+[0.635s] Invoked command in '/home/alyssa/homework2-alyssa225/build/turtle_brick_interfaces' returned '0': /usr/bin/ctest -C Release -D ExperimentalTest --no-compress-output -V --force-new-ctest-process

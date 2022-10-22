@@ -11,21 +11,27 @@ from enum import Enum, auto
 
 class State(Enum):
     """
-    Current state of the robot
+    Current state of the robot.
+
+    Two states for the catcher.
         WAITING: waiting for robot
         TILT: tilt the platform
+
     """
+
     WAITING = auto(),
     TILT = auto()
 
 
 class Catcher(Node):
     """
-    calculates if robot can catch placed brick in time or not
+    Calculates if robot can catch placed brick in time or not.
+
     -If it can catch, robot travels to drop location, catches brick,
         travels back to origin, and tilts brick off
     -If the robot can't reach brick in time, the screen publishes "UNREACHABLE",
         and lets brick fall to ground
+
     SUBSCRIPTIONS:
         -robot_sub:continuous robot position
         -drop_sub: gets placed brick position and sends if drop service is called
@@ -34,6 +40,7 @@ class Catcher(Node):
         -goal_pose: send pose to turtle robot
         -tilt: send tilt angle to platform on turtle robot
         -text marker: publishes "UNREACHABLE" if robot can't reach in time
+
     """
 
     def __init__(self):

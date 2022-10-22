@@ -13,12 +13,17 @@ from enum import Enum, auto
 
 
 class BState(Enum):
-    """ Current state of the brick.
-        PLACED: brick is placed
-        DROPPING: brick is dropping with accelleraction od gravity
-        PLATFORM: The platfom of turtle robot is below the brick
-        FLOOR: The turtle robot is not below the brick
     """
+    Current state of the brick.
+
+    Four states of brick.
+        - PLACED: brick is placed
+        - DROPPING: brick is dropping with accelleraction od gravity
+        - PLATFORM: The platfom of turtle robot is below the brick
+        - FLOOR: The turtle robot is not below the brick
+
+    """
+
     PLACED = auto(),
     DROPPING = auto(),
     PLATFORM = auto(),
@@ -28,9 +33,11 @@ class BState(Enum):
 class Arena(Node):
     """
     Creates the arena and places brick when called in command line.
+
     Will drop the robot when called in command line.
         -if robot is underneath the brick, the brick will land on the robot
         -if nothing is under brick, brick will land on ground
+
     SUBSCRIPTIONS:
         -robot_sub: continuous robot position
     PUBLISHERS:
@@ -42,7 +49,9 @@ class Arena(Node):
         -Drop: Empty drops brick
     TRANSFORMS:
         -world_brick: connects brick to world
+
     """
+
     def __init__(self):
         super().__init__('arena')
         # params

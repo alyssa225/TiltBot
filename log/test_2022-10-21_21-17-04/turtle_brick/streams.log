@@ -1,0 +1,162 @@
+[0.328s] Invoking command in '/home/alyssa/homework2-alyssa225/src/turtle_brick': AMENT_PREFIX_PATH=/home/alyssa/homework2-alyssa225/install/turtle_brick:/home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces:/opt/ros/humble PYTEST_ADDOPTS=--tb=short --junit-xml=/home/alyssa/homework2-alyssa225/build/turtle_brick/pytest.xml --junit-prefix=turtle_brick -o cache_dir=/home/alyssa/homework2-alyssa225/build/turtle_brick/.pytest_cache PYTHONPATH=/home/alyssa/homework2-alyssa225/install/turtle_brick/lib/python3.10/site-packages:/home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/python3 -m pytest
+[0.677s] [1m============================= test session starts ==============================[0m
+[0.678s] platform linux -- Python 3.10.6, pytest-6.2.5, py-1.10.0, pluggy-0.13.0
+[0.685s] cachedir: /home/alyssa/homework2-alyssa225/build/turtle_brick/.pytest_cache
+[0.685s] rootdir: /home/alyssa/homework2-alyssa225/src/turtle_brick
+[0.685s] plugins: ament-lint-0.12.4, ament-xmllint-0.12.4, launch-testing-ros-0.19.3, launch-testing-1.0.2, ament-flake8-0.12.4, ament-pep257-0.12.4, ament-copyright-0.12.4, colcon-core-0.10.0, cov-3.0.0
+[0.769s] [1mcollecting ... [0m[1m
+[0.769s] collected 4 items                                                              [0m
+[0.769s] 
+[0.779s] test/math_test.py [32m.[0m[32m                                                      [ 25%][0m
+[0.780s] test/test_copyright.py [33ms[0m[32m                                                 [ 50%][0m
+[0.999s] test/test_flake8.py [31mF[0m[31m                                                    [ 75%][0m
+[1.098s] test/test_pep257.py [31mF[0m[31m                                                    [100%][0m
+[1.098s] 
+[1.098s] =================================== FAILURES ===================================
+[1.098s] [31m[1m_________________________________ test_flake8 __________________________________[0m
+[1.099s] [1m[31mtest/test_flake8.py[0m:23: in test_flake8
+[1.142s]     [94massert[39;49;00m rc == [94m0[39;49;00m, \
+[1.142s] [1m[31mE   AssertionError: Found 4 code style errors / warnings:[0m
+[1.142s] [1m[31mE     ./turtle_brick/arena.py:37:1: W293 blank line contains whitespace[0m
+[1.142s] [1m[31mE     ./turtle_brick/arena.py:50:1: W293 blank line contains whitespace[0m
+[1.142s] [1m[31mE     ./turtle_brick/turtle_robot.py:17:1: W293 blank line contains whitespace[0m
+[1.143s] [1m[31mE     ./turtle_brick/catcher.py:30:1: W293 blank line contains whitespace[0m
+[1.143s] [1m[31mE   assert 1 == 0[0m
+[1.143s] ----------------------------- Captured stdout call -----------------------------
+[1.143s] 
+[1.143s] ./turtle_brick/arena.py:37:1: W293 blank line contains whitespace
+[1.143s]     """
+[1.144s] 
+[1.144s]     Creates the arena and places brick when called in command line.
+[1.144s]     Will drop the robot when called in command line.
+[1.144s]         -if robot is underneath the brick, the brick will land on the robot
+[1.144s]         -if nothing is under brick, brick will land on ground
+[1.144s]     
+[1.145s]     SUBSCRIPTIONS:
+[1.145s]         -robot_sub: continuous robot position
+[1.145s]     PUBLISHERS:
+[1.145s]         -marker_pub: publishes walls and brick
+[1.145s]         -drop_pub: sends placement, drop coordinates
+[1.145s]         -platform_pub: sends true if platform is under brick
+[1.146s]     SERVICES:
+[1.146s]         -Place: place brick at x, y, z location
+[1.146s]         -Drop: Empty drops brick
+[1.146s]     TRANSFORMS:
+[1.146s]         -world_brick: connects brick to world
+[1.146s]     """
+[1.147s] ^
+[1.147s] 
+[1.147s] ./turtle_brick/arena.py:50:1: W293 blank line contains whitespace
+[1.147s]     
+[1.147s] ^
+[1.147s] 
+[1.147s] ./turtle_brick/turtle_robot.py:17:1: W293 blank line contains whitespace
+[1.148s]     """
+[1.148s]     Creates the turtle_robot and controls joint and translation movements.
+[1.148s]     Additionally, places it in the world and connects to turtlesim.
+[1.148s]     
+[1.148s]     SUBSCRIPTIONS:
+[1.148s]         -goal_sub: subscribes to goal_sub and
+[1.148s]             recieves the positions that will
+[1.149s]             calculate movement towards goal_pose
+[1.149s]         -tilt_sub: subscribes to tilt and will
+[1.149s]             recieve the angle that the robot platform will tilt to
+[1.149s]     PUBLISHERS:
+[1.149s]         -joint_state: publishes joint angles of the turtle_robot
+[1.149s]         -odom_pub: sends positions and twists
+[1.149s]         -vel_pub: sends twist to cmd_vel
+[1.149s]         -robot_pub: sends continuous robot pose
+[1.150s]             # also just relized I could have potentially taken from odom publisher
+[1.150s]             # instead of creating a whole new object and publisher, but too late now
+[1.150s]     TRANSFORMS:
+[1.150s]         -world_odom: connects odom frame to world frame
+[1.150s]         -odom_base_link: connects base_link frame to odom frame
+[1.150s]     """
+[1.150s] ^
+[1.151s] 
+[1.151s] ./turtle_brick/catcher.py:30:1: W293 blank line contains whitespace
+[1.151s]     """
+[1.151s]     Calculates if robot can catch placed brick in time or not.
+[1.151s]     -If it can catch, robot travels to drop location, catches brick,
+[1.151s]         travels back to origin, and tilts brick off
+[1.151s]     -If the robot can't reach brick in time, the screen publishes "UNREACHABLE",
+[1.151s]         and lets brick fall to ground
+[1.152s]     
+[1.152s]     SUBSCRIPTIONS:
+[1.152s]         -robot_sub:continuous robot position
+[1.152s]         -drop_sub: gets placed brick position and sends if drop service is called
+[1.152s]         -catch_sub: gets True the brick is caught on the platform
+[1.152s]     PUBLISHERS:
+[1.152s]         -goal_pose: send pose to turtle robot
+[1.153s]         -tilt: send tilt angle to platform on turtle robot
+[1.153s]         -text marker: publishes "UNREACHABLE" if robot can't reach in time
+[1.153s]     """
+[1.153s] ^
+[1.153s] 
+[1.153s] 4     W293 blank line contains whitespace
+[1.153s] 
+[1.153s] 13 files checked
+[1.154s] 4 errors
+[1.154s] 
+[1.154s] 'W'-type errors: 4
+[1.154s] 
+[1.154s] Checked files:
+[1.154s] 
+[1.154s] * ./setup.py
+[1.154s] * ./turtle_brick/arena.py
+[1.155s] * ./turtle_brick/turtle_robot.py
+[1.155s] * ./turtle_brick/catcher.py
+[1.155s] * ./turtle_brick/__init__.py
+[1.155s] * ./test/math_test.py
+[1.155s] * ./test/test_flake8.py
+[1.155s] * ./test/test_copyright.py
+[1.155s] * ./test/test_pep257.py
+[1.156s] * ./test/brick.test.py
+[1.156s] * ./launch/show_turtle.launch.py
+[1.156s] * ./launch/run_turtle.launch.py
+[1.156s] * ./launch/turtle_arena.launch.py
+[1.156s] ----------------------------- Captured stderr call -----------------------------
+[1.156s] option --max-complexity: please update from optparse string `type=` to argparse callable `type=` -- this will be an error in the future
+[1.156s] [31m[1m_________________________________ test_pep257 __________________________________[0m
+[1.157s] [1m[31mtest/test_pep257.py[0m:23: in test_pep257
+[1.157s]     [94massert[39;49;00m rc == [94m0[39;49;00m, [33m'[39;49;00m[33mFound code style errors / warnings[39;49;00m[33m'[39;49;00m
+[1.157s] [1m[31mE   AssertionError: Found code style errors / warnings[0m
+[1.157s] [1m[31mE   assert 1 == 0[0m
+[1.157s] ----------------------------- Captured stdout call -----------------------------
+[1.157s] checking ./launch/run_turtle.launch.py
+[1.157s] checking ./launch/show_turtle.launch.py
+[1.157s] checking ./launch/turtle_arena.launch.py
+[1.158s] checking ./setup.py
+[1.158s] checking ./test/brick.test.py
+[1.158s] checking ./test/math_test.py
+[1.158s] checking ./test/test_copyright.py
+[1.158s] checking ./test/test_flake8.py
+[1.158s] checking ./test/test_pep257.py
+[1.158s] checking ./turtle_brick/__init__.py
+[1.159s] checking ./turtle_brick/arena.py
+[1.159s] ./turtle_brick/arena.py:16 in public class `BState`: D213: Multi-line docstring summary should start at the second line
+[1.159s] ./turtle_brick/arena.py:31 in public class `Arena`: D205: 1 blank line required between summary line and description (found 0)
+[1.159s] checking ./turtle_brick/catcher.py
+[1.159s] ./turtle_brick/catcher.py:13 in public class `State`: D204: 1 blank line required after class docstring (found 0)
+[1.159s] ./turtle_brick/catcher.py:24 in public class `Catcher`: D205: 1 blank line required between summary line and description (found 0)
+[1.159s] checking ./turtle_brick/turtle_robot.py
+[1.160s] ./turtle_brick/turtle_robot.py:14 in public class `Turtle_robot`: D204: 1 blank line required after class docstring (found 0)
+[1.160s] ./turtle_brick/turtle_robot.py:14 in public class `Turtle_robot`: D205: 1 blank line required between summary line and description (found 0)
+[1.160s] checking test/brick.test.py
+[1.160s] checking test/math_test.py
+[1.160s] checking test/test_copyright.py
+[1.160s] checking test/test_flake8.py
+[1.160s] checking test/test_pep257.py
+[1.161s] 6 errors
+[1.161s] - generated xml file: /home/alyssa/homework2-alyssa225/build/turtle_brick/pytest.xml -
+[1.161s] [33m=============================== warnings summary ===============================[0m
+[1.161s] test/test_flake8.py::test_flake8
+[1.161s] test/test_flake8.py::test_flake8
+[1.161s]   Warning: SelectableGroups dict interface is deprecated. Use select.
+[1.161s] 
+[1.162s] -- Docs: https://docs.pytest.org/en/stable/warnings.html
+[1.162s] =========================== short test summary info ============================
+[1.162s] FAILED test/test_flake8.py::test_flake8 - AssertionError: Found 4 code style ...
+[1.162s] FAILED test/test_pep257.py::test_pep257 - AssertionError: Found code style er...
+[1.162s] [31m============== [31m[1m2 failed[0m, [32m1 passed[0m, [33m1 skipped[0m, [33m2 warnings[0m[31m in 0.46s[0m[31m ==============[0m
+[1.221s] Invoked command in '/home/alyssa/homework2-alyssa225/src/turtle_brick' returned '1': AMENT_PREFIX_PATH=/home/alyssa/homework2-alyssa225/install/turtle_brick:/home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces:/opt/ros/humble PYTEST_ADDOPTS=--tb=short --junit-xml=/home/alyssa/homework2-alyssa225/build/turtle_brick/pytest.xml --junit-prefix=turtle_brick -o cache_dir=/home/alyssa/homework2-alyssa225/build/turtle_brick/.pytest_cache PYTHONPATH=/home/alyssa/homework2-alyssa225/install/turtle_brick/lib/python3.10/site-packages:/home/alyssa/homework2-alyssa225/install/turtle_brick_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/python3 -m pytest
