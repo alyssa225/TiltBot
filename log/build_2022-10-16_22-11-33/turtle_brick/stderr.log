@@ -1,7 +1,0 @@
-/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
-  warnings.warn(
-  File "/home/alyssa/homework2-alyssa225/install/turtle_brick/lib/python3.10/site-packages/turtle_brick/turtle_robot.py", line 33
-    def turtle_odom(, child_id, x,y,z,):
-                    ^
-SyntaxError: invalid syntax
-

@@ -1,1 +1,0 @@
-/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/rosidl_cmake/rosidl_cmake_export_typesupport_targets-extras.cmake

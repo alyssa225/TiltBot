@@ -1,4 +1,0 @@
-[0.227s] Invoking command in '/home/alyssa/ros2_ws/src/homework2-alyssa225/build/turtle_brick_interface': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/alyssa/ros2_ws/src/homework2-alyssa225/build/turtle_brick_interface -- -j8 -l8
-[0.263s] [ 50%] [32mBuilding CXX object CMakeFiles/place.dir/src/place.cpp.o[0m
-[0.290s] [100%] [32m[1mLinking CXX executable place[0m
-[0.330s] [100%] Built target place

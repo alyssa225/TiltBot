@@ -1,4 +1,0 @@
-Invoking command in '/home/alyssa/ros2_ws/src/homework2-alyssa225/build/turtle_brick_interface': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/alyssa/ros2_ws/src/homework2-alyssa225/build/turtle_brick_interface -- -j8 -l8
-Invoked command in '/home/alyssa/ros2_ws/src/homework2-alyssa225/build/turtle_brick_interface' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/alyssa/ros2_ws/src/homework2-alyssa225/build/turtle_brick_interface -- -j8 -l8
-Invoking command in '/home/alyssa/ros2_ws/src/homework2-alyssa225/build/turtle_brick_interface': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/alyssa/ros2_ws/src/homework2-alyssa225/build/turtle_brick_interface
-Invoked command in '/home/alyssa/ros2_ws/src/homework2-alyssa225/build/turtle_brick_interface' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/alyssa/ros2_ws/src/homework2-alyssa225/build/turtle_brick_interface

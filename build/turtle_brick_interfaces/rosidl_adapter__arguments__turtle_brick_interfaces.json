@@ -1,8 +1,0 @@
-{
-  "package_name": "turtle_brick_interfaces",
-  "non_idl_tuples": [
-    "/home/alyssa/homework2-alyssa225/src/turtle_brick_interfaces:msg/Tilt.msg",
-    "/home/alyssa/homework2-alyssa225/src/turtle_brick_interfaces:srv/Place.srv",
-    "/home/alyssa/homework2-alyssa225/src/turtle_brick_interfaces:srv/Drop.srv"
-  ]
-}

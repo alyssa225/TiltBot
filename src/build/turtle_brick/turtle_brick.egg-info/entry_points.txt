@@ -1,5 +1,0 @@
-[console_scripts]
-arena = turtle_brick.arena:arena_entry
-catcher = turtle_brick.catcher:catcher_entry
-turtle_robot = turtle_brick.turtle_robot:main
-

@@ -1,1 +1,0 @@
-/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/rosidl_typesupport_fastrtps_c/turtle_brick_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h

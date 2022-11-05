@@ -1,1 +1,0 @@
-/home/alyssa/homework2-alyssa225/src/build/turtle_brick_interfaces/rosidl_generator_py/turtle_brick_interfaces/_turtle_brick_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
