@@ -22,9 +22,9 @@ LAUNCH ARGUMENTS:
 
 
 def generate_launch_description():
-    turtle_brick_path = 'src/turtle_brick'
-    default_model_path = turtle_brick_path + '/urdf/turtle.urdf.xacro'
-    default_rviz_config_path = turtle_brick_path + '/config/turtle_urdf.rviz'
+    turtle_brick_path = get_package_share_directory('turtle_brick')
+    default_model_path = os.path.join(turtle_brick_path, 'turtle.urdf.xacro')
+    default_rviz_config_path = os.path.join(turtle_brick_path, 'turtle_urdf.rviz')
     use_jsp = LaunchConfiguration('use_jsp')
     use_jsp_arg = DeclareLaunchArgument(name='use_jsp', default_value='"gui"',
                                         choices=['"gui"', '"jsp"', '"none"'],
@@ -38,7 +38,7 @@ def generate_launch_description():
     robot_description = ParameterValue(Command(['xacro ', LaunchConfiguration('model')]),
                                        value_type=str)
     config = os.path.join(
-      get_package_share_directory('turtle_brick'),
+      turtle_brick_path,
       'config',
       'turtle.yaml'
       )

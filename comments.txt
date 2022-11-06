@@ -1,0 +1,10 @@
+Technical: -2
+
+xacro file should be run on the installed version, not directly out of the source tree (see corrected launchfile and setup.py and notes here https://nu-msr.github.io/ros_notes/ros2/modeling.html#org4bbfed1 for details)
+
+
+Coding Style: -3
+Build/workspace files were committed to the repository
+Videos are missing
+The argument should be use_jsp:=none rather than use_jsp:='"none"'
+Put the types of each service/publisher/etc in the comments in addition to their names
