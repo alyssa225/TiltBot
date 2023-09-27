@@ -7,7 +7,7 @@ The package creates a turtle robot and arena in rviz that is connected to turtle
 1. Use `ros2 launch turtle_brick turtle_arena.launch.py use_jsp:='"none"'` to start the arena and turtle simulation
 2. Use `ros2 service call drop std_srvs/srv/Empty` to drop a brick
 3. Here is a video of the turtle when the brick is within catching range
-   `$[196850920-de1b0534-6ec8-48c1-9517-31d77fb2c711.webm](https://github.com/alyssa225/TiltBot/assets/81643108/5583630d-55b7-46b2-b6b2-57db3c7be737)`
+   `[196850920-de1b0534-6ec8-48c1-9517-31d77fb2c711.webm](https://github.com/alyssa225/TiltBot/assets/81643108/5583630d-55b7-46b2-b6b2-57db3c7be737)`
 
 4. Here is a video of the turtle when the brick cannot be caught
    `${embed video here}`
